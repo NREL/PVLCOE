@@ -1,0 +1,105 @@
+/*
+Copyright 2020 Alliance for Sustainable Energy, LLC
+ 
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+ 
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+ 
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+ 
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+ 
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+
+/* This hides the silly number spin buttons in the inputs */
+input[type='number']::-webkit-outer-spin-button,
+input[type='number']::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+.container{
+  max-width:992px;
+  margin:0 auto;
+  padding-bottom:10rem;
+}
+
+.documentation{
+  max-width:769px;
+}
+
+body {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+[class*='col'] {
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.stickything {
+  position: -webkit-sticky;
+  position: sticky;
+  bottom: 0;
+  z-index: 10;
+}
+
+.baseline {
+  background-color: #cce5ff
+}
+
+.proposed {
+  background-color: #d4edda
+}
+
+.common {
+  background-color: #e2e3e5
+}
+
+.slidertext {
+  max-width: 7.5rem
+}
+
+.sliderrow .col {
+  padding-top: 0rem;
+  padding-bottom: 1rem;
+}
+
+
+p.result-label {
+  font-size: 1.2rem;
+  float: left;
+  clear: left;
+  margin-bottom: 0rem;
+  font-weight: 500;
+}
+
+p.result {
+  font-size: 1.2rem;
+  float: right;
+  clear: right;
+  margin-bottom: 0rem;
+}
+
+div.col-md.result {
+  padding-top: 0rem;
+  padding-bottom: 0rem;
+}
+
+div.card-body.result {
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.float-right {
+  float: right;
+}
+
+:target {
+   background: #fff3cd;
+}

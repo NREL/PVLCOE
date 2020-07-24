@@ -1,0 +1,2 @@
+# PVLCOE
+The Comparative PV LCOE Calculator calculates levelized cost of energy (LCOE) for photovoltaic (PV) systems based on cost, performance, and reliability inputs for a *baseline* and a *proposed* technology. It is a single javascript-powered web page that runs entirely on the client side. Check the `lcoe_calculator_documentation.html` file for more detailed documentation.

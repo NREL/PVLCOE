@@ -1,0 +1,426 @@
+<!--
+Copyright 2020 Alliance for Sustainable Energy, LLC
+ 
+Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
+ 
+1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
+ 
+2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
+ 
+3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
+ 
+THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+*/
+-->
+
+<!doctype html>
+<html lang='en'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <link rel='stylesheet' href='css/bootstrap.min.css'>
+    <link rel='stylesheet' href='css/nouislider.min.css'>
+    <link rel='stylesheet' href='css/lcoe_calculator.css'>
+    <title>NREL Comparative PV LCOE calculator</title>
+  </head>
+  <body>
+    <div class='container'>
+      <h1>Comparative PV LCOE calculator</h1>
+      <p class='lead'>This tool calculates levelized cost of energy (LCOE) for photovoltaic (PV) systems based on cost, performance, and reliability inputs for a <strong>baseline</strong> and a <strong>proposed</strong> technology.</p>
+      <p>Choose your inputs and watch the effect on LCOE to determine whether a proposed technology is cost-effective, to perform trade-off analysis among different technology options, and to do break-even analysis of cost or performance.</p>
+      <p>For more details, please <a href='lcoe_calculator_documentation.html' target='_blank'>consult the documentation</a>. You may also be interested in <a href='lcoe_calculator_documentation.html#seealso' target='_blank'>other tools</a> for calculating cost and performance for renewable energy.</p>
+      <h2>Inputs</h2>
+      <div class='alert alert-dismissible alert-info' role='alert'>
+        Use the <strong>presets</strong> button (below) to choose a different cell technology, system type, or location. Use the <strong>copy from baseline button</strong> (below) to make the <strong>proposed</strong> inputs match the <strong>baseline</strong> inputs.
+        <button type='button' class='close' data-dismiss='alert'>
+          <span>&times;</span>
+        </button>
+      </div>
+      <div class='row'>
+        <div class='col-md'>
+          <div class='card baseline'>
+            <h3 class='card-header'>Baseline
+              <button type='button' class='btn btn-primary float-right' data-toggle='modal' data-target='#preset_modal'>
+                Presets
+              </button>
+            </h3>
+            <div class='card-body'>
+              <div class='modal' id='preset_modal' tabindex='-1' role='dialog'>
+                <div class='modal-dialog' role='document'>
+                  <div class='modal-content'>
+                    <div class='modal-header'>
+                      <h3 class='modal-title' id='exampleModalLabel'>Baseline presets</h3>
+                      <button type='button' class='close' data-dismiss='modal'>
+                        <span aria-hidden='true'>&times;</span>
+                      </button>
+                    </div>
+                    <div class='modal-body'>
+                      <p>Use these menus to choose a set of cost and performance values for the Baseline module.</p>
+                      <label for='cell_technology' class='h5'>Cell technology</label>
+                      <div class='form-group'>
+                        <select id='cell_technology' class='form-control'>
+                        </select>
+                      <p class='text-muted'>Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, <strong>energy yield</strong>, <strong>degradation rate</strong>, <strong>BOS cost</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.</p>
+                      </div>
+                      <label for='package_type' class='h5'>Package type</label>
+                      <div class='form-group'>
+                        <select id='package_type' class='form-control'>
+                        </select>
+                      <p class='text-muted'>Package type affects <strong>back layer cost</strong></p>
+                      </div>
+                      <label for='system_type' class='h5'>System type</label>
+                      <div class='form-group'>
+                        <select id='system_type' class='form-control'>
+                        </select>
+                      <p class='text-muted'>System type affects <strong>energy yield</strong> and <strong>BOS cost</strong></p>
+                      </div>
+                      <label for='location_yield' class='h5'>Location</label>
+                      <div class='form-group'>
+                        <select id='location_yield' class='form-control'>
+                        </select>
+                      <p class='text-muted'>Location affects <strong>energy yield</strong> and <strong>BOS cost</strong></p>
+                      </div>
+                    </div>
+                    <div class='modal-footer'>
+                      <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
+                      <button type='button' class='btn btn-primary' onclick=preset_set()>Use this preset</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <h4>Cost</h4>
+              <label for='baseline_cost_front_layer_text' class='h5'>Front layer cost (USD/m<sup>2</sup>)</label>
+              <!-- Each slider goes in a sliderrow, which arranges the text box and slider -->
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <input id='baseline_cost_front_layer_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col baseline'>
+                  <!-- This is an empty div that the JavaScript magically styles as a slider -->
+                  <div id='baseline_cost_front_layer'></div>
+                </div>
+              </div>
+              <label for='baseline_cost_cell_text' class='h5'>Cell cost (USD/m<sup>2</sup>)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='baseline_cost_cell_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col baseline'>
+                  <div id='baseline_cost_cell'></div>
+                </div>
+              </div>
+              <label for='baseline_cost_back_layer_text' class='h5'>Back layer cost (USD/m<sup>2</sup>)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='baseline_cost_back_layer_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col baseline'>
+                  <div id='baseline_cost_back_layer'></div>
+                </div>
+              </div>
+              <label for='baseline_cost_noncell_text' class='h5'>Non-cell module cost (USD/m<sup>2</sup>)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='baseline_cost_noncell_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col baseline'>
+                  <div id='baseline_cost_noncell'></div>
+                </div>
+              </div>
+              <label for='baseline_cost_extra_text' class='h5'>Extra component cost (USD/m<sup>2</sup>)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='baseline_cost_extra_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col baseline'>
+                  <div id='baseline_cost_extra'></div>
+                </div>
+              </div>
+              <label for='baseline_cost_om_text' class='h5'><abbr title='operations and maintenance'>O&amp;M</abbr> cost (USD/kW<sub>DC</sub>/year)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='baseline_cost_om_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col baseline'>
+                  <div id='baseline_cost_om'></div>
+                </div>
+              </div>
+              <label for='baseline_cost_bos_power_text' class='h5'><abbr title='balance of system'>BOS</abbr> cost, power-scaling (USD/W)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='baseline_cost_bos_power_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col baseline'>
+                  <div id='baseline_cost_bos_power'></div>
+                </div>
+              </div>
+              <label for='baseline_cost_bos_area_text' class='h5'><abbr title='balance of system'>BOS</abbr> cost, area-scaling (USD/m<sup>2</sup>)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='baseline_cost_bos_area_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col baseline'>
+                  <div id='baseline_cost_bos_area'></div>
+                </div>
+              </div>
+              <hr>
+              <h4>Performance</h4>
+              <label for='baseline_efficiency_text' class='h5'>Efficiency (%)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='baseline_efficiency_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col baseline'>
+                  <div id='baseline_efficiency'></div>
+                </div>
+              </div>
+              <label for='baseline_energy_yield_text' class='h5'>Energy yield (kWh/kW<sub>DC</sub>)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='baseline_energy_yield_text' type='number' class='form-control' step='1' />
+                </div>
+                <div class='col baseline'>
+                  <div id='baseline_energy_yield'></div>
+                </div>
+              </div>
+              <hr>
+              <h4>Reliability</h4>
+              <label for='baseline_degradation_rate_text' class='h5'>Degradation rate (%/year)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='baseline_degradation_rate_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col baseline'>
+                  <div id='baseline_degradation_rate'></div>
+                </div>
+              </div>
+              <label for='baseline_service_life_text' class='h5'>Service life (years)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='baseline_service_life_text' type='number' class='form-control' step='1' />
+                </div>
+                <div class='col baseline'>
+                  <div id='baseline_service_life'></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class='col-md'>
+          <div class='card proposed'>
+            <h3 class='card-header'>Proposed
+              <button type='button' class='btn btn-secondary float-right' onclick=copy_from_baseline()>
+                Copy from Baseline
+              </button>
+            </h3>
+            <div class='card-body'>
+              <h4>Cost</h4>
+              <label for='proposed_cost_front_layer_text' class='h5'>Front layer cost (USD/m<sup>2</sup>)</label>
+              <!-- Each slider goes in a sliderrow, which arranges the text box and slider -->
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <input id='proposed_cost_front_layer_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col proposed'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
+                  <div id='proposed_cost_front_layer'></div>
+                </div>
+              </div>
+              <label for='proposed_cost_cell_text' class='h5'>Cell cost (USD/m<sup>2</sup>)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='proposed_cost_cell_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col proposed'>
+                  <div id='proposed_cost_cell'></div>
+                </div>
+              </div>
+              <label for='proposed_cost_back_layer_text' class='h5'>Back layer cost (USD/m<sup>2</sup>)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='proposed_cost_back_layer_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col proposed'>
+                  <div id='proposed_cost_back_layer'></div>
+                </div>
+              </div>
+              <label for='proposed_cost_noncell_text' class='h5'>Non-cell module cost (USD/m<sup>2</sup>)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='proposed_cost_noncell_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col proposed'>
+                  <div id='proposed_cost_noncell'></div>
+                </div>
+              </div>
+              <label for='proposed_cost_extra_text' class='h5'>Extra component cost (USD/m<sup>2</sup>)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='proposed_cost_extra_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col proposed'>
+                  <div id='proposed_cost_extra'></div>
+                </div>
+              </div>
+              <label for='proposed_cost_om_text' class='h5'><abbr title='operations and maintenance'>O&amp;M</abbr> cost (USD/kW<sub>DC</sub>/year)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='proposed_cost_om_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col proposed'>
+                  <div id='proposed_cost_om'></div>
+                </div>
+              </div>
+              <label for='proposed_cost_bos_power_text' class='h5'><abbr title='balance of system'>BOS</abbr> cost, power-scaling (USD/W)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='proposed_cost_bos_power_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col proposed'>
+                  <div id='proposed_cost_bos_power'></div>
+                </div>
+              </div>
+              <label for='proposed_cost_bos_area_text' class='h5'><abbr title='balance of system'>BOS</abbr> cost, area-scaling (USD/m<sup>2</sup>)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='proposed_cost_bos_area_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col proposed'>
+                  <div id='proposed_cost_bos_area'></div>
+                </div>
+              </div>
+              <hr>
+              <h4>Performance</h4>
+              <label for='proposed_efficiency_text' class='h5'>Efficiency (%)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='proposed_efficiency_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col proposed'>
+                  <div id='proposed_efficiency'></div>
+                </div>
+              </div>
+              <label for='proposed_energy_yield_text' class='h5'>Energy yield (kWh/kW<sub>DC</sub>)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='proposed_energy_yield_text' type='number' class='form-control' step='1' />
+                </div>
+                <div class='col proposed'>
+                  <div id='proposed_energy_yield'></div>
+                </div>
+              </div>
+              <hr>
+              <h4>Reliability</h4>
+              <label for='proposed_degradation_rate_text' class='h5'>Degradation rate (%/year)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='proposed_degradation_rate_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col proposed'>
+                  <div id='proposed_degradation_rate'></div>
+                </div>
+              </div>
+              <label for='proposed_service_life_text' class='h5'>Service life (years)</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='proposed_service_life_text' type='number' class='form-control' step='1' />
+                </div>
+                <div class='col proposed'>
+                  <div id='proposed_service_life'></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class='row'>
+        <div class='col-xl'>
+          <div class='card common'>
+            <h3 class='card-header'>Common settings</h3>
+            <div class='card-body'>
+              <h4>Financial</h4>
+              <label for='common_discount_rate_text' class='h5'>Discount rate</label>
+              <div class='row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <input id='common_discount_rate_text' type='number' class='form-control' step='0.01' />
+                </div>
+                <div class='col common'>
+                  <div id='common_discount_rate'></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <h2>Results</h2>
+      <h3>LCOE result</h3>
+      <p>
+        <div class='row stickything'>
+          <div class='col-md result'>
+            <div class='card baseline'>
+              <div class='card-body result'>
+
+                <p class='result-label'>Baseline LCOE (USD/kWh) </p>
+                <p class='result'><span class='badge-pill badge-secondary' id='lcoe_baseline'></span></p>
+              </div>
+            </div>
+          </div>
+          <div class='col-md result'>
+            <div class='card proposed'>
+              <div class='card-body result'>
+                <p class='result-label'>Proposed LCOE (USD/kWh) </p>
+                <p class='result'><span class='badge-pill badge-secondary' id='lcoe_proposed'></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </p>
+      <h3>Additional results</h3>
+      <p>
+        <div class='row'>
+          <div class='col-md result'>
+            <div class='card baseline'>
+              <h4 class='card-header'>Baseline</h4>
+              <div class='card-body result'>
+                <p class='result-label'>Module price (USD/W) </p>
+                <p class='result'><span class='badge-pill badge-secondary' id='module_cost_per_watt_baseline'></span></p>
+                <p class='result-label'>Total installed system cost (USD/W) </p>
+                <p class='result'><span class='badge-pill badge-secondary' id='system_cost_per_watt_baseline'></span></p>
+              </div>
+            </div>
+          </div>
+          <div class='col-md result'>
+            <div class='card proposed'>
+              <h4 class='card-header'>Proposed</h4>
+              <div class='card-body result'>
+                <p class='result-label'>Module price (USD/W) </p>
+                <p class='result'><span class='badge-pill badge-secondary' id='module_cost_per_watt_proposed'></span></p>
+                <p class='result-label'>Total installed system cost (USD/W) </p>
+                <p class='result'><span class='badge-pill badge-secondary' id='system_cost_per_watt_proposed'></span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </p>
+      <h2>Notes</h2>
+      <h3>Citation</h3>
+      <p>
+        If you use results from this calculator in a publication or proposal, please cite it:
+      </p>
+      <div class='card'>
+        <div class='card-body'>
+          <p class='card-text'>TJ Silverman, MG Deceglie, KA Horowitz. &ldquo;NREL Comparative PV LCOE Calculator.&rdquo; Internet: http://pvlcoe.nrel.gov, March 2018.</p>
+        </div>
+      </div>
+    </div>
+    <script src='js/jquery-3.2.1.slim.min.js'></script>
+    <script src='js/popper.min.js'></script>
+    <script src='js/bootstrap.min.js'></script>
+    <script src='js/nouislider.min.js'></script>
+    <script src='js/preset_tree.min.js'></script>
+    <script src='js/bos_cost_tree.js'></script>
+    <script src='js/lcoe_calculator.js'></script>
+  </body>
+</html>
