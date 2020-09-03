@@ -1,17 +1,3 @@
-/*
-Copyright 2020 Alliance for Sustainable Energy, LLC
- 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
- 
-1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
- 
-2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
- 
-3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
- 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
-
 var preset_tree = {
   "mono-Si": {
     "glass-polymer backsheet": {
@@ -24,7 +10,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 928.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "AK"
         },
         "USA AL Montgomery": {
@@ -35,7 +21,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1486.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "AL"
         },
         "USA AR Little Rock": {
@@ -46,7 +32,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1480.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "AR"
         },
         "USA AZ Phoenix": {
@@ -57,7 +43,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1829.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "AZ"
         },
         "USA CA Daggett": {
@@ -68,7 +54,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1897.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "CA"
         },
         "USA CO Denver Intl Ap": {
@@ -79,7 +65,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1589.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "CO"
         },
         "USA CT Hartford": {
@@ -90,7 +76,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1308.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "CT"
         },
         "USA DE Dover Afb": {
@@ -101,7 +87,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1350.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "DE"
         },
         "USA FL Fort Lauderdale": {
@@ -112,7 +98,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1418.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "FL"
         },
         "USA GA Albany Dougherty County Ap": {
@@ -123,7 +109,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1413.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "GA"
         },
         "USA HI Honolulu": {
@@ -134,7 +120,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1674.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "HI"
         },
         "USA IA Des Moines": {
@@ -145,7 +131,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1443.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IA"
         },
         "USA ID Boise": {
@@ -156,7 +142,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1521.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "ID"
         },
         "USA IL Springfield": {
@@ -167,7 +153,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1439.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IL"
         },
         "USA IN Indianapolis": {
@@ -178,7 +164,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1382.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IN"
         },
         "USA KS Hutchinson Municipal Ap": {
@@ -189,7 +175,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1572.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "KS"
         },
         "USA KY Bowling Green Warren Co Ap": {
@@ -200,7 +186,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1199.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "KY"
         },
         "USA LA Baton Rouge": {
@@ -211,7 +197,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1448.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "LA"
         },
         "USA MA Boston": {
@@ -222,7 +208,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1389.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MA"
         },
         "USA MD Baltimore": {
@@ -233,7 +219,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1388.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "MD"
         },
         "USA ME Augusta Airport": {
@@ -244,7 +230,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1163.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "ME"
         },
         "USA MI Saginaw Tri City Intl Ap": {
@@ -255,7 +241,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1292.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MI"
         },
         "USA MN Minneapolis": {
@@ -266,7 +252,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1416.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MN"
         },
         "USA MO Kansas City": {
@@ -277,7 +263,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1475.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MO"
         },
         "USA MS Jackson": {
@@ -288,7 +274,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1480.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "MS"
         },
         "USA MT Great Falls": {
@@ -299,7 +285,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1444.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "MT"
         },
         "USA NC Greensboro": {
@@ -310,7 +296,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1479.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "NC"
         },
         "USA ND Bismarck": {
@@ -321,7 +307,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1481.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "ND"
         },
         "USA NE North Platte": {
@@ -332,7 +318,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1583.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NE"
         },
         "USA NH Concord": {
@@ -343,7 +329,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1383.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NH"
         },
         "USA NJ Atlantic City": {
@@ -354,7 +340,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1417.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "NJ"
         },
         "USA NM Albuquerque": {
@@ -365,7 +351,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1828.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "NM"
         },
         "USA NV Las Vegas": {
@@ -376,7 +362,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1848.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "NV"
         },
         "USA NY Rochester": {
@@ -387,7 +373,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1234.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NY"
         },
         "USA OH Columbus": {
@@ -398,7 +384,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1282.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "OH"
         },
         "USA OK Oklahoma City": {
@@ -409,7 +395,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1589.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "OK"
         },
         "USA OR Roseburg Regional Ap": {
@@ -420,7 +406,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1298.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "OR"
         },
         "USA PA Lancaster": {
@@ -431,7 +417,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1240.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "PA"
         },
         "USA RI Providence": {
@@ -442,7 +428,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1397.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "RI"
         },
         "USA SC Greenville": {
@@ -453,7 +439,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1490.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "SC"
         },
         "USA SD Pierre": {
@@ -464,7 +450,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1536.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "SD"
         },
         "USA TN Nashville": {
@@ -475,7 +461,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1444.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "TN"
         },
         "USA TX San Antonio": {
@@ -486,7 +472,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1572.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "TX"
         },
         "USA UT Salt Lake City": {
@@ -497,7 +483,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1558.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "UT"
         },
         "USA VA Richmond": {
@@ -508,7 +494,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1436.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "VA"
         },
         "USA VT Burlington": {
@@ -519,7 +505,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1299.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "VT"
         },
         "USA WA Bremerton National": {
@@ -530,7 +516,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1150.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "WA"
         },
         "USA WI Madison": {
@@ -541,7 +527,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1370.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "WI"
         },
         "USA WV Charleston": {
@@ -552,7 +538,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1295.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "WV"
         },
         "USA WY Cheyenne": {
@@ -563,7 +549,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1596.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "WY"
         }
       },
@@ -576,7 +562,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1180.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "AK"
         },
         "USA AL Montgomery": {
@@ -587,7 +573,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1869.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "AL"
         },
         "USA AR Little Rock": {
@@ -598,7 +584,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1913.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "AR"
         },
         "USA AZ Phoenix": {
@@ -609,7 +595,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2488.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "AZ"
         },
         "USA CA Daggett": {
@@ -620,7 +606,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2655.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "CA"
         },
         "USA CO Denver Intl Ap": {
@@ -631,7 +617,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2113.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "CO"
         },
         "USA CT Hartford": {
@@ -642,7 +628,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1626.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "CT"
         },
         "USA DE Dover Afb": {
@@ -653,7 +639,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1699.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "DE"
         },
         "USA FL Fort Lauderdale": {
@@ -664,7 +650,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1785.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "FL"
         },
         "USA GA Albany Dougherty County Ap": {
@@ -675,7 +661,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1793.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "GA"
         },
         "USA HI Honolulu": {
@@ -686,7 +672,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2223.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "HI"
         },
         "USA IA Des Moines": {
@@ -697,7 +683,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1886.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IA"
         },
         "USA ID Boise": {
@@ -708,7 +694,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2072.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "ID"
         },
         "USA IL Springfield": {
@@ -719,7 +705,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1869.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IL"
         },
         "USA IN Indianapolis": {
@@ -730,7 +716,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1750.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IN"
         },
         "USA KS Hutchinson Municipal Ap": {
@@ -741,7 +727,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2099.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "KS"
         },
         "USA KY Bowling Green Warren Co Ap": {
@@ -752,7 +738,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1525.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "KY"
         },
         "USA LA Baton Rouge": {
@@ -763,7 +749,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1824.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "LA"
         },
         "USA MA Boston": {
@@ -774,7 +760,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1772.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MA"
         },
         "USA MD Baltimore": {
@@ -785,7 +771,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1775.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "MD"
         },
         "USA ME Augusta Airport": {
@@ -796,7 +782,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1486.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "ME"
         },
         "USA MI Saginaw Tri City Intl Ap": {
@@ -807,7 +793,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1666.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MI"
         },
         "USA MN Minneapolis": {
@@ -818,7 +804,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1838.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MN"
         },
         "USA MO Kansas City": {
@@ -829,7 +815,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1917.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MO"
         },
         "USA MS Jackson": {
@@ -840,7 +826,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1884.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "MS"
         },
         "USA MT Great Falls": {
@@ -851,7 +837,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1924.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "MT"
         },
         "USA NC Greensboro": {
@@ -862,7 +848,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1896.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "NC"
         },
         "USA ND Bismarck": {
@@ -873,7 +859,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1958.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "ND"
         },
         "USA NE North Platte": {
@@ -884,7 +870,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2103.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NE"
         },
         "USA NH Concord": {
@@ -895,7 +881,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1769.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NH"
         },
         "USA NJ Atlantic City": {
@@ -906,7 +892,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1800.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "NJ"
         },
         "USA NM Albuquerque": {
@@ -917,7 +903,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2488.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "NM"
         },
         "USA NV Las Vegas": {
@@ -928,7 +914,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2554.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "NV"
         },
         "USA NY Rochester": {
@@ -939,7 +925,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1569.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NY"
         },
         "USA OH Columbus": {
@@ -950,7 +936,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1613.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "OH"
         },
         "USA OK Oklahoma City": {
@@ -961,7 +947,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2098.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "OK"
         },
         "USA OR Roseburg Regional Ap": {
@@ -972,7 +958,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1711.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "OR"
         },
         "USA PA Lancaster": {
@@ -983,7 +969,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1566.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "PA"
         },
         "USA RI Providence": {
@@ -994,7 +980,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1776.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "RI"
         },
         "USA SC Greenville": {
@@ -1005,7 +991,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1915.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "SC"
         },
         "USA SD Pierre": {
@@ -1016,7 +1002,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2038.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "SD"
         },
         "USA TN Nashville": {
@@ -1027,7 +1013,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1826.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "TN"
         },
         "USA TX San Antonio": {
@@ -1038,7 +1024,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2009.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "TX"
         },
         "USA UT Salt Lake City": {
@@ -1049,7 +1035,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2091.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "UT"
         },
         "USA VA Richmond": {
@@ -1060,7 +1046,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1832.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "VA"
         },
         "USA VT Burlington": {
@@ -1071,7 +1057,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1651.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "VT"
         },
         "USA WA Bremerton National": {
@@ -1082,7 +1068,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1483.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "WA"
         },
         "USA WI Madison": {
@@ -1093,7 +1079,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1739.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "WI"
         },
         "USA WV Charleston": {
@@ -1104,7 +1090,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1616.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "WV"
         },
         "USA WY Cheyenne": {
@@ -1115,7 +1101,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2138.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "WY"
         }
       },
@@ -1128,7 +1114,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 861.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "AK"
         },
         "USA AL Montgomery": {
@@ -1139,7 +1125,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1444.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "AL"
         },
         "USA AR Little Rock": {
@@ -1150,7 +1136,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1436.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "AR"
         },
         "USA AZ Phoenix": {
@@ -1161,7 +1147,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1794.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "AZ"
         },
         "USA CA Daggett": {
@@ -1172,7 +1158,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1866.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "CA"
         },
         "USA CO Denver Intl Ap": {
@@ -1183,7 +1169,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1523.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "CO"
         },
         "USA CT Hartford": {
@@ -1194,7 +1180,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1249.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "CT"
         },
         "USA DE Dover Afb": {
@@ -1205,7 +1191,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1280.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "DE"
         },
         "USA FL Fort Lauderdale": {
@@ -1216,7 +1202,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1363.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "FL"
         },
         "USA GA Albany Dougherty County Ap": {
@@ -1227,7 +1213,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1363.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "GA"
         },
         "USA HI Honolulu": {
@@ -1238,7 +1224,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1627.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "HI"
         },
         "USA IA Des Moines": {
@@ -1249,7 +1235,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1385.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IA"
         },
         "USA ID Boise": {
@@ -1260,7 +1246,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1475.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "ID"
         },
         "USA IL Springfield": {
@@ -1271,7 +1257,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1391.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IL"
         },
         "USA IN Indianapolis": {
@@ -1282,7 +1268,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1340.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IN"
         },
         "USA KS Hutchinson Municipal Ap": {
@@ -1293,7 +1279,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1516.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "KS"
         },
         "USA KY Bowling Green Warren Co Ap": {
@@ -1304,7 +1290,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1164.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "KY"
         },
         "USA LA Baton Rouge": {
@@ -1315,7 +1301,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1400.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "LA"
         },
         "USA MA Boston": {
@@ -1326,7 +1312,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1327.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MA"
         },
         "USA MD Baltimore": {
@@ -1337,7 +1323,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1335.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "MD"
         },
         "USA ME Augusta Airport": {
@@ -1348,7 +1334,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1112.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "ME"
         },
         "USA MI Saginaw Tri City Intl Ap": {
@@ -1359,7 +1345,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1241.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MI"
         },
         "USA MN Minneapolis": {
@@ -1370,7 +1356,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1353.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MN"
         },
         "USA MO Kansas City": {
@@ -1381,7 +1367,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1419.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MO"
         },
         "USA MS Jackson": {
@@ -1392,7 +1378,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1436.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "MS"
         },
         "USA MT Great Falls": {
@@ -1403,7 +1389,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1369.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "MT"
         },
         "USA NC Greensboro": {
@@ -1414,7 +1400,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1429.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "NC"
         },
         "USA ND Bismarck": {
@@ -1425,7 +1411,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1406.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "ND"
         },
         "USA NE North Platte": {
@@ -1436,7 +1422,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1512.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NE"
         },
         "USA NH Concord": {
@@ -1447,7 +1433,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1315.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NH"
         },
         "USA NJ Atlantic City": {
@@ -1458,7 +1444,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1352.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "NJ"
         },
         "USA NM Albuquerque": {
@@ -1469,7 +1455,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1810.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "NM"
         },
         "USA NV Las Vegas": {
@@ -1480,7 +1466,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1813.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "NV"
         },
         "USA NY Rochester": {
@@ -1491,7 +1477,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1205.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NY"
         },
         "USA OH Columbus": {
@@ -1502,7 +1488,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1240.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "OH"
         },
         "USA OK Oklahoma City": {
@@ -1513,7 +1499,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1545.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "OK"
         },
         "USA OR Roseburg Regional Ap": {
@@ -1524,7 +1510,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1267.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "OR"
         },
         "USA PA Lancaster": {
@@ -1535,7 +1521,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1188.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "PA"
         },
         "USA RI Providence": {
@@ -1546,7 +1532,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1339.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "RI"
         },
         "USA SC Greenville": {
@@ -1557,7 +1543,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1441.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "SC"
         },
         "USA SD Pierre": {
@@ -1568,7 +1554,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1453.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "SD"
         },
         "USA TN Nashville": {
@@ -1579,7 +1565,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1407.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "TN"
         },
         "USA TX San Antonio": {
@@ -1590,7 +1576,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1533.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "TX"
         },
         "USA UT Salt Lake City": {
@@ -1601,7 +1587,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1514.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "UT"
         },
         "USA VA Richmond": {
@@ -1612,7 +1598,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1376.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "VA"
         },
         "USA VT Burlington": {
@@ -1623,7 +1609,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1256.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "VT"
         },
         "USA WA Bremerton National": {
@@ -1634,7 +1620,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1102.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "WA"
         },
         "USA WI Madison": {
@@ -1645,7 +1631,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1319.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "WI"
         },
         "USA WV Charleston": {
@@ -1656,7 +1642,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1250.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "WV"
         },
         "USA WY Cheyenne": {
@@ -1667,7 +1653,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1524.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "WY"
         }
       }
@@ -1682,7 +1668,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 928.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "AK"
         },
         "USA AL Montgomery": {
@@ -1693,7 +1679,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1486.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "AL"
         },
         "USA AR Little Rock": {
@@ -1704,7 +1690,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1480.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "AR"
         },
         "USA AZ Phoenix": {
@@ -1715,7 +1701,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1829.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "AZ"
         },
         "USA CA Daggett": {
@@ -1726,7 +1712,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1897.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "CA"
         },
         "USA CO Denver Intl Ap": {
@@ -1737,7 +1723,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1589.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "CO"
         },
         "USA CT Hartford": {
@@ -1748,7 +1734,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1308.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "CT"
         },
         "USA DE Dover Afb": {
@@ -1759,7 +1745,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1350.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "DE"
         },
         "USA FL Fort Lauderdale": {
@@ -1770,7 +1756,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1418.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "FL"
         },
         "USA GA Albany Dougherty County Ap": {
@@ -1781,7 +1767,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1413.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "GA"
         },
         "USA HI Honolulu": {
@@ -1792,7 +1778,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1674.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "HI"
         },
         "USA IA Des Moines": {
@@ -1803,7 +1789,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1443.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IA"
         },
         "USA ID Boise": {
@@ -1814,7 +1800,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1521.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "ID"
         },
         "USA IL Springfield": {
@@ -1825,7 +1811,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1439.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IL"
         },
         "USA IN Indianapolis": {
@@ -1836,7 +1822,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1382.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IN"
         },
         "USA KS Hutchinson Municipal Ap": {
@@ -1847,7 +1833,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1572.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "KS"
         },
         "USA KY Bowling Green Warren Co Ap": {
@@ -1858,7 +1844,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1199.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "KY"
         },
         "USA LA Baton Rouge": {
@@ -1869,7 +1855,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1448.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "LA"
         },
         "USA MA Boston": {
@@ -1880,7 +1866,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1389.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MA"
         },
         "USA MD Baltimore": {
@@ -1891,7 +1877,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1388.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "MD"
         },
         "USA ME Augusta Airport": {
@@ -1902,7 +1888,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1163.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "ME"
         },
         "USA MI Saginaw Tri City Intl Ap": {
@@ -1913,7 +1899,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1292.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MI"
         },
         "USA MN Minneapolis": {
@@ -1924,7 +1910,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1416.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MN"
         },
         "USA MO Kansas City": {
@@ -1935,7 +1921,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1475.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MO"
         },
         "USA MS Jackson": {
@@ -1946,7 +1932,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1480.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "MS"
         },
         "USA MT Great Falls": {
@@ -1957,7 +1943,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1444.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "MT"
         },
         "USA NC Greensboro": {
@@ -1968,7 +1954,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1479.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "NC"
         },
         "USA ND Bismarck": {
@@ -1979,7 +1965,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1481.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "ND"
         },
         "USA NE North Platte": {
@@ -1990,7 +1976,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1583.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NE"
         },
         "USA NH Concord": {
@@ -2001,7 +1987,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1383.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NH"
         },
         "USA NJ Atlantic City": {
@@ -2012,7 +1998,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1417.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "NJ"
         },
         "USA NM Albuquerque": {
@@ -2023,7 +2009,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1828.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "NM"
         },
         "USA NV Las Vegas": {
@@ -2034,7 +2020,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1848.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "NV"
         },
         "USA NY Rochester": {
@@ -2045,7 +2031,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1234.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NY"
         },
         "USA OH Columbus": {
@@ -2056,7 +2042,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1282.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "OH"
         },
         "USA OK Oklahoma City": {
@@ -2067,7 +2053,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1589.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "OK"
         },
         "USA OR Roseburg Regional Ap": {
@@ -2078,7 +2064,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1298.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "OR"
         },
         "USA PA Lancaster": {
@@ -2089,7 +2075,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1240.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "PA"
         },
         "USA RI Providence": {
@@ -2100,7 +2086,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1397.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "RI"
         },
         "USA SC Greenville": {
@@ -2111,7 +2097,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1490.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "SC"
         },
         "USA SD Pierre": {
@@ -2122,7 +2108,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1536.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "SD"
         },
         "USA TN Nashville": {
@@ -2133,7 +2119,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1444.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "TN"
         },
         "USA TX San Antonio": {
@@ -2144,7 +2130,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1572.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "TX"
         },
         "USA UT Salt Lake City": {
@@ -2155,7 +2141,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1558.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "UT"
         },
         "USA VA Richmond": {
@@ -2166,7 +2152,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1436.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "VA"
         },
         "USA VT Burlington": {
@@ -2177,7 +2163,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1299.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "VT"
         },
         "USA WA Bremerton National": {
@@ -2188,7 +2174,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1150.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "WA"
         },
         "USA WI Madison": {
@@ -2199,7 +2185,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1370.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "WI"
         },
         "USA WV Charleston": {
@@ -2210,7 +2196,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1295.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "WV"
         },
         "USA WY Cheyenne": {
@@ -2221,7 +2207,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 19.0,
           "energy_yield": 1596.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "WY"
         }
       },
@@ -2234,7 +2220,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1180.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "AK"
         },
         "USA AL Montgomery": {
@@ -2245,7 +2231,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1869.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "AL"
         },
         "USA AR Little Rock": {
@@ -2256,7 +2242,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1913.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "AR"
         },
         "USA AZ Phoenix": {
@@ -2267,7 +2253,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2488.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "AZ"
         },
         "USA CA Daggett": {
@@ -2278,7 +2264,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2655.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "CA"
         },
         "USA CO Denver Intl Ap": {
@@ -2289,7 +2275,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2113.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "CO"
         },
         "USA CT Hartford": {
@@ -2300,7 +2286,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1626.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "CT"
         },
         "USA DE Dover Afb": {
@@ -2311,7 +2297,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1699.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "DE"
         },
         "USA FL Fort Lauderdale": {
@@ -2322,7 +2308,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1785.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "FL"
         },
         "USA GA Albany Dougherty County Ap": {
@@ -2333,7 +2319,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1793.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "GA"
         },
         "USA HI Honolulu": {
@@ -2344,7 +2330,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2223.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "HI"
         },
         "USA IA Des Moines": {
@@ -2355,7 +2341,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1886.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IA"
         },
         "USA ID Boise": {
@@ -2366,7 +2352,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2072.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "ID"
         },
         "USA IL Springfield": {
@@ -2377,7 +2363,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1869.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IL"
         },
         "USA IN Indianapolis": {
@@ -2388,7 +2374,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1750.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IN"
         },
         "USA KS Hutchinson Municipal Ap": {
@@ -2399,7 +2385,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2099.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "KS"
         },
         "USA KY Bowling Green Warren Co Ap": {
@@ -2410,7 +2396,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1525.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "KY"
         },
         "USA LA Baton Rouge": {
@@ -2421,7 +2407,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1824.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "LA"
         },
         "USA MA Boston": {
@@ -2432,7 +2418,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1772.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MA"
         },
         "USA MD Baltimore": {
@@ -2443,7 +2429,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1775.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "MD"
         },
         "USA ME Augusta Airport": {
@@ -2454,7 +2440,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1486.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "ME"
         },
         "USA MI Saginaw Tri City Intl Ap": {
@@ -2465,7 +2451,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1666.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MI"
         },
         "USA MN Minneapolis": {
@@ -2476,7 +2462,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1838.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MN"
         },
         "USA MO Kansas City": {
@@ -2487,7 +2473,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1917.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MO"
         },
         "USA MS Jackson": {
@@ -2498,7 +2484,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1884.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "MS"
         },
         "USA MT Great Falls": {
@@ -2509,7 +2495,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1924.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "MT"
         },
         "USA NC Greensboro": {
@@ -2520,7 +2506,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1896.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "NC"
         },
         "USA ND Bismarck": {
@@ -2531,7 +2517,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1958.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "ND"
         },
         "USA NE North Platte": {
@@ -2542,7 +2528,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2103.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NE"
         },
         "USA NH Concord": {
@@ -2553,7 +2539,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1769.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NH"
         },
         "USA NJ Atlantic City": {
@@ -2564,7 +2550,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1800.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "NJ"
         },
         "USA NM Albuquerque": {
@@ -2575,7 +2561,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2488.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "NM"
         },
         "USA NV Las Vegas": {
@@ -2586,7 +2572,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2554.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "NV"
         },
         "USA NY Rochester": {
@@ -2597,7 +2583,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1569.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NY"
         },
         "USA OH Columbus": {
@@ -2608,7 +2594,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1613.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "OH"
         },
         "USA OK Oklahoma City": {
@@ -2619,7 +2605,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2098.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "OK"
         },
         "USA OR Roseburg Regional Ap": {
@@ -2630,7 +2616,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1711.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "OR"
         },
         "USA PA Lancaster": {
@@ -2641,7 +2627,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1566.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "PA"
         },
         "USA RI Providence": {
@@ -2652,7 +2638,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1776.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "RI"
         },
         "USA SC Greenville": {
@@ -2663,7 +2649,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1915.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "SC"
         },
         "USA SD Pierre": {
@@ -2674,7 +2660,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2038.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "SD"
         },
         "USA TN Nashville": {
@@ -2685,7 +2671,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1826.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "TN"
         },
         "USA TX San Antonio": {
@@ -2696,7 +2682,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2009.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "TX"
         },
         "USA UT Salt Lake City": {
@@ -2707,7 +2693,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2091.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "UT"
         },
         "USA VA Richmond": {
@@ -2718,7 +2704,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1832.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "VA"
         },
         "USA VT Burlington": {
@@ -2729,7 +2715,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1651.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "VT"
         },
         "USA WA Bremerton National": {
@@ -2740,7 +2726,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1483.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "WA"
         },
         "USA WI Madison": {
@@ -2751,7 +2737,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1739.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "WI"
         },
         "USA WV Charleston": {
@@ -2762,7 +2748,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 1616.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "WV"
         },
         "USA WY Cheyenne": {
@@ -2773,7 +2759,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 19.0,
           "energy_yield": 2138.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "WY"
         }
       },
@@ -2786,7 +2772,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 861.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "AK"
         },
         "USA AL Montgomery": {
@@ -2797,7 +2783,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1444.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "AL"
         },
         "USA AR Little Rock": {
@@ -2808,7 +2794,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1436.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "AR"
         },
         "USA AZ Phoenix": {
@@ -2819,7 +2805,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1794.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "AZ"
         },
         "USA CA Daggett": {
@@ -2830,7 +2816,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1866.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "CA"
         },
         "USA CO Denver Intl Ap": {
@@ -2841,7 +2827,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1523.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "CO"
         },
         "USA CT Hartford": {
@@ -2852,7 +2838,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1249.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "CT"
         },
         "USA DE Dover Afb": {
@@ -2863,7 +2849,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1280.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "DE"
         },
         "USA FL Fort Lauderdale": {
@@ -2874,7 +2860,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1363.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "FL"
         },
         "USA GA Albany Dougherty County Ap": {
@@ -2885,7 +2871,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1363.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "GA"
         },
         "USA HI Honolulu": {
@@ -2896,7 +2882,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1627.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "HI"
         },
         "USA IA Des Moines": {
@@ -2907,7 +2893,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1385.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IA"
         },
         "USA ID Boise": {
@@ -2918,7 +2904,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1475.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "ID"
         },
         "USA IL Springfield": {
@@ -2929,7 +2915,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1391.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IL"
         },
         "USA IN Indianapolis": {
@@ -2940,7 +2926,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1340.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "IN"
         },
         "USA KS Hutchinson Municipal Ap": {
@@ -2951,7 +2937,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1516.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "KS"
         },
         "USA KY Bowling Green Warren Co Ap": {
@@ -2962,7 +2948,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1164.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "KY"
         },
         "USA LA Baton Rouge": {
@@ -2973,7 +2959,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1400.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "LA"
         },
         "USA MA Boston": {
@@ -2984,7 +2970,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1327.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MA"
         },
         "USA MD Baltimore": {
@@ -2995,7 +2981,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1335.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "MD"
         },
         "USA ME Augusta Airport": {
@@ -3006,7 +2992,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1112.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "ME"
         },
         "USA MI Saginaw Tri City Intl Ap": {
@@ -3017,7 +3003,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1241.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MI"
         },
         "USA MN Minneapolis": {
@@ -3028,7 +3014,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1353.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MN"
         },
         "USA MO Kansas City": {
@@ -3039,7 +3025,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1419.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "MO"
         },
         "USA MS Jackson": {
@@ -3050,7 +3036,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1436.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "MS"
         },
         "USA MT Great Falls": {
@@ -3061,7 +3047,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1369.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "MT"
         },
         "USA NC Greensboro": {
@@ -3072,7 +3058,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1429.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "NC"
         },
         "USA ND Bismarck": {
@@ -3083,7 +3069,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1406.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "ND"
         },
         "USA NE North Platte": {
@@ -3094,7 +3080,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1512.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NE"
         },
         "USA NH Concord": {
@@ -3105,7 +3091,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1315.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NH"
         },
         "USA NJ Atlantic City": {
@@ -3116,7 +3102,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1352.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "NJ"
         },
         "USA NM Albuquerque": {
@@ -3127,7 +3113,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1810.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "NM"
         },
         "USA NV Las Vegas": {
@@ -3138,7 +3124,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1813.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.71,
           "state": "NV"
         },
         "USA NY Rochester": {
@@ -3149,7 +3135,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1205.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "NY"
         },
         "USA OH Columbus": {
@@ -3160,7 +3146,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1240.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "OH"
         },
         "USA OK Oklahoma City": {
@@ -3171,7 +3157,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1545.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "OK"
         },
         "USA OR Roseburg Regional Ap": {
@@ -3182,7 +3168,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1267.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "OR"
         },
         "USA PA Lancaster": {
@@ -3193,7 +3179,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1188.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "PA"
         },
         "USA RI Providence": {
@@ -3204,7 +3190,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1339.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "RI"
         },
         "USA SC Greenville": {
@@ -3215,7 +3201,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1441.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "SC"
         },
         "USA SD Pierre": {
@@ -3226,7 +3212,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1453.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "SD"
         },
         "USA TN Nashville": {
@@ -3237,7 +3223,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1407.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "TN"
         },
         "USA TX San Antonio": {
@@ -3248,7 +3234,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1533.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "TX"
         },
         "USA UT Salt Lake City": {
@@ -3259,7 +3245,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1514.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "UT"
         },
         "USA VA Richmond": {
@@ -3270,7 +3256,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1376.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "VA"
         },
         "USA VT Burlington": {
@@ -3281,7 +3267,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1256.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "VT"
         },
         "USA WA Bremerton National": {
@@ -3292,7 +3278,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1102.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "WA"
         },
         "USA WI Madison": {
@@ -3303,7 +3289,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1319.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.35,
           "state": "WI"
         },
         "USA WV Charleston": {
@@ -3314,7 +3300,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1250.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.6,
           "state": "WV"
         },
         "USA WY Cheyenne": {
@@ -3325,7 +3311,7 @@ var preset_tree = {
           "cost_om": 21.0,
           "efficiency": 19.0,
           "energy_yield": 1524.0,
-          "degradation_rate": 0.36,
+          "degradation_rate": 0.42,
           "state": "WY"
         }
       }
@@ -3342,7 +3328,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 938.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "AK"
         },
         "USA AL Montgomery": {
@@ -3353,7 +3339,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1484.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "AL"
         },
         "USA AR Little Rock": {
@@ -3364,7 +3350,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1480.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "AR"
         },
         "USA AZ Phoenix": {
@@ -3375,7 +3361,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1822.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.71,
           "state": "AZ"
         },
         "USA CA Daggett": {
@@ -3386,7 +3372,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1895.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "CA"
         },
         "USA CO Denver Intl Ap": {
@@ -3397,7 +3383,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1594.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "CO"
         },
         "USA CT Hartford": {
@@ -3408,7 +3394,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1316.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "CT"
         },
         "USA DE Dover Afb": {
@@ -3419,7 +3405,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1355.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "DE"
         },
         "USA FL Fort Lauderdale": {
@@ -3430,7 +3416,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1413.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "FL"
         },
         "USA GA Albany Dougherty County Ap": {
@@ -3441,7 +3427,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1411.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "GA"
         },
         "USA HI Honolulu": {
@@ -3452,7 +3438,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1669.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "HI"
         },
         "USA IA Des Moines": {
@@ -3463,7 +3449,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1450.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "IA"
         },
         "USA ID Boise": {
@@ -3474,7 +3460,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1528.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "ID"
         },
         "USA IL Springfield": {
@@ -3485,7 +3471,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1444.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "IL"
         },
         "USA IN Indianapolis": {
@@ -3496,7 +3482,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1388.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "IN"
         },
         "USA KS Hutchinson Municipal Ap": {
@@ -3507,7 +3493,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1574.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "KS"
         },
         "USA KY Bowling Green Warren Co Ap": {
@@ -3518,7 +3504,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1201.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "KY"
         },
         "USA LA Baton Rouge": {
@@ -3529,7 +3515,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1445.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "LA"
         },
         "USA MA Boston": {
@@ -3540,7 +3526,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1398.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MA"
         },
         "USA MD Baltimore": {
@@ -3551,7 +3537,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1393.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "MD"
         },
         "USA ME Augusta Airport": {
@@ -3562,7 +3548,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1171.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "ME"
         },
         "USA MI Saginaw Tri City Intl Ap": {
@@ -3573,7 +3559,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1300.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MI"
         },
         "USA MN Minneapolis": {
@@ -3584,7 +3570,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1425.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MN"
         },
         "USA MO Kansas City": {
@@ -3595,7 +3581,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1480.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MO"
         },
         "USA MS Jackson": {
@@ -3606,7 +3592,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1479.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "MS"
         },
         "USA MT Great Falls": {
@@ -3617,7 +3603,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1454.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "MT"
         },
         "USA NC Greensboro": {
@@ -3628,7 +3614,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1483.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "NC"
         },
         "USA ND Bismarck": {
@@ -3639,7 +3625,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1491.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "ND"
         },
         "USA NE North Platte": {
@@ -3650,7 +3636,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1590.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "NE"
         },
         "USA NH Concord": {
@@ -3661,7 +3647,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1391.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "NH"
         },
         "USA NJ Atlantic City": {
@@ -3672,7 +3658,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1424.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "NJ"
         },
         "USA NM Albuquerque": {
@@ -3683,7 +3669,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1832.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.71,
           "state": "NM"
         },
         "USA NV Las Vegas": {
@@ -3694,7 +3680,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1846.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.71,
           "state": "NV"
         },
         "USA NY Rochester": {
@@ -3705,7 +3691,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1241.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "NY"
         },
         "USA OH Columbus": {
@@ -3716,7 +3702,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1288.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "OH"
         },
         "USA OK Oklahoma City": {
@@ -3727,7 +3713,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1591.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "OK"
         },
         "USA OR Roseburg Regional Ap": {
@@ -3738,7 +3724,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1303.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "OR"
         },
         "USA PA Lancaster": {
@@ -3749,7 +3735,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1244.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "PA"
         },
         "USA RI Providence": {
@@ -3760,7 +3746,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1405.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "RI"
         },
         "USA SC Greenville": {
@@ -3771,7 +3757,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1492.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "SC"
         },
         "USA SD Pierre": {
@@ -3782,7 +3768,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1545.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "SD"
         },
         "USA TN Nashville": {
@@ -3793,7 +3779,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1445.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "TN"
         },
         "USA TX San Antonio": {
@@ -3804,7 +3790,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1569.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "TX"
         },
         "USA UT Salt Lake City": {
@@ -3815,7 +3801,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1564.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "UT"
         },
         "USA VA Richmond": {
@@ -3826,7 +3812,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1440.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "VA"
         },
         "USA VT Burlington": {
@@ -3837,7 +3823,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1308.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "VT"
         },
         "USA WA Bremerton National": {
@@ -3848,7 +3834,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1156.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "WA"
         },
         "USA WI Madison": {
@@ -3859,7 +3845,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1379.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "WI"
         },
         "USA WV Charleston": {
@@ -3870,7 +3856,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1299.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "WV"
         },
         "USA WY Cheyenne": {
@@ -3881,7 +3867,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1606.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "WY"
         }
       },
@@ -3894,7 +3880,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1195.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "AK"
         },
         "USA AL Montgomery": {
@@ -3905,7 +3891,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1866.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "AL"
         },
         "USA AR Little Rock": {
@@ -3916,7 +3902,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1912.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "AR"
         },
         "USA AZ Phoenix": {
@@ -3927,7 +3913,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2471.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.71,
           "state": "AZ"
         },
         "USA CA Daggett": {
@@ -3938,7 +3924,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2647.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "CA"
         },
         "USA CO Denver Intl Ap": {
@@ -3949,7 +3935,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2119.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "CO"
         },
         "USA CT Hartford": {
@@ -3960,7 +3946,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1636.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "CT"
         },
         "USA DE Dover Afb": {
@@ -3971,7 +3957,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1707.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "DE"
         },
         "USA FL Fort Lauderdale": {
@@ -3982,7 +3968,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1777.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "FL"
         },
         "USA GA Albany Dougherty County Ap": {
@@ -3993,7 +3979,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1790.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "GA"
         },
         "USA HI Honolulu": {
@@ -4004,7 +3990,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2213.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "HI"
         },
         "USA IA Des Moines": {
@@ -4015,7 +4001,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1895.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "IA"
         },
         "USA ID Boise": {
@@ -4026,7 +4012,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2081.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "ID"
         },
         "USA IL Springfield": {
@@ -4037,7 +4023,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1876.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "IL"
         },
         "USA IN Indianapolis": {
@@ -4048,7 +4034,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1758.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "IN"
         },
         "USA KS Hutchinson Municipal Ap": {
@@ -4059,7 +4045,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2101.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "KS"
         },
         "USA KY Bowling Green Warren Co Ap": {
@@ -4070,7 +4056,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1527.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "KY"
         },
         "USA LA Baton Rouge": {
@@ -4081,7 +4067,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1819.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "LA"
         },
         "USA MA Boston": {
@@ -4092,7 +4078,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1783.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MA"
         },
         "USA MD Baltimore": {
@@ -4103,7 +4089,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1782.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "MD"
         },
         "USA ME Augusta Airport": {
@@ -4114,7 +4100,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1497.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "ME"
         },
         "USA MI Saginaw Tri City Intl Ap": {
@@ -4125,7 +4111,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1678.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MI"
         },
         "USA MN Minneapolis": {
@@ -4136,7 +4122,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1851.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MN"
         },
         "USA MO Kansas City": {
@@ -4147,7 +4133,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1923.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MO"
         },
         "USA MS Jackson": {
@@ -4158,7 +4144,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1881.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "MS"
         },
         "USA MT Great Falls": {
@@ -4169,7 +4155,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1938.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "MT"
         },
         "USA NC Greensboro": {
@@ -4180,7 +4166,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1900.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "NC"
         },
         "USA ND Bismarck": {
@@ -4191,7 +4177,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1971.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "ND"
         },
         "USA NE North Platte": {
@@ -4202,7 +4188,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2113.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "NE"
         },
         "USA NH Concord": {
@@ -4213,7 +4199,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1781.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "NH"
         },
         "USA NJ Atlantic City": {
@@ -4224,7 +4210,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1809.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "NJ"
         },
         "USA NM Albuquerque": {
@@ -4235,7 +4221,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2492.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.71,
           "state": "NM"
         },
         "USA NV Las Vegas": {
@@ -4246,7 +4232,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2546.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.71,
           "state": "NV"
         },
         "USA NY Rochester": {
@@ -4257,7 +4243,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1578.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "NY"
         },
         "USA OH Columbus": {
@@ -4268,7 +4254,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1621.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "OH"
         },
         "USA OK Oklahoma City": {
@@ -4279,7 +4265,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2100.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "OK"
         },
         "USA OR Roseburg Regional Ap": {
@@ -4290,7 +4276,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1714.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "OR"
         },
         "USA PA Lancaster": {
@@ -4301,7 +4287,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1573.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "PA"
         },
         "USA RI Providence": {
@@ -4312,7 +4298,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1787.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "RI"
         },
         "USA SC Greenville": {
@@ -4323,7 +4309,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1917.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "SC"
         },
         "USA SD Pierre": {
@@ -4334,7 +4320,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2049.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "SD"
         },
         "USA TN Nashville": {
@@ -4345,7 +4331,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1827.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "TN"
         },
         "USA TX San Antonio": {
@@ -4356,7 +4342,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2003.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "TX"
         },
         "USA UT Salt Lake City": {
@@ -4367,7 +4353,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2096.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "UT"
         },
         "USA VA Richmond": {
@@ -4378,7 +4364,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1837.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "VA"
         },
         "USA VT Burlington": {
@@ -4389,7 +4375,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1663.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "VT"
         },
         "USA WA Bremerton National": {
@@ -4400,7 +4386,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1492.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "WA"
         },
         "USA WI Madison": {
@@ -4411,7 +4397,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1750.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "WI"
         },
         "USA WV Charleston": {
@@ -4422,7 +4408,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1622.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "WV"
         },
         "USA WY Cheyenne": {
@@ -4433,7 +4419,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2153.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "WY"
         }
       }
@@ -4448,7 +4434,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 938.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "AK"
         },
         "USA AL Montgomery": {
@@ -4459,7 +4445,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1484.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "AL"
         },
         "USA AR Little Rock": {
@@ -4470,7 +4456,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1480.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "AR"
         },
         "USA AZ Phoenix": {
@@ -4481,7 +4467,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1822.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.71,
           "state": "AZ"
         },
         "USA CA Daggett": {
@@ -4492,7 +4478,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1895.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "CA"
         },
         "USA CO Denver Intl Ap": {
@@ -4503,7 +4489,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1594.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "CO"
         },
         "USA CT Hartford": {
@@ -4514,7 +4500,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1316.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "CT"
         },
         "USA DE Dover Afb": {
@@ -4525,7 +4511,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1355.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "DE"
         },
         "USA FL Fort Lauderdale": {
@@ -4536,7 +4522,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1413.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "FL"
         },
         "USA GA Albany Dougherty County Ap": {
@@ -4547,7 +4533,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1411.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "GA"
         },
         "USA HI Honolulu": {
@@ -4558,7 +4544,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1669.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "HI"
         },
         "USA IA Des Moines": {
@@ -4569,7 +4555,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1450.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "IA"
         },
         "USA ID Boise": {
@@ -4580,7 +4566,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1528.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "ID"
         },
         "USA IL Springfield": {
@@ -4591,7 +4577,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1444.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "IL"
         },
         "USA IN Indianapolis": {
@@ -4602,7 +4588,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1388.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "IN"
         },
         "USA KS Hutchinson Municipal Ap": {
@@ -4613,7 +4599,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1574.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "KS"
         },
         "USA KY Bowling Green Warren Co Ap": {
@@ -4624,7 +4610,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1201.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "KY"
         },
         "USA LA Baton Rouge": {
@@ -4635,7 +4621,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1445.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "LA"
         },
         "USA MA Boston": {
@@ -4646,7 +4632,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1398.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MA"
         },
         "USA MD Baltimore": {
@@ -4657,7 +4643,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1393.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "MD"
         },
         "USA ME Augusta Airport": {
@@ -4668,7 +4654,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1171.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "ME"
         },
         "USA MI Saginaw Tri City Intl Ap": {
@@ -4679,7 +4665,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1300.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MI"
         },
         "USA MN Minneapolis": {
@@ -4690,7 +4676,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1425.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MN"
         },
         "USA MO Kansas City": {
@@ -4701,7 +4687,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1480.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MO"
         },
         "USA MS Jackson": {
@@ -4712,7 +4698,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1479.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "MS"
         },
         "USA MT Great Falls": {
@@ -4723,7 +4709,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1454.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "MT"
         },
         "USA NC Greensboro": {
@@ -4734,7 +4720,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1483.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "NC"
         },
         "USA ND Bismarck": {
@@ -4745,7 +4731,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1491.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "ND"
         },
         "USA NE North Platte": {
@@ -4756,7 +4742,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1590.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "NE"
         },
         "USA NH Concord": {
@@ -4767,7 +4753,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1391.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "NH"
         },
         "USA NJ Atlantic City": {
@@ -4778,7 +4764,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1424.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "NJ"
         },
         "USA NM Albuquerque": {
@@ -4789,7 +4775,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1832.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.71,
           "state": "NM"
         },
         "USA NV Las Vegas": {
@@ -4800,7 +4786,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1846.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.71,
           "state": "NV"
         },
         "USA NY Rochester": {
@@ -4811,7 +4797,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1241.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "NY"
         },
         "USA OH Columbus": {
@@ -4822,7 +4808,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1288.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "OH"
         },
         "USA OK Oklahoma City": {
@@ -4833,7 +4819,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1591.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "OK"
         },
         "USA OR Roseburg Regional Ap": {
@@ -4844,7 +4830,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1303.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "OR"
         },
         "USA PA Lancaster": {
@@ -4855,7 +4841,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1244.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "PA"
         },
         "USA RI Providence": {
@@ -4866,7 +4852,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1405.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "RI"
         },
         "USA SC Greenville": {
@@ -4877,7 +4863,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1492.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "SC"
         },
         "USA SD Pierre": {
@@ -4888,7 +4874,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1545.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "SD"
         },
         "USA TN Nashville": {
@@ -4899,7 +4885,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1445.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "TN"
         },
         "USA TX San Antonio": {
@@ -4910,7 +4896,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1569.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "TX"
         },
         "USA UT Salt Lake City": {
@@ -4921,7 +4907,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1564.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "UT"
         },
         "USA VA Richmond": {
@@ -4932,7 +4918,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1440.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "VA"
         },
         "USA VT Burlington": {
@@ -4943,7 +4929,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1308.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "VT"
         },
         "USA WA Bremerton National": {
@@ -4954,7 +4940,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1156.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "WA"
         },
         "USA WI Madison": {
@@ -4965,7 +4951,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1379.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "WI"
         },
         "USA WV Charleston": {
@@ -4976,7 +4962,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1299.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "WV"
         },
         "USA WY Cheyenne": {
@@ -4987,7 +4973,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 17.0,
           "energy_yield": 1606.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "WY"
         }
       },
@@ -5000,7 +4986,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1195.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "AK"
         },
         "USA AL Montgomery": {
@@ -5011,7 +4997,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1866.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "AL"
         },
         "USA AR Little Rock": {
@@ -5022,7 +5008,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1912.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "AR"
         },
         "USA AZ Phoenix": {
@@ -5033,7 +5019,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2471.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.71,
           "state": "AZ"
         },
         "USA CA Daggett": {
@@ -5044,7 +5030,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2647.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "CA"
         },
         "USA CO Denver Intl Ap": {
@@ -5055,7 +5041,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2119.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "CO"
         },
         "USA CT Hartford": {
@@ -5066,7 +5052,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1636.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "CT"
         },
         "USA DE Dover Afb": {
@@ -5077,7 +5063,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1707.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "DE"
         },
         "USA FL Fort Lauderdale": {
@@ -5088,7 +5074,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1777.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "FL"
         },
         "USA GA Albany Dougherty County Ap": {
@@ -5099,7 +5085,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1790.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "GA"
         },
         "USA HI Honolulu": {
@@ -5110,7 +5096,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2213.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "HI"
         },
         "USA IA Des Moines": {
@@ -5121,7 +5107,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1895.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "IA"
         },
         "USA ID Boise": {
@@ -5132,7 +5118,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2081.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "ID"
         },
         "USA IL Springfield": {
@@ -5143,7 +5129,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1876.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "IL"
         },
         "USA IN Indianapolis": {
@@ -5154,7 +5140,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1758.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "IN"
         },
         "USA KS Hutchinson Municipal Ap": {
@@ -5165,7 +5151,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2101.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "KS"
         },
         "USA KY Bowling Green Warren Co Ap": {
@@ -5176,7 +5162,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1527.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "KY"
         },
         "USA LA Baton Rouge": {
@@ -5187,7 +5173,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1819.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "LA"
         },
         "USA MA Boston": {
@@ -5198,7 +5184,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1783.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MA"
         },
         "USA MD Baltimore": {
@@ -5209,7 +5195,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1782.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "MD"
         },
         "USA ME Augusta Airport": {
@@ -5220,7 +5206,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1497.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "ME"
         },
         "USA MI Saginaw Tri City Intl Ap": {
@@ -5231,7 +5217,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1678.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MI"
         },
         "USA MN Minneapolis": {
@@ -5242,7 +5228,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1851.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MN"
         },
         "USA MO Kansas City": {
@@ -5253,7 +5239,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1923.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "MO"
         },
         "USA MS Jackson": {
@@ -5264,7 +5250,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1881.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "MS"
         },
         "USA MT Great Falls": {
@@ -5275,7 +5261,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1938.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "MT"
         },
         "USA NC Greensboro": {
@@ -5286,7 +5272,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1900.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "NC"
         },
         "USA ND Bismarck": {
@@ -5297,7 +5283,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1971.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "ND"
         },
         "USA NE North Platte": {
@@ -5308,7 +5294,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2113.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "NE"
         },
         "USA NH Concord": {
@@ -5319,7 +5305,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1781.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "NH"
         },
         "USA NJ Atlantic City": {
@@ -5330,7 +5316,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1809.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "NJ"
         },
         "USA NM Albuquerque": {
@@ -5341,7 +5327,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2492.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.71,
           "state": "NM"
         },
         "USA NV Las Vegas": {
@@ -5352,7 +5338,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2546.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.71,
           "state": "NV"
         },
         "USA NY Rochester": {
@@ -5363,7 +5349,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1578.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "NY"
         },
         "USA OH Columbus": {
@@ -5374,7 +5360,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1621.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "OH"
         },
         "USA OK Oklahoma City": {
@@ -5385,7 +5371,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2100.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "OK"
         },
         "USA OR Roseburg Regional Ap": {
@@ -5396,7 +5382,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1714.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "OR"
         },
         "USA PA Lancaster": {
@@ -5407,7 +5393,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1573.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "PA"
         },
         "USA RI Providence": {
@@ -5418,7 +5404,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1787.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "RI"
         },
         "USA SC Greenville": {
@@ -5429,7 +5415,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1917.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "SC"
         },
         "USA SD Pierre": {
@@ -5440,7 +5426,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2049.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "SD"
         },
         "USA TN Nashville": {
@@ -5451,7 +5437,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1827.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "TN"
         },
         "USA TX San Antonio": {
@@ -5462,7 +5448,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2003.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "TX"
         },
         "USA UT Salt Lake City": {
@@ -5473,7 +5459,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2096.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "UT"
         },
         "USA VA Richmond": {
@@ -5484,7 +5470,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1837.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "VA"
         },
         "USA VT Burlington": {
@@ -5495,7 +5481,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1663.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "VT"
         },
         "USA WA Bremerton National": {
@@ -5506,7 +5492,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1492.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "WA"
         },
         "USA WI Madison": {
@@ -5517,7 +5503,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1750.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.35,
           "state": "WI"
         },
         "USA WV Charleston": {
@@ -5528,7 +5514,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 1622.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.6,
           "state": "WV"
         },
         "USA WY Cheyenne": {
@@ -5539,7 +5525,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 17.0,
           "energy_yield": 2153.0,
-          "degradation_rate": 0.65,
+          "degradation_rate": 0.42,
           "state": "WY"
         }
       }
@@ -5556,7 +5542,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 959.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "AK"
         },
         "USA AL Montgomery": {
@@ -5567,7 +5553,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1535.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "AL"
         },
         "USA AR Little Rock": {
@@ -5578,7 +5564,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1526.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "AR"
         },
         "USA AZ Phoenix": {
@@ -5589,7 +5575,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1875.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.91,
           "state": "AZ"
         },
         "USA CA Daggett": {
@@ -5600,7 +5586,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1940.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "CA"
         },
         "USA CO Denver Intl Ap": {
@@ -5611,7 +5597,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1630.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "CO"
         },
         "USA CT Hartford": {
@@ -5622,7 +5608,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1350.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "CT"
         },
         "USA DE Dover Afb": {
@@ -5633,7 +5619,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1392.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "DE"
         },
         "USA FL Fort Lauderdale": {
@@ -5644,7 +5630,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1471.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "FL"
         },
         "USA GA Albany Dougherty County Ap": {
@@ -5655,7 +5641,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1461.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "GA"
         },
         "USA HI Honolulu": {
@@ -5666,7 +5652,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1728.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "HI"
         },
         "USA IA Des Moines": {
@@ -5677,7 +5663,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1484.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "IA"
         },
         "USA ID Boise": {
@@ -5688,7 +5674,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1560.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "ID"
         },
         "USA IL Springfield": {
@@ -5699,7 +5685,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1480.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "IL"
         },
         "USA IN Indianapolis": {
@@ -5710,7 +5696,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1424.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "IN"
         },
         "USA KS Hutchinson Municipal Ap": {
@@ -5721,7 +5707,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1611.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "KS"
         },
         "USA KY Bowling Green Warren Co Ap": {
@@ -5732,7 +5718,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1242.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "KY"
         },
         "USA LA Baton Rouge": {
@@ -5743,7 +5729,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1499.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "LA"
         },
         "USA MA Boston": {
@@ -5754,7 +5740,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1428.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "MA"
         },
         "USA MD Baltimore": {
@@ -5765,7 +5751,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1430.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "MD"
         },
         "USA ME Augusta Airport": {
@@ -5776,7 +5762,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1198.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "ME"
         },
         "USA MI Saginaw Tri City Intl Ap": {
@@ -5787,7 +5773,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1329.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "MI"
         },
         "USA MN Minneapolis": {
@@ -5798,7 +5784,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1455.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "MN"
         },
         "USA MO Kansas City": {
@@ -5809,7 +5795,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1517.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "MO"
         },
         "USA MS Jackson": {
@@ -5820,7 +5806,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1529.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "MS"
         },
         "USA MT Great Falls": {
@@ -5831,7 +5817,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1482.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "MT"
         },
         "USA NC Greensboro": {
@@ -5842,7 +5828,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1524.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "NC"
         },
         "USA ND Bismarck": {
@@ -5853,7 +5839,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1519.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "ND"
         },
         "USA NE North Platte": {
@@ -5864,7 +5850,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1624.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "NE"
         },
         "USA NH Concord": {
@@ -5875,7 +5861,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1424.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "NH"
         },
         "USA NJ Atlantic City": {
@@ -5886,7 +5872,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1461.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "NJ"
         },
         "USA NM Albuquerque": {
@@ -5897,7 +5883,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1868.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.91,
           "state": "NM"
         },
         "USA NV Las Vegas": {
@@ -5908,7 +5894,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1893.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.91,
           "state": "NV"
         },
         "USA NY Rochester": {
@@ -5919,7 +5905,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1274.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "NY"
         },
         "USA OH Columbus": {
@@ -5930,7 +5916,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1324.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "OH"
         },
         "USA OK Oklahoma City": {
@@ -5941,7 +5927,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1632.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "OK"
         },
         "USA OR Roseburg Regional Ap": {
@@ -5952,7 +5938,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1339.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "OR"
         },
         "USA PA Lancaster": {
@@ -5963,7 +5949,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1280.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "PA"
         },
         "USA RI Providence": {
@@ -5974,7 +5960,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1436.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "RI"
         },
         "USA SC Greenville": {
@@ -5985,7 +5971,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1537.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "SC"
         },
         "USA SD Pierre": {
@@ -5996,7 +5982,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1576.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "SD"
         },
         "USA TN Nashville": {
@@ -6007,7 +5993,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1489.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "TN"
         },
         "USA TX San Antonio": {
@@ -6018,7 +6004,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1620.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "TX"
         },
         "USA UT Salt Lake City": {
@@ -6029,7 +6015,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1600.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "UT"
         },
         "USA VA Richmond": {
@@ -6040,7 +6026,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1482.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "VA"
         },
         "USA VT Burlington": {
@@ -6051,7 +6037,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1337.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "VT"
         },
         "USA WA Bremerton National": {
@@ -6062,7 +6048,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1188.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "WA"
         },
         "USA WI Madison": {
@@ -6073,7 +6059,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1409.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "WI"
         },
         "USA WV Charleston": {
@@ -6084,7 +6070,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1339.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "WV"
         },
         "USA WY Cheyenne": {
@@ -6095,7 +6081,7 @@ var preset_tree = {
           "cost_om": 15.4,
           "efficiency": 16.0,
           "energy_yield": 1635.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "WY"
         }
       },
@@ -6108,7 +6094,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1220.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "AK"
         },
         "USA AL Montgomery": {
@@ -6119,7 +6105,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1932.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "AL"
         },
         "USA AR Little Rock": {
@@ -6130,7 +6116,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1973.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "AR"
         },
         "USA AZ Phoenix": {
@@ -6141,7 +6127,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2558.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.91,
           "state": "AZ"
         },
         "USA CA Daggett": {
@@ -6152,7 +6138,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2717.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "CA"
         },
         "USA CO Denver Intl Ap": {
@@ -6163,7 +6149,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2169.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "CO"
         },
         "USA CT Hartford": {
@@ -6174,7 +6160,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1678.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "CT"
         },
         "USA DE Dover Afb": {
@@ -6185,7 +6171,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1753.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "DE"
         },
         "USA FL Fort Lauderdale": {
@@ -6196,7 +6182,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1850.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "FL"
         },
         "USA GA Albany Dougherty County Ap": {
@@ -6207,7 +6193,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1855.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "GA"
         },
         "USA HI Honolulu": {
@@ -6218,7 +6204,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2293.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "HI"
         },
         "USA IA Des Moines": {
@@ -6229,7 +6215,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1938.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "IA"
         },
         "USA ID Boise": {
@@ -6240,7 +6226,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2125.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "ID"
         },
         "USA IL Springfield": {
@@ -6251,7 +6237,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1921.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "IL"
         },
         "USA IN Indianapolis": {
@@ -6262,7 +6248,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1803.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "IN"
         },
         "USA KS Hutchinson Municipal Ap": {
@@ -6273,7 +6259,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2151.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "KS"
         },
         "USA KY Bowling Green Warren Co Ap": {
@@ -6284,7 +6270,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1579.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "KY"
         },
         "USA LA Baton Rouge": {
@@ -6295,7 +6281,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1887.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "LA"
         },
         "USA MA Boston": {
@@ -6306,7 +6292,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1819.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "MA"
         },
         "USA MD Baltimore": {
@@ -6317,7 +6303,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1827.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "MD"
         },
         "USA ME Augusta Airport": {
@@ -6328,7 +6314,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1529.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "ME"
         },
         "USA MI Saginaw Tri City Intl Ap": {
@@ -6339,7 +6325,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1712.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "MI"
         },
         "USA MN Minneapolis": {
@@ -6350,7 +6336,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1887.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "MN"
         },
         "USA MO Kansas City": {
@@ -6361,7 +6347,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1971.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "MO"
         },
         "USA MS Jackson": {
@@ -6372,7 +6358,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1946.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "MS"
         },
         "USA MT Great Falls": {
@@ -6383,7 +6369,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1973.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "MT"
         },
         "USA NC Greensboro": {
@@ -6394,7 +6380,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1953.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "NC"
         },
         "USA ND Bismarck": {
@@ -6405,7 +6391,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2008.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "ND"
         },
         "USA NE North Platte": {
@@ -6416,7 +6402,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2157.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "NE"
         },
         "USA NH Concord": {
@@ -6427,7 +6413,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1822.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "NH"
         },
         "USA NJ Atlantic City": {
@@ -6438,7 +6424,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1854.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "NJ"
         },
         "USA NM Albuquerque": {
@@ -6449,7 +6435,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2541.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.91,
           "state": "NM"
         },
         "USA NV Las Vegas": {
@@ -6460,7 +6446,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2618.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.91,
           "state": "NV"
         },
         "USA NY Rochester": {
@@ -6471,7 +6457,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1619.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "NY"
         },
         "USA OH Columbus": {
@@ -6482,7 +6468,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1666.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "OH"
         },
         "USA OK Oklahoma City": {
@@ -6493,7 +6479,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2153.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "OK"
         },
         "USA OR Roseburg Regional Ap": {
@@ -6504,7 +6490,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1769.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "OR"
         },
         "USA PA Lancaster": {
@@ -6515,7 +6501,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1616.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "PA"
         },
         "USA RI Providence": {
@@ -6526,7 +6512,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1825.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "RI"
         },
         "USA SC Greenville": {
@@ -6537,7 +6523,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1974.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "SC"
         },
         "USA SD Pierre": {
@@ -6548,7 +6534,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2091.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "SD"
         },
         "USA TN Nashville": {
@@ -6559,7 +6545,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1883.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "TN"
         },
         "USA TX San Antonio": {
@@ -6570,7 +6556,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2072.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "TX"
         },
         "USA UT Salt Lake City": {
@@ -6581,7 +6567,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2146.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "UT"
         },
         "USA VA Richmond": {
@@ -6592,7 +6578,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1889.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "VA"
         },
         "USA VT Burlington": {
@@ -6603,7 +6589,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1698.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "VT"
         },
         "USA WA Bremerton National": {
@@ -6614,7 +6600,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1535.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "WA"
         },
         "USA WI Madison": {
@@ -6625,7 +6611,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1787.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.45,
           "state": "WI"
         },
         "USA WV Charleston": {
@@ -6636,7 +6622,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 1672.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.77,
           "state": "WV"
         },
         "USA WY Cheyenne": {
@@ -6647,7 +6633,7 @@ var preset_tree = {
           "cost_om": 18.5,
           "efficiency": 16.0,
           "energy_yield": 2188.0,
-          "degradation_rate": 0.4,
+          "degradation_rate": 0.54,
           "state": "WY"
         }
       }
