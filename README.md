@@ -11,5 +11,6 @@ In the /build-presets/ folder, the MakePresetTree.py file builds a javascript fi
  - module efficiency 
  - energy yield 
  - degradation rate
+ 
 The values for efficiency and all costs listed above are defined in the python file. The sources for these values are cited in https://www.nrel.gov/pv/lcoe-calculator/documentation.html. Energy yield and degradation rate values are populated from an Excel sheet ('Energy-yield_deg-rate.xlsx') which contains data for all feasible combinations of different hardware configurations (cell material, module packaging, system type) and locations. The sources for these values are also cited in the documentation file.  
 
