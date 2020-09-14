@@ -26,10 +26,10 @@ system_types = {
 # %% Preset values for module parameters: costs are in USD per square meter, efficiency reported as a percentage
 module_details = {
     'cost_front_layer': 4.06,
-    'cost_cell': {'mono-Si': 34.4, 'multi-Si': 31.45, 'CdTe': 30, 'perovskite':10},
+    'cost_cell': {'mono-Si': 34.4, 'multi-Si': 31.45, 'CdTe': 30},
     'cost_back_layer': {'glass-polymer backsheet': 2.32, 'glass-glass': 3},
     'cost_noncell': 18.,
-    'efficiency': {'mono-Si': 19.0, 'multi-Si': 17.0, 'CdTe': 16.0, 'perovskite':16.0},
+    'efficiency': {'mono-Si': 19.0, 'multi-Si': 17.0, 'CdTe': 16.0},
 }
 
 
