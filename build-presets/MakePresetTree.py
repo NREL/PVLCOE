@@ -78,9 +78,9 @@ for cell_technology, package_type, system_type, location in system_yield:
 
 
 # %% Save as javascript files
-with open('preset_tree.min.js', 'w') as file:
+with open('../js/preset_tree.min.js', 'w') as file:
     file.write('var preset_tree = ' + json.dumps(preset_tree, separators=(',', ':')))
 # Create preset_tree.js if you want a version that is more legible to humans    
-# with open('preset_tree.js', 'w') as file:
+# with open('../js/preset_tree.js', 'w') as file:
 #     file.write('var preset_tree = ' + json.dumps(preset_tree, indent=2, separators=(',', ': ')))
 
