@@ -236,8 +236,13 @@ function setup_preset_location_yield() {
     preset_location_yield.value = selected
   }
 }
+
 // Set up the presets for the first time
+preset_cell_technology.value = 'mono-Si'
 setup_preset_package_type()
+preset_package_type.value = 'glass-polymer backsheet'
+preset_system_type.value = 'fixed tilt, utility scale'
+preset_location_yield.value = 'USA MO Kansas City'
 
 // Set up the presets anytime a menu selection is made
 preset_cell_technology.addEventListener('input', function(){
@@ -249,11 +254,6 @@ preset_package_type.addEventListener('input', function(){
 preset_system_type.addEventListener('input', function(){
   setup_preset_location_yield()
 })
-
-preset_cell_technology.value = 'mono-Si'
-preset_package_type.value = 'glass-polymer backsheet'
-preset_system_type.value = 'fixed tilt, utility scale'
-preset_location_yield.value = 'USA MO Kansas City'
 
 function preset_set(){
   var preset = preset_tree[preset_cell_technology.value][preset_package_type.value][preset_system_type.value][preset_location_yield.value]
