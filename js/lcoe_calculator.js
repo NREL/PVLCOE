@@ -169,6 +169,241 @@ slider_setup(
   {'start': 0, 'min': 0, 'max': 10, 'step': 0.01, 'digits': 2}
 )
 
+function reset_degradation() {
+  var outputs = calculate()
+  var cost_baseline = outputs[0]
+  var energy_baseline = outputs[1]
+  var energy_proposed = outputs[3]
+  var energy_yield = parseFloat($('#proposed_energy_yield_text').val())/1000
+  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+  var year = $('#proposed_service_life_text').val()
+
+  var wanted = energy_baseline/energy_yield
+
+  var best_deg = 0
+  var difference = 100000000
+
+  for (var deg = 0; deg < 0.05; deg += 0.0001){
+    var update = (1 - Math.pow((1-deg)/(1+common_discount_rate), year)) / (deg + common_discount_rate)
+    
+    var curr = Math.abs(wanted - update)
+    if (curr < difference) {
+       difference = curr
+       best_deg = deg
+    }
+  }
+  new_value = best_deg*100
+  $('#proposed_degradation_rate_text').val((new_value).toFixed(2))
+  var slider = document.getElementById('proposed_degradation_rate');
+
+  var max = slider.noUiSlider.options.range.max
+  var min = slider.noUiSlider.options.range.min
+  if (new_value >= max) {
+    slider.noUiSlider.set(max);
+  } else if (new_value <= min) {
+    slider.noUiSlider.set(min);
+  } else {
+    slider.noUiSlider.set(new_value);
+  }
+  calculate()
+}
+
+function reset_OM() {
+  var init_cost = initial_cost('proposed')
+  var outputs = calculate()
+  var cost_baseline = outputs[0]
+  var energy_baseline = outputs[1]
+  var energy_proposed = outputs[3]
+  var lcoe_baseline = cost_baseline/energy_baseline
+  var proposed_service_life = parseFloat($('#proposed_service_life_text').val())
+  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+
+  var nonzero_yrs = lcoe_baseline * energy_proposed - init_cost
+
+  var new_value = nonzero_yrs/((1 - 1/Math.pow(1 + common_discount_rate, proposed_service_life))/common_discount_rate)
+
+  if (new_value == 0) {
+    new_value = (0.00).toFixed(2) // otherwise will display -0.00
+  } else {
+    new_value = new_value
+  }
+  new_value *= 1000
+  $('#proposed_cost_om_text').val((new_value).toFixed(2))
+  var slider = document.getElementById('proposed_cost_om');
+
+  var max = slider.noUiSlider.options.range.max
+  var min = slider.noUiSlider.options.range.min
+  if (new_value >= max) {
+    slider.noUiSlider.set(max);
+  } else if (new_value <= min) {
+    slider.noUiSlider.set(min);
+  } else {
+    slider.noUiSlider.set(new_value);
+  }
+  calculate()
+
+}
+
+function reset_year() {
+  /* ADJUST SLIDER */
+  var outputs = calculate()
+  var cost_baseline = outputs[0]
+  var energy_baseline = outputs[1]
+  var lcoe_baseline = cost_baseline/energy_baseline
+  var om_cost = parseFloat($('#proposed_cost_om_text').val())/1000
+  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+  var degradation_rate = parseFloat($('#proposed_degradation_rate_text').val())/100.0
+  var energy_yield = parseFloat($('#proposed_energy_yield_text').val())/1000
+
+  cost_val = initial_cost('proposed') + om_cost * ((1 - 1/Math.pow(1 + common_discount_rate, 25))/common_discount_rate)
+  energy_val = energy_yield * (1-Math.pow((1-degradation_rate)/(1+common_discount_rate), 25)) / (degradation_rate + common_discount_rate)
+
+  var best_year = 1
+  var difference = 10000000
+
+  for (var year = 1; year <= 50; year++) {
+    cost_val = initial_cost('proposed') + om_cost * ((1 - 1/Math.pow(1 + common_discount_rate, year))/common_discount_rate)
+    energy_val = energy_yield * (1-Math.pow((1-degradation_rate)/(1+common_discount_rate), year)) / (degradation_rate + common_discount_rate)
+
+    var curr = Math.abs(lcoe_baseline - cost_val/energy_val)
+    if (curr < difference) {
+         difference = curr
+	 best_year = year
+    }
+
+    
+  }
+  new_value = best_year
+  $('#proposed_service_life_text').val(best_year)
+  var slider = document.getElementById('proposed_service_life');
+
+  var max = slider.noUiSlider.options.range.max
+  var min = slider.noUiSlider.options.range.min
+  if (new_value >= max) {
+    slider.noUiSlider.set(max);
+  } else if (new_value <= min) {
+    slider.noUiSlider.set(min);
+  } else {
+    slider.noUiSlider.set(new_value);
+  }
+
+}
+
+function match_baseline_LCOE(slider_name, number_name) {
+  // ALSO UPDATE MODULE COST AND BASELINE COST AT BOTTOM
+  var slider = document.getElementById(slider_name);
+  var number = document.getElementById(number_name);
+  var init_cost = initial_cost('proposed')
+
+  var cost_bos_power = parseFloat($('#proposed_cost_bos_power_text').val())
+  var cost_bos_area = parseFloat($('#proposed_cost_bos_area_text').val())
+  var efficiency = parseFloat($('#proposed_efficiency_text').val())
+
+  var module_markup = 1.15 // maybe this should be a constant at top of file??
+
+  var cost_front_layer = parseFloat($('#proposed_cost_front_layer_text').val())
+  var cost_cell = parseFloat($('#proposed_cost_cell_text').val())
+  var cost_back_layer = parseFloat($('#proposed_cost_back_layer_text').val())
+  var cost_noncell = parseFloat($('#proposed_cost_noncell_text').val())
+  var cost_extra = parseFloat($('#proposed_cost_extra_text').val())
+
+  var outputs = calculate()
+  var cost_baseline = outputs[0]
+  var energy_baseline = outputs[1]
+  var cost_proposed = outputs[2]
+  var later_cost = cost_proposed - init_cost
+  var energy_proposed = outputs[3]
+
+  var lcoe_baseline = cost_baseline/energy_baseline
+  
+  if (slider_name == 'proposed_cost_front_layer') {
+    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+    new_value = ((wanted_cost/module_markup)*(10.0*efficiency) - cost_cell - cost_back_layer - cost_noncell - cost_extra).toFixed(2)
+  } else if (slider_name == 'proposed_cost_cell') {
+    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+    new_value = ((wanted_cost/module_markup)*(10.0*efficiency)- cost_front_layer - cost_back_layer - cost_noncell - cost_extra).toFixed(2)
+  } else if (slider_name == 'proposed_cost_back_layer') {
+    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+    new_value = ((wanted_cost/module_markup)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_noncell - cost_extra).toFixed(2)
+  } else if (slider_name == 'proposed_cost_noncell') {
+    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+    new_value = ((wanted_cost/module_markup)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_extra).toFixed(2)
+  } else if (slider_name == 'proposed_cost_extra') {
+    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+    new_value = ((wanted_cost/module_markup)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_noncell).toFixed(2)
+  } else if (slider_name == 'proposed_cost_bos_power') {
+    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - (module_markup * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency))
+    new_value = wanted_cost - cost_bos_area/(10.0*efficiency)
+  } else if (slider_name == 'proposed_cost_bos_area') {
+    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - (module_markup * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency))
+    new_value = (wanted_cost - cost_bos_power)*(10.0*efficiency)
+  } else if (slider_name == 'proposed_efficiency') {
+    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost 
+    new_value = (cost_bos_area + module_markup * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)) / (10 * (wanted_cost-cost_bos_power))
+  }
+
+  // necessary to recalculate instead of reading from HTML due to rounding issues
+
+  if (new_value == 0) {
+    number.value = (0.00).toFixed(2) // otherwise will display -0.00
+  } else if (slider_name == 'proposed_efficiency') {
+    number.value = new_value
+  } else {
+    number.value = new_value
+  }
+  
+  var max = slider.noUiSlider.options.range.max
+  var min = slider.noUiSlider.options.range.min
+  if (new_value >= max) {
+    slider.noUiSlider.set(max);
+  } else if (new_value <= min) {
+    slider.noUiSlider.set(min);
+  } else {
+    slider.noUiSlider.set(new_value);
+  }
+
+  calculate()
+  
+}
+
+
+function reset_energy_yield() {
+  / * CHECK ZERO AND NEGATIVE EDGE CASES * /
+  var outputs = calculate()
+  var cost_baseline = outputs[0]
+  var energy_baseline = outputs[1]
+  var cost_proposed = outputs[2]
+  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+
+  var lcoe_baseline = cost_baseline/energy_baseline
+  var energy_wanted = cost_proposed/lcoe_baseline
+  console.log('energy wanted: ' + energy_wanted)
+  degradation_rate = parseFloat($('#proposed_degradation_rate_text').val())/100.0
+  var year = parseFloat($('#proposed_service_life_text').val())
+  
+ 
+  var new_value = energy_wanted / ((Math.pow(1-degradation_rate, year) / Math.pow(1+common_discount_rate, year+1) - (1/(1+common_discount_rate))) / ((1-degradation_rate)/(1+common_discount_rate) - 1)) * 1000
+
+  console.log('new yield: ' + energy_yield)
+  $('#proposed_energy_yield_text').val(new_value.toFixed(0))
+
+  var slider = document.getElementById('proposed_energy_yield');
+
+  var max = slider.noUiSlider.options.range.max
+  var min = slider.noUiSlider.options.range.min
+  if (new_value >= max) {
+    slider.noUiSlider.set(max);
+  } else if (new_value <= min) {
+    slider.noUiSlider.set(min);
+  } else {
+    slider.noUiSlider.set(new_value);
+  }
+
+  calculate()
+
+  
+}
+
 // Set up the baseline Preset model
 var preset_cell_technology = document.getElementById('cell_technology')
 var preset_location_yield = document.getElementById('location_yield')
@@ -293,10 +528,12 @@ function preset_set(){
   $('#preset_modal').modal('hide')
 }
 
+
 preset_set()
 copy_from_baseline()
 
 function copy_from_baseline(){
+  // console.log('hello')
   // Set the text input fields
   $('#proposed_cost_front_layer_text').val($('#baseline_cost_front_layer_text').val())
   $('#proposed_cost_cell_text').val($('#baseline_cost_cell_text').val())
@@ -365,6 +602,7 @@ function initial_cost(key) {
   }
   var module_markup = 1.15
   var cost_module = module_markup * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency)
+  // console.log('correct cost_module: ' + cost_module)
 
   // Update the cost per watt results
   if (key=='baseline') {
@@ -428,6 +666,8 @@ function energy(key, year) {
 }
 
 function calculate() {
+  // console.log('function')
+  // console.log('inside')
   // Read the UI elements into variables
   var baseline_service_life = parseFloat($('#baseline_service_life_text').val())
   var proposed_service_life = parseFloat($('#proposed_service_life_text').val())
@@ -444,16 +684,42 @@ function calculate() {
     energy_baseline += energy('baseline', year)/Math.pow(1 + common_discount_rate, year)
   }
   var lcoe_baseline = cost_baseline/energy_baseline
+  // console.log('calculate baseline: ' + lcoe_baseline)
 
   var cost_proposed = 0.0
   var energy_proposed = 0.0
+  var mine = 0.0
   for (var year = 0; year <= proposed_service_life; year++) {
+    //console.log('here')
     cost_proposed += cost('proposed', year)/Math.pow(1 + common_discount_rate, year)
+    temp = energy('proposed', year)
+    // console.log('temp ', year, temp)
     energy_proposed += energy('proposed', year)/Math.pow(1 + common_discount_rate, year)
+    // console.log('good: ', year, energy_proposed)
+
+
+    energy_yield = parseFloat($('#proposed_energy_yield_text').val())/1000.0
+    degradation_rate = parseFloat($('#proposed_degradation_rate_text').val())/100.0
+    mytemp = energy_yield*Math.pow(1-degradation_rate, year - 1)
+    /* console.log('mytemp: ', year, mytemp)
+    if (year > 0) {
+        mine += energy_yield*Math.pow(1-degradation_rate, year - 1) / Math.pow((1+common_discount_rate), year)
+    }
+   
+    console.log('mine: ', year, mine)
+    if (year > 0) {
+       myformula = energy_yield * (Math.pow(1-degradation_rate, year) / Math.pow(1+common_discount_rate, year+1) - (1/(1+common_discount_rate))) / ((1-degradation_rate)/(1+common_discount_rate) - 1)
+       console.log('myformula: ', myformula)
+
+    } */
+  
   }
   var lcoe_proposed = cost_proposed/energy_proposed
 
   // Put the final answer into the little pills in the Results section
   document.getElementById('lcoe_baseline').innerHTML = lcoe_baseline.toFixed(4)
   document.getElementById('lcoe_proposed').innerHTML = lcoe_proposed.toFixed(4)
+
+  // console.log('calculate: ', [cost_baseline, energy_baseline, cost_proposed, energy_proposed])
+  return [cost_baseline, energy_baseline, cost_proposed, energy_proposed]
 }

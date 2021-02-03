@@ -31,7 +31,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       <p>For more details, please <a href='lcoe_calculator_documentation.html' target='_blank'>consult the documentation</a>. You may also be interested in <a href='lcoe_calculator_documentation.html#seealso' target='_blank'>other tools</a> for calculating cost and performance for renewable energy.</p>
       <h2>Inputs</h2>
       <div class='alert alert-dismissible alert-info' role='alert'>
-        Use the <strong>presets</strong> button (below) to choose a different cell technology, system type, or location. Use the <strong>copy from baseline button</strong> (below) to make the <strong>proposed</strong> inputs match the <strong>baseline</strong> inputs.
+        <p text /p>
         <button type='button' class='close' data-dismiss='alert'>
           <span>&times;</span>
         </button>
@@ -44,8 +44,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                 Presets
               </button>
             </h3>
+	    
             <div class='card-body'>
+	      
               <div class='modal' id='preset_modal' tabindex='-1' role='dialog'>
+		
                 <div class='modal-dialog' role='document'>
                   <div class='modal-content'>
                     <div class='modal-header'>
@@ -86,8 +89,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                       <button type='button' class='btn btn-primary' onclick=preset_set()>Use this preset</button>
                     </div>
                   </div>
-                </div>
-              </div>
+                </div> 
+              </div>  
               <h4>Cost</h4>
               <label for='baseline_cost_front_layer_text' class='h5'>Front layer cost (USD/m<sup>2</sup>)</label>
               <!-- Each slider goes in a sliderrow, which arranges the text box and slider -->
@@ -219,6 +222,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               <label for='proposed_cost_front_layer_text' class='h5'>Front layer cost (USD/m<sup>2</sup>)</label>
               <!-- Each slider goes in a sliderrow, which arranges the text box and slider -->
               <div class='row align-items-center sliderrow'>
+		<button id = "matchButton1" type="button" class="btn" onclick="match_baseline_LCOE('proposed_cost_front_layer', 'proposed_cost_front_layer_text')">Basic</button>
                 <div class='col slidertext'>
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <input id='proposed_cost_front_layer_text' type='number' class='form-control' step='0.01' />
@@ -230,6 +234,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               </div>
               <label for='proposed_cost_cell_text' class='h5'>Cell cost (USD/m<sup>2</sup>)</label>
               <div class='row align-items-center sliderrow'>
+		<button id = "matchButton2" type="button" class="btn" onclick="match_baseline_LCOE('proposed_cost_cell', 'proposed_cost_cell_text')">Basic</button>
                 <div class='col slidertext'>
                   <input id='proposed_cost_cell_text' type='number' class='form-control' step='0.01' />
                 </div>
@@ -239,6 +244,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               </div>
               <label for='proposed_cost_back_layer_text' class='h5'>Back layer cost (USD/m<sup>2</sup>)</label>
               <div class='row align-items-center sliderrow'>
+		<button id = "matchButton3" type="button" class="btn" onclick="match_baseline_LCOE('proposed_cost_back_layer', 'proposed_cost_back_layer_text')">Basic</button>
                 <div class='col slidertext'>
                   <input id='proposed_cost_back_layer_text' type='number' class='form-control' step='0.01' />
                 </div>
@@ -248,6 +254,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               </div>
               <label for='proposed_cost_noncell_text' class='h5'>Non-cell module cost (USD/m<sup>2</sup>)</label>
               <div class='row align-items-center sliderrow'>
+		<button id = "matchButton4" type="button" class="btn" onclick="match_baseline_LCOE('proposed_cost_noncell', 'proposed_cost_noncell_text')">Basic</button>
                 <div class='col slidertext'>
                   <input id='proposed_cost_noncell_text' type='number' class='form-control' step='0.01' />
                 </div>
@@ -257,6 +264,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               </div>
               <label for='proposed_cost_extra_text' class='h5'>Extra component cost (USD/m<sup>2</sup>)</label>
               <div class='row align-items-center sliderrow'>
+		<button id = "matchButton5" type="button" class="btn" onclick="match_baseline_LCOE('proposed_cost_extra', 'proposed_cost_extra_text')">Basic</button>
                 <div class='col slidertext'>
                   <input id='proposed_cost_extra_text' type='number' class='form-control' step='0.01' />
                 </div>
@@ -266,6 +274,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               </div>
               <label for='proposed_cost_om_text' class='h5'><abbr title='operations and maintenance'>O&amp;M</abbr> cost (USD/kW<sub>DC</sub>/year)</label>
               <div class='row align-items-center sliderrow'>
+		<button id = "matchButton6" type="button" class="btn" onclick="reset_OM()">Basic</button>
                 <div class='col slidertext'>
                   <input id='proposed_cost_om_text' type='number' class='form-control' step='0.01' />
                 </div>
@@ -275,6 +284,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               </div>
               <label for='proposed_cost_bos_power_text' class='h5'><abbr title='balance of system'>BOS</abbr> cost, power-scaling (USD/W)</label>
               <div class='row align-items-center sliderrow'>
+		<button id = "matchButton7" type="button" class="btn" onclick="match_baseline_LCOE('proposed_cost_bos_power', 'proposed_cost_bos_power_text')">Basic</button>
                 <div class='col slidertext'>
                   <input id='proposed_cost_bos_power_text' type='number' class='form-control' step='0.01' />
                 </div>
@@ -284,6 +294,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               </div>
               <label for='proposed_cost_bos_area_text' class='h5'><abbr title='balance of system'>BOS</abbr> cost, area-scaling (USD/m<sup>2</sup>)</label>
               <div class='row align-items-center sliderrow'>
+		<button id = "matchButton8" type="button" class="btn" onclick="match_baseline_LCOE('proposed_cost_bos_area', 'proposed_cost_bos_area_text')">Basic</button>
                 <div class='col slidertext'>
                   <input id='proposed_cost_bos_area_text' type='number' class='form-control' step='0.01' />
                 </div>
@@ -295,6 +306,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               <h4>Performance</h4>
               <label for='proposed_efficiency_text' class='h5'>Efficiency (%)</label>
               <div class='row align-items-center sliderrow'>
+		<button id = "matchButton8" type="button" class="btn" onclick="match_baseline_LCOE('proposed_efficiency', 'proposed_efficiency_text')">Basic</button>
                 <div class='col slidertext'>
                   <input id='proposed_efficiency_text' type='number' class='form-control' step='0.01' />
                 </div>
@@ -304,6 +316,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               </div>
               <label for='proposed_energy_yield_text' class='h5'>Energy yield (kWh/kW<sub>DC</sub>)</label>
               <div class='row align-items-center sliderrow'>
+		<button id = "matchButton9" type="button" class="btn" onclick="reset_energy_yield()">Basic</button>
                 <div class='col slidertext'>
                   <input id='proposed_energy_yield_text' type='number' class='form-control' step='1' />
                 </div>
@@ -315,6 +328,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               <h4>Reliability</h4>
               <label for='proposed_degradation_rate_text' class='h5'>System degradation rate (%/year)</label>
               <div class='row align-items-center sliderrow'>
+		<button id = "matchButton12" type="button" class="btn" onclick="reset_degradation()">Basic</button>
                 <div class='col slidertext'>
                   <input id='proposed_degradation_rate_text' type='number' class='form-control' step='0.01' />
                 </div>
@@ -324,6 +338,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               </div>
               <label for='proposed_service_life_text' class='h5'>Service life (years)</label>
               <div class='row align-items-center sliderrow'>
+		<button id = "matchButton10" type="button" class="btn" onclick="reset_year()">Basic</button>
                 <div class='col slidertext'>
                   <input id='proposed_service_life_text' type='number' class='form-control' step='1' />
                 </div>
