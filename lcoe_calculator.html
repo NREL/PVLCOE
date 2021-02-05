@@ -31,24 +31,31 @@
       <h2>Inputs</h2>
       <div class="card bg-light">
         <div class='card-body'>
-          Use the <strong>presets</strong> (below) to choose a different cell technology, system type, or location. Use the <strong>copy from baseline button</strong> (below) to make the <strong>proposed</strong> inputs match the <strong>baseline</strong> inputs.
-          <form class="form-inline">
-            <div class='form-group'>
-	      <a href="#" title="Cell Technology" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, <strong>energy yield</strong>, <strong>degradation rate</strong>, <strong>BOS cost</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.">Cell Technology</a>
+          Use the <strong>presets</strong> (below) to choose a different cell technology, package type, system type, or location. Use the <strong>copy from baseline button</strong> (below) to make the <strong>proposed</strong> inputs match the <strong>baseline</strong> inputs.
+          
+          <div class='row'>
+            <div class='col-sm-6'>
+	      <a href="javascript://" title="Cell Technology" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, <strong>energy yield</strong>, <strong>degradation rate</strong>, <strong>BOS cost</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.">Cell Technology</a>
               <select id='cell_technology' class='form-control'></select>
-	      <a href="#" title="Package Technology" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Package type affects <strong>back layer cost.">Package Technology</a>
+            </div>
+            <div class='col-sm-6'>
+	      <a href="javascript://" title="Package Type" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Package type affects <strong>back layer cost.">Package Type</a>
               <select id='package_type' class='form-control'></select>
             </div>
-          </form>
-          <form class="form-inline">
-            <div class='form-group'>
-	      <a href="#" title="System Type" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="System type affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">System Type</a>
+          </div>
+          <div class='row'>
+            <div class='col-sm-6'>
+	      <a href="javascript://" title="System Type" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="System type affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">System Type</a>
               <select id='system_type' class='form-control'></select>
-	      <a href="#" title="Location" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Location affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">Location</a>
+            </div>
+            <div class='col-sm-6'>
+	      <a href="javascript://" title="Location" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Location affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">Location</a>
               <select id='location_yield' class='form-control'></select>
             </div>
-          </form>
-          <button type='button' class='btn btn-primary' onclick=preset_set()>Use this preset</button>
+          </div>
+          <div class="text-center">
+            <button type='button' class='btn btn-primary' onclick=preset_set()>Use this preset</button>
+          </div>
         </div>
       </div>
       <div class='row'>
