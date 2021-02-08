@@ -28,41 +28,44 @@
       <p class='lead'>This tool calculates levelized cost of energy (LCOE) for photovoltaic (PV) systems based on cost, performance, and reliability inputs for a <strong>baseline</strong> and a <strong>proposed</strong> technology.</p>
       <p>Choose your inputs and watch the effect on LCOE to determine whether a proposed technology is cost-effective, to perform trade-off analysis among different technology options, and to do break-even analysis of cost or performance.</p>
       <p>For more details, please <a href='lcoe_calculator_documentation.html' target='_blank'>consult the documentation</a>. You may also be interested in <a href='lcoe_calculator_documentation.html#seealso' target='_blank'>other tools</a> for calculating cost and performance for renewable energy.</p>
-      <h2>Inputs</h2>
+      
       <div class="card bg-light">
+        <h4 class='card-header'>Presets for Baseline Inputs</h4>
         <div class='card-body'>
-          Use the <strong>presets</strong> (below) to choose a different cell technology, package type, system type, or location. Use the <strong>copy from baseline button</strong> (below) to make the <strong>proposed</strong> inputs match the <strong>baseline</strong> inputs.
+          Use the <strong>presets</strong> (below) to choose a different cell technology, package type, system type, or location for the baseline inputs.
           
           <div class='row'>
-            <div class='col-sm-6'>
-	      <a href="javascript://" title="Cell Technology" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, <strong>energy yield</strong>, <strong>degradation rate</strong>, <strong>BOS cost</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.">Cell Technology</a>
+            <div class='col-sm-3'>
+	      <a href="javascript://" title="Cell Technology" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, <strong>energy yield</strong>, <strong>degradation rate</strong>, <strong>BOS cost</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.">Cell Technology
+              <span class="badge badge-primary">?</span></a>
               <select id='cell_technology' class='form-control'></select>
             </div>
-            <div class='col-sm-6'>
-	      <a href="javascript://" title="Package Type" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Package type affects <strong>back layer cost.">Package Type</a>
+            <div class='col-sm-3'>
+	      <a href="javascript://" title="Package Type" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Package type affects <strong>back layer cost.">Package Type
+              <span class="badge badge-primary">?</span></a>
               <select id='package_type' class='form-control'></select>
             </div>
-          </div>
-          <div class='row'>
-            <div class='col-sm-6'>
-	      <a href="javascript://" title="System Type" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="System type affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">System Type</a>
+          
+            <div class='col-sm-3'>
+	      <a href="javascript://" title="System Type" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="System type affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">System Type
+              <span class="badge badge-primary">?</span></a>
               <select id='system_type' class='form-control'></select>
             </div>
-            <div class='col-sm-6'>
-	      <a href="javascript://" title="Location" data-toggle="popover" data-placement="top" data-trigger="focus" data-content="Location affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">Location</a>
+            <div class='col-sm-3'>
+	      <a href="javascript://" title="Location" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Location affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">Location
+              <span class="badge badge-primary">?</span></a>
               <select id='location_yield' class='form-control'></select>
             </div>
           </div>
-          <div class="text-center">
+          
             <button type='button' class='btn btn-primary' onclick=preset_set()>Use this preset</button>
           </div>
-        </div>
+        
       </div>
       <div class='row'>
         <div class='col-md'>
           <div class='card baseline'>
-            <h3 class='card-header'>Baseline
-            </h3>
+            <h3 class='card-header'>Baseline</h3>
             <div class='card-body'>
               <h4>Cost</h4>
               <label for='baseline_cost_front_layer_text' class='h5'>Front layer cost (USD/m<sup>2</sup>)</label>
@@ -81,6 +84,7 @@
               <div class='row align-items-center sliderrow'>
                 <div class='col slidertext'>
                   <input id='baseline_cost_cell_text' type='number' class='form-control' step='0.01' />
+                  
                 </div>
                 <div class='col baseline'>
                   <div id='baseline_cost_cell'></div>
@@ -195,11 +199,19 @@
               <label for='proposed_cost_front_layer_text' class='h5'>Front layer cost (USD/m<sup>2</sup>)</label>
               <!-- Each slider goes in a sliderrow, which arranges the text box and slider -->
               <div class='row align-items-center sliderrow'>
-                <button id = "matchButton" type="button" class="btn" onclick="match_baseline_LCOE('proposed_cost_front_layer', 'proposed_cost_front_layer_text')">Basic</button>
+                <!-- <button id = "matchButton" type="button" class="btn" onclick="match_baseline_LCOE('proposed_cost_front_layer', 'proposed_cost_front_layer_text')">Basic</button> -->
+               
                 <div class='col slidertext'>
                   <!-- This is the text box, which the JavaScript hooks into -->
+                  <!-- NEEDS CHANGING -->
+                  <div class='flex-container'>
+                  
                   <input id='proposed_cost_front_layer_text' type='number' class='form-control' step='0.01' />
-                </div>
+                  <button id = "smallButton" type="button" class="btn" onclick="match_baseline_LCOE('proposed_cost_front_layer', 'proposed_cost_front_layer_text')">B</button>
+                  </div>
+               </div>
+                  
+                
                 <div class='col proposed'>
                   <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_cost_front_layer'></div>
@@ -207,9 +219,19 @@
               </div>
               <label for='proposed_cost_cell_text' class='h5'>Cell cost (USD/m<sup>2</sup>)</label>
               <div class='row align-items-center sliderrow'>
-                <button id = "matchButton" type="button" class="btn" onclick="match_baseline_LCOE('proposed_cost_cell', 'proposed_cost_cell_text')">Basic</button>
+                <!-- <button id = "matchButton" type="button" class="btn" onclick="match_baseline_LCOE('proposed_cost_cell', 'proposed_cost_cell_text')">Basic</button> -->
                 <div class='col slidertext'>
-                  <input id='proposed_cost_cell_text' type='number' class='form-control' step='0.01' />
+                <!-- NEEDS CHANGING -->
+                  <div class="input-group mb-2">
+                  <div class="input-group-prepend" onclick="match_baseline_LCOE('proposed_cost_cell', 'proposed_cost_cell_text')">
+                  <div class="input-group-text"><svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+<ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+<line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+<path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+</svg></div>
+                  </div>
+                  <input id='proposed_cost_cell_text' type='number' class='form-control' step='0.01' /> </div>
                 </div>
                 <div class='col proposed'>
                   <div id='proposed_cost_cell'></div>

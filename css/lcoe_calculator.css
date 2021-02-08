@@ -20,6 +20,26 @@ input[type='number']::-webkit-inner-spin-button {
 }
 input[type='number'] {
     -moz-appearance: textfield;
+    width: 70px;
+}
+
+a>.badge {
+  vertical-align: middle;
+  margin-top: -0.3em;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  z-index:1;
+  position:relative;
+}
+
+svg {
+  horizontal-align:middle;
+  vertical-align:middle;
+  z-index:100;
+  position:relative;
 }
 
 .container{
