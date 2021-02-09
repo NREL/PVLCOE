@@ -75,7 +75,6 @@ slider_setup(
   'baseline_cost_extra_text',
   {'start': 0, 'min': 0, 'max': 100, 'step': 0.01, 'digits': 2}
 )
-
 slider_setup(
   'baseline_cost_om',
   'baseline_cost_om_text',
@@ -177,30 +176,25 @@ slider_setup(
   {'start': 0, 'min': 0, 'max': 10, 'step': 0.01, 'digits': 2}
 )
 
-function reset_degradation() {
+function func_deg(deg) {
+  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+  var year = $('#proposed_service_life_text').val()
   var outputs = calculate()
   var cost_baseline = outputs[0]
   var energy_baseline = outputs[1]
-  var energy_proposed = outputs[3]
+  var cost_proposed = outputs[2]
   var energy_yield = parseFloat($('#proposed_energy_yield_text').val())/1000
-  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
-  var year = $('#proposed_service_life_text').val()
 
-  var wanted = energy_baseline/energy_yield
+  var wanted = energy_baseline*cost_proposed/(energy_yield*cost_baseline)
+  return wanted - (1 - Math.pow((1-deg)/(1+common_discount_rate), year)) / (deg + common_discount_rate)
+}
 
-  var best_deg = 0
-  var difference = wanted
+function reset_degradation() {
+  console.log('here')
+  new_value = secant_method(func_deg, 0, 0.05, 0.0001) * 100
+  console.log('secant: ', new_value)
+  console.log('brent: ', brents_method(func_deg, 0, 0.05, 0.0001)*100)
 
-  for (var deg = 0; deg < 0.05; deg += 0.0001){
-    var update = (1 - Math.pow((1-deg)/(1+common_discount_rate), year)) / (deg + common_discount_rate)
-    
-    var curr = Math.abs(wanted - update)
-    if (curr < difference) {
-       difference = curr
-       best_deg = deg
-    }
-  }
-  new_value = best_deg*100
   $('#proposed_degradation_rate_text').val((new_value).toFixed(2))
 
   update_slider('proposed_degradation_rate', new_value)
@@ -233,7 +227,86 @@ function reset_OM() {
 
 }
 
-function reset_year() {
+/*
+Used to find the service life (in years). The solution for service life doesn't have a closed form solution.
+While Brent's method can also be used to find the degradation rate, secant method is preferred since it can find roots
+outside of the slider range (like negative numbers) and display them. 
+*/
+function brents_method(f, a, b, precision, root_precision) {
+  if (f(a) == NaN || f(b) == NaN) {
+    console.log('nan')
+  }
+  console.log(f(a), f(b))
+  if (f(a) * f(b) >= 0) { // method doesn't work
+    return -1;
+  } 
+  
+  if (Math.abs(f(a)) < Math.abs(f(b))) {
+      var temp = a
+      a = b
+      b = temp
+  }
+  
+  var init_a = a
+  var init_b = b
+  var c = a
+  var mflag = true
+  var s = b
+
+  while ((Math.abs(f(b)) > root_precision || Math.abs(f(s)) > root_precision) || (b - a) > precision) {
+    console.log(a, f(a), b, f(b))
+    if (f(a) != f(c) && f(b) != f(c)) {
+      s = a*f(b)*f(c)/((f(a)-f(b))*(f(a)-f(c))) + b*f(a)*f(c)/((f(b)-f(a))*(f(b)-f(c))) + c*f(a)*f(b)/((f(c)-f(a))*(f(c)-f(b)))
+    } else {
+      s = b-f(b) * (b-a)/(f(b)-f(a))
+    }
+    if (!((s < b) && (s > ((3*a+b)/4))) || (mflag && (Math.abs(s-b) >= Math.abs(b-c)/2)) || (!mflag && (Math.abs(s-b) >= Math.abs(c-d)/2)) || (mflag && (Math.abs(b-c) < precision)) || (!mflag && (Math.abs(c-d) < precision))) {
+      s = (a+b)/2
+      mflag = true
+    } else {
+      mflag = false
+    }
+    
+    var d = c
+    c = b
+    if (f(a) * f(s) < 0) {
+      b = s
+    } else {
+      a = s
+    }
+    if (Math.abs(f(a)) < Math.abs(f(b))) {
+      var temp = a
+      a = b
+      b = temp
+    }
+    //console.log('b: ', b)
+    
+  }
+  return b;
+} 
+
+/*
+This is used to find the degradation rate. The equation for degradation rate doesn't have a closed form solution. Secant method 
+allows values outside of the slider range to be displayed. It cannot be used to find service life since the LCOE curve is too 
+flat for large numbers. 
+*/
+function secant_method(f, x0, x1, precision) {
+  var prev = 0
+  var x2 = x1 - f(x1) * (x1 - x0) / parseFloat(f(x1) - f(x0))
+  while (Math.abs(x2 - prev) > precision) {
+    prev = x2
+    console.log('before: ', x0, x1, x2)
+    x0 = x1
+    x1 = x2
+    console.log('after: ', x0, x1, f(x1), (x1 - x0), parseFloat(f(x1) - f(x0)))
+    x2 = x1 - f(x1) * (x1 - x0) / parseFloat(f(x1) - f(x0))
+    
+  }
+  return x2;
+
+}
+
+function func_year(year) {
   var outputs = calculate()
   var cost_baseline = outputs[0]
   var energy_baseline = outputs[1]
@@ -243,25 +316,15 @@ function reset_year() {
   var degradation_rate = parseFloat($('#proposed_degradation_rate_text').val())/100.0
   var energy_yield = parseFloat($('#proposed_energy_yield_text').val())/1000
 
-  cost_val = initial_cost('proposed') + om_cost * ((1 - 1/Math.pow(1 + common_discount_rate, 25))/common_discount_rate)
-  energy_val = energy_yield * (1-Math.pow((1-degradation_rate)/(1+common_discount_rate), 25)) / (degradation_rate + common_discount_rate)
+  cost_val = initial_cost('proposed') + om_cost * ((1 - 1/Math.pow(1 + common_discount_rate, year))/common_discount_rate)
+  energy_val = energy_yield * (1-Math.pow((1-degradation_rate)/(1+common_discount_rate), year)) / (degradation_rate + common_discount_rate)
+  return lcoe_baseline - cost_val/energy_val
+}
 
-  var best_year = 1
-  var difference = 10000000 // a large number
-
-  for (var year = 1; year <= 50; year++) {
-    cost_val = initial_cost('proposed') + om_cost * ((1 - 1/Math.pow(1 + common_discount_rate, year))/common_discount_rate)
-    energy_val = energy_yield * (1-Math.pow((1-degradation_rate)/(1+common_discount_rate), year)) / (degradation_rate + common_discount_rate)
-
-    var curr = Math.abs(lcoe_baseline - cost_val/energy_val)
-    if (curr < difference) {
-         difference = curr
-	 best_year = year
-    }
-    
-  }
-  $('#proposed_service_life_text').val(best_year)
-  update_slider('proposed_service_life', best_year)
+function reset_year() {
+  new_value = brents_method(func_year, 1, 50, 0.0001, 1e-10).toFixed(0)
+  $('#proposed_service_life_text').val(new_value)
+  update_slider('proposed_service_life', new_value)
   calculate()
 
 }
@@ -659,3 +722,4 @@ function calculate() {
 
   return [cost_baseline, energy_baseline, cost_proposed, energy_proposed]
 }
+
