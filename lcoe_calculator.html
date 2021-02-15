@@ -30,11 +30,12 @@
       <p>For more details, please <a href='lcoe_calculator_documentation.html' target='_blank'>consult the documentation</a>. You may also be interested in <a href='lcoe_calculator_documentation.html#seealso' target='_blank'>other tools</a> for calculating cost and performance for renewable energy.</p>
       
       <div class="card bg-light">
-        <h4 class='card-header'>Presets for Baseline Inputs</h4>
+        <h4 class='card-header'>Presets for Inputs</h4>
+        
         <div class='card-body'>
-          Use the <strong>presets</strong> (below) to choose a different cell technology, package type, system type, or location for the baseline inputs.
+          Use the <strong>presets</strong> (below) to choose a different cell technology, package type, system type, or location for the inputs.
           
-          <div class='row'>
+          <div class='row align-items-center'>
             <div class='col-sm-3'>
 	      <a href="javascript://" title="Cell Technology" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, <strong>energy yield</strong>, <strong>degradation rate</strong>, <strong>BOS cost</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.">Cell Technology
               <span class="badge badge-primary">?</span></a>
@@ -57,10 +58,31 @@
               <select id='location_yield' class='form-control'></select>
             </div>
           </div>
+          <div class="row second align-items-center">
+            <div class='col-sm-2'><button type='button' class='btn baseline btn-preset' onclick=preset_set('baseline')>Load for baseline</button></div>
+            <div class='col-sm-2'><button type='button' class='btn proposed btn-preset' onclick=preset_set('proposed')>Load for proposed</button></div>
+            <div class='col-sm-4'> </div>
+            <div class='col-sm-4'>
+               <a href="javascript://" title="Inverter Load Ratio" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Inverter load ratio affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">Inverter Load Ratio
+               <span class="badge badge-primary">?</span></a>
+               <div class = 'row align-items-center ilr-preset'>
+                
+                <div class='col presettext'>
+                 
+                  <input id='ilr_preset_text' type='number' size='4' class='form-control' step='0.1' />
+                </div>
+                <div class='col presetslider'>
+                  
+                  <div id='ilr_preset'></div>
+                </div>
+             </div>
+	     </div>
+             
+            </div>
+
           
-            <button type='button' class='btn btn-primary' onclick=preset_set()>Use this preset</button>
           </div>
-        
+          
       </div>
       <div class='row'>
         <div class='col-md'>
@@ -190,7 +212,7 @@
         <div class='col-md'>
           <div class='card proposed'>
             <h3 class='card-header'>Proposed
-              <button type='button' class='btn btn-secondary float-right' onclick=copy_from_baseline()>
+              <button type='button' class='btn btn-secondary btn-sm float-right' onclick=copy_from_baseline()>
               Copy from Baseline
               </button>
             </h3>
