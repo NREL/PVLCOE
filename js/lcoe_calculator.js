@@ -45,7 +45,7 @@ function slider_setup(slider_name, number_name, settings) {
   // When the number changes, update the slider
   // The conditionals allow the user to put in an out-of-bounds number
   number.addEventListener('input', function(){
-    update_slider(slider, this.value)
+    update_slider(slider_name, this.value)
     calculate()
   });
 }
@@ -176,52 +176,67 @@ slider_setup(
   {'start': 0, 'min': 0, 'max': 10, 'step': 0.01, 'digits': 2}
 )
 
-function func_deg(deg) {
+function func_deg(deg, key) {
   var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
-  var year = $('#proposed_service_life_text').val()
+  var year = $('#'+key+'_service_life_text').val()
   var outputs = calculate()
-  var cost_baseline = outputs[0]
-  var energy_baseline = outputs[1]
-  var cost_proposed = outputs[2]
-  var energy_yield = parseFloat($('#proposed_energy_yield_text').val())/1000
-
-  var wanted = energy_baseline*cost_proposed/(energy_yield*cost_baseline)
+  var energy_yield = parseFloat($('#'+key+'_energy_yield_text').val())/1000
+  if (key == 'baseline') {
+     var cost_comparison = outputs[2]
+     var energy_comparison = outputs[3]
+     var cost_current = outputs[0]
+  } else if (key == 'proposed') {
+     var cost_comparison = outputs[0]
+     var energy_comparison = outputs[1]
+     var cost_current = outputs[2]
+  }
+  
+  var wanted = energy_comparison*cost_current/(energy_yield*cost_comparison)
   return wanted - (1 - Math.pow((1-deg)/(1+common_discount_rate), year)) / (deg + common_discount_rate)
 }
 
-function reset_degradation() {
-  new_value = secant_method(func_deg, 0, 0.05, 0.0001) * 100
+function reset_degradation(key) {
+  new_value = secant_method(func_deg, 0, 0.05, 0.0001, key) * 100
+  console.log(func_deg(0, 'baseline'))
+  console.log(func_deg(0.05, 'baseline'))
   // console.log('secant: ', new_value)
   // console.log('brent: ', brents_method(func_deg, 0, 0.05, 0.0001)*100)
 
-  $('#proposed_degradation_rate_text').val((new_value).toFixed(2))
+  $('#'+key+'_degradation_rate_text').val((new_value).toFixed(2))
 
-  update_slider('proposed_degradation_rate', new_value)
+  update_slider(key+'_degradation_rate', new_value)
   calculate()
 }
 
-function reset_OM() {
-  var init_cost = initial_cost('proposed')
+function reset_OM(key) {
   var outputs = calculate()
-  var cost_baseline = outputs[0]
-  var energy_baseline = outputs[1]
-  var energy_proposed = outputs[3]
-  var lcoe_baseline = cost_baseline/energy_baseline
-  var proposed_service_life = parseFloat($('#proposed_service_life_text').val())
   var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
-
-  var nonzero_yrs = lcoe_baseline * energy_proposed - init_cost
-
-  var new_value = nonzero_yrs/((1 - 1/Math.pow(1 + common_discount_rate, proposed_service_life))/common_discount_rate)
+  if (key == 'baseline') {
+    var init_cost = initial_cost('baseline')
+    var service_life = parseFloat($('#baseline_service_life_text').val())
+    var cost_comparison = outputs[2]
+    var energy_comparison = outputs[3]
+    var energy_current = outputs[1]
+  } else if (key == 'proposed') {
+    var init_cost = initial_cost('proposed')
+    var service_life = parseFloat($('#proposed_service_life_text').val())
+    var cost_comparison = outputs[0]
+    var energy_comparison = outputs[1]
+    var energy_current = outputs[3]
+  }
+  
+  var lcoe = cost_comparison/energy_comparison
+  var nonzero_yrs = lcoe * energy_current - init_cost
+  var new_value = nonzero_yrs/((1 - 1/Math.pow(1 + common_discount_rate, service_life))/common_discount_rate)
 
   if (new_value == 0) {
     new_value = (0.00).toFixed(2) // otherwise will display -0.00
   } 
 
   new_value *= 1000
-  $('#proposed_cost_om_text').val((new_value).toFixed(2))
+  $('#'+key+'_cost_om_text').val((new_value).toFixed(2))
   
-  update_slider('proposed_cost_om', new_value)
+  update_slider(key+'_cost_om', new_value)
   calculate()
 
 }
@@ -231,16 +246,16 @@ Used to find the service life (in years). The solution for service life doesn't 
 While Brent's method can also be used to find the degradation rate, secant method is preferred since it can find roots
 outside of the slider range (like negative numbers) and display them. 
 */
-function brents_method(f, a, b, precision, root_precision) {
+function brents_method(f, a, b, precision, root_precision, key) {
   /*if (f(a) == NaN || f(b) == NaN) {
     console.log('nan')
   }
   console.log(f(a), f(b))*/
-  if (f(a) * f(b) >= 0) { // method doesn't work
+  if (f(a, key) * f(b, key) >= 0) { // method doesn't work
     return -1;
   } 
   
-  if (Math.abs(f(a)) < Math.abs(f(b))) {
+  if (Math.abs(f(a, key)) < Math.abs(f(b, key))) {
       var temp = a
       a = b
       b = temp
@@ -250,12 +265,12 @@ function brents_method(f, a, b, precision, root_precision) {
   var flag = true
   var s = b
 
-  while ((Math.abs(f(b)) > root_precision || Math.abs(f(s)) > root_precision) || (b - a) > precision) {
-    console.log(a, f(a), b, f(b))
-    if (f(a) != f(c) && f(b) != f(c)) {
-      s = a*f(b)*f(c)/((f(a)-f(b))*(f(a)-f(c))) + b*f(a)*f(c)/((f(b)-f(a))*(f(b)-f(c))) + c*f(a)*f(b)/((f(c)-f(a))*(f(c)-f(b)))
+  while ((Math.abs(f(b, key)) > root_precision || Math.abs(f(s, key)) > root_precision) || (b - a) > precision) {
+    // console.log(a, f(a), b, f(b))
+    if (f(a, key) != f(c, key) && f(b, key) != f(c, key)) {
+      s = a*f(b, key)*f(c, key)/((f(a, key)-f(b, key))*(f(a, key)-f(c, key))) + b*f(a, key)*f(c, key)/((f(b, key)-f(a, key))*(f(b, key)-f(c, key))) + c*f(a, key)*f(b, key)/((f(c, key)-f(a, key))*(f(c, key)-f(b, key)))
     } else {
-      s = b-f(b) * (b-a)/(f(b)-f(a))
+      s = b-f(b, key) * (b-a)/(f(b, key)-f(a, key))
     }
     if (!((s < b) && (s > ((3*a+b)/4))) || (flag && (Math.abs(s-b) >= Math.abs(b-c)/2)) || (!flag && (Math.abs(s-b) >= Math.abs(c-d)/2)) || (flag && (Math.abs(b-c) < precision)) || (!flag && (Math.abs(c-d) < precision))) {
       s = (a+b)/2
@@ -266,14 +281,14 @@ function brents_method(f, a, b, precision, root_precision) {
     
     var d = c
     c = b
-    if (f(a) * f(s) < 0) {
+    if (f(a, key) * f(s, key) < 0) {
       b = s
     } else {
       a = s
     }
-    if (Math.abs(f(a)) < Math.abs(f(b))) {
+    if (Math.abs(f(a, key)) < Math.abs(f(b, key))) {
       var temp = a
-      a = b
+      a = b	
       b = temp
     }
     //console.log('b: ', b)
@@ -287,56 +302,49 @@ This is used to find the degradation rate. The equation for degradation rate doe
 allows values outside of the slider range to be displayed. It cannot be used to find service life since the LCOE curve is too 
 flat (and creates divide by 0 behavior) for large numbers. 
 */
-function secant_method(f, x0, x1, precision) {
+function secant_method(f, x0, x1, precision, key) {
   var prev = 0
-  var x2 = x1 - f(x1) * (x1 - x0) / parseFloat(f(x1) - f(x0))
+  var x2 = x1 - f(x1, key) * (x1 - x0) / parseFloat(f(x1, key) - f(x0, key))
   while (Math.abs(x2 - prev) > precision) {
     prev = x2
     // console.log('before: ', x0, x1, x2)
     x0 = x1
     x1 = x2
-    // console.log('after: ', x0, x1, f(x1), (x1 - x0), parseFloat(f(x1) - f(x0)))
-    x2 = x1 - f(x1) * (x1 - x0) / parseFloat(f(x1) - f(x0))
+    // console.log('after: ', x0, x1, f(x1, key), (x1 - x0), parseFloat(f(x1, key) - f(x0, key)))
+    x2 = x1 - f(x1, key) * (x1 - x0) / parseFloat(f(x1, key) - f(x0, key))
     
   }
   return x2;
 
 }
-function func_year_direct(year) {
-  var outputs = calculate()
-  var cost_baseline = outputs[0]
-  var energy_baseline = outputs[1]
-  var lcoe_baseline = cost_baseline/energy_baseline
-  var om_cost = parseFloat($('#proposed_cost_om_text').val())/1000
-  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
-  var degradation_rate = parseFloat($('#proposed_degradation_rate_text').val())/100.0
-  var energy_yield = parseFloat($('#proposed_energy_yield_text').val())/1000
 
-  cost_val = initial_cost('proposed') + om_cost * ((1 - 1/Math.pow(1 + common_discount_rate, year))/common_discount_rate)
+function func_year(year, key) {
+  var outputs = calculate()
+  if (key == 'baseline') {
+    //console.log('baseline')
+    var cost_comparison = outputs[2]
+    var energy_comparison = outputs[3]
+  } else if (key == 'proposed') {
+    var cost_comparison = outputs[0]
+    var energy_comparison = outputs[1]
+  }
+
+  var lcoe = cost_comparison/energy_comparison
+  //console.log(lcoe)
+  var om_cost = parseFloat($('#'+key+'_cost_om_text').val())/1000
+  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+  var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
+  var energy_yield = parseFloat($('#'+key+'_energy_yield_text').val())/1000
+  //console.log(degradation_rate, energy_yield)
+
+  cost_val = initial_cost(key) + om_cost * ((1 - 1/Math.pow(1 + common_discount_rate, year))/common_discount_rate)
   energy_val = energy_yield * (1-Math.pow((1-degradation_rate)/(1+common_discount_rate), year)) / (degradation_rate + common_discount_rate)
-  return cost_val/energy_val
+  return lcoe - cost_val/energy_val
 }
 
-
-function func_year(year) {
-  var outputs = calculate()
-  var cost_baseline = outputs[0]
-  var energy_baseline = outputs[1]
-  var lcoe_baseline = cost_baseline/energy_baseline
-  var om_cost = parseFloat($('#proposed_cost_om_text').val())/1000
-  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
-  var degradation_rate = parseFloat($('#proposed_degradation_rate_text').val())/100.0
-  var energy_yield = parseFloat($('#proposed_energy_yield_text').val())/1000
-
-  cost_val = initial_cost('proposed') + om_cost * ((1 - 1/Math.pow(1 + common_discount_rate, year))/common_discount_rate)
-  energy_val = energy_yield * (1-Math.pow((1-degradation_rate)/(1+common_discount_rate), year)) / (degradation_rate + common_discount_rate)
-  return lcoe_baseline - cost_val/energy_val
-}
-
-function reset_year() {
+function reset_year(key) {
   var new_value = 0
-  new_value = brents_method(func_year, 1, 100, 0.0001, 1e-10)
-  // console.log('here: ', func_year_direct(new_value))
+  new_value = brents_method(func_year, 1, 100, 0.0001, 1e-10, key)
   new_value = new_value.toFixed(0)
   if (new_value == -1) {
     if (func_year(1) < 0) {
@@ -345,66 +353,71 @@ function reset_year() {
       new_value = 1
     }
   }
-  $('#proposed_service_life_text').val(new_value)
-  update_slider('proposed_service_life', new_value)
+  $('#'+key+'_service_life_text').val(new_value)
+  update_slider(key+'_service_life', new_value)
   calculate()
 
 }
 
-function match_baseline_LCOE(slider_name, number_name) {
-  var slider = document.getElementById(slider_name);
+function match_LCOE(slider_name, number_name, key) {
   var number = document.getElementById(number_name);
-  var init_cost = initial_cost('proposed')
-
-  var cost_bos_power = parseFloat($('#proposed_cost_bos_power_text').val())
-  var cost_bos_area = parseFloat($('#proposed_cost_bos_area_text').val())
-  var efficiency = parseFloat($('#proposed_efficiency_text').val())
-
-  var cost_front_layer = parseFloat($('#proposed_cost_front_layer_text').val())
-  var cost_cell = parseFloat($('#proposed_cost_cell_text').val())
-  var cost_back_layer = parseFloat($('#proposed_cost_back_layer_text').val())
-  var cost_noncell = parseFloat($('#proposed_cost_noncell_text').val())
-  var cost_extra = parseFloat($('#proposed_cost_extra_text').val())
-
   var outputs = calculate()
-  var cost_baseline = outputs[0]
-  var energy_baseline = outputs[1]
-  var cost_proposed = outputs[2]
-  var later_cost = cost_proposed - init_cost
-  var energy_proposed = outputs[3]
+  var init_cost = initial_cost(key)
+  var cost_bos_power = parseFloat($('#'+key+'_cost_bos_power_text').val())
+  var cost_bos_area = parseFloat($('#'+key+'_cost_bos_area_text').val())
+  var efficiency = parseFloat($('#'+key+'_efficiency_text').val())
 
-  var lcoe_baseline = cost_baseline/energy_baseline
+  var cost_front_layer = parseFloat($('#'+key+'_cost_front_layer_text').val())
+  var cost_cell = parseFloat($('#'+key+'_cost_cell_text').val())
+  var cost_back_layer = parseFloat($('#'+key+'_cost_back_layer_text').val())
+  var cost_noncell = parseFloat($('#'+key+'_cost_noncell_text').val())
+  var cost_extra = parseFloat($('#'+key+'_cost_extra_text').val())
+
+  if (key == 'baseline') {
+    var cost_comparison = outputs[2]
+    var energy_comparison = outputs[3]
+    var cost_current = outputs[0]
+    var energy_current = outputs[1]
+  } else if (key == 'proposed') {
+    var cost_comparison = outputs[0]
+    var energy_comparison = outputs[1]
+    var cost_current = outputs[2]
+    var energy_current = outputs[3]
+  }
+
+  var later_cost = cost_current - init_cost
+  var lcoe = cost_comparison/energy_comparison
   
-  if (slider_name == 'proposed_cost_front_layer') {
-    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+  if (slider_name == 'cost_front_layer') {
+    wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
     cost_front_layer = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency) - cost_cell - cost_back_layer - cost_noncell - cost_extra).toFixed(2)
     new_value = cost_front_layer
-  } else if (slider_name == 'proposed_cost_cell') {
-    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+  } else if (slider_name == 'cost_cell') {
+    wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
     cost_cell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_back_layer - cost_noncell - cost_extra).toFixed(2)
     new_value = cost_cell
-  } else if (slider_name == 'proposed_cost_back_layer') {
-    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+  } else if (slider_name == 'cost_back_layer') {
+    wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
     cost_back_layer = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_noncell - cost_extra).toFixed(2)
     new_value = cost_back_layer
-  } else if (slider_name == 'proposed_cost_noncell') {
-    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+  } else if (slider_name == 'cost_noncell') {
+    wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
     cost_noncell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_extra).toFixed(2)
     new_value = cost_noncell
-  } else if (slider_name == 'proposed_cost_extra') {
-    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+  } else if (slider_name == 'cost_extra') {
+    wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
     cost_extra = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_noncell).toFixed(2)
     new_value = cost_extra
-  } else if (slider_name == 'proposed_cost_bos_power') {
-    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - (MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency))
+  } else if (slider_name == 'cost_bos_power') {
+    wanted_cost = (lcoe * energy_current) - later_cost - (MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency))
     cost_bos_power = wanted_cost - cost_bos_area/(10.0*efficiency)
     new_value = cost_bos_power
-  } else if (slider_name == 'proposed_cost_bos_area') {
-    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost - (MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency))
+  } else if (slider_name == 'cost_bos_area') {
+    wanted_cost = (lcoe * energy_current) - later_cost - (MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency))
     cost_bos_area = (wanted_cost - cost_bos_power)*(10.0*efficiency)
     new_value = cost_bos_area
-  } else if (slider_name == 'proposed_efficiency') {
-    wanted_cost = (lcoe_baseline * energy_proposed) - later_cost 
+  } else if (slider_name == 'efficiency') {
+    wanted_cost = (lcoe * energy_current) - later_cost 
     efficiency = (cost_bos_area + MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)) / (10 * (wanted_cost-cost_bos_power))
     new_value = efficiency
   }
@@ -414,36 +427,42 @@ function match_baseline_LCOE(slider_name, number_name) {
   } else if (slider_name == 'proposed_efficiency') {
     number.value = new_value.toFixed(1) 
   } else {
-    number.value = new_value.toFixed(2)
+    number.value = new_value
   }
 
   var cost_module = MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency)
-  document.getElementById('module_cost_per_watt_proposed').innerHTML = cost_module.toFixed(2)
-  document.getElementById('system_cost_per_watt_proposed').innerHTML = (cost_bos_power + cost_bos_area/(10.0*efficiency) + cost_module).toFixed(2)
+  document.getElementById('module_cost_per_watt_'+key).innerHTML = cost_module.toFixed(2)
+  document.getElementById('system_cost_per_watt_'+key).innerHTML = (cost_bos_power + cost_bos_area/(10.0*efficiency) + cost_module).toFixed(2)
   
-  update_slider(slider_name, new_value)
+  update_slider(key+'_'+slider_name, new_value)
   calculate()
   
 }
 
 
-function reset_energy_yield() {
+function reset_energy_yield(key) {
   var outputs = calculate()
-  var cost_baseline = outputs[0]
-  var energy_baseline = outputs[1]
-  var cost_proposed = outputs[2]
   var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
-
-  var lcoe_baseline = cost_baseline/energy_baseline
-  var energy_wanted = cost_proposed/lcoe_baseline
-  degradation_rate = parseFloat($('#proposed_degradation_rate_text').val())/100.0
-  var year = parseFloat($('#proposed_service_life_text').val())
+  if (key == 'baseline') {
+      var cost_comparison = outputs[2]
+      var energy_comparison = outputs[3]
+      var cost_current = outputs[0]
+  } else if (key == 'proposed') {
+      var cost_comparison = outputs[0]
+      var energy_comparison = outputs[1]
+      var cost_current = outputs[2]
+  }
+  
+  var lcoe = cost_comparison/energy_comparison
+  var energy_wanted = cost_current/lcoe
+  degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
+  var year = parseFloat($('#'+key+'_service_life_text').val())
 
   var new_value = energy_wanted / ((1 - Math.pow((1-degradation_rate)/(1+common_discount_rate), year)) / (degradation_rate + common_discount_rate)) * 1000
 
-  $('#proposed_energy_yield_text').val(new_value.toFixed(0))
+  $('#'+key+'_energy_yield_text').val(new_value.toFixed(0))
 
-  update_slider('proposed_energy_yield', new_value.toFixed(0))
+  update_slider(key+'_energy_yield', new_value.toFixed(0))
 
   calculate()
 }
