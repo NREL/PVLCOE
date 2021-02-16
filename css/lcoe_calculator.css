@@ -22,6 +22,10 @@ input[type='number'] {
     -moz-appearance: textfield;
 }
 
+.input-group-prepend {
+  cursor:pointer
+}
+
 .container{
   max-width:992px;
   margin:0 auto;

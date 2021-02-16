@@ -434,6 +434,7 @@ function match_LCOE(slider_name, number_name, key) {
   document.getElementById('module_cost_per_watt_'+key).innerHTML = cost_module.toFixed(2)
   document.getElementById('system_cost_per_watt_'+key).innerHTML = (cost_bos_power + cost_bos_area/(10.0*efficiency) + cost_module).toFixed(2)
   
+  $('#'+key+'_'+slider_name+'_text').val(new_value)
   update_slider(key+'_'+slider_name, new_value)
   calculate()
   
