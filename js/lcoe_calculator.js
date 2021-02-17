@@ -197,8 +197,6 @@ function func_deg(deg, key) {
 
 function reset_degradation(key) {
   new_value = secant_method(func_deg, 0, 0.05, 0.0001, key) * 100
-  console.log(func_deg(0, 'baseline'))
-  console.log(func_deg(0.05, 'baseline'))
   // console.log('secant: ', new_value)
   // console.log('brent: ', brents_method(func_deg, 0, 0.05, 0.0001)*100)
 
@@ -211,15 +209,13 @@ function reset_degradation(key) {
 function reset_OM(key) {
   var outputs = calculate()
   var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+  var init_cost = initial_cost(key)
+  var service_life = parseFloat($('#'+key+'_service_life_text').val())
   if (key == 'baseline') {
-    var init_cost = initial_cost('baseline')
-    var service_life = parseFloat($('#baseline_service_life_text').val())
     var cost_comparison = outputs[2]
     var energy_comparison = outputs[3]
     var energy_current = outputs[1]
   } else if (key == 'proposed') {
-    var init_cost = initial_cost('proposed')
-    var service_life = parseFloat($('#proposed_service_life_text').val())
     var cost_comparison = outputs[0]
     var energy_comparison = outputs[1]
     var energy_current = outputs[3]
@@ -398,8 +394,8 @@ function match_LCOE(slider_name, number_name, key) {
     new_value = cost_cell
   } else if (slider_name == 'cost_back_layer') {
     wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
-    cost_back_layer = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_noncell - cost_extra).toFixed(2)
-    new_value = cost_back_layer
+    cost_back_layer = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_noncell - cost_extra)
+    new_value = cost_back_layer.toFixed(2)
   } else if (slider_name == 'cost_noncell') {
     wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
     cost_noncell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_extra).toFixed(2)
@@ -411,24 +407,20 @@ function match_LCOE(slider_name, number_name, key) {
   } else if (slider_name == 'cost_bos_power') {
     wanted_cost = (lcoe * energy_current) - later_cost - (MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency))
     cost_bos_power = wanted_cost - cost_bos_area/(10.0*efficiency)
-    new_value = cost_bos_power
+    new_value = cost_bos_power.toFixed(2)
   } else if (slider_name == 'cost_bos_area') {
     wanted_cost = (lcoe * energy_current) - later_cost - (MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency))
     cost_bos_area = (wanted_cost - cost_bos_power)*(10.0*efficiency)
-    new_value = cost_bos_area
+    new_value = cost_bos_area.toFixed(2)
   } else if (slider_name == 'efficiency') {
     wanted_cost = (lcoe * energy_current) - later_cost 
     efficiency = (cost_bos_area + MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)) / (10 * (wanted_cost-cost_bos_power))
-    new_value = efficiency
+    new_value = efficiency.toFixed(1) 
   }
-
-  if (new_value == 0) {
-    number.value = (0.00).toFixed(2) // otherwise will display -0.00
-  } else if (slider_name == 'proposed_efficiency') {
-    number.value = new_value.toFixed(1) 
-  } else {
-    number.value = new_value
-  }
+  
+  if (new_value == 0.00) {
+    new_value = (0.00).toFixed(2) // otherwise will display -0.00
+  } 
 
   var cost_module = MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency)
   document.getElementById('module_cost_per_watt_'+key).innerHTML = cost_module.toFixed(2)

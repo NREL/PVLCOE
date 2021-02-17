@@ -94,130 +94,296 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               <h4>Cost</h4>
               <label for='baseline_cost_front_layer_text' class='h5'>Front layer cost (USD/m<sup>2</sup>)</label>
               <!-- Each slider goes in a sliderrow, which arranges the text box and slider -->
-              <div class='row align-items-center sliderrow'>
-                <button id = "matchButton" type="button" class="btn" onclick="match_LCOE('cost_front_layer', 'baseline_cost_front_layer_text', 'baseline')">Basic</button>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
                   <!-- This is the text box, which the JavaScript hooks into -->
-                  <input id='baseline_cost_front_layer_text' type='number' class='form-control' step='0.01' />
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_front_layer', 'baseline_cost_front_layer_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+                        <ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+                        <line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+                        <path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+                        </svg>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_front_layer_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
-                  <!-- This is an empty div that the JavaScript magically styles as a slider -->
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_front_layer'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_cell_text' class='h5'>Cell cost (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
-               <button id = "matchButton" type="button" class="btn" onclick="match_LCOE('cost_cell', 'baseline_cost_cell_text', 'baseline')">Basic</button>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_cell_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_cell', 'baseline_cost_cell_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+                        <ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+                        <line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+                        <path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+                        </svg>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_cell_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_cell'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_back_layer_text' class='h5'>Back layer cost (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
-               <button id = "matchButton" type="button" class="btn" onclick="match_LCOE('cost_back_layer', 'baseline_cost_back_layer_text', 'baseline')">Basic</button>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_back_layer_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_back_layer', 'baseline_cost_back_layer_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+                        <ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+                        <line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+                        <path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+                        </svg>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_back_layer_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_back_layer'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_noncell_text' class='h5'>Non-cell module cost (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
-               <button id = "matchButton" type="button" class="btn" onclick="match_LCOE('cost_noncell', 'baseline_cost_noncell_text', 'baseline')">Basic</button>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_noncell_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_noncell', 'baseline_cost_noncell_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+                        <ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+                        <line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+                        <path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+                        </svg>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_noncell_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_noncell'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_extra_text' class='h5'>Extra component cost (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
-               <button id = "matchButton" type="button" class="btn" onclick="match_LCOE('cost_extra', 'baseline_cost_extra_text', 'baseline')">Basic</button>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_extra_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_extra', 'baseline_cost_extra_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+                        <ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+                        <line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+                        <path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+                        </svg>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_extra_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_extra'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_om_text' class='h5'><abbr title='operations and maintenance'>O&amp;M</abbr> cost (USD/kW<sub>DC</sub>/year)</label>
-              <div class='row align-items-center sliderrow'>
-               <button id = "matchButton" type="button" class="btn" onclick="reset_OM('baseline')">Basic</button>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_om_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="reset_OM('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+                        <ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+                        <line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+                        <path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+                        </svg>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_om_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_om'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_bos_power_text' class='h5'><abbr title='balance of system'>BOS</abbr> cost, power-scaling (USD/W)</label>
-              <div class='row align-items-center sliderrow'>
-               <button id = "matchButton" type="button" class="btn" onclick="match_LCOE('cost_bos_power', 'baseline_cost_bos_power_text', 'baseline')">Basic</button>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_bos_power_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_bos_power', 'baseline_cost_bos_power_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+                        <ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+                        <line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+                        <path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+                        </svg>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_bos_power_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_bos_power'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_bos_area_text' class='h5'><abbr title='balance of system'>BOS</abbr> cost, area-scaling (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
-               <button id = "matchButton" type="button" class="btn" onclick="match_LCOE('cost_bos_area', 'baseline_cost_bos_area_text', 'baseline')">Basic</button>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_bos_area_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_bos_area', 'baseline_cost_bos_area_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+                        <ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+                        <line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+                        <path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+                        </svg>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_bos_area_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_bos_area'></div>
-                </div>
+                </div> 
               </div>
               <hr>
               <h4>Performance</h4>
               <label for='baseline_efficiency_text' class='h5'>Efficiency (%)</label>
-              <div class='row align-items-center sliderrow'>
-               <button id = "matchButton" type="button" class="btn" onclick="match_LCOE('efficiency', 'baseline_efficiency_text', 'baseline')">Basic</button>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_efficiency_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('efficiency', 'baseline_efficiency_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+                        <ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+                        <line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+                        <path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+                        </svg>
+                     </span>
+                   </div>
+                  <input id='baseline_efficiency_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_efficiency'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_energy_yield_text' class='h5'>Energy yield (kWh/kW<sub>DC</sub>)</label>
-              <div class='row align-items-center sliderrow'>
-               <button id = "matchButton" type="button" class="btn" onclick="reset_energy_yield('baseline')">Basic</button>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_energy_yield_text' type='number' class='form-control' step='1' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="reset_energy_yield('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+                        <ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+                        <line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+                        <path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+                        </svg>
+                     </span>
+                   </div>
+                  <input id='baseline_energy_yield_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_energy_yield'></div>
-                </div>
+                </div> 
               </div>
               <hr>
               <h4>Reliability</h4>
               <label for='baseline_degradation_rate_text' class='h5'>System degradation rate (%/year)</label>
-              <div class='row align-items-center sliderrow'>
-                <button id = "matchButton" type="button" class="btn" onclick="reset_degradation('baseline')">Basic</button>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_degradation_rate_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="reset_degradation('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+                        <ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+                        <line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+                        <path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+                        </svg>
+                     </span>
+                   </div>
+                  <input id='baseline_degradation_rate_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_degradation_rate'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_service_life_text' class='h5'>Service life (years)</label>
-              <div class='row align-items-center sliderrow'>
-               <button id = "matchButton" type="button" class="btn" onclick="reset_year('baseline')">Basic</button>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_service_life_text' type='number' class='form-control' step='1' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="reset_year('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <ellipse cx="3.96226" cy="6.42857" rx="3.20755" ry="3.42857" fill="#C4C4C4"/>
+                        <ellipse cx="14.717" cy="6.64286" rx="5.28302" ry="6.64286" fill="#C4C4C4"/>
+                        <line y1="-0.5" x2="20.4304" y2="-0.5" transform="matrix(0.941992 0.335634 -0.266264 0.9639 0 9.85715)" stroke="black"/>
+                        <path d="M7.92453 12.4286L11.5194 18.8571H4.32971L7.92453 12.4286Z" fill="#C4C4C4"/>
+                        </svg>
+                     </span>
+                   </div>
+                  <input id='baseline_service_life_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_service_life'></div>
-                </div>
+                </div> 
               </div>
             </div>
           </div>
