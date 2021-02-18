@@ -14,6 +14,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 const MODULE_MARKUP = 1.15
 
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover({html:true});   
+});
+
 function update_slider(slider_name, value) {
   var slider = document.getElementById(slider_name);
   var max = slider.noUiSlider.options.range.max
@@ -53,7 +57,7 @@ function slider_setup(slider_name, number_name, settings) {
 slider_setup(
   'ilr_preset',
   'ilr_preset_text',
-  {'start': 1.1, 'min': 1.1, 'max': 1.5, 'step': 0.1, 'digits': 1}
+  {'start': 1.1, 'min': 1.1, 'max': 1.4, 'step': 0.1, 'digits': 1}
 )
 
 slider_setup(
@@ -449,8 +453,8 @@ setup_preset_package_type()
 preset_package_type.value = 'glass-polymer backsheet'
 preset_system_type.value = 'fixed tilt, utility scale'
 preset_location_yield.value = 'USA MO Kansas City'
-ilr_slider.value = 1.3
-$('#ilr_slider_text').val(1.3)
+//ilr_slider.value = 1.3
+//$('#ilr_slider_text').val(1.3)
 
 // Set up the presets anytime a menu selection is made
 preset_cell_technology.addEventListener('input', function(){
@@ -485,65 +489,33 @@ function preset_set(key){
   $('#common_discount_rate_text').val(discount_rate_default)
   document.getElementById('common_discount_rate').noUiSlider.set(discount_rate_default)
 
-  if (key == 'baseline') {
   // Set the text input fields
-  
-  $('#baseline_cost_front_layer_text').val(preset['cost_front_layer'].toFixed(2))
-  $('#baseline_cost_cell_text').val(preset['cost_cell'].toFixed(2))
-  $('#baseline_cost_back_layer_text').val(preset['cost_back_layer'].toFixed(2))
-  $('#baseline_cost_noncell_text').val(preset['cost_noncell'].toFixed(2))
-  $('#baseline_cost_extra').val(0)
-  $('#baseline_cost_om_text').val(preset['cost_om'].toFixed(2))
-  $('#baseline_cost_bos_power_text').val(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_power'].toFixed(2))
-  $('#baseline_cost_bos_area_text').val(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_area'].toFixed(2))
-  $('#baseline_efficiency_text').val(preset['efficiency'].toFixed(1))
-  $('#baseline_energy_yield_text').val(preset['energy_yield'].toFixed(0))
-  $('#baseline_degradation_rate_text').val(preset['degradation_rate'].toFixed(2))
-  $('#baseline_service_life_text').val(service_life_default)
-  
+  $('#'+key+'_cost_front_layer_text').val(preset['cost_front_layer'].toFixed(2))
+  $('#'+key+'_cost_cell_text').val(preset['cost_cell'].toFixed(2))
+  $('#'+key+'_cost_back_layer_text').val(preset['cost_back_layer'].toFixed(2))
+  $('#'+key+'_cost_noncell_text').val(preset['cost_noncell'].toFixed(2))
+  $('#'+key+'_cost_extra').val(0)
+  $('#'+key+'_cost_om_text').val(preset['cost_om'].toFixed(2))
+  $('#'+key+'_cost_bos_power_text').val(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_power'].toFixed(2))
+  $('#'+key+'_cost_bos_area_text').val(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_area'].toFixed(2))
+  $('#'+key+'_efficiency_text').val(preset['efficiency'].toFixed(1))
+  $('#'+key+'_energy_yield_text').val(preset['energy_yield'].toFixed(0))
+  $('#'+key+'_degradation_rate_text').val(preset['degradation_rate'].toFixed(2))
+  $('#'+key+'_service_life_text').val(service_life_default)
 
   // Set the sliders
-  document.getElementById('baseline_cost_front_layer').noUiSlider.set(preset['cost_front_layer'])
-  document.getElementById('baseline_cost_cell').noUiSlider.set(preset['cost_cell'])
-  document.getElementById('baseline_cost_back_layer').noUiSlider.set(preset['cost_back_layer'])
-  document.getElementById('baseline_cost_noncell').noUiSlider.set(preset['cost_noncell'])
-  document.getElementById('baseline_cost_extra').noUiSlider.set(0.00)
-  document.getElementById('baseline_cost_om').noUiSlider.set(preset['cost_om'].toFixed(2))
-  document.getElementById('baseline_cost_bos_power').noUiSlider.set(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_power'])
-  document.getElementById('baseline_cost_bos_area').noUiSlider.set(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_area'])
-  document.getElementById('baseline_efficiency').noUiSlider.set(preset['efficiency'])
-  document.getElementById('baseline_energy_yield').noUiSlider.set(preset['energy_yield'])
-  document.getElementById('baseline_degradation_rate').noUiSlider.set(preset['degradation_rate'])
-  document.getElementById('baseline_service_life').noUiSlider.set(service_life_default)
-  } else if (key == 'proposed') {
-  $('#proposed_cost_front_layer_text').val(preset['cost_front_layer'].toFixed(2))
-  $('#proposed_cost_cell_text').val(preset['cost_cell'].toFixed(2))
-  $('#proposed_cost_back_layer_text').val(preset['cost_back_layer'].toFixed(2))
-  $('#proposed_cost_noncell_text').val(preset['cost_noncell'].toFixed(2))
-  $('#proposed_cost_extra').val(0)
-  $('#proposed_cost_om_text').val(preset['cost_om'].toFixed(2))
-  $('#proposed_cost_bos_power_text').val(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_power'].toFixed(2))
-  $('#proposed_cost_bos_area_text').val(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_area'].toFixed(2))
-  $('#proposed_efficiency_text').val(preset['efficiency'].toFixed(1))
-  $('#proposed_energy_yield_text').val(preset['energy_yield'].toFixed(0))
-  $('#proposed_degradation_rate_text').val(preset['degradation_rate'].toFixed(2))
-  $('#proposed_service_life_text').val(service_life_default)
-  
-
-  // Set the sliders
-  document.getElementById('proposed_cost_front_layer').noUiSlider.set(preset['cost_front_layer'])
-  document.getElementById('proposed_cost_cell').noUiSlider.set(preset['cost_cell'])
-  document.getElementById('proposed_cost_back_layer').noUiSlider.set(preset['cost_back_layer'])
-  document.getElementById('proposed_cost_noncell').noUiSlider.set(preset['cost_noncell'])
-  document.getElementById('proposed_cost_extra').noUiSlider.set(0.00)
-  document.getElementById('proposed_cost_om').noUiSlider.set(preset['cost_om'].toFixed(2))
-  document.getElementById('proposed_cost_bos_power').noUiSlider.set(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_power'])
-  document.getElementById('proposed_cost_bos_area').noUiSlider.set(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_area'])
-  document.getElementById('proposed_efficiency').noUiSlider.set(preset['efficiency'])
-  document.getElementById('proposed_energy_yield').noUiSlider.set(preset['energy_yield'])
-  document.getElementById('proposed_degradation_rate').noUiSlider.set(preset['degradation_rate'])
-  document.getElementById('proposed_service_life').noUiSlider.set(service_life_default)
-  }
+  document.getElementById(key+'_cost_front_layer').noUiSlider.set(preset['cost_front_layer'])
+  document.getElementById(key+'_cost_cell').noUiSlider.set(preset['cost_cell'])
+  document.getElementById(key+'_cost_back_layer').noUiSlider.set(preset['cost_back_layer'])
+  document.getElementById(key+'_cost_noncell').noUiSlider.set(preset['cost_noncell'])
+  document.getElementById(key+'_cost_extra').noUiSlider.set(0.00)
+  document.getElementById(key+'_cost_om').noUiSlider.set(preset['cost_om'].toFixed(2))
+  document.getElementById(key+'_cost_bos_power').noUiSlider.set(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_power'])
+  document.getElementById(key+'_cost_bos_area').noUiSlider.set(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_area'])
+  document.getElementById(key+'_efficiency').noUiSlider.set(preset['efficiency'])
+  document.getElementById(key+'_energy_yield').noUiSlider.set(preset['energy_yield'])
+  document.getElementById(key+'_degradation_rate').noUiSlider.set(preset['degradation_rate'])
+  document.getElementById(key+'_service_life').noUiSlider.set(service_life_default)
 
   calculate()
 }
@@ -581,20 +553,6 @@ function copy_from_baseline(){
   document.getElementById('proposed_degradation_rate').noUiSlider.set($('#baseline_degradation_rate_text').val())
   document.getElementById('proposed_service_life').noUiSlider.set($('#baseline_service_life_text').val())
 
-  calculate()
-}
-
-function copy_from_proposed(){
-  $('#baseline_cost_front_layer_text').val($('#proposed_cost_front_layer_text').val())
-  $('#baseline_cost_cell_text').val($('#proposed_cost_cell_text').val())
-  $('#baseline_cost_back_layer_text').val($('#proposed_cost_back_layer_text').val())
-  $('#baseline_cost_noncell_text').val($('#proposed_cost_noncell_text').val())
-  $('#baseline_cost_extra_text').val($('#proposed_cost_extra_text').val())
-  $('#baseline_cost_om_text').val($('#proposed_cost_om_text').val())
-  $('#baseline_efficiency_text').val($('#proposed_efficiency_text').val())
-  $('#baseline_energy_yield_text').val($('#proposed_energy_yield_text').val())
-  $('#baseline_degradation_rate_text').val($('#proposed_degradation_rate_text').val())
-  $('#baseline_service_life_text').val($('#proposed_service_life_text').val())
   calculate()
 }
 
@@ -688,8 +646,6 @@ function calculate() {
   var proposed_service_life = parseFloat($('#proposed_service_life_text').val())
 
   var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
-  var common_parameter_2 = parseFloat($('#common_parameter_2_text').val())
-  var common_parameter_3 = parseFloat($('#common_parameter_3_text').val())
 
   // Calculate baseline and proposed 
   var cost_baseline = 0.0
@@ -702,7 +658,6 @@ function calculate() {
 
   var cost_proposed = 0.0
   var energy_proposed = 0.0
-  var mine = 0.0
   for (var year = 0; year <= proposed_service_life; year++) {
     cost_proposed += cost('proposed', year)/Math.pow(1 + common_discount_rate, year)
     energy_proposed += energy('proposed', year)/Math.pow(1 + common_discount_rate, year)

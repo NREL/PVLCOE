@@ -28,13 +28,10 @@
       <p class='lead'>This tool calculates levelized cost of energy (LCOE) for photovoltaic (PV) systems based on cost, performance, and reliability inputs for a <strong>baseline</strong> and a <strong>proposed</strong> technology.</p>
       <p>Choose your inputs and watch the effect on LCOE to determine whether a proposed technology is cost-effective, to perform trade-off analysis among different technology options, and to do break-even analysis of cost or performance.</p>
       <p>For more details, please <a href='lcoe_calculator_documentation.html' target='_blank'>consult the documentation</a>. You may also be interested in <a href='lcoe_calculator_documentation.html#seealso' target='_blank'>other tools</a> for calculating cost and performance for renewable energy.</p>
-      
       <div class="card bg-light">
         <h4 class='card-header'>Presets for Inputs</h4>
-        
         <div class='card-body'>
           Use the <strong>presets</strong> (below) to choose a different cell technology, package type, system type, or location for the inputs.
-          
           <div class='row align-items-center'>
             <div class='col-sm-3'>
 	      <a href="javascript://" title="Cell Technology" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, <strong>energy yield</strong>, <strong>degradation rate</strong>, <strong>BOS cost</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.">Cell Technology
@@ -66,13 +63,11 @@
                <a href="javascript://" title="Inverter Load Ratio" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Inverter load ratio affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">Inverter Load Ratio
                <span class="badge badge-primary">?</span></a>
                <div class = 'row align-items-center ilr-preset'>
-                
                 <div class='col presettext'>
                  
                   <input id='ilr_preset_text' type='number' size='4' class='form-control' step='0.1' />
                 </div>
                 <div class='col presetslider'>
-                  
                   <div id='ilr_preset'></div>
                 </div>
              </div>
@@ -453,10 +448,5 @@
     <script src='js/preset_tree.min.js'></script>
     <script src='js/bos_cost_tree.js'></script>
     <script src='js/lcoe_calculator.js'></script>
-    <script>
-      $(document).ready(function(){
-        $('[data-toggle="popover"]').popover({html:true});   
-      });
-    </script>
   </body>
 </html>
