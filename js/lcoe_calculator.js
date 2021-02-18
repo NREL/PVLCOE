@@ -14,6 +14,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 const MODULE_MARKUP = 1.15
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
 function update_slider(slider_name, value) {
   var slider = document.getElementById(slider_name);
   var max = slider.noUiSlider.options.range.max
@@ -197,8 +201,6 @@ function func_deg(deg, key) {
 
 function reset_degradation(key) {
   new_value = secant_method(func_deg, 0, 0.05, 0.0001, key) * 100
-  // console.log('secant: ', new_value)
-  // console.log('brent: ', brents_method(func_deg, 0, 0.05, 0.0001)*100)
 
   $('#'+key+'_degradation_rate_text').val((new_value).toFixed(2))
 
@@ -243,10 +245,7 @@ While Brent's method can also be used to find the degradation rate, secant metho
 outside of the slider range (like negative numbers) and display them. 
 */
 function brents_method(f, a, b, precision, root_precision, key) {
-  /*if (f(a) == NaN || f(b) == NaN) {
-    console.log('nan')
-  }
-  console.log(f(a), f(b))*/
+
   if (f(a, key) * f(b, key) >= 0) { // method doesn't work
     return -1;
   } 
@@ -262,7 +261,6 @@ function brents_method(f, a, b, precision, root_precision, key) {
   var s = b
 
   while ((Math.abs(f(b, key)) > root_precision || Math.abs(f(s, key)) > root_precision) || (b - a) > precision) {
-    // console.log(a, f(a), b, f(b))
     if (f(a, key) != f(c, key) && f(b, key) != f(c, key)) {
       s = a*f(b, key)*f(c, key)/((f(a, key)-f(b, key))*(f(a, key)-f(c, key))) + b*f(a, key)*f(c, key)/((f(b, key)-f(a, key))*(f(b, key)-f(c, key))) + c*f(a, key)*f(b, key)/((f(c, key)-f(a, key))*(f(c, key)-f(b, key)))
     } else {
@@ -287,7 +285,6 @@ function brents_method(f, a, b, precision, root_precision, key) {
       a = b	
       b = temp
     }
-    //console.log('b: ', b)
     
   }
   return b;
@@ -317,7 +314,6 @@ function secant_method(f, x0, x1, precision, key) {
 function func_year(year, key) {
   var outputs = calculate()
   if (key == 'baseline') {
-    //console.log('baseline')
     var cost_comparison = outputs[2]
     var energy_comparison = outputs[3]
   } else if (key == 'proposed') {
@@ -326,12 +322,10 @@ function func_year(year, key) {
   }
 
   var lcoe = cost_comparison/energy_comparison
-  //console.log(lcoe)
   var om_cost = parseFloat($('#'+key+'_cost_om_text').val())/1000
   var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
   var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
   var energy_yield = parseFloat($('#'+key+'_energy_yield_text').val())/1000
-  //console.log(degradation_rate, energy_yield)
 
   cost_val = initial_cost(key) + om_cost * ((1 - 1/Math.pow(1 + common_discount_rate, year))/common_discount_rate)
   energy_val = energy_yield * (1-Math.pow((1-degradation_rate)/(1+common_discount_rate), year)) / (degradation_rate + common_discount_rate)
