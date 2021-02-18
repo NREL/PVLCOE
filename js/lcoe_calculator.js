@@ -38,7 +38,14 @@ function slider_setup(slider_name, number_name, settings) {
   var slider = document.getElementById(slider_name);
   var number = document.getElementById(number_name);
   // Create the slider
-  noUiSlider.create(slider, {start: settings['start'], step: settings['step'], connect: true, range: {'min': settings['min'], 'max': settings['max']}});
+  if (slider_name == 'ilr_preset') {
+    noUiSlider.create(slider, {
+    start: [1.1],
+    range: {'min': [1.1], '0.1%': [1.1, 0.2], '65%': [1.3, 0.1], 'max': [1.4]}
+   });
+  } else {
+     noUiSlider.create(slider, {start: settings['start'], step: settings['step'], connect: true, range: {'min': settings['min'], 'max': settings['max']}});
+  }
   // Set the number input to equal the slider's starting point
   number.value = parseFloat(slider.noUiSlider.get()).toFixed(settings['digits']);
   // When the slider moves, update the number
