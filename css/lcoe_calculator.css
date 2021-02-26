@@ -81,6 +81,7 @@ p.result-label {
   clear: left;
   margin-bottom: 0rem;
   font-weight: 500;
+  white-space: nowrap;
 }
 
 p.result {

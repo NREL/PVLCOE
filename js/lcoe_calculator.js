@@ -38,7 +38,10 @@ function slider_setup(slider_name, number_name, settings) {
   var slider = document.getElementById(slider_name);
   var number = document.getElementById(number_name);
   // Create the slider
-  noUiSlider.create(slider, {start: settings['start'], step: settings['step'], connect: true, range: {'min': settings['min'], 'max': settings['max']}});
+  noUiSlider.create(slider, {keyboardSupport: true, keyboardDefaultStep: 1, start: settings['start'], step: settings['step'], connect: true, range: {'min': settings['min'], 'max': settings['max']}});
+
+
+
   // Set the number input to equal the slider's starting point
   number.value = parseFloat(slider.noUiSlider.get()).toFixed(settings['digits']);
   // When the slider moves, update the number
@@ -337,10 +340,10 @@ function reset_year(key) {
   new_value = brents_method(func_year, 1, 100, 0.0001, 1e-10, key)
   new_value = new_value.toFixed(0)
   if (new_value == -1) {
-    if (func_year(1) < 0) {
-      new_value = 100
-    } else {
+    if (Math.abs(func_year(1, key)) < Math.abs(func_year(100, key))) {
       new_value = 1
+    } else {
+      new_value = 100
     }
   }
   $('#'+key+'_service_life_text').val(new_value)
