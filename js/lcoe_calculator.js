@@ -13,16 +13,25 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 */
 
 const MODULE_MARKUP = 1.15
-
+$('#baseline_service_life_text').tooltip('disable')
+//$('#baseline_service_life_text').tooltip('toggleEnabled')
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
-function update_slider(slider_name, value) {
+function update_slider(slider_name, value) { 
+  $('#baseline_service_life_text').tooltip('hide')
+  //$('#baseline_service_life_text').tooltip('show')
   var slider = document.getElementById(slider_name);
   var max = slider.noUiSlider.options.range.max
   var min = slider.noUiSlider.options.range.min
-
+  value = parseFloat(value)
+  //console.log(value, Number.isInteger(value))
+  if ((slider_name == 'baseline_service_life' || slider_name == 'proposed_service_life') && (!Number.isInteger(value))) {
+     console.log(slider_name == 'baseline_service_life' || slider_name == 'proposed_service_life', !Number.isInteger(value), 'invalid')
+     $('#baseline_service_life_text').tooltip('enable')
+     $('#baseline_service_life_text').tooltip('show')
+  } else {$('#baseline_service_life_text').tooltip('disable')}
   if (value >= max) {
       slider.noUiSlider.set(max);
   } else if (value <= min) {
@@ -31,6 +40,16 @@ function update_slider(slider_name, value) {
       slider.noUiSlider.set(value);
   }
 }
+
+/*if (!Number.isInteger(parseFloat($('#baseline_service_life_text').val())) || !Number.isInteger(parseFloat($('#proposed_service_life_text').val()))) {
+     //console.log(slider_name == 'baseline_service_life' || slider_name == 'proposed_service_life', !Number.isInteger(value), 'invalid')
+     
+     $('#baseline_service_life_text').tooltip('enable')
+     $('#baseline_service_life_text').tooltip('show')
+  } else {
+$('#baseline_service_life_text').tooltip('disable')
+console.log('not int')
+}*/
 
 function slider_setup(slider_name, number_name, settings) {
   // Set up sliders
