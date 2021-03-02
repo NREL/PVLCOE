@@ -32,21 +32,27 @@ function update_slider(slider_name, value) {
   }
 }
 
+function filterPips(value) {
+  if (value.toFixed(1) == 1.1 || value.toFixed(1) == 1.3 || value.toFixed(1) == 1.4) return 0;
+  return -1;
+}
+
 function slider_setup(slider_name, number_name, settings) {
   // Set up sliders
   // Make variables for the slider and number input objects
   var slider = document.getElementById(slider_name);
   var number = document.getElementById(number_name);
-  // Create the slider
-  if (slider_name == 'ilr_preset') {
+  
+  if (slider_name == 'ilr_preset') { // create non-linear preset slider with pips
     noUiSlider.create(slider, {
     start: [1.1],
-    range: {'min': [1.1], '0.1%': [1.1, 0.2], '65%': [1.3, 0.1], 'max': [1.4]},
-    pips: {mode: 'steps', density: 3, values: [0.1, 65, 100]}
+    range: {'min': [1.09], '0.1%': [1.1, 0.2], '65%': [1.3, 0.1], 'max': [1.4]}, // min needs to be 1.09 to get all pips to appear
+    pips: {mode: 'steps', density: 50, filter: filterPips}
    });
-  } else {
+  } else { // Create all other sliders
      noUiSlider.create(slider, {start: settings['start'], step: settings['step'], connect: true, range: {'min': settings['min'], 'max': settings['max']}});
   }
+
   // Set the number input to equal the slider's starting point
   number.value = parseFloat(slider.noUiSlider.get()).toFixed(settings['digits']);
   // When the slider moves, update the number
