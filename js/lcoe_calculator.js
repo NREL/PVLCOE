@@ -30,13 +30,19 @@ function update_slider(slider_name, value) {
   value = parseFloat(value)
 
   // displays warning if non-integer service life
-  if (slider_name == 'baseline_service_life' && (!Number.isInteger(value))) {
+  if ((slider_name == 'baseline_service_life' && (!Number.isInteger(value))) || (slider_name == 'baseline_service_life' && value > 1000)) {
+     if (value > 1000) {
+       $('#baseline_service_life_text').val(1000)
+     }
      $('#baseline_service_life_text').tooltip('enable')
      $('#baseline_service_life_text').tooltip('show')
   } else {
      $('#baseline_service_life_text').tooltip('disable')
   }
-  if (slider_name == 'proposed_service_life' && (!Number.isInteger(value))) {
+  if ((slider_name == 'proposed_service_life' && (!Number.isInteger(value))) || (slider_name == 'proposed_service_life' && value > 1000)) {
+     if (value > 1000) {
+       $('#proposed_service_life_text').val(1000)
+     }
      $('#proposed_service_life_text').tooltip('enable')
      $('#proposed_service_life_text').tooltip('show')
   } else {
