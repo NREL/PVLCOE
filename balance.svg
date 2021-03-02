@@ -1,8 +1,6 @@
-<svg width="19" height="22" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-<line y1="-0.5" x2="6.0867" y2="-0.5" transform="matrix(-0.0108148 0.999941 -0.999863 -0.0165288 8.57523 0.000305176)" stroke="black"/>
-<line x1="3.82913" y1="7.5301" x2="14.8291" y2="3.5301" stroke="black"/>
-<path d="M2.12146 17.75L4.5 8.92195L6.87854 17.75H2.12146Z" stroke="black"/>
-<path d="M12.1215 13.75L14.5 4.92195L16.8785 13.75H12.1215Z" stroke="black"/>
-<path d="M8 17C6.96296 19.2639 4.11111 22.4333 1 17" stroke="black"/>
-<path d="M18 13C16.963 15.2639 14.1111 18.4333 11 13" stroke="black"/>
+<svg width="17" height="22" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<line y1="-0.5" x2="6.0867" y2="-0.5" transform="matrix(-0.0108148 0.999941 -0.999863 -0.0165288 7.57523 0.000305176)" stroke="black"/>
+<line x1="2.82913" y1="7.5301" x2="13.8291" y2="3.5301" stroke="black"/>
+<path d="M1.12146 17.75L3.5 8.92195L5.87854 17.75H1.12146Z" stroke="black"/>
+<path d="M11.1215 13.75L13.5 4.92195L15.8785 13.75H11.1215Z" stroke="black"/>
 </svg>

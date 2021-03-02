@@ -14,24 +14,36 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 const MODULE_MARKUP = 1.15
 $('#baseline_service_life_text').tooltip('disable')
-//$('#baseline_service_life_text').tooltip('toggleEnabled')
+$('#proposed_service_life_text').tooltip('disable')
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
 
 function update_slider(slider_name, value) { 
   $('#baseline_service_life_text').tooltip('hide')
-  //$('#baseline_service_life_text').tooltip('show')
+  $('#proposed_service_life_text').tooltip('hide')
+
   var slider = document.getElementById(slider_name);
   var max = slider.noUiSlider.options.range.max
   var min = slider.noUiSlider.options.range.min
   value = parseFloat(value)
-  //console.log(value, Number.isInteger(value))
-  if ((slider_name == 'baseline_service_life' || slider_name == 'proposed_service_life') && (!Number.isInteger(value))) {
-     console.log(slider_name == 'baseline_service_life' || slider_name == 'proposed_service_life', !Number.isInteger(value), 'invalid')
+
+  // displays warning if non-integer service life
+  if (slider_name == 'baseline_service_life' && (!Number.isInteger(value))) {
      $('#baseline_service_life_text').tooltip('enable')
      $('#baseline_service_life_text').tooltip('show')
-  } else {$('#baseline_service_life_text').tooltip('disable')}
+  } else {
+     $('#baseline_service_life_text').tooltip('disable')
+  }
+  if (slider_name == 'proposed_service_life' && (!Number.isInteger(value))) {
+     $('#proposed_service_life_text').tooltip('enable')
+     $('#proposed_service_life_text').tooltip('show')
+  } else {
+     $('#proposed_service_life_text').tooltip('disable')
+  }
+
+  // The conditionals allow the user to put in an out-of-bounds number
   if (value >= max) {
       slider.noUiSlider.set(max);
   } else if (value <= min) {
@@ -41,16 +53,6 @@ function update_slider(slider_name, value) {
   }
 }
 
-/*if (!Number.isInteger(parseFloat($('#baseline_service_life_text').val())) || !Number.isInteger(parseFloat($('#proposed_service_life_text').val()))) {
-     //console.log(slider_name == 'baseline_service_life' || slider_name == 'proposed_service_life', !Number.isInteger(value), 'invalid')
-     
-     $('#baseline_service_life_text').tooltip('enable')
-     $('#baseline_service_life_text').tooltip('show')
-  } else {
-$('#baseline_service_life_text').tooltip('disable')
-console.log('not int')
-}*/
-
 function slider_setup(slider_name, number_name, settings) {
   // Set up sliders
   // Make variables for the slider and number input objects
@@ -58,8 +60,6 @@ function slider_setup(slider_name, number_name, settings) {
   var number = document.getElementById(number_name);
   // Create the slider
   noUiSlider.create(slider, {keyboardSupport: true, keyboardDefaultStep: 1, start: settings['start'], step: settings['step'], connect: true, range: {'min': settings['min'], 'max': settings['max']}});
-
-
 
   // Set the number input to equal the slider's starting point
   number.value = parseFloat(slider.noUiSlider.get()).toFixed(settings['digits']);
@@ -69,7 +69,6 @@ function slider_setup(slider_name, number_name, settings) {
     calculate()
   });
   // When the number changes, update the slider
-  // The conditionals allow the user to put in an out-of-bounds number
   number.addEventListener('input', function(){
     update_slider(slider_name, this.value)
     calculate()
@@ -202,6 +201,7 @@ slider_setup(
   {'start': 0, 'min': 0, 'max': 10, 'step': 0.01, 'digits': 2}
 )
 
+// function used by secant method to break even degradation rate
 function func_deg(deg, key) {
   var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
   var year = $('#'+key+'_service_life_text').val()
@@ -221,6 +221,8 @@ function func_deg(deg, key) {
   return wanted - (1 - Math.pow((1-deg)/(1+common_discount_rate), year)) / (deg + common_discount_rate)
 }
 
+// break even degradation rate using secant method
+// secant method is necessary since the equation doesn't have a closed form solution
 function reset_degradation(key) {
   new_value = secant_method(func_deg, 0, 0.05, 0.0001, key) * 100
 
@@ -230,6 +232,7 @@ function reset_degradation(key) {
   calculate()
 }
 
+// break even O&M cost
 function reset_OM(key) {
   var outputs = calculate()
   var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
@@ -333,6 +336,7 @@ function secant_method(f, x0, x1, precision, key) {
 
 }
 
+// function used by Brent's method to break even service life
 function func_year(year, key) {
   var outputs = calculate()
   if (key == 'baseline') {
@@ -354,10 +358,13 @@ function func_year(year, key) {
   return lcoe - cost_val/energy_val
 }
 
+// break even service life using Brent's method
 function reset_year(key) {
   var new_value = 0
   new_value = brents_method(func_year, 1, 100, 0.0001, 1e-10, key)
   new_value = new_value.toFixed(0)
+
+  // Brent's method failed, determine if largest or smallest value should be displayed
   if (new_value == -1) {
     if (Math.abs(func_year(1, key)) < Math.abs(func_year(100, key))) {
       new_value = 1
@@ -371,6 +378,8 @@ function reset_year(key) {
 
 }
 
+// function to break even front layer cost, cell cost, back layer cost, non-cell module cost, extra component cost,
+// BOS cost power scaling, BOS cost area scaling, and efficiency
 function match_LCOE(slider_name, number_name, key) {
   var number = document.getElementById(number_name);
   var outputs = calculate()
@@ -448,7 +457,7 @@ function match_LCOE(slider_name, number_name, key) {
   
 }
 
-
+// function to break even energy yield
 function reset_energy_yield(key) {
   var outputs = calculate()
   var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
@@ -740,8 +749,6 @@ function calculate() {
   var proposed_service_life = parseFloat($('#proposed_service_life_text').val())
 
   var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
-  var common_parameter_2 = parseFloat($('#common_parameter_2_text').val())
-  var common_parameter_3 = parseFloat($('#common_parameter_3_text').val())
 
   // Calculate baseline and proposed 
   var cost_baseline = 0.0
@@ -754,7 +761,6 @@ function calculate() {
 
   var cost_proposed = 0.0
   var energy_proposed = 0.0
-  var mine = 0.0
   for (var year = 0; year <= proposed_service_life; year++) {
     cost_proposed += cost('proposed', year)/Math.pow(1 + common_discount_rate, year)
     energy_proposed += energy('proposed', year)/Math.pow(1 + common_discount_rate, year)
@@ -762,9 +768,19 @@ function calculate() {
   var lcoe_proposed = cost_proposed/energy_proposed
 
   // Put the final answer into the little pills in the Results section
-  document.getElementById('lcoe_baseline').innerHTML = lcoe_baseline.toFixed(4)
-  document.getElementById('lcoe_proposed').innerHTML = lcoe_proposed.toFixed(4)
+  // display 'error' if service life input is invalid 
+  if (!Number.isInteger(parseFloat($('#baseline_service_life_text').val()))) {
+     document.getElementById('lcoe_baseline').innerHTML = 'error'
+  } else {
+     document.getElementById('lcoe_baseline').innerHTML = lcoe_baseline.toFixed(4)
+  }
+  if (!Number.isInteger(parseFloat($('#proposed_service_life_text').val()))) {
+     document.getElementById('lcoe_proposed').innerHTML = 'error'
+  } else {
+     document.getElementById('lcoe_proposed').innerHTML = lcoe_proposed.toFixed(4)
+  }
 
+  // return values used in break even calculations
   return [cost_baseline, energy_baseline, cost_proposed, energy_proposed]
 }
 
