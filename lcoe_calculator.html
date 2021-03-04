@@ -27,7 +27,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <div class='container'>
       <h1>Comparative PV LCOE calculator</h1>
       <p class='lead'>This tool calculates levelized cost of energy (LCOE) for photovoltaic (PV) systems based on cost, performance, and reliability inputs for a <strong>baseline</strong> and a <strong>proposed</strong> technology.</p>
-      <p>Choose your inputs and watch the effect on LCOE to determine whether a proposed technology is cost-effective, to perform trade-off analysis among different technology options, and to do break-even analysis of cost or performance.</p>
+      <p>Choose your inputs and watch the effect on LCOE to determine whether a proposed technology is cost-effective, to perform trade-off analysis among different technology options, and to do break-even analysis of cost or performance. Each <img src="balance.svg"></img> button adjusts a single input to make the baseline and proposed LCOE equal.</p>
       <p>For more details, please <a href='lcoe_calculator_documentation.html' target='_blank'>consult the documentation</a>. You may also be interested in <a href='lcoe_calculator_documentation.html#seealso' target='_blank'>other tools</a> for calculating cost and performance for renewable energy.</p>
       <h2>Inputs</h2>
       <div class='alert alert-dismissible alert-info' role='alert'>
@@ -314,7 +314,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                         <img src="balance.svg"></img>
                      </span>
                    </div>
-                  <input id='baseline_service_life_text' type='number' class='form-control' step='0.01' data-toggle='tooltip' title='Input for service life must be a positive integer no greater than 1000.' data-placement='top'/></div>
+                  <input id='baseline_service_life_text' type='number' class='form-control' step='0.01' data-toggle='tooltip' title='Service life must be a positive integer no greater than 1000.' data-placement='top'/></div>
                  </div>
                 </div>
                 <div class='col baseline ml-4'>
@@ -559,7 +559,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                         <img src="balance.svg"></img>
                      </span>
                    </div>
-                  <input id='proposed_service_life_text' type='number' class='form-control' step='0.01' data-toggle='tooltip' title='Input for service life must be a positive integer no greater than 1000.' data-placement='top'/></div>
+                  <input id='proposed_service_life_text' type='number' class='form-control' step='0.01' data-toggle='tooltip' title='Service life must be a positive integer no greater than 1000.' data-placement='top'/></div>
                  </div>
                 </div>
                 <div class='col proposed ml-4'>
