@@ -15,6 +15,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 const MODULE_MARKUP = 1.15
 $('#baseline_service_life_text').tooltip('disable')
 $('#proposed_service_life_text').tooltip('disable')
+$('#lcoe_proposed').tooltip('disable')
+$('#lcoe_baseline').tooltip('disable')
 
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
@@ -389,10 +391,16 @@ function reset_year(key) {
   if ((document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) && (key == 'proposed')) {
     $('#lcoe_proposed').tooltip('enable')
     $('#lcoe_proposed').tooltip('show')
+    setTimeout(function(){
+        $('#lcoe_proposed').tooltip('hide');
+    }, 3000);
   }
   if ((document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) && (key == 'baseline')) {
     $('#lcoe_baseline').tooltip('enable')
     $('#lcoe_baseline').tooltip('show')
+    setTimeout(function(){
+        $('#lcoe_baseline').tooltip('hide');
+    }, 3000);
   }
 }
 
