@@ -10,7 +10,7 @@ Redistribution and use in source and binary forms, with or without modification,
 3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
  
 THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
+
 -->
 
 <!doctype html>
@@ -27,7 +27,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <div class='container'>
       <h1>Comparative PV LCOE calculator</h1>
       <p class='lead'>This tool calculates levelized cost of energy (LCOE) for photovoltaic (PV) systems based on cost, performance, and reliability inputs for a <strong>baseline</strong> and a <strong>proposed</strong> technology.</p>
-      <p>Choose your inputs and watch the effect on LCOE to determine whether a proposed technology is cost-effective, to perform trade-off analysis among different technology options, and to do break-even analysis of cost or performance.</p>
+      <p>Choose your inputs and watch the effect on LCOE to determine whether a proposed technology is cost-effective, to perform trade-off analysis among different technology options, and to do break-even analysis of cost or performance. Each <img src="balance.svg"></img> button adjusts a single input to make the baseline and proposed LCOE equal.</p>
       <p>For more details, please <a href='lcoe_calculator_documentation.html' target='_blank'>consult the documentation</a>. You may also be interested in <a href='lcoe_calculator_documentation.html#seealso' target='_blank'>other tools</a> for calculating cost and performance for renewable energy.</p>
       <h2>Inputs</h2>
       <div class='alert alert-dismissible alert-info' role='alert'>
@@ -86,123 +86,241 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                       <button type='button' class='btn btn-primary' onclick=preset_set()>Use this preset</button>
                     </div>
                   </div>
-                </div>
-              </div>
+                </div> 
+              </div>  
               <h4>Cost</h4>
               <label for='baseline_cost_front_layer_text' class='h5'>Front layer cost (USD/m<sup>2</sup>)</label>
               <!-- Each slider goes in a sliderrow, which arranges the text box and slider -->
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
                   <!-- This is the text box, which the JavaScript hooks into -->
-                  <input id='baseline_cost_front_layer_text' type='number' class='form-control' step='0.01' />
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_front_layer', 'baseline_cost_front_layer_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_front_layer_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
-                  <!-- This is an empty div that the JavaScript magically styles as a slider -->
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_front_layer'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_cell_text' class='h5'>Cell cost (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_cell_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_cell', 'baseline_cost_cell_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_cell_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_cell'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_back_layer_text' class='h5'>Back layer cost (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_back_layer_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_back_layer', 'baseline_cost_back_layer_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_back_layer_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_back_layer'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_noncell_text' class='h5'>Non-cell module cost (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_noncell_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_noncell', 'baseline_cost_noncell_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_noncell_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_noncell'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_extra_text' class='h5'>Extra component cost (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_extra_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_extra', 'baseline_cost_extra_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_extra_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_extra'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_om_text' class='h5'><abbr title='operations and maintenance'>O&amp;M</abbr> cost (USD/kW<sub>DC</sub>/year)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_om_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="reset_OM('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_om_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_om'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_bos_power_text' class='h5'><abbr title='balance of system'>BOS</abbr> cost, power-scaling (USD/W)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_bos_power_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_bos_power', 'baseline_cost_bos_power_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_bos_power_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_bos_power'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_cost_bos_area_text' class='h5'><abbr title='balance of system'>BOS</abbr> cost, area-scaling (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_cost_bos_area_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_bos_area', 'baseline_cost_bos_area_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_cost_bos_area_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_cost_bos_area'></div>
-                </div>
+                </div> 
               </div>
               <hr>
               <h4>Performance</h4>
               <label for='baseline_efficiency_text' class='h5'>Efficiency (%)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_efficiency_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('efficiency', 'baseline_efficiency_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_efficiency_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_efficiency'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_energy_yield_text' class='h5'>Energy yield (kWh/kW<sub>DC</sub>)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_energy_yield_text' type='number' class='form-control' step='1' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="reset_energy_yield('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_energy_yield_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_energy_yield'></div>
-                </div>
+                </div> 
               </div>
               <hr>
               <h4>Reliability</h4>
               <label for='baseline_degradation_rate_text' class='h5'>System degradation rate (%/year)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_degradation_rate_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="reset_degradation('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_degradation_rate_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_degradation_rate'></div>
-                </div>
+                </div> 
               </div>
               <label for='baseline_service_life_text' class='h5'>Service life (years)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='baseline_service_life_text' type='number' class='form-control' step='1' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="reset_year('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_service_life_text' type='number' class='form-control' step='0.01' data-toggle='tooltip' title='Service life must be a positive integer no greater than 1000.' data-placement='top'/></div>
+                 </div>
                 </div>
-                <div class='col baseline'>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_service_life'></div>
-                </div>
+                </div> 
               </div>
             </div>
           </div>
@@ -218,116 +336,234 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               <h4>Cost</h4>
               <label for='proposed_cost_front_layer_text' class='h5'>Front layer cost (USD/m<sup>2</sup>)</label>
               <!-- Each slider goes in a sliderrow, which arranges the text box and slider -->
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
                   <!-- This is the text box, which the JavaScript hooks into -->
-                  <input id='proposed_cost_front_layer_text' type='number' class='form-control' step='0.01' />
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_front_layer', 'proposed_cost_front_layer_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_cost_front_layer_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
                   <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_cost_front_layer'></div>
                 </div>
               </div>
               <label for='proposed_cost_cell_text' class='h5'>Cell cost (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='proposed_cost_cell_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_cell', 'proposed_cost_cell_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_cost_cell_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_cost_cell'></div>
                 </div>
               </div>
               <label for='proposed_cost_back_layer_text' class='h5'>Back layer cost (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='proposed_cost_back_layer_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_back_layer', 'proposed_cost_back_layer_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_cost_back_layer_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_cost_back_layer'></div>
                 </div>
               </div>
               <label for='proposed_cost_noncell_text' class='h5'>Non-cell module cost (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='proposed_cost_noncell_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_noncell', 'proposed_cost_noncell_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_cost_noncell_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_cost_noncell'></div>
                 </div>
               </div>
               <label for='proposed_cost_extra_text' class='h5'>Extra component cost (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='proposed_cost_extra_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_extra', 'proposed_cost_extra_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_cost_extra_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_cost_extra'></div>
                 </div>
               </div>
               <label for='proposed_cost_om_text' class='h5'><abbr title='operations and maintenance'>O&amp;M</abbr> cost (USD/kW<sub>DC</sub>/year)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='proposed_cost_om_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="reset_OM('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_cost_om_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_cost_om'></div>
                 </div>
               </div>
               <label for='proposed_cost_bos_power_text' class='h5'><abbr title='balance of system'>BOS</abbr> cost, power-scaling (USD/W)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='proposed_cost_bos_power_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_bos_power', 'proposed_cost_bos_power_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_cost_bos_power_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_cost_bos_power'></div>
                 </div>
               </div>
               <label for='proposed_cost_bos_area_text' class='h5'><abbr title='balance of system'>BOS</abbr> cost, area-scaling (USD/m<sup>2</sup>)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='proposed_cost_bos_area_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('cost_bos_area', 'proposed_cost_bos_area_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_cost_bos_area_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_cost_bos_area'></div>
                 </div>
               </div>
               <hr>
               <h4>Performance</h4>
               <label for='proposed_efficiency_text' class='h5'>Efficiency (%)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='proposed_efficiency_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="match_LCOE('efficiency', 'proposed_efficiency_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_efficiency_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_efficiency'></div>
                 </div>
               </div>
               <label for='proposed_energy_yield_text' class='h5'>Energy yield (kWh/kW<sub>DC</sub>)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='proposed_energy_yield_text' type='number' class='form-control' step='1' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="reset_energy_yield('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_energy_yield_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_energy_yield'></div>
                 </div>
               </div>
               <hr>
               <h4>Reliability</h4>
               <label for='proposed_degradation_rate_text' class='h5'>System degradation rate (%/year)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='proposed_degradation_rate_text' type='number' class='form-control' step='0.01' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="reset_degradation('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_degradation_rate_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_degradation_rate'></div>
                 </div>
               </div>
               <label for='proposed_service_life_text' class='h5'>Service life (years)</label>
-              <div class='row align-items-center sliderrow'>
+              <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='proposed_service_life_text' type='number' class='form-control' step='1' />
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="reset_year('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img src="balance.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_service_life_text' type='number' class='form-control' step='0.01' data-toggle='tooltip' title='Service life must be a positive integer no greater than 1000.' data-placement='top'/></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_service_life'></div>
                 </div>
               </div>
@@ -361,9 +597,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
           <div class='col-md result'>
             <div class='card baseline'>
               <div class='card-body result'>
-
-                <p class='result-label'>Baseline LCOE (USD/kWh) </p>
-                <p class='result'><span class='badge-pill badge-secondary' id='lcoe_baseline'></span></p>
+               <p class='result-label'>Baseline LCOE (USD/kWh) </p>
+                <p class='result'><span class='badge-pill badge-secondary' id='lcoe_baseline' data-toggle='tooltip' data-trigger='manual' title='Breakeven result is approximate because service life has been rounded.' data-placement='top'></span></p>
               </div>
             </div>
           </div>
@@ -371,7 +606,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
             <div class='card proposed'>
               <div class='card-body result'>
                 <p class='result-label'>Proposed LCOE (USD/kWh) </p>
-                <p class='result'><span class='badge-pill badge-secondary' id='lcoe_proposed'></span></p>
+                <p class='result'><span class='badge-pill badge-secondary' id='lcoe_proposed' data-toggle='tooltip' data-trigger='manual' title='Breakeven result is approximate because service life has been rounded.' data-placement='top'></span></p>
               </div>
             </div>
           </div>
@@ -411,7 +646,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       </p>
       <div class='card'>
         <div class='card-body'>
-          <p class='card-text'>TJ Silverman, MG Deceglie, KA Horowitz. &ldquo;NREL Comparative PV LCOE Calculator.&rdquo; Internet: http://pvlcoe.nrel.gov, March 2018.</p>
+          <p class='card-text'>SJ Andrews, B Smith, MG Deceglie, KA Horowitz, and TJ Silverman. “NREL Comparative PV LCOE Calculator.” Unreleased version (latest release available at <a href="https://pvlcoe.nrel.gov" target="_blank">https://pvlcoe.nrel.gov</a>)</p>
+          <p class='card-text'>Note: We recommend including the <a href="https://docs.github.com/en/github/writing-on-github/autolinked-references-and-urls#commit-shas" target="_blank">URL for a specific commit</a> if citing results from an unreleased version.</p>
         </div>
       </div>
     </div>
