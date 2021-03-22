@@ -196,8 +196,13 @@ slider_setup(
   {'start': 0,  'min': 1, 'max': 50, 'step': 1, 'digits': 0}
 )
 slider_setup(
-  'common_discount_rate',
-  'common_discount_rate_text',
+  'baseline_discount_rate',
+  'baseline_discount_rate_text',
+  {'start': 0, 'min': 0, 'max': 10, 'step': 0.01, 'digits': 2}
+)
+slider_setup(
+  'proposed_discount_rate',
+  'proposed_discount_rate_text',
   {'start': 0, 'min': 0, 'max': 10, 'step': 0.01, 'digits': 2}
 )
 
@@ -295,8 +300,6 @@ function preset_set(key){
   var preset = preset_tree[preset_cell_technology.value][preset_package_type.value][preset_system_type.value][preset_location_yield.value]
   var service_life_default = 25
   var discount_rate_default = 6.30
-  $('#common_discount_rate_text').val(discount_rate_default)
-  document.getElementById('common_discount_rate').noUiSlider.set(discount_rate_default)
 
   // Set the text input fields
   $('#'+key+'_cost_front_layer_text').val(preset['cost_front_layer'].toFixed(2))
@@ -311,6 +314,7 @@ function preset_set(key){
   $('#'+key+'_energy_yield_text').val(preset['energy_yield'].toFixed(0))
   $('#'+key+'_degradation_rate_text').val(preset['degradation_rate'].toFixed(2))
   $('#'+key+'_service_life_text').val(service_life_default)
+  $('#'+key+'_discount_rate_text').val(discount_rate_default)
 
   // Set the sliders
   document.getElementById(key+'_cost_front_layer').noUiSlider.set(preset['cost_front_layer'])
@@ -325,6 +329,7 @@ function preset_set(key){
   document.getElementById(key+'_energy_yield').noUiSlider.set(preset['energy_yield'])
   document.getElementById(key+'_degradation_rate').noUiSlider.set(preset['degradation_rate'])
   document.getElementById(key+'_service_life').noUiSlider.set(service_life_default)
+  document.getElementById(key+'_discount_rate').noUiSlider.set(discount_rate_default)
 
   calculate()
 }
@@ -347,6 +352,7 @@ function copy_from_baseline(){
   $('#proposed_energy_yield_text').val($('#baseline_energy_yield_text').val())
   $('#proposed_degradation_rate_text').val($('#baseline_degradation_rate_text').val())
   $('#proposed_service_life_text').val($('#baseline_service_life_text').val())
+  $('#proposed_discount_rate_text').val($('#baseline_discount_rate_text').val())
 
   // Set the sliders
   document.getElementById('proposed_cost_front_layer').noUiSlider.set($('#baseline_cost_front_layer_text').val())
@@ -361,6 +367,7 @@ function copy_from_baseline(){
   document.getElementById('proposed_energy_yield').noUiSlider.set($('#baseline_energy_yield_text').val())
   document.getElementById('proposed_degradation_rate').noUiSlider.set($('#baseline_degradation_rate_text').val())
   document.getElementById('proposed_service_life').noUiSlider.set($('#baseline_service_life_text').val())
+  document.getElementById('proposed_discount_rate').noUiSlider.set($('#baseline_discount_rate_text').val())
 
   calculate()
 }
@@ -454,22 +461,23 @@ function calculate() {
   var baseline_service_life = parseFloat($('#baseline_service_life_text').val())
   var proposed_service_life = parseFloat($('#proposed_service_life_text').val())
 
-  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+  var baseline_discount_rate = parseFloat($('#baseline_discount_rate_text').val())/100.0
+  var proposed_discount_rate = parseFloat($('#proposed_discount_rate_text').val())/100.0
 
   // Calculate baseline and proposed 
   var cost_baseline = 0.0
   var energy_baseline = 0.0
   for (var year = 0; year <= baseline_service_life; year++) {
-    cost_baseline += cost('baseline', year)/Math.pow(1 + common_discount_rate, year)
-    energy_baseline += energy('baseline', year)/Math.pow(1 + common_discount_rate, year)
+    cost_baseline += cost('baseline', year)/Math.pow(1 + baseline_discount_rate, year)
+    energy_baseline += energy('baseline', year)/Math.pow(1 + baseline_discount_rate, year)
   }
   var lcoe_baseline = cost_baseline/energy_baseline
 
   var cost_proposed = 0.0
   var energy_proposed = 0.0
   for (var year = 0; year <= proposed_service_life; year++) {
-    cost_proposed += cost('proposed', year)/Math.pow(1 + common_discount_rate, year)
-    energy_proposed += energy('proposed', year)/Math.pow(1 + common_discount_rate, year)
+    cost_proposed += cost('proposed', year)/Math.pow(1 + proposed_discount_rate, year)
+    energy_proposed += energy('proposed', year)/Math.pow(1 + proposed_discount_rate, year)
   }
   var lcoe_proposed = cost_proposed/energy_proposed
 
