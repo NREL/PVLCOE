@@ -27,6 +27,7 @@ function baselineToggle() {
     document.getElementById("proposedCheckBox").checked = true;
     $('#proposed_discount_rate_text').val($('#baseline_discount_rate_text').val())
     document.getElementById('proposed_discount_rate').noUiSlider.set($('#baseline_discount_rate_text').val())
+    calculate();
   } else {
     document.getElementById("proposedCheckBox").checked = false;
   }
@@ -41,6 +42,7 @@ function proposedToggle() {
 
     $('#baseline_discount_rate_text').val($('#proposed_discount_rate_text').val())
     document.getElementById('baseline_discount_rate').noUiSlider.set($('#proposed_discount_rate_text').val())
+    calculate();
   } else {
     document.getElementById("baselineCheckBox").checked = false;
   }
