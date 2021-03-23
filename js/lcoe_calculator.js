@@ -18,6 +18,33 @@ $(document).ready(function(){
   $('[data-toggle="popover"]').popover({html:true});   
 });
 
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+function baselineToggle() {
+  if (document.getElementById('baselineCheckBox').checked) {
+    document.getElementById("proposedCheckBox").checked = true;
+  } else {
+    document.getElementById("proposedCheckBox").checked = false;
+  }
+  setTimeout(function(){
+     $('#baselineCheckBox').tooltip('hide');
+  }, 1500);
+}
+
+function proposedToggle() {
+  if (document.getElementById('proposedCheckBox').checked) {
+    document.getElementById("baselineCheckBox").checked = true;
+  } else {
+    document.getElementById("baselineCheckBox").checked = false;
+  }
+  setTimeout(function(){
+     $('#proposedCheckBox').tooltip('hide');
+  }, 1500);
+}
+
+
 function update_slider(slider_name, value) {
   var slider = document.getElementById(slider_name);
   var max = slider.noUiSlider.options.range.max
@@ -55,15 +82,32 @@ function slider_setup(slider_name, number_name, settings) {
 
   // Set the number input to equal the slider's starting point
   number.value = parseFloat(slider.noUiSlider.get()).toFixed(settings['digits']);
+
   // When the slider moves, update the number
   slider.noUiSlider.on('slide', function(values) {
     number.value = parseFloat(values[0]).toFixed(settings['digits']);
+    if (slider_name == 'baseline_discount_rate' && !document.getElementById('baselineCheckBox').checked) {
+      update_slider('proposed_discount_rate', number.value)
+      $('#proposed_discount_rate_text').val(number.value)
+    }
+    if (slider_name == 'proposed_discount_rate' && !document.getElementById('proposedCheckBox').checked) {
+      update_slider('baseline_discount_rate', number.value)
+      $('#baseline_discount_rate_text').val(number.value)
+    }
     calculate()
   });
   // When the number changes, update the slider
   // The conditionals allow the user to put in an out-of-bounds number
   number.addEventListener('input', function(){
     update_slider(slider_name, this.value);
+    if (slider_name == 'baseline_discount_rate' && !document.getElementById('baselineCheckBox').checked) {
+      update_slider('proposed_discount_rate', this.value)
+      $('#proposed_discount_rate_text').val(this.value)
+    }
+    if (slider_name == 'proposed_discount_rate' && !document.getElementById('proposedCheckBox').checked) {
+      update_slider('baseline_discount_rate', this.value)
+      $('#baseline_discount_rate_text').val(this.value)
+    }
     calculate();
   });
 }

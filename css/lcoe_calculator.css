@@ -23,6 +23,13 @@ input[type='number'] {
     width: 70px;
 }
 
+.largerCheckbox {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-top: 6px;
+}
+
 a>.badge {
   vertical-align: middle;
   margin-top: -0.3em;
