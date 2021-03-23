@@ -86,11 +86,11 @@ function slider_setup(slider_name, number_name, settings) {
   // When the slider moves, update the number
   slider.noUiSlider.on('slide', function(values) {
     number.value = parseFloat(values[0]).toFixed(settings['digits']);
-    if (slider_name == 'baseline_discount_rate' && !document.getElementById('baselineCheckBox').checked) {
+    if (slider_name == 'baseline_discount_rate' && document.getElementById('baselineCheckBox').checked) {
       update_slider('proposed_discount_rate', number.value)
       $('#proposed_discount_rate_text').val(number.value)
     }
-    if (slider_name == 'proposed_discount_rate' && !document.getElementById('proposedCheckBox').checked) {
+    if (slider_name == 'proposed_discount_rate' && document.getElementById('proposedCheckBox').checked) {
       update_slider('baseline_discount_rate', number.value)
       $('#baseline_discount_rate_text').val(number.value)
     }
@@ -100,11 +100,11 @@ function slider_setup(slider_name, number_name, settings) {
   // The conditionals allow the user to put in an out-of-bounds number
   number.addEventListener('input', function(){
     update_slider(slider_name, this.value);
-    if (slider_name == 'baseline_discount_rate' && !document.getElementById('baselineCheckBox').checked) {
+    if (slider_name == 'baseline_discount_rate' && document.getElementById('baselineCheckBox').checked) {
       update_slider('proposed_discount_rate', this.value)
       $('#proposed_discount_rate_text').val(this.value)
     }
-    if (slider_name == 'proposed_discount_rate' && !document.getElementById('proposedCheckBox').checked) {
+    if (slider_name == 'proposed_discount_rate' && document.getElementById('proposedCheckBox').checked) {
       update_slider('baseline_discount_rate', this.value)
       $('#baseline_discount_rate_text').val(this.value)
     }
