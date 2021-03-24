@@ -23,31 +23,37 @@ $(function () {
 })
 
 function baselineToggle() {
-  if (document.getElementById('baselineCheckBox').checked) {
-    document.getElementById("proposedCheckBox").checked = true;
+  if (document.getElementById('baselineLinkImage').src.includes('broken')) {
+    document.getElementById("baselineLinkImage").src = "link.svg";
+    document.getElementById("proposedLinkImage").src = "link.svg";
     $('#proposed_discount_rate_text').val($('#baseline_discount_rate_text').val())
     document.getElementById('proposed_discount_rate').noUiSlider.set($('#baseline_discount_rate_text').val())
     calculate();
+
   } else {
-    document.getElementById("proposedCheckBox").checked = false;
+    document.getElementById("baselineLinkImage").src = "broken_link.svg";
+    document.getElementById("proposedLinkImage").src = "broken_link.svg";
+
   }
   setTimeout(function(){
-     $('#baselineCheckBox').tooltip('hide');
+     $('#baselineDiscountPrepend').tooltip('hide');
   }, 1500);
 }
 
 function proposedToggle() {
-  if (document.getElementById('proposedCheckBox').checked) {
-    document.getElementById("baselineCheckBox").checked = true;
-
+  if (document.getElementById('proposedLinkImage').src.includes('broken')) {
+    document.getElementById("baselineLinkImage").src = "link.svg";
+    document.getElementById("proposedLinkImage").src = "link.svg";
     $('#baseline_discount_rate_text').val($('#proposed_discount_rate_text').val())
     document.getElementById('baseline_discount_rate').noUiSlider.set($('#proposed_discount_rate_text').val())
     calculate();
+
   } else {
-    document.getElementById("baselineCheckBox").checked = false;
+    document.getElementById("baselineLinkImage").src = "broken_link.svg";
+    document.getElementById("proposedLinkImage").src = "broken_link.svg";
   }
   setTimeout(function(){
-     $('#proposedCheckBox').tooltip('hide');
+     $('#proposedDiscountPrepend').tooltip('hide');
   }, 1500);
 }
 
@@ -93,11 +99,11 @@ function slider_setup(slider_name, number_name, settings) {
   // When the slider moves, update the number
   slider.noUiSlider.on('slide', function(values) {
     number.value = parseFloat(values[0]).toFixed(settings['digits']);
-    if (slider_name == 'baseline_discount_rate' && document.getElementById('baselineCheckBox').checked) {
+    if (slider_name == 'baseline_discount_rate' && !document.getElementById('baselineLinkImage').src.includes('broken')) {
       update_slider('proposed_discount_rate', number.value)
       $('#proposed_discount_rate_text').val(number.value)
     }
-    if (slider_name == 'proposed_discount_rate' && document.getElementById('proposedCheckBox').checked) {
+    if (slider_name == 'proposed_discount_rate' && !document.getElementById('proposedLinkImage').src.includes('broken')) {
       update_slider('baseline_discount_rate', number.value)
       $('#baseline_discount_rate_text').val(number.value)
     }
@@ -107,11 +113,11 @@ function slider_setup(slider_name, number_name, settings) {
   // The conditionals allow the user to put in an out-of-bounds number
   number.addEventListener('input', function(){
     update_slider(slider_name, this.value);
-    if (slider_name == 'baseline_discount_rate' && document.getElementById('baselineCheckBox').checked) {
+    if (slider_name == 'baseline_discount_rate' && !document.getElementById('baselineLinkImage').src.includes('broken')) {
       update_slider('proposed_discount_rate', this.value)
       $('#proposed_discount_rate_text').val(this.value)
     }
-    if (slider_name == 'proposed_discount_rate' && document.getElementById('proposedCheckBox').checked) {
+    if (slider_name == 'proposed_discount_rate' && !document.getElementById('proposedLinkImage').src.includes('broken')) {
       update_slider('baseline_discount_rate', this.value)
       $('#baseline_discount_rate_text').val(this.value)
     }

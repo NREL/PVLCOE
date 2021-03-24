@@ -199,32 +199,26 @@
               </div>
               <hr>
               <h4>Financial</h4>
-              <!-- <label for='baseline_discount_rate_text' class='h5'>Discount rate</label>
-              <div class='row align-items-center sliderrow'>
-                <label class="switch">
-  <input type="checkbox" class="largerCheckbox" name="checkBox1">
-</label>
-                <div class='col slidertext'>
-                  <input id='baseline_discount_rate_text' type='number' class='form-control' step='0.01' />
-                </div>
-                <div class='col baseline'>
-                  <div id='baseline_discount_rate'></div>
-                </div>
-              </div> -->
-              <label for='baseline_discount_rate_text' class='h5'>Discount rate</label>
+<label for='baseline_discount_rate_text' class='h5'>Discount rate</label>
               <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <div class="row ml-0">
-                  <label class="switch">
-                     <input type="checkbox" class="largerCheckbox" id="baselineCheckBox" checked data-toggle='tooltip' title='When checked, baseline and proposed discount rate are synchronized. When unchecked, the user can control each slider separately.' data-placement='top' onclick="baselineToggle()">
-                  </label>
-                  <input id='baseline_discount_rate_text' type='number' class='form-control ml-2' step='0.01'/></div>
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="baselineToggle()" data-toggle='tooltip' id="baselineDiscountPrepend" title='EDIT THIS' data-placement='top'>
+                     <span class="input-group-text">
+                        <img id="baselineLinkImage" src="link.svg"></img>
+                     </span>
+                   </div>
+         
+                  <input id='baseline_discount_rate_text' type='number' class='form-control' step='0.01'/></div>
                 </div>
-                <div class='col baseline'>
+		</div>
+                <div class='col baseline ml-4'>
                   <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_discount_rate'></div>
-                </div> 
+                </div>
+		
               </div>
             </div>
           </div>
@@ -363,17 +357,22 @@
                   <div id='proposed_discount_rate'></div>
                 </div>
               </div> -->
-              <label for='proposed_discount_rate_text' class='h5'>Discount rate</label>
+ 
+<label for='proposed_discount_rate_text' class='h5'>Discount rate</label>
               <div class='form-row align-items-center sliderrow'>
                 <div class='col slidertext'>
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <div class="row ml-0">
-                  <label class="switch">
-                     <input type="checkbox" class="largerCheckbox" id="proposedCheckBox" checked data-toggle='tooltip' title='When checked, baseline and proposed discount rate are synchronized. When unchecked, the user can control each slider separately.' data-placement='top' onclick="proposedToggle()">
-                  </label>
-                  <input id='proposed_discount_rate_text' type='number' class='form-control ml-2' step='0.01'/></div>
+                  <div class="input-group">
+                  <div class="input-group-prepend" data-toggle='tooltip' id="proposedDiscountPrepend" title='EDIT THIS' data-placement='top' onclick="proposedToggle()">
+                     <span class="input-group-text">
+                        <img id="proposedLinkImage" src="link.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_discount_rate_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
                 </div>
-                <div class='col proposed'>
+                <div class='col proposed ml-4'>
                   <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='proposed_discount_rate'></div>
                 </div> 
