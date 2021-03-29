@@ -18,9 +18,15 @@ $(document).ready(function(){
   $('[data-toggle="popover"]').popover({html:true});   
 });
 
+$('#baseline_service_life_text').tooltip('disable')
+$('#proposed_service_life_text').tooltip('disable')
+$('#lcoe_proposed').tooltip('disable')
+$('#lcoe_baseline').tooltip('disable')
+
 $(function () {
   $('[data-toggle="tooltip"]').tooltip()
 })
+
 
 function baselineToggle() {
   if (document.getElementById('baselineLinkImage').src.includes('broken')) {
@@ -58,10 +64,38 @@ function proposedToggle() {
 }
 
 
-function update_slider(slider_name, value) {
+function update_slider(slider_name, value) { 
+  $('#baseline_service_life_text').tooltip('hide')
+  $('#proposed_service_life_text').tooltip('hide')
+  $('#lcoe_proposed').tooltip('hide')
+  $('#lcoe_baseline').tooltip('hide')
+
   var slider = document.getElementById(slider_name);
   var max = slider.noUiSlider.options.range.max
   var min = slider.noUiSlider.options.range.min
+  value = parseFloat(value)
+
+  // displays warning if non-integer service life
+  if ((slider_name == 'baseline_service_life' && (!Number.isInteger(value))) || (slider_name == 'baseline_service_life' && value > 1000)) {
+     if (value > 1000) {
+       $('#baseline_service_life_text').val(1000)
+     }
+     $('#baseline_service_life_text').tooltip('enable')
+     $('#baseline_service_life_text').tooltip('show')
+  } else {
+     $('#baseline_service_life_text').tooltip('disable')
+  }
+  if ((slider_name == 'proposed_service_life' && (!Number.isInteger(value))) || (slider_name == 'proposed_service_life' && value > 1000)) {
+     if (value > 1000) {
+       $('#proposed_service_life_text').val(1000)
+     }
+     $('#proposed_service_life_text').tooltip('enable')
+     $('#proposed_service_life_text').tooltip('show')
+  } else {
+     $('#proposed_service_life_text').tooltip('disable')
+  }
+
+  // The conditionals allow the user to put in an out-of-bounds number
 
   if (value >= max) {
       slider.noUiSlider.set(max);
@@ -71,6 +105,7 @@ function update_slider(slider_name, value) {
       slider.noUiSlider.set(value);
   }
 }
+
 
 function filterPips(value) {
   if (value.toFixed(1) == 1.1 || value.toFixed(1) == 1.3 || value.toFixed(1) == 1.4) return 0;
@@ -82,6 +117,7 @@ function slider_setup(slider_name, number_name, settings) {
   // Make variables for the slider and number input objects
   var slider = document.getElementById(slider_name);
   var number = document.getElementById(number_name);
+
   
   if (slider_name == 'ilr_preset') { // create non-linear preset slider with pips
     noUiSlider.create(slider, {
@@ -93,11 +129,17 @@ function slider_setup(slider_name, number_name, settings) {
      noUiSlider.create(slider, {start: settings['start'], step: settings['step'], connect: true, range: {'min': settings['min'], 'max': settings['max']}});
   }
 
+  // Create the slider
+  /* noUiSlider.create(slider, {keyboardSupport: true, keyboardDefaultStep: 1, start: settings['start'], step: settings['step'], connect: true, range: {'min': settings['min'], 'max': settings['max']}}); */
+
+
   // Set the number input to equal the slider's starting point
   number.value = parseFloat(slider.noUiSlider.get()).toFixed(settings['digits']);
 
   // When the slider moves, update the number
   slider.noUiSlider.on('slide', function(values) {
+    $('#lcoe_proposed').tooltip('hide')
+    $('#lcoe_baseline').tooltip('hide')
     number.value = parseFloat(values[0]).toFixed(settings['digits']);
     if (slider_name == 'baseline_discount_rate' && !document.getElementById('baselineLinkImage').src.includes('broken')) {
       update_slider('proposed_discount_rate', number.value)
@@ -110,8 +152,8 @@ function slider_setup(slider_name, number_name, settings) {
     calculate()
   });
   // When the number changes, update the slider
-  // The conditionals allow the user to put in an out-of-bounds number
   number.addEventListener('input', function(){
+
     update_slider(slider_name, this.value);
     if (slider_name == 'baseline_discount_rate' && !document.getElementById('baselineLinkImage').src.includes('broken')) {
       update_slider('proposed_discount_rate', this.value)
@@ -121,7 +163,11 @@ function slider_setup(slider_name, number_name, settings) {
       update_slider('baseline_discount_rate', this.value)
       $('#baseline_discount_rate_text').val(this.value)
     }
-    calculate();
+    
+    $('#lcoe_proposed').tooltip('hide')
+    $('#lcoe_baseline').tooltip('hide')
+    // update_slider(slider_name, this.value)
+    calculate()
   });
 }
 
@@ -156,7 +202,6 @@ slider_setup(
   'baseline_cost_extra_text',
   {'start': 0, 'min': 0, 'max': 100, 'step': 0.01, 'digits': 2}
 )
-
 slider_setup(
   'baseline_cost_om',
   'baseline_cost_om_text',
@@ -262,6 +307,299 @@ slider_setup(
   'proposed_discount_rate_text',
   {'start': 0, 'min': 0, 'max': 10, 'step': 0.01, 'digits': 2}
 )
+
+// function used by secant method to break even degradation rate
+function func_deg(deg, key) {
+  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+  var year = $('#'+key+'_service_life_text').val()
+  var outputs = calculate()
+  var energy_yield = parseFloat($('#'+key+'_energy_yield_text').val())/1000
+  if (key == 'baseline') {
+     var cost_comparison = outputs[2]
+     var energy_comparison = outputs[3]
+     var cost_current = outputs[0]
+  } else if (key == 'proposed') {
+     var cost_comparison = outputs[0]
+     var energy_comparison = outputs[1]
+     var cost_current = outputs[2]
+  }
+  
+  var wanted = energy_comparison*cost_current/(energy_yield*cost_comparison)
+  return wanted - (1 - Math.pow((1-deg)/(1+common_discount_rate), year)) / (deg + common_discount_rate)
+}
+
+// break even degradation rate using secant method
+// secant method is necessary since the equation doesn't have a closed form solution
+function reset_degradation(key) {
+  new_value = secant_method(func_deg, 0, 0.05, 0.0001, key) * 100
+
+  $('#'+key+'_degradation_rate_text').val((new_value))
+
+  update_slider(key+'_degradation_rate', new_value)
+  calculate()
+}
+
+// break even O&M cost
+function reset_OM(key) {
+  var outputs = calculate()
+  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+  var init_cost = initial_cost(key)
+  var service_life = parseFloat($('#'+key+'_service_life_text').val())
+  if (key == 'baseline') {
+    var cost_comparison = outputs[2]
+    var energy_comparison = outputs[3]
+    var energy_current = outputs[1]
+  } else if (key == 'proposed') {
+    var cost_comparison = outputs[0]
+    var energy_comparison = outputs[1]
+    var energy_current = outputs[3]
+  }
+  
+  var lcoe = cost_comparison/energy_comparison
+  var nonzero_yrs = lcoe * energy_current - init_cost
+  var new_value = nonzero_yrs/((1 - 1/Math.pow(1 + common_discount_rate, service_life))/common_discount_rate)
+
+
+  new_value *= 1000
+  $('#'+key+'_cost_om_text').val((new_value))
+  
+  update_slider(key+'_cost_om', new_value)
+  calculate()
+
+}
+
+/*
+Used to find the service life (in years). The solution for service life doesn't have a closed form solution.
+While Brent's method can also be used to find the degradation rate, secant method is preferred since it can find roots
+outside of the slider range (like negative numbers) and display them. 
+*/
+function brents_method(f, a, b, precision, root_precision, key) {
+
+  if (f(a, key) * f(b, key) >= 0) { // method doesn't work
+    return -1;
+  } 
+  
+  if (Math.abs(f(a, key)) < Math.abs(f(b, key))) {
+      var temp = a
+      a = b
+      b = temp
+  }
+  
+  var c = a
+  var flag = true
+  var s = b
+
+  while ((Math.abs(f(b, key)) > root_precision || Math.abs(f(s, key)) > root_precision) || (b - a) > precision) {
+    if (f(a, key) != f(c, key) && f(b, key) != f(c, key)) {
+      s = a*f(b, key)*f(c, key)/((f(a, key)-f(b, key))*(f(a, key)-f(c, key))) + b*f(a, key)*f(c, key)/((f(b, key)-f(a, key))*(f(b, key)-f(c, key))) + c*f(a, key)*f(b, key)/((f(c, key)-f(a, key))*(f(c, key)-f(b, key)))
+    } else {
+      s = b-f(b, key) * (b-a)/(f(b, key)-f(a, key))
+    }
+    if (!((s < b) && (s > ((3*a+b)/4))) || (flag && (Math.abs(s-b) >= Math.abs(b-c)/2)) || (!flag && (Math.abs(s-b) >= Math.abs(c-d)/2)) || (flag && (Math.abs(b-c) < precision)) || (!flag && (Math.abs(c-d) < precision))) {
+      s = (a+b)/2
+      flag = true
+    } else {
+      flag = false
+    }
+    
+    var d = c
+    c = b
+    if (f(a, key) * f(s, key) < 0) {
+      b = s
+    } else {
+      a = s
+    }
+    if (Math.abs(f(a, key)) < Math.abs(f(b, key))) {
+      var temp = a
+      a = b	
+      b = temp
+    }
+    
+  }
+  return b;
+} 
+
+/*
+This is used to find the degradation rate. The equation for degradation rate doesn't have a closed form solution. Secant method 
+allows values outside of the slider range to be displayed. It cannot be used to find service life since the LCOE curve is too 
+flat (and creates divide by 0 behavior) for large numbers. 
+*/
+function secant_method(f, x0, x1, precision, key) {
+  var prev = 0
+  var x2 = x1 - f(x1, key) * (x1 - x0) / parseFloat(f(x1, key) - f(x0, key))
+  while (Math.abs(x2 - prev) > precision) {
+    prev = x2
+    // console.log('before: ', x0, x1, x2)
+    x0 = x1
+    x1 = x2
+    // console.log('after: ', x0, x1, f(x1, key), (x1 - x0), parseFloat(f(x1, key) - f(x0, key)))
+    x2 = x1 - f(x1, key) * (x1 - x0) / parseFloat(f(x1, key) - f(x0, key))
+    
+  }
+  return x2;
+
+}
+
+// function used by Brent's method to break even service life
+function func_year(year, key) {
+  var outputs = calculate()
+  if (key == 'baseline') {
+    var cost_comparison = outputs[2]
+    var energy_comparison = outputs[3]
+  } else if (key == 'proposed') {
+    var cost_comparison = outputs[0]
+    var energy_comparison = outputs[1]
+  }
+
+  var lcoe = cost_comparison/energy_comparison
+  var om_cost = parseFloat($('#'+key+'_cost_om_text').val())/1000
+  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+  var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
+  var energy_yield = parseFloat($('#'+key+'_energy_yield_text').val())/1000
+
+  cost_val = initial_cost(key) + om_cost * ((1 - 1/Math.pow(1 + common_discount_rate, year))/common_discount_rate)
+  energy_val = energy_yield * (1-Math.pow((1-degradation_rate)/(1+common_discount_rate), year)) / (degradation_rate + common_discount_rate)
+  return lcoe - cost_val/energy_val
+}
+
+// break even service life using Brent's method
+function reset_year(key) {
+  $('#lcoe_proposed').tooltip('disable')
+  $('#lcoe_baseline').tooltip('disable')
+  var new_value = 0
+  new_value = brents_method(func_year, 1, 100, 0.0001, 1e-10, key)
+  new_value = new_value.toFixed(0)
+
+  // Brent's method failed, determine if largest or smallest value should be displayed
+  if (new_value == -1) {
+    if (Math.abs(func_year(1, key)) < Math.abs(func_year(100, key))) {
+      new_value = 1
+    } else {
+      new_value = 100
+    }
+  }
+  $('#'+key+'_service_life_text').val(new_value)
+  update_slider(key+'_service_life', new_value)
+  calculate()
+  if ((document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) && (key == 'proposed')) {
+    $('#lcoe_proposed').tooltip('enable')
+    $('#lcoe_proposed').tooltip('show')
+    setTimeout(function(){
+        $('#lcoe_proposed').tooltip('hide');
+    }, 3000);
+  }
+  if ((document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) && (key == 'baseline')) {
+    $('#lcoe_baseline').tooltip('enable')
+    $('#lcoe_baseline').tooltip('show')
+    setTimeout(function(){
+        $('#lcoe_baseline').tooltip('hide');
+    }, 3000);
+  }
+}
+
+// function to break even front layer cost, cell cost, back layer cost, non-cell module cost, extra component cost,
+// BOS cost power scaling, BOS cost area scaling, and efficiency
+function match_LCOE(slider_name, number_name, key) {
+  var number = document.getElementById(number_name);
+  var outputs = calculate()
+  var init_cost = initial_cost(key)
+  var cost_bos_power = parseFloat($('#'+key+'_cost_bos_power_text').val())
+  var cost_bos_area = parseFloat($('#'+key+'_cost_bos_area_text').val())
+  var efficiency = parseFloat($('#'+key+'_efficiency_text').val())
+
+  var cost_front_layer = parseFloat($('#'+key+'_cost_front_layer_text').val())
+  var cost_cell = parseFloat($('#'+key+'_cost_cell_text').val())
+  var cost_back_layer = parseFloat($('#'+key+'_cost_back_layer_text').val())
+  var cost_noncell = parseFloat($('#'+key+'_cost_noncell_text').val())
+  var cost_extra = parseFloat($('#'+key+'_cost_extra_text').val())
+
+  if (key == 'baseline') {
+    var cost_comparison = outputs[2]
+    var energy_comparison = outputs[3]
+    var cost_current = outputs[0]
+    var energy_current = outputs[1]
+  } else if (key == 'proposed') {
+    var cost_comparison = outputs[0]
+    var energy_comparison = outputs[1]
+    var cost_current = outputs[2]
+    var energy_current = outputs[3]
+  }
+
+  var later_cost = cost_current - init_cost
+  var lcoe = cost_comparison/energy_comparison
+  
+  if (slider_name == 'cost_front_layer') {
+    wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+    cost_front_layer = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency) - cost_cell - cost_back_layer - cost_noncell - cost_extra).toFixed(2)
+    new_value = cost_front_layer
+  } else if (slider_name == 'cost_cell') {
+    wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+    cost_cell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_back_layer - cost_noncell - cost_extra).toFixed(2)
+    new_value = cost_cell
+  } else if (slider_name == 'cost_back_layer') {
+    wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+    cost_back_layer = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_noncell - cost_extra)
+    new_value = cost_back_layer
+  } else if (slider_name == 'cost_noncell') {
+    wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+    cost_noncell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_extra).toFixed(2)
+    new_value = cost_noncell
+  } else if (slider_name == 'cost_extra') {
+    wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
+    cost_extra = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_noncell).toFixed(2)
+    new_value = cost_extra
+  } else if (slider_name == 'cost_bos_power') {
+    wanted_cost = (lcoe * energy_current) - later_cost - (MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency))
+    cost_bos_power = wanted_cost - cost_bos_area/(10.0*efficiency)
+    new_value = cost_bos_power
+  } else if (slider_name == 'cost_bos_area') {
+    wanted_cost = (lcoe * energy_current) - later_cost - (MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency))
+    cost_bos_area = (wanted_cost - cost_bos_power)*(10.0*efficiency)
+    new_value = cost_bos_area
+  } else if (slider_name == 'efficiency') {
+    wanted_cost = (lcoe * energy_current) - later_cost 
+    efficiency = (cost_bos_area + MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)) / (10 * (wanted_cost-cost_bos_power))
+    new_value = efficiency
+  }
+  
+
+  var cost_module = MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency)
+  document.getElementById('module_cost_per_watt_'+key).innerHTML = cost_module.toFixed(2)
+  document.getElementById('system_cost_per_watt_'+key).innerHTML = (cost_bos_power + cost_bos_area/(10.0*efficiency) + cost_module).toFixed(2)
+  
+  $('#'+key+'_'+slider_name+'_text').val(new_value)
+  update_slider(key+'_'+slider_name, new_value)
+  calculate()
+  
+}
+
+// function to break even energy yield
+function reset_energy_yield(key) {
+  var outputs = calculate()
+  var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+  if (key == 'baseline') {
+      var cost_comparison = outputs[2]
+      var energy_comparison = outputs[3]
+      var cost_current = outputs[0]
+  } else if (key == 'proposed') {
+      var cost_comparison = outputs[0]
+      var energy_comparison = outputs[1]
+      var cost_current = outputs[2]
+  }
+  
+  var lcoe = cost_comparison/energy_comparison
+  var energy_wanted = cost_current/lcoe
+  degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
+  var year = parseFloat($('#'+key+'_service_life_text').val())
+
+  var new_value = energy_wanted / ((1 - Math.pow((1-degradation_rate)/(1+common_discount_rate), year)) / (degradation_rate + common_discount_rate)) * 1000
+
+  $('#'+key+'_energy_yield_text').val(new_value)
+
+  update_slider(key+'_energy_yield', new_value)
+
+  calculate()
+}
 
 // Set up the baseline Preset model
 var preset_cell_technology = document.getElementById('cell_technology')
@@ -393,6 +731,7 @@ function preset_set(key){
 
 
 preset_set('baseline')
+// preset_set()
 copy_from_baseline()
 
 function copy_from_baseline(){
@@ -521,6 +860,8 @@ function calculate() {
   var baseline_discount_rate = parseFloat($('#baseline_discount_rate_text').val())/100.0
   var proposed_discount_rate = parseFloat($('#proposed_discount_rate_text').val())/100.0
 
+  // var common_discount_rate = parseFloat($('#common_discount_rate_text').val())/100.0
+
   // Calculate baseline and proposed 
   var cost_baseline = 0.0
   var energy_baseline = 0.0
@@ -539,8 +880,21 @@ function calculate() {
   var lcoe_proposed = cost_proposed/energy_proposed
 
   // Put the final answer into the little pills in the Results section
-  document.getElementById('lcoe_baseline').innerHTML = lcoe_baseline.toFixed(4)
-  document.getElementById('lcoe_proposed').innerHTML = lcoe_proposed.toFixed(4)
 
+  // display 'error' if service life input is invalid 
+  if (!Number.isInteger(parseFloat($('#baseline_service_life_text').val()))) {
+     document.getElementById('lcoe_baseline').innerHTML = 'error'
+  } else {
+     document.getElementById('lcoe_baseline').innerHTML = lcoe_baseline.toFixed(4)
+  }
+  if (!Number.isInteger(parseFloat($('#proposed_service_life_text').val()))) {
+     document.getElementById('lcoe_proposed').innerHTML = 'error'
+  } else {
+     document.getElementById('lcoe_proposed').innerHTML = lcoe_proposed.toFixed(4)
+  }
+
+  // return values used in break even calculations
   return [cost_baseline, energy_baseline, cost_proposed, energy_proposed]
 }
+
+
