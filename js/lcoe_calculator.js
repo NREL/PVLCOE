@@ -598,7 +598,7 @@ function match_LCOE(slider_name, number_name, key) {
   } else if (slider_name == 'efficiency') {
     wanted_cost = (lcoe * energy_current) - later_cost 
     efficiency = (cost_bos_area + MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)) / (10 * (wanted_cost-cost_bos_power))
-    new_value = efficiency
+    new_value = efficiency.toFixed(1)
   }
   
 
@@ -636,7 +636,7 @@ function reset_energy_yield(key) {
 
   var new_value = energy_wanted / (energy_mult + degradation_rate * energy_deg_mult) * 1000
 
-  $('#'+key+'_energy_yield_text').val(new_value)
+  $('#'+key+'_energy_yield_text').val(new_value.toFixed(0))
 
   update_slider(key+'_energy_yield', new_value)
 
@@ -645,14 +645,14 @@ function reset_energy_yield(key) {
   var lcoe_baseline = document.getElementById('lcoe_baseline').innerHTML
 
   // resolve tiny rounding errors
-  if (lcoe_proposed != lcoe_baseline && Math.abs(lcoe_proposed - lcoe_baseline) < 0.0001) {
+  /*if (lcoe_proposed != lcoe_baseline && Math.abs(lcoe_proposed - lcoe_baseline) < 0.0001) {
     if (key == 'baseline') {
        document.getElementById('lcoe_baseline').innerHTML = document.getElementById('lcoe_proposed').innerHTML
     }
     if (key == 'proposed') {
        document.getElementById('lcoe_proposed').innerHTML = document.getElementById('lcoe_baseline').innerHTML
     }
-  }
+  }*/
 }
 
 // Set up the baseline Preset model
@@ -932,7 +932,7 @@ function calculate() {
   var lcoe_proposed = cost_proposed/energy_proposed
 
 
-  // console.log(lcoe_baseline, lcoe_proposed)
+  console.log(lcoe_baseline, lcoe_proposed)
 
   // display 'error' if service life input is invalid 
   // Put the final answer into the little pills in the Results section
