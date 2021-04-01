@@ -320,6 +320,7 @@ slider_setup(
 // break even degradation rate using secant method
 // secant method is necessary since the equation doesn't have a closed form solution
 function reset_degradation(key) {
+  if (document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) {
   var outputs = calculate()
   var discount_rate = parseFloat($('#'+key+'_discount_rate_text').val())/100.0
   if (key == 'baseline') {
@@ -347,34 +348,26 @@ function reset_degradation(key) {
   update_slider(key+'_degradation_rate', new_value)
 
   calculate()
+
+
   var lcoe_proposed = document.getElementById('lcoe_proposed').innerHTML
   var lcoe_baseline = document.getElementById('lcoe_baseline').innerHTML
 
   // resolve tiny rounding errors
   if (lcoe_proposed != lcoe_baseline && Math.abs(lcoe_proposed - lcoe_baseline) < 0.0001) {
     if (key == 'baseline') {
-       document.getElementById('lcoe_baseline').innerHTML = document.getElementById('lcoe_proposed').innerHTML
+       document.getElementById('lcoe_baseline').innerHTML = lcoe.toFixed(4)
     }
     if (key == 'proposed') {
-       document.getElementById('lcoe_proposed').innerHTML = document.getElementById('lcoe_baseline').innerHTML
+       document.getElementById('lcoe_proposed').innerHTML = lcoe.toFixed(4)
     }
   }
-
-
-
-
-
-
-  /*new_value = secant_method(func_deg, 0, 0.05, 0.0001, key) * 100
-
-  $('#'+key+'_degradation_rate_text').val((new_value))
-
-  update_slider(key+'_degradation_rate', new_value)
-  calculate()*/
+  }
 }
 
 // break even O&M cost
 function reset_OM(key) {
+  if (document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) {
   var outputs = calculate()
   var discount_rate = parseFloat($('#'+key+'_discount_rate_text').val())/100.0
   var init_cost = initial_cost(key)
@@ -399,7 +392,20 @@ function reset_OM(key) {
   
   update_slider(key+'_cost_om', new_value)
   calculate()
+  }
 
+  var lcoe_proposed = document.getElementById('lcoe_proposed').innerHTML
+  var lcoe_baseline = document.getElementById('lcoe_baseline').innerHTML
+
+  // resolve tiny rounding errors
+  if (lcoe_proposed != lcoe_baseline && Math.abs(lcoe_proposed - lcoe_baseline) < 0.0001) {
+    if (key == 'baseline') {
+       document.getElementById('lcoe_baseline').innerHTML = lcoe.toFixed(4)
+    }
+    if (key == 'proposed') {
+       document.getElementById('lcoe_proposed').innerHTML = lcoe.toFixed(4)
+    }
+  }
 }
 
 /*
@@ -534,11 +540,15 @@ function reset_year(key) {
         $('#lcoe_baseline').tooltip('hide');
     }, 3000);
   }
+
+
 }
 
 // function to break even front layer cost, cell cost, back layer cost, non-cell module cost, extra component cost,
 // BOS cost power scaling, BOS cost area scaling, and efficiency
 function match_LCOE(slider_name, number_name, key) {
+  if (document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) {
+
   var number = document.getElementById(number_name);
   var outputs = calculate()
   var init_cost = initial_cost(key)
@@ -569,11 +579,11 @@ function match_LCOE(slider_name, number_name, key) {
   
   if (slider_name == 'cost_front_layer') {
     wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
-    cost_front_layer = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency) - cost_cell - cost_back_layer - cost_noncell - cost_extra).toFixed(2)
+    cost_front_layer = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency) - cost_cell - cost_back_layer - cost_noncell - cost_extra) //.toFixed(2)
     new_value = cost_front_layer
   } else if (slider_name == 'cost_cell') {
     wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
-    cost_cell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_back_layer - cost_noncell - cost_extra).toFixed(2)
+    cost_cell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_back_layer - cost_noncell - cost_extra) //.toFixed(2)
     new_value = cost_cell
   } else if (slider_name == 'cost_back_layer') {
     wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
@@ -581,11 +591,11 @@ function match_LCOE(slider_name, number_name, key) {
     new_value = cost_back_layer
   } else if (slider_name == 'cost_noncell') {
     wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
-    cost_noncell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_extra).toFixed(2)
+    cost_noncell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_extra) //.toFixed(2)
     new_value = cost_noncell
   } else if (slider_name == 'cost_extra') {
     wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
-    cost_extra = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_noncell).toFixed(2)
+    cost_extra = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_noncell) //.toFixed(2)
     new_value = cost_extra
   } else if (slider_name == 'cost_bos_power') {
     wanted_cost = (lcoe * energy_current) - later_cost - (MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency))
@@ -598,7 +608,7 @@ function match_LCOE(slider_name, number_name, key) {
   } else if (slider_name == 'efficiency') {
     wanted_cost = (lcoe * energy_current) - later_cost 
     efficiency = (cost_bos_area + MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)) / (10 * (wanted_cost-cost_bos_power))
-    new_value = efficiency.toFixed(1)
+    new_value = efficiency 
   }
   
 
@@ -609,11 +619,27 @@ function match_LCOE(slider_name, number_name, key) {
   $('#'+key+'_'+slider_name+'_text').val(new_value)
   update_slider(key+'_'+slider_name, new_value)
   calculate()
-  
+
+  var lcoe_proposed = document.getElementById('lcoe_proposed').innerHTML
+  var lcoe_baseline = document.getElementById('lcoe_baseline').innerHTML
+
+  // resolve tiny rounding errors
+  if (lcoe_proposed != lcoe_baseline && Math.abs(lcoe_proposed - lcoe_baseline) < 0.0001) {
+    if (key == 'baseline') {
+       document.getElementById('lcoe_baseline').innerHTML = lcoe.toFixed(4)
+    }
+    if (key == 'proposed') {
+       document.getElementById('lcoe_proposed').innerHTML = lcoe.toFixed(4)
+    }
+  }
+
+  }
+
 }
 
 // function to break even energy yield
 function reset_energy_yield(key) {
+  if (document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) {
   var outputs = calculate()
   var discount_rate = parseFloat($('#'+key+'_discount_rate_text').val())/100.0
   if (key == 'baseline') {
@@ -636,23 +662,28 @@ function reset_energy_yield(key) {
 
   var new_value = energy_wanted / (energy_mult + degradation_rate * energy_deg_mult) * 1000
 
-  $('#'+key+'_energy_yield_text').val(new_value.toFixed(0))
+
+
+  $('#'+key+'_energy_yield_text').val(new_value)
 
   update_slider(key+'_energy_yield', new_value)
 
   calculate()
+
+
   var lcoe_proposed = document.getElementById('lcoe_proposed').innerHTML
   var lcoe_baseline = document.getElementById('lcoe_baseline').innerHTML
 
   // resolve tiny rounding errors
-  /*if (lcoe_proposed != lcoe_baseline && Math.abs(lcoe_proposed - lcoe_baseline) < 0.0001) {
+  if (lcoe_proposed != lcoe_baseline && Math.abs(lcoe_proposed - lcoe_baseline) < 0.0001) {
     if (key == 'baseline') {
-       document.getElementById('lcoe_baseline').innerHTML = document.getElementById('lcoe_proposed').innerHTML
+       document.getElementById('lcoe_baseline').innerHTML = lcoe.toFixed(4)
     }
     if (key == 'proposed') {
-       document.getElementById('lcoe_proposed').innerHTML = document.getElementById('lcoe_baseline').innerHTML
+       document.getElementById('lcoe_proposed').innerHTML = lcoe.toFixed(4)
     }
-  }*/
+  }
+  }
 }
 
 // Set up the baseline Preset model
@@ -896,7 +927,6 @@ function energy(key, year) {
   if(year == 0){
     return 0
   } else {
-    // var energy_thisyear = energy_yield*Math.pow(1 - degradation_rate, (year - 1))
     var energy_thisyear = energy_yield*(1 - degradation_rate * (year - 0.5))
     if(energy_thisyear > 0){
       return energy_thisyear
@@ -932,7 +962,7 @@ function calculate() {
   var lcoe_proposed = cost_proposed/energy_proposed
 
 
-  console.log(lcoe_baseline, lcoe_proposed)
+  // console.log(lcoe_baseline, lcoe_proposed)
 
   // display 'error' if service life input is invalid 
   // Put the final answer into the little pills in the Results section
