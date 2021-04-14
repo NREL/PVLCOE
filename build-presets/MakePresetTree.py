@@ -1,5 +1,7 @@
 """
-This code uses the PySAM wrapper for the SAM GUI to generate energy yield and create a new preset tree. It loops through every combination of cell technology, package type, system type, inverter loading ratio and location to determine the energy yield with those settings.
+This code uses the PySAM wrapper for the SAM GUI to generate energy yield and create a new preset tree. 
+It loops through every combination of cell technology, package type, system type, inverter loading ratio 
+and location to determine the energy yield with those settings.
 """
 import pandas as pd
 import json
@@ -11,10 +13,10 @@ import PySAM.PySSC as pssc
 # to avoid rounding issues, the lat and lon returned by pysam are in this file
 # locations maps a lat/lon pair to the string name of the location
 locations = {}
-df = pd.read_csv('/Users/sandrews/Documents/pysam_coords_final.csv')
+df = pd.read_csv('location_coordinates.csv')
 for index, row in df.iterrows():
 	locations[(row['Latitude'], row['Longitude'])] = 'USA ' + row['State'] + ' ' + row['Place']
-print(locations)	
+	
 
 # Define feasible system configurations
 cell_technologies = ['mono-Si', 'multi-Si', 'CdTe']
@@ -54,7 +56,7 @@ cost_om = {
 inverter_loading_ratio = [1.1, 1.3, 1.4]
  
 # creating PySAM model with default info from json file (that doesn't have location info)
-json_file = open("/Users/sandrews/Documents/pvwatts.json")
+json_file = open("pvwatts_inputs.json")
 dic = json.load(json_file)
 
 # using the pvwatts model
@@ -63,7 +65,7 @@ json_file.close()
 json_model = pvwatts.wrap(pv_dat)
 
 # convert weather files into format that can be used by PySAM
-weather_folder = "/Users/sandrews/Documents/calculator_locations"
+weather_folder = "weather_files"
 weather_files = glob.glob(weather_folder + "/*.csv")
 weather_data = [tools.SAM_CSV_to_solar_data(f) for f in weather_files]
 
