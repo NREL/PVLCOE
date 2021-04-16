@@ -108,6 +108,13 @@ function update_slider(slider_name, value) {
   }
   
 
+  if (slider_name == 'baseline_efficiency' && value > 100) {
+    $('#baseline_efficiency_text').val(100)
+  }
+  if (slider_name == 'proposed_efficiency' && value > 100) {
+    $('#proposed_efficiency_text').val(100)
+  }
+
 
   // displays warning if non-integer service life
   if ((slider_name == 'baseline_service_life' && (!Number.isInteger(value))) || (slider_name == 'baseline_service_life' && value > 1000) || (slider_name == 'baseline_service_life' && value > max_year)) {
@@ -181,6 +188,7 @@ function slider_setup(slider_name, number_name, settings) {
 
   // When the slider moves, update the number
   slider.noUiSlider.on('slide', function(values) {
+    // console.log('break even happened slider')
     $('#lcoe_proposed').tooltip('hide')
     $('#lcoe_baseline').tooltip('hide')
     $('#baseline_service_life_text').tooltip('hide')
@@ -259,7 +267,7 @@ function slider_setup(slider_name, number_name, settings) {
 
   // When the number changes, update the slider
   number.addEventListener('input', function(){
-
+    // console.log('break even happened number')
     update_slider(slider_name, this.value);
 
 
