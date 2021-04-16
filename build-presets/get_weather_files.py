@@ -45,7 +45,7 @@ for i in range(len(lat_list)):
 
 	info = pd.read_csv(url)
 	print(lat)
-	# save the info to a csv, the weather_file folder must already be created
+	# save the info to a csv, the weather_files folder must already be created
 	info.to_csv('weather_files/'+ state + '_' +str(lat)+'_'+str(lon)+'_tmy.csv', index=False)
 	
 
