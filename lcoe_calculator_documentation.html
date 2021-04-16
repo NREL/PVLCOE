@@ -62,9 +62,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         <dd class='col-sm-9'>Location can be one of 50 places, one in each US state. Locations are chosen to have nearly the median solar resource in the state, subject to data availability. Weather data for each location was used to produce a preset value for undegraded energy yield. Location affects <strong>energy yield</strong> and <strong>BOS cost</strong>.</dd>
       </dl>
       <h2>Input parameters</h2>
-      <h3>Separate inputs</h3>
-      <p>These inputs apply separately to the <strong>baseline</strong> and <strong>proposed</strong> technologies. Module price is calculated by summing the component costs and adding a 15% margin representing the module manufacturer's profit.</p>
+      <p>These inputs apply separately to the <strong>baseline</strong> and <strong>proposed</strong> technologies.</p>
       <h4>Cost</h4>
+      <p>Module price is calculated by summing the component costs and adding a 15% margin representing the module manufacturer's profit. For more details on balance of system cost calculations, consult the <a href="https://github.com/NREL/PVLCOE/">repository documentation</a>.</p>
       <dl class='row'>
         <dt class='col-sm-3'>Front layer cost</dt>
         <dd class='col-sm-9'>Cost of the glass on the front surface of the module.</dd>
@@ -88,16 +88,15 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         <dt class='col-sm-3'>Efficiency</dt>
         <dd class='col-sm-9'>Module efficiency measured at standard test conditions (STC). This is the module's nameplate efficiency.</dd>
         <dt class='col-sm-3'>Energy yield</dt>
-        <dd class='col-sm-9'>Also known as array yield, the first-year energy production of the system, normalized by its nameplate power rating.</dd>
+        <dd class='col-sm-9'>Also known as array yield, the energy production of the undegraded system, normalized by its nameplate power rating.</dd>
       </dl>
       <h4>Reliability</h4>
       <dl class='row'>
         <dt class='col-sm-3'>Degradation rate</dt>
-        <dd class='col-sm-9'>The annual, fractional loss of the system's energy production.</dd>
+        <dd class='col-sm-9'>The annual loss in energy production, as a fraction of the system's undegraded energy yield. Degradation rate is limited based on the value of <strong>service life</strong> so that the system's final-year energy production is greater than zero.</dd>
         <dt class='col-sm-3'>Service life</dt>
-        <dd class='col-sm-9'>The number of years the system is expected to operate.</dd>
+        <dd class='col-sm-9'>The number of years the system is expected to operate. The &ldquo;financial life&rdquo; of the system is set equal to its service life. Service life is limited based on the value of <strong>degradation rate</strong> so that the system's final-year energy production is greater than zero. The maximum value of service life is 1000 years.</dd>
       </dl>
-      <h3>Common inputs</h3>
       <h4>Financial</h4>
       <dl class='row'>
         <dt class='col-sm-3'>Discount rate</dt>
