@@ -117,8 +117,7 @@ for cell_technology in cell_technologies:
             					'efficiency': module_details['efficiency'][cell_technology],
             					'energy_yield': energy_yield,
             					'degradation_rate': 0.7,
-            					'state': location.split(' ')[1],
-						'tilt': tilt[system_type]
+            					'state': location.split(' ')[1]
 					}
 
 # print(preset_tree)			
