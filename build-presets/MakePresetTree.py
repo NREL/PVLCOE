@@ -22,9 +22,9 @@ for index, row in df.iterrows():
 cell_technologies = ['mono-Si', 'multi-Si', 'CdTe']
 
 package_types = {
-    'mono-Si': ('glass-polymer backsheet', 'glass-glass'),
-    'multi-Si': ('glass-polymer backsheet', 'glass-glass'),
-    'CdTe': ('glass-glass')
+    'mono-Si': ['glass-polymer backsheet', 'glass-glass'],
+    'multi-Si': ['glass-polymer backsheet', 'glass-glass'],
+    'CdTe': ['glass-glass']
 }
 
 system_types = {
@@ -57,10 +57,10 @@ inverter_loading_ratio = [1.1, 1.3, 1.4]
  
 # creating PySAM model with default info from json file (that doesn't have location info)
 json_file = open("pvwatts_inputs.json")
-dic = json.load(json_file)
+dict = json.load(json_file)
 
 # using the pvwatts model
-pv_dat = pssc.dict_to_ssc_table(dic, "pvwattsv7")
+pv_dat = pssc.dict_to_ssc_table(dict, "pvwattsv7")
 json_file.close()
 json_model = pvwatts.wrap(pv_dat)
 
@@ -91,36 +91,37 @@ for cell_technology in cell_technologies:
 			for ilr in inverter_loading_ratio:
 				if ilr not in preset_tree[cell_technology][package_type][system_type]:
 					preset_tree[cell_technology][package_type][system_type][ilr] = {}
-					for solar_resource_file in weather_data:
-						# print(cell_technology, package_type, system_type, ilr)
-						json_model.SolarResource.solar_resource_data = solar_resource_file
-						lat = json_model.SolarResource.solar_resource_data['lat']
-						lon = json_model.SolarResource.solar_resource_data['lon']
-						location = locations[(lat, lon)] # string name of location
+				for solar_resource_file in weather_data:
+					
+					json_model.SolarResource.solar_resource_data = solar_resource_file
+					lat = json_model.SolarResource.solar_resource_data['lat']
+					lon = json_model.SolarResource.solar_resource_data['lon']
+					location = locations[(lat, lon)] # string name of location
+					# print(cell_technology, package_type, system_type, ilr, location)
 
-						# set specific inputs of PySAM model based on system type and ILR
-						json_model.SystemDesign.gcr = ground_coverage_ratio[system_type]
-						json_model.SystemDesign.array_type = array_type[system_type]
-						json_model.SystemDesign.tilt = tilt[system_type]
-						json_model.SystemDesign.dc_ac_ratio = ilr
+					# set specific inputs of PySAM model based on system type and ILR
+					json_model.SystemDesign.gcr = ground_coverage_ratio[system_type]
+					json_model.SystemDesign.array_type = array_type[system_type]
+					json_model.SystemDesign.tilt = tilt[system_type]
+					json_model.SystemDesign.dc_ac_ratio = ilr
 
-						json_model.execute(0) # run the model
-						energy_yield = json_model.Outputs.kwh_per_kw # get the energy yield from the outputs
+					json_model.execute(0) # run the model
+					energy_yield = json_model.Outputs.kwh_per_kw # get the energy yield from the outputs
 
-						preset_tree[cell_technology][package_type][system_type][ilr][location] = {
-							'cost_front_layer': module_details['cost_front_layer'],
-            						'cost_cell': module_details['cost_cell'][cell_technology],
-           						'cost_back_layer': module_details['cost_back_layer'][package_type],
-            						'cost_noncell': module_details['cost_noncell'],
-            						'cost_om': cost_om[system_type],
-            						'efficiency': module_details['efficiency'][cell_technology],
-            						'energy_yield': energy_yield,
-            						'degradation_rate': 0.7,
-            						'state': location.split(' ')[1],
-							'tilt': tilt[system_type]
-						}
+					preset_tree[cell_technology][package_type][system_type][ilr][location] = {
+						'cost_front_layer': module_details['cost_front_layer'],
+            					'cost_cell': module_details['cost_cell'][cell_technology],
+           					'cost_back_layer': module_details['cost_back_layer'][package_type],
+            					'cost_noncell': module_details['cost_noncell'],
+            					'cost_om': cost_om[system_type],
+            					'efficiency': module_details['efficiency'][cell_technology],
+            					'energy_yield': energy_yield,
+            					'degradation_rate': 0.7,
+            					'state': location.split(' ')[1],
+						'tilt': tilt[system_type]
+					}
 
 # print(preset_tree)			
-with open('preset_tree.js', 'w') as file:
+with open('../js/PresetTree.js', 'w') as file:
     file.write('var preset_tree = ' + json.dumps(preset_tree, indent=2, separators=(',', ': ')))
 
