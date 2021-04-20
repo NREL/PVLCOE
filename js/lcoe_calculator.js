@@ -1024,12 +1024,33 @@ constraint.text = 'Area Constrained'
 // Set up the presets anytime a menu selection is made
 preset_cell_technology.addEventListener('input', function(){
   setup_preset_package_type()
+  if (preset_system_type.value.includes('residential')) {
+    $('#ilr_preset_text').val(1.1)
+    document.getElementById('ilr_preset').noUiSlider.set(1.1)
+  } else {
+    $('#ilr_preset_text').val(1.3)
+    document.getElementById('ilr_preset').noUiSlider.set(1.3)
+  }
 })
 preset_package_type.addEventListener('input', function(){
   setup_preset_system_type()
+  if (preset_system_type.value.includes('residential')) {
+    $('#ilr_preset_text').val(1.1)
+    document.getElementById('ilr_preset').noUiSlider.set(1.1)
+  } else {
+    $('#ilr_preset_text').val(1.3)
+    document.getElementById('ilr_preset').noUiSlider.set(1.3)
+  }
 })
 preset_system_type.addEventListener('input', function(){
   setup_preset_location_yield()
+  if (preset_system_type.value.includes('residential')) {
+    $('#ilr_preset_text').val(1.1)
+    document.getElementById('ilr_preset').noUiSlider.set(1.1)
+  } else {
+    $('#ilr_preset_text').val(1.3)
+    document.getElementById('ilr_preset').noUiSlider.set(1.3)
+  }
 })
 
 
