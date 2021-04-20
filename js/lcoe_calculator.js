@@ -84,33 +84,11 @@ function update_slider(slider_name, value) {
   value = parseFloat(value)
 
   key = slider_name.substring(0, 8) // 'baseline' and 'proposed' are both 8 letters
-  /*var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
-  var year = parseFloat($('#'+key+'_service_life_text').val())
-  var max_year = 1 / degradation_rate + 0.5
-  var max_degradation = 1 / (year - 0.5) * 100*/
 
   // var degradation_rate, year, max_year, max_degradation;
 
   // console.log('testing', max_year, max_degradation, year)
 
-  /* DELETEEEEEEEEEE
-if (slider_name == 'baseline_degradation_rate' && value > max_degradation) {
-    document.getElementById('baseline_degradation_rate_text').setAttribute('data-original-title', 'Maximum degradation rate is ' + max_degradation.toFixed(2) + '% for entire service life to have positive energy output.');
-
-     $('#baseline_degradation_rate_text').tooltip('enable')
-     $('#baseline_degradation_rate_text').tooltip('show')
-  } else {
-     $('#baseline_degradation_rate_text').tooltip('disable')
-  }
-
-  if (slider_name == 'proposed_degradation_rate' && value > max_degradation) {
-    document.getElementById('proposed_degradation_rate_text').setAttribute('data-original-title', 'Maximum degradation rate is ' + max_degradation.toFixed(2) + '% for entire service life to have positive energy output.');
-
-     $('#proposed_degradation_rate_text').tooltip('enable')
-     $('#proposed_degradation_rate_text').tooltip('show')
-  } else {
-     $('#proposed_degradation_rate_text').tooltip('disable')
-  }*/
 
 
 
@@ -161,14 +139,14 @@ var max_degradation = 1 / (year - 0.5) * 100
   var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
   var max_year = 1 / degradation_rate + 0.5
   // max_year.toFixed(0)
-flag = true
+
 console.log('here', value, max_year.toFixed(0), flag)
    if (!(value < max_year.toFixed(0))) {
     value = max_year.toFixed(0)
 console.log('even year')
-
+flag = true
     $('#baseline_service_life_text').val(max_year.toFixed(0))
-    document.getElementById('baseline_degradation_rate_text').setAttribute('data-original-title', 'Choose a smaller degradation rate to enable a larger service life.');
+    document.getElementById('baseline_service_life_text').setAttribute('data-original-title', 'Choose a smaller degradation rate to enable a larger service life.');
 
      $('#baseline_service_life_text').tooltip('enable')
      $('#baseline_service_life_text').tooltip('show')
@@ -185,9 +163,10 @@ console.log('even year')
   var max_year = parseInt(1 / degradation_rate + 0.5)
    if (!(value < max_year)) {
     value = parseInt(max_year)
+flag = true
 
     $('#proposed_service_life_text').val(max_year.toFixed(0))
-    document.getElementById('proposed_degradation_rate_text').setAttribute('data-original-title', 'Choose a smaller degradation rate to enable a larger service life.');
+    document.getElementById('proposed_service_life_text').setAttribute('data-original-title', 'Choose a smaller degradation rate to enable a larger service life.');
 
      $('#proposed_service_life_text').tooltip('enable')
      $('#proposed_service_life_text').tooltip('show')
@@ -271,11 +250,8 @@ console.log('test1')
 console.log('testing', flag)
      if (!flag) {
 console.log('wrong')
-       // document.getElementById('baseline_service_life_text').setAttribute('data-original-title', 'Service life must be a positive integer no greater than 1000.');
-      /*else { 
-       document.getElementById('baseline_service_life_text').setAttribute('data-original-title', 'Effective service life is ' + max_year.toFixed(0) + ' to avoid negative energy output.');
-
-     }*/
+       document.getElementById('baseline_service_life_text').setAttribute('data-original-title', 'Service life must be a positive integer no greater than 1000.');
+      
 
      $('#baseline_service_life_text').tooltip('enable')
      $('#baseline_service_life_text').tooltip('show')
@@ -291,14 +267,12 @@ console.log('test2')
        $('#proposed_service_life_text').val(1000)
      }
 
-      
-       // document.getElementById('proposed_service_life_text').setAttribute('data-original-title', 'Service life must be a positive integer no greater than 1000.');
-     /*else { 
-       document.getElementById('proposed_service_life_text').setAttribute('data-original-title', 'Effective service life is ' + max_year.toFixed(0) + ' to avoid negative energy output.');
-     } */
-
+      if (!flag) {
+     document.getElementById('proposed_service_life_text').setAttribute('data-original-title', 'Service life must be a positive integer no greater than 1000.');
+     
      $('#proposed_service_life_text').tooltip('enable')
      $('#proposed_service_life_text').tooltip('show')
+	}
   } else {
      $('#proposed_service_life_text').tooltip('disable')
   } 
@@ -356,7 +330,7 @@ function slider_setup(slider_name, number_name, settings) {
 	console.log('slider and large', slider_name+'_text')
 
       
-       // document.getElementById(slider_name+'_text').setAttribute('data-original-title', 'Service life must be a positive integer no greater than 1000.');
+       document.getElementById(slider_name+'_text').setAttribute('data-original-title', 'Service life must be a positive integer no greater than 1000.');
 
 
      $('#'+slider_name+'_text').tooltip('enable')
@@ -410,54 +384,6 @@ function slider_setup(slider_name, number_name, settings) {
    });
   }
  
-  /* DELETEEEEEEE
-if (slider_name == 'baseline_service_life' && val > max_year) {
-    document.getElementById('baseline_service_life_text').setAttribute('data-original-title', 'Effective service life is ' + max_year.toFixed(0) + ' to avoid negative energy output.');
-
-    $('#baseline_service_life_text').tooltip('enable')
-    $('#baseline_service_life_text').tooltip('show')
-  } else {
-    $('#baseline_service_life_text').tooltip('disable')
-  }
-  setTimeout(function(){
-     $('#baseline_service_life_text').tooltip('hide');
-  }, 3000);
-
-  if (slider_name == 'proposed_service_life' && val > max_year) {
-    document.getElementById('proposed_service_life_text').setAttribute('data-original-title', 'Effective service life is ' + max_year.toFixed(0) + ' to avoid negative energy output.');
-
-    $('#proposed_service_life_text').tooltip('enable')
-    $('#proposed_service_life_text').tooltip('show')
-  } else {
-    $('#proposed_service_life_text').tooltip('disable')
-  }
-  setTimeout(function(){
-     $('#proposed_service_life_text').tooltip('hide');
-  }, 3000);
-
-  if (slider_name == 'baseline_degradation_rate' && val > max_degradation) {
-    document.getElementById('baseline_degradation_rate_text').setAttribute('data-original-title', 'Maximum degradation rate is ' + max_degradation.toFixed(2) + '% for entire service life to have positive energy output.');
-
-    $('#baseline_degradation_rate_text').tooltip('enable')
-    $('#baseline_degradation_rate_text').tooltip('show')
-  } else {
-    $('#baseline_degradation_rate_text').tooltip('disable')
-  }
-  setTimeout(function(){
-     $('#baseline_degradation_rate_text').tooltip('hide');
-  }, 3000);
-
-  if (slider_name == 'proposed_degradation_rate' && val > max_degradation) {
-    document.getElementById('proposed_degradation_rate_text').setAttribute('data-original-title', 'Maximum degradation rate is ' + max_degradation.toFixed(2) + '% for entire service life to have positive energy output.');
-
-    $('#proposed_degradation_rate_text').tooltip('enable')
-    $('#proposed_degradation_rate_text').tooltip('show')
-  } else {
-    $('#proposed_degradation_rate_text').tooltip('disable')
-  }
-  setTimeout(function(){
-     $('#proposed_degradation_rate_text').tooltip('hide');
-  }, 3000); DELETEEEEEEE */
     
 
     // if discount rate is linked, move baseline and proposed sliders together
@@ -477,16 +403,6 @@ if (slider_name == 'baseline_service_life' && val > max_year) {
   number.addEventListener('input', function(){
     // console.log('break even happened number')
 	//console.log('num moving')
-    /*if (this.value > 1000 && (slider_name == 'baseline_service_life' || slider_name == 'baseline_service_life')) {
-	console.log('greater than 1000')
-	this.value = 1000
-	document.getElementById(slider_name+'_text').setAttribute('data-original-title', 'Service life must be a positive integer no greater than 1000.');
-     	$('#'+slider_name+'_text').tooltip('enable')
-    	$('#'+slider_name+'_text').tooltip('show')
-    } else {
-	$('#'+slider_name+'_text').tooltip('disable')
-    }*/
-
 
   
     update_slider(slider_name, this.value);
@@ -667,26 +583,7 @@ function reset_degradation(key) {
   update_slider(key+'_degradation_rate', new_value)
   calculate()
 
-  /* if ((document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) && (key == 'proposed')) {
-    $('#lcoe_proposed').tooltip('enable')
-    $('#lcoe_proposed').tooltip('show')
 
-    document.getElementById('lcoe_proposed').setAttribute('data-original-title', 'Break even result doesn’t match because degradation rate is restricted to avoid negative energy output');
-    setTimeout(function(){
-        $('#lcoe_proposed').tooltip('hide');
-    }, 3000);
-  }
-  if ((document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) && (key == 'baseline')) {
-    console.log('broken degradation')
-    document.getElementById('lcoe_baseline').setAttribute('data-original-title', 'Break even result doesn’t match because degradation rate is restricted to avoid negative energy output');;
-
-    $('#lcoe_baseline').tooltip('enable')
-    $('#lcoe_baseline').tooltip('show')
-
-    setTimeout(function(){
-        $('#lcoe_baseline').tooltip('hide');
-    }, 3000);
-  } */
   }
 }
 
@@ -842,7 +739,7 @@ function reset_year(key) {
 
   // Brent's method failed, determine if largest or smallest value should be displayed
   if (new_value == -1) {
-    // mismatch = true;
+    mismatch = true;
     if (Math.abs(func_year(1, key)) < Math.abs(func_year(upper_bound, key))) {
       new_value = 1
     } else {
@@ -855,10 +752,10 @@ function reset_year(key) {
   calculate()
 
   // show a tooltip with a warning for 3 seconds if LCOEs don't match for rounding reasons
+if (!mismatch) {
   if ((document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) && (key == 'proposed')) {
 
-    /* if (mismatch) document.getElementById('lcoe_proposed').setAttribute('data-original-title', 'Break even result doesn’t match because service life is restricted to avoid negative energy output');
-    else */
+    
     document.getElementById('lcoe_proposed').setAttribute('data-original-title', 'Break even result is approximate because service life has been rounded.');
 
     $('#lcoe_proposed').tooltip('enable')
@@ -870,9 +767,7 @@ function reset_year(key) {
   }
   if ((document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) && (key == 'baseline')) {
 
-    /* if (mismatch) {
-      document.getElementById('lcoe_baseline').setAttribute('data-original-title', 'Break even result doesn’t match because service life is restricted to avoid negative energy output'); }
-    else { */
+    
       document.getElementById('lcoe_baseline').setAttribute('data-original-title', 'Break even result is approximate because service life has been rounded.');
 
 
@@ -883,6 +778,7 @@ function reset_year(key) {
         $('#lcoe_baseline').tooltip('hide');
     }, 3000);
   }
+}
 
 
 }
