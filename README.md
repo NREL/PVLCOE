@@ -12,18 +12,30 @@ In the /build-presets/ folder, the MakePresetTree.py file builds a javascript fi
  - energy yield 
  - degradation rate
 
-The values for efficiency and all costs listed above are defined in the python file. The sources for these values are cited in https://www.nrel.gov/pv/lcoe-calculator/documentation.html. Energy yield and degradation rate values are populated from an Excel sheet ('Energy-yield_deg-rate.xlsx') which contains data for all feasible combinations of different hardware configurations (cell technology, module package type, system type) and locations. The sources for these values are also cited in the documentation file. You can edit (or add) default values that are preset in the calculator. Follow the instructions depending on which values you want to edit:
+The values for efficiency, degradation rate, and all costs listed above are defined in the python file. The sources for these values are cited in https://www.nrel.gov/pv/lcoe-calculator/documentation.html. Energy yield is populated by running the NREL PySAM model inside the MakePresetTree.py script for every combination of presets (cell technology, module package type, system type, inverter loading ratio, and location). PySAM installation instructions are here: https://nrel-pysam.readthedocs.io/en/master/.The sources for these values are also cited in the documentation file. You can edit (or add) default values that are preset in the calculator. Follow the instructions depending on which values you want to edit:
 
-## If you only want to change or add locations, energy yield values, or degradation rate values:
- - Edit the relevant rows in 'Energy-yield_deg-rate.xlsx' which is stored in the /build-presets/ folder
+## If you only want to change or add locations:
+ - The get_weather_files.py script contains code to make calls to the NSRDB API to get the weather files necessary for running PySAM. Links to the API instructions and getting a key are in the file header comment. To add a location, add the name of the location and its latitude and longitude coordinates to the location_coordinates.csv files. 
  - Install the requirements listed in 'requirements.txt' in the /build-presets/ folder
+ - Run get_weather_files.py to get a weather file for this location, and then run MakePresetTree.py.
+ - Then, lcoe_calculator.html will show your new presets!
+
+## If you want to change energy yield or the inputs to the PySAM model:
+ - Install the requirements listed in 'requirements.txt' in the /build-presets/ folder
+ - Make changes to the PySAM settings within MakePresetTree.py
  - Run MakePresetTree.py in the /build-presets/ folder
  - Then, lcoe_calculator.html will show your new presets!
 
-## If you want to change or add cell technologies, package types, system types, non-BOS costs, or efficiency
+## If you want to change or add cell technologies, package types, system types, non-BOS costs, or efficiency:
  - Install the requirements listed in 'requirements.txt' in the /build-presets/ folder
- - If desired, add cell technologies, package types, or system types to the lists already available in MakePresetTree.py, then add new rows for these additional types in 'Energy-yield_deg-rate.xlsx' and enter values for energy yield and degradation rate
+ - If desired, add cell technologies, package types, or system types to the lists already available in MakePresetTree.py
  - Add/edit costs and efficiency values in-line in the MakePresetTree.py script
  - Run MakePresetTree.py in the /build-presets/ folder
+ - Then, lcoe_calculator.html will show your new presets!
+
+## If you want to change or add BOS costs:
+ - Install the requirements listed in 'requirements.txt' in the /build-presets/ folder
+ - If desired, edit the costs in the spreadsheets corresponding to system type in the /build-presets/BOS_cost_data/ folder
+ - Run MakeBOSTree.py in the /build-presets/ folder
  - Then, lcoe_calculator.html will show your new presets!
 
