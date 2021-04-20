@@ -982,8 +982,7 @@ function setup_preset_location_yield() {
   slider_val = parseFloat(ilr_slider.noUiSlider.get())
 
   // ensures alphabetical order
-  var locations = ['USA AK Juneau', 'USA AL Montgomery', 'USA AR Little Rock', 'USA AZ Phoenix', 'USA CA Daggett', 'USA CO Denver', 'USA CT Hartford', 'USA DE Dover', 'USA FL Fort Lauderdale', 'USA GA Albany', 'USA HI Honolulu', 'USA IA Des Moines', 'USA ID Boise', 'USA IL Springfield', 'USA IN Indianapolis', 'USA KS Hutchinson', 'USA KY Bowling Green', 'USA LA Baton Rouge', 'USA MA Boston', 'USA MD Baltimore', 'USA ME Augusta', 'USA MI Saginaw', 'USA MN Minneapolis', 'USA MO Kansas City', 'USA MS Jackson', 'USA MT Great Falls', 'USA NC Greensboro', 'USA ND Bismarck', 'USA NE North Platte', 'USA NH Concord', 'USA NJ Atlantic City', 'USA NM Albuquerque', 'USA NV Las Vegas', 'USA NY Rochester', 'USA OH Columbus', 'USA OK Oklahoma City', 'USA OR Roseburg', 'USA PA Lancaster', 'USA RI Providence', 'USA SC Greenville', 'USA SD Pierre', 'USA TN Nashville', 'USA TX San Antonio', 'USA UT Salt Lake City', 'USA VA Richmond', 'USA VT Burlington', 'USA WA Bremerton', 'USA WI Madison', 'USA WV Charleston', 'USA WY Cheyenne']
-
+  var locations = Object.keys(preset_tree[preset_cell_technology.value][preset_package_type.value][preset_system_type.value][slider_val]).sort()
 
   for (var i = 0; i < locations.length; i++) {
     var option = document.createElement('option');
