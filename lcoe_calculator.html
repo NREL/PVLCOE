@@ -52,7 +52,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               <select id='system_type' class='form-control'></select>
             </div>
             <div class='col-sm-3'>
-	      <a href="javascript://" title="Location" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Location affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">Location
+	      <a href="javascript://" title="Location" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Location affects <strong>energy yield</strong>.">Location
               <span class="badge badge-primary">?</span></a>
               <select id='location_yield' class='form-control'></select>
             </div>
@@ -70,8 +70,14 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                 </div>
               </div>
             </div>
-            <div class='col-sm-3'></div>
-            <div class='col-sm-5 text-right mb-2'>
+            <div class='col-sm-3 mb-4'>
+               
+	      <a href="javascript://" title="Constraint" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Constraint affects <strong>BOS cost</strong>."> Constraint
+              <span class="badge badge-primary">?</span></a>
+              <select id='constraint' class='form-control'></select>
+		
+	    </div>
+            <div class='col-sm-5 text-right mb-3'>
             <button type='button' class='btn baseline btn-preset' onclick=preset_set('baseline')>Apply to baseline</button>
             <button type='button' class='btn proposed btn-preset' onclick=preset_set('proposed')>Apply to proposed</button>
            </div>
@@ -685,8 +691,11 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <script src='js/popper.min.js'></script>
     <script src='js/bootstrap.min.js'></script>
     <script src='js/nouislider.min.js'></script>
-    <script src='js/preset_tree.min.js'></script>
-    <script src='js/bos_cost_tree.js'></script>
+    <!-- <script src='js/preset_tree.min.js'></script>
+    <script src='js/bos_cost_tree.js'></script> -->
+
+    <script src='js/PresetTree.js'></script>
+    <script src='js/BosCostTree.js'></script>
     <script src='js/lcoe_calculator.js'></script>
   </body>
 </html>

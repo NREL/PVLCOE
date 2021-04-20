@@ -923,6 +923,7 @@ var preset_location_yield = document.getElementById('location_yield')
 var preset_system_type = document.getElementById('system_type')
 var preset_package_type = document.getElementById('package_type')
 var ilr_slider = document.getElementById('ilr_preset')
+var constraint = document.getElementById('constraint')
 // Fill in the preset cell technologies
 for (var key in preset_tree) {
   var option = document.createElement('option');
@@ -969,21 +970,45 @@ function setup_preset_system_type() {
   setup_preset_location_yield()
 }
 
+/* function setup_preset_ilr() {
+} */
+
 function setup_preset_location_yield() {
   // Fill in the location menu
   var selected = preset_location_yield.value
   // Clear the options
   preset_location_yield.options.length = 0
   // Now fill in the options available for the cell technology, package type, system type
-  for (var key in preset_tree[preset_cell_technology.value][preset_package_type.value][preset_system_type.value]) {
+  slider_val = parseFloat(ilr_slider.noUiSlider.get())
+
+  // ensures alphabetical order
+  var locations = ['USA AK Juneau', 'USA AL Montgomery', 'USA AR Little Rock', 'USA AZ Phoenix', 'USA CA Daggett', 'USA CO Denver', 'USA CT Hartford', 'USA DE Dover', 'USA FL Fort Lauderdale', 'USA GA Albany', 'USA HI Honolulu', 'USA IA Des Moines', 'USA ID Boise', 'USA IL Springfield', 'USA IN Indianapolis', 'USA KS Hutchinson', 'USA KY Bowling Green', 'USA LA Baton Rouge', 'USA MA Boston', 'USA MD Baltimore', 'USA ME Augusta', 'USA MI Saginaw', 'USA MN Minneapolis', 'USA MO Kansas City', 'USA MS Jackson', 'USA MT Great Falls', 'USA NC Greensboro', 'USA ND Bismarck', 'USA NE North Platte', 'USA NH Concord', 'USA NJ Atlantic City', 'USA NM Albuquerque', 'USA NV Las Vegas', 'USA NY Rochester', 'USA OH Columbus', 'USA OK Oklahoma City', 'USA OR Roseburg', 'USA PA Lancaster', 'USA RI Providence', 'USA SC Greenville', 'USA SD Pierre', 'USA TN Nashville', 'USA TX San Antonio', 'USA UT Salt Lake City', 'USA VA Richmond', 'USA VT Burlington', 'USA WA Bremerton', 'USA WI Madison', 'USA WV Charleston', 'USA WY Cheyenne']
+
+
+  for (var i = 0; i < locations.length; i++) {
     var option = document.createElement('option');
-    option.text = key;
-    option.value = key;
+    option.text = locations[i];
+    option.value = locations[i];
     preset_location_yield.appendChild(option)
   }
-  if (selected in preset_tree[preset_cell_technology.value][preset_package_type.value][preset_system_type.value]){
+  if (selected in preset_tree[preset_cell_technology.value][preset_package_type.value][preset_system_type.value][slider_val]){
     preset_location_yield.value = selected
   }
+  setup_preset_constraint()
+}
+
+function setup_preset_constraint() {
+  constraint.options.length = 0
+
+  var option = document.createElement('option');
+  option.text = "Area Constrained";
+  option.value = "Area_Constrained";
+  constraint.appendChild(option)
+  
+  var option = document.createElement('option');
+  option.text = "Power Constrained";
+  option.value = "Power_Constrained";
+  constraint.appendChild(option)
 }
 
 // Set up the presets for the first time
@@ -992,8 +1017,9 @@ setup_preset_package_type()
 preset_package_type.value = 'glass-polymer backsheet'
 preset_system_type.value = 'fixed tilt, utility scale'
 preset_location_yield.value = 'USA MO Kansas City'
-//ilr_slider.value = 1.3
-//$('#ilr_slider_text').val(1.3)
+$('#ilr_preset_text').val(1.3)
+document.getElementById('ilr_preset').noUiSlider.set(1.3)
+constraint.text = 'Area Constrained'
 
 // Set up the presets anytime a menu selection is made
 preset_cell_technology.addEventListener('input', function(){
@@ -1008,7 +1034,7 @@ preset_system_type.addEventListener('input', function(){
 
 
 function preset_set(key){
-  var preset = preset_tree[preset_cell_technology.value][preset_package_type.value][preset_system_type.value][preset_location_yield.value]
+  var preset = preset_tree[preset_cell_technology.value][preset_package_type.value][preset_system_type.value][parseFloat(ilr_slider.noUiSlider.get())][preset_location_yield.value]
   var service_life_default = 25
   var discount_rate_default = 6.30
 
@@ -1019,8 +1045,8 @@ function preset_set(key){
   $('#'+key+'_cost_noncell_text').val(preset['cost_noncell'].toFixed(2))
   $('#'+key+'_cost_extra').val(0)
   $('#'+key+'_cost_om_text').val(preset['cost_om'].toFixed(2))
-  $('#'+key+'_cost_bos_power_text').val(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_power'].toFixed(2))
-  $('#'+key+'_cost_bos_area_text').val(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_area'].toFixed(2))
+  $('#'+key+'_cost_bos_power_text').val(cost_bos_tree[preset_system_type.value][parseFloat(ilr_slider.noUiSlider.get())][constraint.value]['cost_bos_power'])
+  $('#'+key+'_cost_bos_area_text').val(cost_bos_tree[preset_system_type.value][parseFloat(ilr_slider.noUiSlider.get())][constraint.value]['cost_bos_area'])
   $('#'+key+'_efficiency_text').val(preset['efficiency'].toFixed(1))
   $('#'+key+'_energy_yield_text').val(preset['energy_yield'].toFixed(0))
   $('#'+key+'_degradation_rate_text').val(preset['degradation_rate'].toFixed(2))
@@ -1034,8 +1060,8 @@ function preset_set(key){
   document.getElementById(key+'_cost_noncell').noUiSlider.set(preset['cost_noncell'])
   document.getElementById(key+'_cost_extra').noUiSlider.set(0.00)
   document.getElementById(key+'_cost_om').noUiSlider.set(preset['cost_om'].toFixed(2))
-  document.getElementById(key+'_cost_bos_power').noUiSlider.set(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_power'])
-  document.getElementById(key+'_cost_bos_area').noUiSlider.set(cost_bos_tree[preset_system_type.value][preset['state']]['cost_bos_area'])
+  document.getElementById(key+'_cost_bos_power').noUiSlider.set(cost_bos_tree[preset_system_type.value][parseFloat(ilr_slider.noUiSlider.get())][constraint.value]['cost_bos_power'])
+  document.getElementById(key+'_cost_bos_area').noUiSlider.set(cost_bos_tree[preset_system_type.value][parseFloat(ilr_slider.noUiSlider.get())][constraint.value]['cost_bos_area'])
   document.getElementById(key+'_efficiency').noUiSlider.set(preset['efficiency'])
   document.getElementById(key+'_energy_yield').noUiSlider.set(preset['energy_yield'])
   document.getElementById(key+'_degradation_rate').noUiSlider.set(preset['degradation_rate'])
