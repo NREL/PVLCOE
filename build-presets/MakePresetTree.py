@@ -15,13 +15,9 @@ import PySAM.PySSC as pssc
 # to avoid rounding issues, the lat and lon returned by pysam are in this file
 # locations maps a lat/lon pair to the string name of the location
 locations = {}
-loc = []
 df = pd.read_csv('location_coordinates.csv')
 for index, row in df.iterrows():
-	locations[(row['Latitude'], row['Longitude'])] = 'USA ' + row['State'] + ' ' + row['Place']
-	loc.append('USA ' + row['State'] + ' ' + row['Place'])
-print(loc)
-	
+	locations[(row['Latitude'], row['Longitude'])] = 'USA ' + row['State'] + ' ' + row['Place']	
 
 # Define feasible system configurations
 cell_technologies = ['mono-Si', 'multi-Si', 'CdTe']
@@ -73,7 +69,6 @@ json_model = pvwatts.wrap(pv_dat)
 weather_folder = "weather_files"
 weather_files = glob.glob(weather_folder + "/*.csv")
 weather_data = [tools.SAM_CSV_to_solar_data(f) for f in weather_files]
-print(weather_data)
 
 # tilt angles reported in degrees, needed for running PySAM 
 tilt = {'fixed tilt, utility scale': 33, 'single-axis tracked, utility scale': 33, 'roof-mounted, residential scale': 25, 'roof-mounted, commercial scale': 10, 'fixed tilt, commercial scale': 10}
@@ -103,7 +98,6 @@ for cell_technology in cell_technologies:
 					lat = json_model.SolarResource.solar_resource_data['lat']
 					lon = json_model.SolarResource.solar_resource_data['lon']
 					location = locations[(lat, lon)] # string name of location
-					# print(cell_technology, package_type, system_type, ilr, location)
 
 					# set specific inputs of PySAM model based on system type and ILR
 					json_model.SystemDesign.gcr = ground_coverage_ratio[system_type]
@@ -126,9 +120,8 @@ for cell_technology in cell_technologies:
             					'state': location.split(' ')[1]
 					}
 
-# print(preset_tree)	
-"""		
+# print(preset_tree)			
 with open('../js/PresetTree.js', 'w') as file:
     file.write('var preset_tree = ' + json.dumps(preset_tree, indent=2, separators=(',', ': ')))
-"""
+
 
