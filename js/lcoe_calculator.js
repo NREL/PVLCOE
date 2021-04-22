@@ -85,10 +85,10 @@ function update_slider(slider_name, value) {
 
   key = slider_name.substring(0, 8) // 'baseline' and 'proposed' are both 8 letters
 
-  // indicates if slider movement because of break even button
+  // indicates if slider movement because of break-even button
   var flag = false;
 
-  // for break even purposes, calculate the maximum values after the slider is moved to make sure calculation based on most recent values
+  // for break-even purposes, calculate the maximum values after the slider is moved to make sure calculation based on most recent values
   // the following four conditions handle the popups on service life and degradation
   if (slider_name == 'baseline_degradation_rate') {
 
@@ -98,7 +98,7 @@ function update_slider(slider_name, value) {
    // checking equality
    if (!(value < max_degradation)) {
 
-     flag = true // indicates break even
+     flag = true // indicates break-even
 
      value = max_degradation // restrict displayed value based on maximum
      $('#baseline_degradation_rate_text').val(max_degradation.toFixed(2))
@@ -143,7 +143,7 @@ function update_slider(slider_name, value) {
 
      flag = true
      $('#baseline_service_life_text').val(max_year.toFixed(0))
-     document.getElementById('baseline_service_life_text').setAttribute('data-original-title', 'Choose a smaller degradation rate to enable a larger service life.');
+     document.getElementById('baseline_service_life_text').setAttribute('data-original-title', 'Choose a smaller degradation rate to enable a longer service life.');
 
      $('#baseline_service_life_text').tooltip('enable')
      $('#baseline_service_life_text').tooltip('show')
@@ -163,7 +163,7 @@ function update_slider(slider_name, value) {
       flag = true
 
       $('#proposed_service_life_text').val(max_year.toFixed(0))
-      document.getElementById('proposed_service_life_text').setAttribute('data-original-title', 'Choose a smaller degradation rate to enable a larger service life.');
+      document.getElementById('proposed_service_life_text').setAttribute('data-original-title', 'Choose a smaller degradation rate to enable a longer service life.');
 
       $('#proposed_service_life_text').tooltip('enable')
       $('#proposed_service_life_text').tooltip('show')
@@ -237,7 +237,7 @@ function update_slider(slider_name, value) {
        $('#baseline_service_life_text').val(1000)
      }
 
-     if (!flag) { // only display for non-break even interaction
+     if (!flag) { // only display for non-break-even interaction
 
        document.getElementById('baseline_service_life_text').setAttribute('data-original-title', 'Service life must be a positive integer no greater than 1000.');
       
@@ -532,7 +532,7 @@ slider_setup(
   {'start': 0, 'min': 0, 'max': 10, 'step': 0.01, 'digits': 2}
 )
 
-/* function with calculations for break even degradation rate
+/* function with calculations for break-even degradation rate
    key: baseline or proposed
 */
 function reset_degradation(key) {
@@ -584,9 +584,9 @@ function func_deg(deg, key) {
   return energy_wanted - (energy_yield * energy_mult + energy_yield * deg * energy_deg_mult)
 }
 
-// break even O&M cost
+// break-even O&M cost
 function reset_OM(key) {
-  // only perform break even calculations if baseline and proposed LCOEs are different
+  // only perform break-even calculations if baseline and proposed LCOEs are different
   if (document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) {
     var outputs = calculate()
     var discount_rate = parseFloat($('#'+key+'_discount_rate_text').val())/100.0
@@ -672,7 +672,7 @@ function brents_method(f, a, b, precision, root_precision, key) {
   return b;
 } 
 
-// function used by Brent's method to break even service life
+// function used by Brent's method to break-even service life
 function func_year(year, key) {
   var outputs = calculate()
   if (key == 'baseline') {
@@ -698,7 +698,7 @@ function func_year(year, key) {
   return lcoe - cost_val/energy_val
 }
 
-// break even service life using Brent's method
+// break-even service life using Brent's method
 function reset_year(key) {
   $('#lcoe_proposed').tooltip('disable')
   $('#lcoe_baseline').tooltip('disable')
@@ -722,11 +722,11 @@ function reset_year(key) {
   update_slider(key+'_service_life', new_value)
   calculate()
 
-  // show a tooltip with a warning for 3 seconds if LCOEs don't match for rounding reasons (and not because break even failed)
+  // show a tooltip with a warning for 3 seconds if LCOEs don't match for rounding reasons (and not because break-even failed)
   if (!break_even) {
     if ((document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) && (key == 'proposed')) {
 
-      document.getElementById('lcoe_proposed').setAttribute('data-original-title', 'Break even result is approximate because service life has been rounded.');
+      document.getElementById('lcoe_proposed').setAttribute('data-original-title', 'Break-even result is approximate because service life has been rounded.');
 
       $('#lcoe_proposed').tooltip('enable')
       $('#lcoe_proposed').tooltip('show')
@@ -737,7 +737,7 @@ function reset_year(key) {
     }
     if ((document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) && (key == 'baseline')) {
     
-      document.getElementById('lcoe_baseline').setAttribute('data-original-title', 'Break even result is approximate because service life has been rounded.');
+      document.getElementById('lcoe_baseline').setAttribute('data-original-title', 'Break-even result is approximate because service life has been rounded.');
 
       $('#lcoe_baseline').tooltip('enable')
       $('#lcoe_baseline').tooltip('show')
@@ -749,11 +749,11 @@ function reset_year(key) {
   }
 }
 
-/* function to break even front layer cost, cell cost, back layer cost, non-cell module cost, extra component cost,
+/* function to break-even front layer cost, cell cost, back layer cost, non-cell module cost, extra component cost,
 BOS cost power scaling, BOS cost area scaling, and efficiency
 */
 function match_LCOE(slider_name, number_name, key) {
-  // only perform break even calculations if baseline and proposed LCOEs are different
+  // only perform break-even calculations if baseline and proposed LCOEs are different
   if (document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) {
 
     var number = document.getElementById(number_name);
@@ -784,7 +784,7 @@ function match_LCOE(slider_name, number_name, key) {
     var later_cost = cost_current - init_cost
     var lcoe = cost_comparison/energy_comparison
   
-    // different break even calculations depending on the slider
+    // different break-even calculations depending on the slider
     if (slider_name == 'cost_front_layer') {
       wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
       cost_front_layer = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency) - cost_cell - cost_back_layer - cost_noncell - cost_extra) //.toFixed(2)
@@ -839,9 +839,9 @@ function match_LCOE(slider_name, number_name, key) {
 
 }
 
-// function to break even energy yield
+// function to break-even energy yield
 function reset_energy_yield(key) {
-  // only perform break even calculations if baseline and proposed LCOEs are different
+  // only perform break-even calculations if baseline and proposed LCOEs are different
   if (document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) {
     var outputs = calculate()
     var discount_rate = parseFloat($('#'+key+'_discount_rate_text').val())/100.0
@@ -1203,6 +1203,6 @@ function calculate() {
      document.getElementById('lcoe_proposed').innerHTML = lcoe_proposed.toFixed(4)
   }
 
-  // return values used in break even calculations
+  // return values used in break-even calculations
   return [cost_baseline, energy_baseline, cost_proposed, energy_proposed]
 }
