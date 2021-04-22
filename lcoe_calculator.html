@@ -36,7 +36,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
           Use the <strong>presets</strong> (below) to choose a different cell technology, package type, system type, location, inverter loading ratio, or constraint for the inputs.
           <div class='row align-items-center'>
             <div class='col-sm-3'>
-	      <a href="javascript://" title="Cell Technology" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, <strong>energy yield</strong>, <strong>degradation rate</strong>, <strong>BOS cost</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.">Cell Technology
+	      <a href="javascript://" title="Cell Technology" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, <strong>BOS cost</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.">Cell Technology
               <span class="badge badge-primary">?</span></a>
               <select id='cell_technology' class='form-control'></select>
             </div>
@@ -45,7 +45,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               <span class="badge badge-primary">?</span></a>
               <select id='package_type' class='form-control'></select>
             </div>
-          
             <div class='col-sm-3'>
 	      <a href="javascript://" title="System Type" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="System type affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">System Type
               <span class="badge badge-primary">?</span></a>
@@ -71,11 +70,9 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
               </div>
             </div>
             <div class='col-sm-3 mb-4'>
-               
 	      <a href="javascript://" title="Constraint" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Constraint affects <strong>BOS cost</strong>."> Constraint
               <span class="badge badge-primary">?</span></a>
               <select id='constraint' class='form-control'></select>
-		
 	    </div>
             <div class='col-sm-5 text-right mb-3'>
             <button type='button' class='btn baseline btn-preset' onclick=preset_set('baseline')>Apply to baseline</button>
@@ -336,7 +333,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                         <img id="baselineLinkImage" src="link.svg"></img>
                      </span>
                    </div>
-         
                   <input id='baseline_discount_rate_text' type='number' class='form-control' step='0.01'/></div>
                 </div>
 		</div>
@@ -344,7 +340,6 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <!-- This is an empty div that jQuery UI magically styles as a slider -->
                   <div id='baseline_discount_rate'></div>
                 </div>
-		
               </div>
             </div>
           </div>
