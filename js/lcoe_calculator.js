@@ -28,8 +28,6 @@ $('#proposed_service_life_text').tooltip('disable')
 $('#lcoe_proposed').tooltip('disable')
 $('#lcoe_baseline').tooltip('disable')
 
-
-
 // toggle between link and broken link icon for baseline discount rate slider
 function baselineToggle() {
   if (document.getElementById('baselineLinkImage').src.includes('broken')) {
@@ -185,7 +183,6 @@ function update_slider(slider_name, value) {
     max_year = 1000
   } 
   var max_degradation = 1 / (year - 0.5) * 100
-
 
   // the following four conditions handle updating the maximum of the service life/degradation sliders
   if (slider_name == 'baseline_degradation_rate') {
@@ -585,7 +582,6 @@ function func_deg(deg, key) {
   var energy_deg_mult = (1 / Math.pow(1 + discount_rate, year - 1) - 1 - discount_rate) / Math.pow(discount_rate, 2) - ((0.5 - year) / Math.pow(1 + discount_rate, year) - 0.5) / discount_rate
   
   return energy_wanted - (energy_yield * energy_mult + energy_yield * deg * energy_deg_mult)
-
 }
 
 // break even O&M cost
@@ -904,8 +900,10 @@ for (var key in preset_tree) {
 function setup_preset_package_type() {
   // Get the current selection
   var selected = preset_package_type.value
+
   // Clear the options
   preset_package_type.options.length = 0
+
   // Now fill in the options available for the cell technology
   for (var key in preset_tree[preset_cell_technology.value]) {
     var option = document.createElement('option');
@@ -923,8 +921,10 @@ function setup_preset_package_type() {
 function setup_preset_system_type() {
   // Get the current selection
   var selected = preset_system_type.value
+
   // Clear the options
   preset_system_type.options.length = 0
+
   // Now fill in the options available for the cell technology and package type
   for (var key in preset_tree[preset_cell_technology.value][preset_package_type.value]) {
     var option = document.createElement('option');
@@ -940,9 +940,12 @@ function setup_preset_system_type() {
 
 // Fill in the location menu
 function setup_preset_location_yield() {
+  // Get the current selection
   var selected = preset_location_yield.value
+
   // Clear the options
   preset_location_yield.options.length = 0
+
   // Now fill in the options available for the cell technology, package type, system type
   slider_val = parseFloat(ilr_slider.noUiSlider.get())
 
@@ -961,6 +964,7 @@ function setup_preset_location_yield() {
   setup_preset_constraint()
 }
 
+// Fill in the constraint menu
 function setup_preset_constraint() {
   constraint.options.length = 0
 
@@ -1023,7 +1027,6 @@ preset_system_type.addEventListener('input', function(){
   }
 })
 
-
 function preset_set(key){
   var preset = preset_tree[preset_cell_technology.value][preset_package_type.value][preset_system_type.value][parseFloat(ilr_slider.noUiSlider.get())][preset_location_yield.value]
   var service_life_default = 25
@@ -1061,7 +1064,6 @@ function preset_set(key){
 
   calculate()
 }
-
 
 preset_set('baseline')
 copy_from_baseline()
@@ -1206,7 +1208,6 @@ function calculate() {
     energy_proposed += energy('proposed', year)/Math.pow(1 + proposed_discount_rate, year)
   }
   var lcoe_proposed = cost_proposed/energy_proposed
-
 
   // display 'error' if service life input is invalid 
   // Put the final answer into the little pills in the Results section
