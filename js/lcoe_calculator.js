@@ -1028,6 +1028,28 @@ function preset_set(key){
   $('#'+key+'_service_life_text').val(service_life_default)
   $('#'+key+'_discount_rate_text').val(discount_rate_default)
 
+  var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
+  var year = parseFloat($('#'+key+'_service_life_text').val())
+  var max_year = 1 / degradation_rate + 0.5
+  if (max_year > 1000) {
+    max_year = 1000
+  } 
+  var max_degradation = 1 / (year - 0.5) * 100
+
+  // make sure service life and degradation rate sliders update properly
+  document.getElementById(key+'_service_life').noUiSlider.updateOptions({
+    range: {
+      'min': 0,
+      'max': max_year
+    }
+  });
+  document.getElementById(key+'_degradation_rate').noUiSlider.updateOptions({
+    range: {
+      'min': 0,
+      'max': max_degradation
+    } 
+  });
+
   // Set the sliders
   document.getElementById(key+'_cost_front_layer').noUiSlider.set(preset['cost_front_layer'])
   document.getElementById(key+'_cost_cell').noUiSlider.set(preset['cost_cell'])
@@ -1064,6 +1086,29 @@ function copy_from_baseline(){
   $('#proposed_degradation_rate_text').val($('#baseline_degradation_rate_text').val())
   $('#proposed_service_life_text').val($('#baseline_service_life_text').val())
   $('#proposed_discount_rate_text').val($('#baseline_discount_rate_text').val())
+
+  var degradation_rate = parseFloat($('#proposed_degradation_rate_text').val())/100.0
+  var year = parseFloat($('#proposed_service_life_text').val())
+  var max_year = 1 / degradation_rate + 0.5
+  if (max_year > 1000) {
+    max_year = 1000
+  } 
+  var max_degradation = 1 / (year - 0.5) * 100
+
+  // make sure service life and degradation rate sliders update properly
+  document.getElementById('proposed_service_life').noUiSlider.updateOptions({
+    range: {
+      'min': 0,
+      'max': max_year
+    }
+  });
+
+  document.getElementById('proposed_degradation_rate').noUiSlider.updateOptions({
+    range: {
+      'min': 0,
+      'max': max_degradation
+    } 
+  });
 
   // Set the sliders
   document.getElementById('proposed_cost_front_layer').noUiSlider.set($('#baseline_cost_front_layer_text').val())
