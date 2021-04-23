@@ -95,7 +95,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       <h4>Reliability</h4>
       <dl class='row'>
         <dt class='col-sm-3'>Degradation rate</dt>
-        <dd class='col-sm-9'>The annual loss in energy production, as a fraction of the system's undegraded energy yield. Degradation rate is limited based on the value of <strong>service life</strong> so that the system's final-year energy production is greater than zero.</dd>
+        <dd class='col-sm-9'>The annual loss in energy production, as a percentage of the system's undegraded energy yield. Degradation rate is limited based on the value of <strong>service life</strong> so that the system's final-year energy production is greater than zero.</dd>
         <dt class='col-sm-3'>Service life</dt>
         <dd class='col-sm-9'>The number of years the system is expected to operate. The &ldquo;financial life&rdquo; of the system is set equal to its service life. Service life is limited based on the value of <strong>degradation rate</strong> so that the system's final-year energy production is greater than zero. The maximum value of service life is 1000 years.</dd>
       </dl>
@@ -112,8 +112,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       \end{cases}\text{,}$$ where \(c_\text{capital}\) is the initial capital cost of the system and \(c_\text{O&M}\) is the annual O&amp;M cost. In this calculator, these costs are in units of USD/kW.</p>
       <p>The energy produced in year \(n\) $$e_n = \begin{cases} 
       0 & n = 0\\
-      \text{max}\left[ Y \left( 1 - R_d \right)^\left(n-1\right), 0 \right] & n>0
-      \end{cases}\text{,}$$ where \(Y\) is the first-year energy yield and \(R_d\) is the system's annual degradation rate. In this calculator, this energy production is in units of kWh/kW, so \(c_e\) is in units of USD/kWh.</p>
+      \text{max}\left[ e_0 \left( 1 - \frac{R_d}{100} * \left(n-0.5\right)\right), 0 \right] & n>0
+      \end{cases}\text{,}$$ where \(e_0\) is the ideal undegraded energy yield and \(R_d\) is the system's annual degradation rate. In this calculator, this energy production is in units of kWh/kW, so \(c_e\) is in units of USD/kWh.</p>
       <div id='seealso'>
         <h2>See also</h2>
         <p>This tool is for evaluating how changes to PV module and system technology affect LCOE. You may be interested in these other resources.</p>
