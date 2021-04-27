@@ -1,6 +1,6 @@
 """
-This code uses the PySAM wrapper for the SAM GUI to generate energy yield and create a new preset tree. 
-It loops through every combination of cell technology, package type, system type, inverter loading ratio 
+This code uses the PySAM wrapper for the SAM GUI to generate energy yield and create a new preset tree.
+It loops through every combination of cell technology, package type, system type, inverter loading ratio
 and location to determine the energy yield with those settings.
 
 Note: this script runs PySAM 3300 times (for each preset combination) and takes ~30 mins to finish running.
@@ -17,7 +17,8 @@ import PySAM.PySSC as pssc
 locations = {}
 df = pd.read_csv('location_coordinates.csv')
 for index, row in df.iterrows():
-	locations[(row['Latitude'], row['Longitude'])] = 'USA ' + row['State'] + ' ' + row['Place']	
+    locations[(row['Latitude'], row['Longitude'])] = 'USA ' + \
+        row['State'] + ' ' + row['Place']
 
 # Define feasible system configurations
 cell_technologies = ['mono-Si', 'multi-Si', 'CdTe']
@@ -55,7 +56,7 @@ cost_om = {
 }
 
 inverter_loading_ratio = [1.1, 1.3, 1.4]
- 
+
 # creating PySAM model with default info from json file (that doesn't have location info)
 json_file = open("pvwatts_inputs.json")
 dict = json.load(json_file)
@@ -70,58 +71,61 @@ weather_folder = "weather_files"
 weather_files = glob.glob(weather_folder + "/*.csv")
 weather_data = [tools.SAM_CSV_to_solar_data(f) for f in weather_files]
 
-# tilt angles reported in degrees, needed for running PySAM 
-tilt = {'fixed tilt, utility scale': 33, 'single-axis tracked, utility scale': 33, 'roof-mounted, residential scale': 25, 'roof-mounted, commercial scale': 10, 'fixed tilt, commercial scale': 10}
+# tilt angles reported in degrees, needed for running PySAM
+tilt = {'fixed tilt, utility scale': 33, 'single-axis tracked, utility scale': 33,
+        'roof-mounted, residential scale': 25, 'roof-mounted, commercial scale': 10, 'fixed tilt, commercial scale': 10}
 
 # 0: fixed rack, 1: fixed roof, 2: 1 axis; needed for running PySAM
-array_type = {'fixed tilt, utility scale': 0, 'single-axis tracked, utility scale': 2, 'roof-mounted, residential scale': 1, 'roof-mounted, commercial scale': 1, 'fixed tilt, commercial scale': 0}
+array_type = {'fixed tilt, utility scale': 0, 'single-axis tracked, utility scale': 2,
+              'roof-mounted, residential scale': 1, 'roof-mounted, commercial scale': 1, 'fixed tilt, commercial scale': 0}
 
 # between 0 and 1, needed for running PySAM
-ground_coverage_ratio = {'fixed tilt, utility scale': 0.44, 'single-axis tracked, utility scale': 0.33, 'roof-mounted, residential scale': 0.44, 'roof-mounted, commercial scale': 0.44, 'fixed tilt, commercial scale': 0.44}
+ground_coverage_ratio = {'fixed tilt, utility scale': 0.44, 'single-axis tracked, utility scale': 0.33,
+                         'roof-mounted, residential scale': 0.44, 'roof-mounted, commercial scale': 0.44, 'fixed tilt, commercial scale': 0.44}
 
 preset_tree = {}
 for cell_technology in cell_technologies:
-	if cell_technology not in preset_tree:
-		preset_tree[cell_technology] = {}
-	for package_type in package_types[cell_technology]:
-		if package_type not in preset_tree[cell_technology]:
-			preset_tree[cell_technology][package_type] = {}
-		for system_type in system_types[cell_technology]:
-			if system_type not in preset_tree[cell_technology][package_type]:
-				preset_tree[cell_technology][package_type][system_type] = {}
-			for ilr in inverter_loading_ratio:
-				if ilr not in preset_tree[cell_technology][package_type][system_type]:
-					preset_tree[cell_technology][package_type][system_type][ilr] = {}
-				for solar_resource_file in weather_data:
-					
-					json_model.SolarResource.solar_resource_data = solar_resource_file
-					lat = json_model.SolarResource.solar_resource_data['lat']
-					lon = json_model.SolarResource.solar_resource_data['lon']
-					location = locations[(lat, lon)] # string name of location
+    if cell_technology not in preset_tree:
+        preset_tree[cell_technology] = {}
+    for package_type in package_types[cell_technology]:
+        if package_type not in preset_tree[cell_technology]:
+            preset_tree[cell_technology][package_type] = {}
+        for system_type in system_types[cell_technology]:
+            if system_type not in preset_tree[cell_technology][package_type]:
+                preset_tree[cell_technology][package_type][system_type] = {}
+            for ilr in inverter_loading_ratio:
+                if ilr not in preset_tree[cell_technology][package_type][system_type]:
+                    preset_tree[cell_technology][package_type][system_type][ilr] = {}
+                for solar_resource_file in weather_data:
 
-					# set specific inputs of PySAM model based on system type and ILR
-					json_model.SystemDesign.gcr = ground_coverage_ratio[system_type]
-					json_model.SystemDesign.array_type = array_type[system_type]
-					json_model.SystemDesign.tilt = tilt[system_type]
-					json_model.SystemDesign.dc_ac_ratio = ilr
+                    json_model.SolarResource.solar_resource_data = solar_resource_file
+                    lat = json_model.SolarResource.solar_resource_data['lat']
+                    lon = json_model.SolarResource.solar_resource_data['lon']
+                    location = locations[(lat, lon)]  # string name of location
 
-					json_model.execute(0) # run the model
-					energy_yield = json_model.Outputs.kwh_per_kw # get the energy yield from the outputs
+                    # set specific inputs of PySAM model based on system type and ILR
+                    json_model.SystemDesign.gcr = ground_coverage_ratio[system_type]
+                    json_model.SystemDesign.array_type = array_type[system_type]
+                    json_model.SystemDesign.tilt = tilt[system_type]
+                    json_model.SystemDesign.dc_ac_ratio = ilr
 
-					preset_tree[cell_technology][package_type][system_type][ilr][location] = {
-						'cost_front_layer': module_details['cost_front_layer'],
-            					'cost_cell': module_details['cost_cell'][cell_technology],
-           					'cost_back_layer': module_details['cost_back_layer'][package_type],
-            					'cost_noncell': module_details['cost_noncell'],
-            					'cost_om': cost_om[system_type],
-            					'efficiency': module_details['efficiency'][cell_technology],
-            					'energy_yield': energy_yield,
-            					'degradation_rate': 0.7,
-            					'state': location.split(' ')[1]
-					}
+                    json_model.execute(0)  # run the model
+                    # get the energy yield from the outputs
+                    energy_yield = json_model.Outputs.kwh_per_kw
 
-# print(preset_tree)			
+                    preset_tree[cell_technology][package_type][system_type][ilr][location] = {
+                        'cost_front_layer': module_details['cost_front_layer'],
+                        'cost_cell': module_details['cost_cell'][cell_technology],
+                        'cost_back_layer': module_details['cost_back_layer'][package_type],
+                        'cost_noncell': module_details['cost_noncell'],
+                        'cost_om': cost_om[system_type],
+                        'efficiency': module_details['efficiency'][cell_technology],
+                        'energy_yield': energy_yield,
+                        'degradation_rate': 0.7,
+                        'state': location.split(' ')[1]
+                    }
+
+# print(preset_tree)
 with open('../js/PresetTree.js', 'w') as file:
-    file.write('var preset_tree = ' + json.dumps(preset_tree, indent=2, separators=(',', ': ')))
-
-
+    file.write('var preset_tree = ' + json.dumps(preset_tree,
+                                                 indent=2, separators=(',', ': ')))
