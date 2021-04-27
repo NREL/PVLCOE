@@ -14,6 +14,18 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 const MODULE_MARKUP = 1.15
 
+// the slider max is 60, but 100 is the absolute largest value efficiency can take
+const EFFICIENCY_MAX = 100
+
+// the max values for these sliders
+const DEGRADATION_MAX = 5
+const SERVICE_LIFE_SLIDER_MAX = 100
+
+// the absolute maximum value service life can potentially take, either by typing or break-even result
+// the calculator freezes if this number gets too large
+const SERVICE_LIFE_CAP = 1000
+
+
 // allows for use of popovers and tooltips between javascript and html
 $(function(){
   $('[data-toggle="popover"]').popover({html:true});  
@@ -98,7 +110,7 @@ function update_slider(slider_name, value) {
   key = slider_name.substring(0, 8) // 'baseline' and 'proposed' are both 8 letters
 
   // indicates if slider movement because of break-even button
-  var flag = false;
+  var breakeven_active = false;
 
   // for break-even purposes, calculate the maximum values after the slider is moved to make sure calculation based on most recent values
   // the following four conditions handle the popups on service life and degradation
@@ -110,7 +122,7 @@ function update_slider(slider_name, value) {
    // checking equality
    if (!(value < max_degradation)) {
 
-     flag = true // indicates break-even
+     breakeven_active = true // indicates break-even
 
      value = max_degradation // restrict displayed value based on maximum
      $('#baseline_degradation_rate_text').val(max_degradation.toFixed(2))
@@ -132,7 +144,7 @@ function update_slider(slider_name, value) {
     var max_degradation = 1 / (year - 0.5) * 100
 
     if (!(value < max_degradation)) {
-      flag = true
+      breakeven_active = true
       value = max_degradation
       $('#proposed_degradation_rate_text').val(max_degradation.toFixed(2))
       document.getElementById('proposed_degradation_rate_text').setAttribute('data-original-title', 'Choose a shorter service life to enable a larger degradation rate.');
@@ -153,7 +165,7 @@ function update_slider(slider_name, value) {
    if (!(value < max_year.toFixed(0))) {
      value = max_year.toFixed(0) // round to integer
 
-     flag = true
+     breakeven_active = true
      $('#baseline_service_life_text').val(max_year.toFixed(0))
      document.getElementById('baseline_service_life_text').setAttribute('data-original-title', 'Choose a smaller degradation rate to enable a longer service life.');
 
@@ -172,7 +184,7 @@ function update_slider(slider_name, value) {
     var max_year = 1 / degradation_rate + 0.5
     if (!(value < max_year.toFixed(0))) {
       value = max_year.toFixed(0)
-      flag = true
+      breakeven_active = true
 
       $('#proposed_service_life_text').val(max_year.toFixed(0))
       document.getElementById('proposed_service_life_text').setAttribute('data-original-title', 'Choose a smaller degradation rate to enable a longer service life.');
@@ -188,64 +200,60 @@ function update_slider(slider_name, value) {
    }
   } 
 
-    // key = slider_name.substring(0, 8) // 'baseline' and 'proposed' are both 8 letters
-    var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
-    var year = parseFloat($('#'+key+'_service_life_text').val())
-    var max_year = 1 / degradation_rate + 0.5
+  var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
+  var year = parseFloat($('#'+key+'_service_life_text').val())
+  var max_year = 1 / degradation_rate + 0.5
     
-    if (max_year > 100) {
-      max_year = 100
-    } 
-    var max_degradation = 1 / (year - 0.5) * 100
-    if (max_degradation > 5) {
-      max_degradation = 5
-    } 
+  if (max_year > SERVICE_LIFE_SLIDER_MAX) {
+    max_year = SERVICE_LIFE_SLIDER_MAX
+  } 
+  var max_degradation = 1 / (year - 0.5) * 100
+  if (max_degradation > DEGRADATION_MAX) {
+    max_degradation = DEGRADATION_MAX
+  } 
 
-    // when the degradation or service life slider moves, update the maximum of the other slider
-    if (slider_name == 'baseline_degradation_rate') {
+  // when the degradation or service life slider moves, update the maximum of the other slider
+  if (slider_name == 'baseline_degradation_rate') {
     if (degradation_rate > 0) {
-      // console.log('here', max_year, 100-parseInt(max_year))
-	// console.log('here', max_year)
       document.getElementById('baseline_service_life').noUiSlider.updateOptions({
-        padding: [0, 100-parseInt(max_year)]
+        padding: [0, SERVICE_LIFE_SLIDER_MAX-parseInt(max_year)]
       });
 	}
-    }
-    if (slider_name == 'proposed_degradation_rate') {
+  }
+  if (slider_name == 'proposed_degradation_rate') {
     if (degradation_rate > 0) {
       document.getElementById('proposed_service_life').noUiSlider.updateOptions({
-        padding: [0, 100-parseInt(max_year)]
+        padding: [0, SERVICE_LIFE_SLIDER_MAX-parseInt(max_year)]
       });
 	}
-    }
-    if (slider_name == 'baseline_service_life') {
-
+  }
+  if (slider_name == 'baseline_service_life') {
       document.getElementById('baseline_degradation_rate').noUiSlider.updateOptions({
-        padding: [0, Math.round((5 - max_degradation)*100)/100 ]
+        padding: [0, Math.round((DEGRADATION_MAX - max_degradation)*100)/100 ]
       });
-    }
-    if (slider_name == 'proposed_service_life') {
+  }
+  if (slider_name == 'proposed_service_life') {
       document.getElementById('proposed_degradation_rate').noUiSlider.updateOptions({
-        padding: [0, Math.round((5 - max_degradation)*100)/100 ] 
+        padding: [0, Math.round((DEGRADATION_MAX - max_degradation)*100)/100 ] 
       });
-    } 
+  } 
 
   // efficiency capped at 100%
-  if (slider_name == 'baseline_efficiency' && value > 100) {
-    $('#baseline_efficiency_text').val(100)
+  if (slider_name == 'baseline_efficiency' && value > EFFICIENCY_MAX) {
+    $('#baseline_efficiency_text').val(EFFICIENCY_MAX)
   }
-  if (slider_name == 'proposed_efficiency' && value > 100) {
-    $('#proposed_efficiency_text').val(100)
+  if (slider_name == 'proposed_efficiency' && value > EFFICIENCY_MAX) {
+    $('#proposed_efficiency_text').val(EFFICIENCY_MAX)
   }
 
   // displays warning if non-integer service life
-  if ((slider_name == 'baseline_service_life' && (!Number.isInteger(value))) || (slider_name == 'baseline_service_life' && value >= 1000)) {
+  if ((slider_name == 'baseline_service_life' && (!Number.isInteger(value))) || (slider_name == 'baseline_service_life' && value >= SERVICE_LIFE_CAP)) {
 
-     if (value > 1000) { // set service life maximum at 1000 (calculator freezes if service life is too large)
-       $('#baseline_service_life_text').val(1000)
+     if (value > SERVICE_LIFE_CAP) { // set service life maximum at 1000 (calculator freezes if service life is too large)
+       $('#baseline_service_life_text').val(SERVICE_LIFE_CAP)
      }
 
-     if (!flag) { // only display for non-break-even interaction
+     if (!breakeven_active) { // only display for non-break-even interaction
 
        document.getElementById('baseline_service_life_text').setAttribute('data-original-title', 'Service life must be a positive integer no greater than 1000.');
       
@@ -256,13 +264,13 @@ function update_slider(slider_name, value) {
      $('#baseline_service_life_text').tooltip('disable')
   }
 
-  if ((slider_name == 'proposed_service_life' && (!Number.isInteger(value))) || (slider_name == 'proposed_service_life' && value >= 1000)) {
+  if ((slider_name == 'proposed_service_life' && (!Number.isInteger(value))) || (slider_name == 'proposed_service_life' && value >= SERVICE_LIFE_CAP)) {
 
-     if (value > 1000) { // set service life maximum at 1000 (calculator freezes if service life is too large)
-       $('#proposed_service_life_text').val(1000)
+     if (value > SERVICE_LIFE_CAP) { // set service life maximum at 1000 (calculator freezes if service life is too large)
+       $('#proposed_service_life_text').val(SERVICE_LIFE_CAP)
      }
 
-     if (!flag) {
+     if (!breakeven_active) {
        document.getElementById('proposed_service_life_text').setAttribute('data-original-title', 'Service life must be a positive integer no greater than 1000.');
      
        $('#proposed_service_life_text').tooltip('enable')
@@ -293,8 +301,8 @@ function pip_baseline_year(value) {
   var year = parseFloat($('#baseline_service_life_text').val())
   var max_year = 1 / degradation_rate + 0.5
     
-  if (max_year > 100) {
-    max_year = 100
+  if (max_year > SERVICE_LIFE_SLIDER_MAX) {
+    max_year = SERVICE_LIFE_SLIDER_MAX
   } 
   if (value == parseInt(max_year)) return 1;
   return -1; 
@@ -305,8 +313,8 @@ function pip_proposed_year(value) {
   var year = parseFloat($('#proposed_service_life_text').val())
   var max_year = 1 / degradation_rate + 0.5
     
-  if (max_year > 100) {
-    max_year = 100
+  if (max_year > SERVICE_LIFE_SLIDER_MAX) {
+    max_year = SERVICE_LIFE_SLIDER_MAX
   } 
   if (value == parseInt(max_year)) return 1;
   return -1; 
@@ -317,10 +325,9 @@ function pip_baseline_degradation(value) {
   var year = parseFloat($('#baseline_service_life_text').val())
 
   var max_degradation = 1 / (year - 0.5) * 100
-  if (max_degradation > 5) {
-    max_degradation = 5
+  if (max_degradation > DEGRADATION_MAX) {
+    max_degradation = DEGRADATION_MAX
   }
-  // console.log(parseFloat(max_degradation.toFixed(2)))
   if (value == parseFloat(max_degradation.toFixed(2))) return 1;
   return -1; 
 }
@@ -330,10 +337,9 @@ function pip_proposed_degradation(value) {
   var year = parseFloat($('#proposed_service_life_text').val())
 
   var max_degradation = 1 / (year - 0.5) * 100
-  if (max_degradation > 5) {
-    max_degradation = 5
+  if (max_degradation > DEGRADATION_MAX) {
+    max_degradation = DEGRADATION_MAX
   }
-  // console.log(parseFloat(max_degradation.toFixed(2)))
   if (value == parseFloat(max_degradation.toFixed(2))) return 1;
   return -1; 
 }
@@ -376,7 +382,7 @@ function slider_setup(slider_name, number_name, settings) {
     var val = parseFloat(values[0]).toFixed(settings['digits']);
     number.value = val
 
-    if (val >= 1000 && (slider_name == 'proposed_service_life' || slider_name == 'baseline_service_life')) {
+    if (val >= SERVICE_LIFE_CAP && (slider_name == 'proposed_service_life' || slider_name == 'baseline_service_life')) {
       document.getElementById(slider_name+'_text').setAttribute('data-original-title', 'Service life must be a positive integer no greater than 1000.');
 
 
@@ -391,36 +397,36 @@ function slider_setup(slider_name, number_name, settings) {
     var year = parseFloat($('#'+key+'_service_life_text').val())
     var max_year = 1 / degradation_rate + 0.5
     
-    if (max_year > 100) {
-      max_year = 100
+    if (max_year > SERVICE_LIFE_SLIDER_MAX) {
+      max_year = SERVICE_LIFE_SLIDER_MAX
     } 
     var max_degradation = 1 / (year - 0.5) * 100
-    if (max_degradation > 5) {
-      max_degradation = 5
+    if (max_degradation > DEGRADATION_MAX) {
+      max_degradation = DEGRADATION_MAX
     } 
 
     // when the degradation or service life slider moves, update the maximum of the other slider
     if (slider_name == 'baseline_degradation_rate') {
       document.getElementById('baseline_service_life').noUiSlider.updateOptions({
-        padding: [0, 100-parseInt(max_year)],
+        padding: [0, SERVICE_LIFE_SLIDER_MAX-parseInt(max_year)],
 	//pips: {mode: 'steps', density: 50, filter: pip_baseline_year}
       });
     }
     if (slider_name == 'proposed_degradation_rate') {
       document.getElementById('proposed_service_life').noUiSlider.updateOptions({
-        padding: [0, 100-parseInt(max_year)],
+        padding: [0, SERVICE_LIFE_SLIDER_MAX-parseInt(max_year)],
 	//pips: {mode: 'steps', density: 50, filter: pip_proposed_year}
       });
     }
     if (slider_name == 'baseline_service_life') {
      document.getElementById('baseline_degradation_rate').noUiSlider.updateOptions({
-        padding: [0, Math.round((5 - max_degradation)*100)/100 ],
+        padding: [0, Math.round((DEGRADATION_MAX - max_degradation)*100)/100 ],
 	//pips: {mode: 'steps', density: 50, filter: pip_baseline_degradation}
       });
     }
     if (slider_name == 'proposed_service_life') {
       document.getElementById('proposed_degradation_rate').noUiSlider.updateOptions({
-        padding: [0, Math.round((5 - max_degradation)*100)/100 ] 
+        padding: [0, Math.round((DEGRADATION_MAX - max_degradation)*100)/100 ] 
       });
     } 
     
@@ -515,12 +521,12 @@ slider_setup(
 slider_setup(
   'baseline_degradation_rate',
   'baseline_degradation_rate_text',
-  {'start': 0, 'min': 0, 'max': 5, 'step': 0.01, 'digits': 2}
+  {'start': 0, 'min': 0, 'max': DEGRADATION_MAX, 'step': 0.01, 'digits': 2}
 )
 slider_setup(
   'baseline_service_life',
   'baseline_service_life_text',
-  {'start': 0, 'min': 1, 'max': 100, 'step': 1, 'digits': 0}
+  {'start': 0, 'min': 1, 'max': SERVICE_LIFE_SLIDER_MAX, 'step': 1, 'digits': 0}
 )
 slider_setup(
   'proposed_cost_front_layer',
@@ -575,12 +581,12 @@ slider_setup(
 slider_setup(
   'proposed_degradation_rate',
   'proposed_degradation_rate_text',
-  {'start': 0, 'min': 0, 'max': 5, 'step': 0.01, 'digits': 2}
+  {'start': 0, 'min': 0, 'max': DEGRADATION_MAX, 'step': 0.01, 'digits': 2}
 )
 slider_setup(
   'proposed_service_life',
   'proposed_service_life_text',
-  {'start': 0,  'min': 1, 'max': 100, 'step': 1, 'digits': 0}
+  {'start': 0,  'min': 1, 'max': SERVICE_LIFE_SLIDER_MAX, 'step': 1, 'digits': 0}
 )
 slider_setup(
   'baseline_discount_rate',
@@ -596,7 +602,7 @@ slider_setup(
 /* function with calculations for break-even degradation rate
    key: baseline or proposed
 */
-function reset_degradation(key) {
+function break_even_degradation(key) {
   $('#lcoe_proposed').tooltip('disable')
   $('#lcoe_baseline').tooltip('disable')
 
@@ -625,13 +631,13 @@ function func_deg(deg, key) {
   var outputs = calculate()
   var discount_rate = parseFloat($('#'+key+'_discount_rate_text').val())/100.0
   if (key == 'baseline') {
-      var cost_comparison = outputs[2]
-      var energy_comparison = outputs[3]
-      var cost_current = outputs[0]
+      var cost_comparison = outputs['cost_proposed']
+      var energy_comparison = outputs['energy_proposed']
+      var cost_current = outputs['cost_baseline']
   } else if (key == 'proposed') {
-      var cost_comparison = outputs[0]
-      var energy_comparison = outputs[1]
-      var cost_current = outputs[2]
+      var cost_comparison = outputs['cost_baseline']
+      var energy_comparison = outputs['energy_baseline']
+      var cost_current = outputs['cost_proposed']
   }
   
   var lcoe = cost_comparison/energy_comparison
@@ -646,21 +652,22 @@ function func_deg(deg, key) {
 }
 
 // break-even O&M cost
-function reset_OM(key) {
+function break_even_OM(key) {
   // only perform break-even calculations if baseline and proposed LCOEs are different
   if (document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) {
     var outputs = calculate()
     var discount_rate = parseFloat($('#'+key+'_discount_rate_text').val())/100.0
     var init_cost = initial_cost(key)
     var service_life = parseFloat($('#'+key+'_service_life_text').val())
+
     if (key == 'baseline') {
-      var cost_comparison = outputs[2]
-      var energy_comparison = outputs[3]
-      var energy_current = outputs[1]
+      var cost_comparison = outputs['cost_proposed']
+      var energy_comparison = outputs['energy_proposed']
+      var energy_current = outputs['energy_baseline']
     } else if (key == 'proposed') {
-      var cost_comparison = outputs[0]
-      var energy_comparison = outputs[1]
-      var energy_current = outputs[3]
+      var cost_comparison = outputs['cost_baseline']
+      var energy_comparison = outputs['energy_baseline']
+      var energy_current = outputs['energy_proposed']
     }
   
     var lcoe = cost_comparison/energy_comparison
@@ -737,11 +744,11 @@ function brents_method(f, a, b, precision, root_precision, key) {
 function func_year(year, key) {
   var outputs = calculate()
   if (key == 'baseline') {
-    var cost_comparison = outputs[2]
-    var energy_comparison = outputs[3]
+    var cost_comparison = outputs['cost_proposed']
+    var energy_comparison = outputs['energy_proposed']
   } else if (key == 'proposed') {
-    var cost_comparison = outputs[0]
-    var energy_comparison = outputs[1]
+    var cost_comparison = outputs['cost_baseline']
+    var energy_comparison = outputs['energy_baseline']
   }
 
   var lcoe = cost_comparison/energy_comparison
@@ -760,7 +767,7 @@ function func_year(year, key) {
 }
 
 // break-even service life using Brent's method
-function reset_year(key) {
+function break_even_service_life(key) {
   $('#lcoe_proposed').tooltip('disable')
   $('#lcoe_baseline').tooltip('disable')
   var break_even = false;
@@ -831,15 +838,15 @@ function match_LCOE(slider_name, number_name, key) {
     var cost_extra = parseFloat($('#'+key+'_cost_extra_text').val())
 
     if (key == 'baseline') {
-      var cost_comparison = outputs[2]
-      var energy_comparison = outputs[3]
-      var cost_current = outputs[0]
-      var energy_current = outputs[1]
+      var cost_comparison = outputs['cost_proposed']
+      var energy_comparison = outputs['energy_proposed']
+      var cost_current = outputs['cost_baseline']
+      var energy_current = outputs['energy_baseline']
     } else if (key == 'proposed') {
-      var cost_comparison = outputs[0]
-      var energy_comparison = outputs[1]
-      var cost_current = outputs[2]
-      var energy_current = outputs[3]
+      var cost_comparison = outputs['cost_baseline']
+      var energy_comparison = outputs['energy_baseline']
+      var cost_current = outputs['cost_proposed']
+      var energy_current = outputs['energy_proposed']
     }
 
     var later_cost = cost_current - init_cost
@@ -848,11 +855,11 @@ function match_LCOE(slider_name, number_name, key) {
     // different break-even calculations depending on the slider
     if (slider_name == 'cost_front_layer') {
       wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
-      cost_front_layer = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency) - cost_cell - cost_back_layer - cost_noncell - cost_extra) //.toFixed(2)
+      cost_front_layer = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency) - cost_cell - cost_back_layer - cost_noncell - cost_extra) 
       new_value = cost_front_layer
     } else if (slider_name == 'cost_cell') {
       wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
-      cost_cell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_back_layer - cost_noncell - cost_extra) //.toFixed(2)
+      cost_cell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_back_layer - cost_noncell - cost_extra) 
       new_value = cost_cell
     } else if (slider_name == 'cost_back_layer') {
       wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
@@ -860,11 +867,11 @@ function match_LCOE(slider_name, number_name, key) {
       new_value = cost_back_layer
     } else if (slider_name == 'cost_noncell') {
       wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
-      cost_noncell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_extra) //.toFixed(2)
+      cost_noncell = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_extra) 
       new_value = cost_noncell
     } else if (slider_name == 'cost_extra') {
       wanted_cost = (lcoe * energy_current) - later_cost - cost_bos_power - cost_bos_area/(10.0*efficiency)
-      cost_extra = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_noncell) //.toFixed(2)
+      cost_extra = ((wanted_cost/MODULE_MARKUP)*(10.0*efficiency)- cost_front_layer - cost_cell - cost_back_layer - cost_noncell) 
       new_value = cost_extra
     } else if (slider_name == 'cost_bos_power') {
       wanted_cost = (lcoe * energy_current) - later_cost - (MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency))
@@ -883,6 +890,8 @@ function match_LCOE(slider_name, number_name, key) {
     var cost_module = MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency)
     document.getElementById('module_cost_per_watt_'+key).innerHTML = cost_module.toFixed(2)
     document.getElementById('system_cost_per_watt_'+key).innerHTML = (cost_bos_power + cost_bos_area/(10.0*efficiency) + cost_module).toFixed(2)
+
+    if (new_value < 1e-7) new_value = 0 // handle imprecision
   
     $('#'+key+'_'+slider_name+'_text').val(new_value)
     update_slider(key+'_'+slider_name, new_value)
@@ -901,19 +910,19 @@ function match_LCOE(slider_name, number_name, key) {
 }
 
 // function to break-even energy yield
-function reset_energy_yield(key) {
+function break_even_energy_yield(key) {
   // only perform break-even calculations if baseline and proposed LCOEs are different
   if (document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) {
     var outputs = calculate()
     var discount_rate = parseFloat($('#'+key+'_discount_rate_text').val())/100.0
     if (key == 'baseline') {
-      var cost_comparison = outputs[2]
-      var energy_comparison = outputs[3]
-      var cost_current = outputs[0]
+      var cost_comparison = outputs["cost_proposed"]
+      var energy_comparison = outputs["energy_proposed"]
+      var cost_current = outputs["cost_baseline"]
     } else if (key == 'proposed') {
-      var cost_comparison = outputs[0]
-      var energy_comparison = outputs[1]
-      var cost_current = outputs[2]
+      var cost_comparison = outputs["cost_baseline"]
+      var energy_comparison = outputs["energy_baseline"]
+      var cost_current = outputs["cost_proposed"]
     }
   
     var lcoe = cost_comparison/energy_comparison
@@ -1092,20 +1101,20 @@ function preset_set(key){
   var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
   var year = parseFloat($('#'+key+'_service_life_text').val())
   var max_year = 1 / degradation_rate + 0.5
-  if (max_year > 100) {
-    max_year = 100
+  if (max_year > SERVICE_LIFE_SLIDER_MAX) {
+    max_year = SERVICE_LIFE_SLIDER_MAX
   } 
   var max_degradation = 1 / (year - 0.5) * 100
-  if (max_degradation > 5) {
-    max_degradation = 5
+  if (max_degradation > DEGRADATION_MAX) {
+    max_degradation = DEGRADATION_MAX
   } 
 
   // make sure service life and degradation rate sliders update properly
   document.getElementById(key+'_service_life').noUiSlider.updateOptions({
-    padding: [0, 100-parseInt(max_year)]
+    padding: [0, SERVICE_LIFE_SLIDER_MAX-parseInt(max_year)]
   });
   document.getElementById(key+'_degradation_rate').noUiSlider.updateOptions({
-    padding: [0, Math.round((5 - max_degradation)*100)/100 ]
+    padding: [0, Math.round((DEGRADATION_MAX - max_degradation)*100)/100 ]
   }); 
 
   // Set the sliders
@@ -1160,20 +1169,20 @@ function copy_from_baseline(){
   var degradation_rate = parseFloat($('#proposed_degradation_rate_text').val())/100.0
   var year = parseFloat($('#proposed_service_life_text').val())
   var max_year = 1 / degradation_rate + 0.5
-  if (max_year > 100) {
-    max_year = 100
+  if (max_year > SERVICE_LIFE_SLIDER_MAX) {
+    max_year = SERVICE_LIFE_SLIDER_MAX 
   } 
   var max_degradation = 1 / (year - 0.5) * 100
-  if (max_degradation > 5) {
-    max_degradation = 5
+  if (max_degradation > DEGRADATION_MAX) {
+    max_degradation = DEGRADATION_MAX
   } 
 
   // make sure service life and degradation rate sliders update properly
   document.getElementById('proposed_service_life').noUiSlider.updateOptions({
-    padding: [0, 100-parseInt(max_year)]
+    padding: [0, SERVICE_LIFE_SLIDER_MAX-parseInt(max_year)]
   });
   document.getElementById('proposed_degradation_rate').noUiSlider.updateOptions({
-    padding: [0, Math.round((5 - max_degradation)*100)/100 ]
+    padding: [0, Math.round((DEGRADATION_MAX - max_degradation)*100)/100 ]
   }); 
 
   // Set the sliders
@@ -1301,5 +1310,6 @@ function calculate() {
   }
 
   // return values used in break-even calculations
-  return [cost_baseline, energy_baseline, cost_proposed, energy_proposed]
+  //return [cost_baseline, energy_baseline, cost_proposed, energy_proposed]
+  return {"cost_baseline": cost_baseline, "energy_baseline": energy_baseline, "cost_proposed": cost_proposed, "energy_proposed": energy_proposed}
 }
