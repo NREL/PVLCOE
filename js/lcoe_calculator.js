@@ -205,7 +205,7 @@ function update_slider(slider_name, value) {
     if (slider_name == 'baseline_degradation_rate') {
     if (degradation_rate > 0) {
       // console.log('here', max_year, 100-parseInt(max_year))
-	console.log('here', max_year)
+	// console.log('here', max_year)
       document.getElementById('baseline_service_life').noUiSlider.updateOptions({
         padding: [0, 100-parseInt(max_year)]
       });
@@ -229,52 +229,6 @@ function update_slider(slider_name, value) {
         padding: [0, Math.round((5 - max_degradation)*100)/100 ] 
       });
     } 
-
-  /* var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
-  var year = parseFloat($('#'+key+'_service_life_text').val())
-  var max_year = 1 / degradation_rate + 0.5
-  if (max_year > 1000) { // need to restrict so service life doesn't get too large
-    max_year = 1000
-  } 
-  var max_degradation = 1 / (year - 0.5) * 100
-
-  // the following four conditions handle updating the maximum of the service life/degradation sliders
-  if (slider_name == 'baseline_degradation_rate') {
-    if (degradation_rate > 0) {
-      document.getElementById('baseline_service_life').noUiSlider.updateOptions({
-        range: {
-          'min': 0,
-          'max': max_year
-        }
-      });
-    }
-  }
-  if (slider_name == 'proposed_degradation_rate') {
-    if (degradation_rate > 0) {
-      document.getElementById('proposed_service_life').noUiSlider.updateOptions({
-        range: {
-          'min': 0,
-          'max': max_year
-        }
-      });
-    }
-  }
-  if (slider_name == 'baseline_service_life') {
-    document.getElementById('baseline_degradation_rate').noUiSlider.updateOptions({
-      range: {
-        'min': 0,
-        'max': max_degradation
-      }
-    });
-  }
-  if (slider_name == 'proposed_service_life') {
-    document.getElementById('proposed_degradation_rate').noUiSlider.updateOptions({
-      range: {
-        'min': 0,
-        'max': max_degradation
-      }
-    });
-  }*/
 
   // efficiency capped at 100%
   if (slider_name == 'baseline_efficiency' && value > 100) {
@@ -334,6 +288,56 @@ function filterPips(value) {
   return -1;
 }
 
+function pip_baseline_year(value) {
+  var degradation_rate = parseFloat($('#baseline_degradation_rate_text').val())/100.0
+  var year = parseFloat($('#baseline_service_life_text').val())
+  var max_year = 1 / degradation_rate + 0.5
+    
+  if (max_year > 100) {
+    max_year = 100
+  } 
+  if (value == parseInt(max_year)) return 1;
+  return -1; 
+}
+
+function pip_proposed_year(value) {
+  var degradation_rate = parseFloat($('#proposed_degradation_rate_text').val())/100.0
+  var year = parseFloat($('#proposed_service_life_text').val())
+  var max_year = 1 / degradation_rate + 0.5
+    
+  if (max_year > 100) {
+    max_year = 100
+  } 
+  if (value == parseInt(max_year)) return 1;
+  return -1; 
+}
+
+function pip_baseline_degradation(value) {
+  var degradation_rate = parseFloat($('#baseline_degradation_rate_text').val())/100.0
+  var year = parseFloat($('#baseline_service_life_text').val())
+
+  var max_degradation = 1 / (year - 0.5) * 100
+  if (max_degradation > 5) {
+    max_degradation = 5
+  }
+  // console.log(parseFloat(max_degradation.toFixed(2)))
+  if (value == parseFloat(max_degradation.toFixed(2))) return 1;
+  return -1; 
+}
+
+function pip_proposed_degradation(value) {
+  var degradation_rate = parseFloat($('#proposed_degradation_rate_text').val())/100.0
+  var year = parseFloat($('#proposed_service_life_text').val())
+
+  var max_degradation = 1 / (year - 0.5) * 100
+  if (max_degradation > 5) {
+    max_degradation = 5
+  }
+  // console.log(parseFloat(max_degradation.toFixed(2)))
+  if (value == parseFloat(max_degradation.toFixed(2))) return 1;
+  return -1; 
+}
+
 /* set up sliders based on name of slider, name of input box, and settings (features for sliders) */
 function slider_setup(slider_name, number_name, settings) {
   // Make variables for the slider and number input objects
@@ -346,6 +350,14 @@ function slider_setup(slider_name, number_name, settings) {
       range: {'min': [1.09], '0.1%': [1.1, 0.2], '65%': [1.3, 0.1], 'max': [1.4]}, // min needs to be 1.09 to get all pips to appear
       pips: {mode: 'steps', density: 50, filter: filterPips}
     });
+  } else if (slider_name == 'baseline_degradation_rate') {
+     noUiSlider.create(slider, {start: settings['start'], step: settings['step'], connect: true, pips: {mode: 'steps', density: 50, filter: pip_baseline_degradation}, range: {'min': settings['min'], 'max': settings['max']}});
+  } else if (slider_name == 'baseline_service_life') {
+     noUiSlider.create(slider, {start: settings['start'], step: settings['step'], connect: true, pips: {mode: 'steps', density: 50, filter: pip_baseline_year}, range: {'min': settings['min'], 'max': settings['max']}});
+  } else if (slider_name == 'proposed_degradation_rate') {
+     noUiSlider.create(slider, {start: settings['start'], step: settings['step'], connect: true, pips: {mode: 'steps', density: 50, filter: pip_proposed_degradation}, range: {'min': settings['min'], 'max': settings['max']}});
+  } else if (slider_name == 'proposed_service_life') {
+     noUiSlider.create(slider, {start: settings['start'], step: settings['step'], connect: true, pips: {mode: 'steps', density: 50, filter: pip_proposed_year}, range: {'min': settings['min'], 'max': settings['max']}});
   } else { // Create all other sliders
      noUiSlider.create(slider, {start: settings['start'], step: settings['step'], connect: true, range: {'min': settings['min'], 'max': settings['max']}});
   }
@@ -389,20 +401,21 @@ function slider_setup(slider_name, number_name, settings) {
 
     // when the degradation or service life slider moves, update the maximum of the other slider
     if (slider_name == 'baseline_degradation_rate') {
-      // console.log('here', max_year, 100-parseInt(max_year))
       document.getElementById('baseline_service_life').noUiSlider.updateOptions({
-        padding: [0, 100-parseInt(max_year)]
+        padding: [0, 100-parseInt(max_year)],
+	//pips: {mode: 'steps', density: 50, filter: pip_baseline_year}
       });
     }
     if (slider_name == 'proposed_degradation_rate') {
       document.getElementById('proposed_service_life').noUiSlider.updateOptions({
-        padding: [0, 100-parseInt(max_year)]
+        padding: [0, 100-parseInt(max_year)],
+	//pips: {mode: 'steps', density: 50, filter: pip_proposed_year}
       });
     }
     if (slider_name == 'baseline_service_life') {
-
-      document.getElementById('baseline_degradation_rate').noUiSlider.updateOptions({
-        padding: [0, Math.round((5 - max_degradation)*100)/100 ]
+     document.getElementById('baseline_degradation_rate').noUiSlider.updateOptions({
+        padding: [0, Math.round((5 - max_degradation)*100)/100 ],
+	//pips: {mode: 'steps', density: 50, filter: pip_baseline_degradation}
       });
     }
     if (slider_name == 'proposed_service_life') {

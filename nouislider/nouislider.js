@@ -1518,7 +1518,7 @@
                 node.style[options.style] = offset + "%";
 
                 // Values are only appended for points marked '1' or '2'.
-                if (type > PIPS_NO_VALUE) {
+                if (type > PIPS_LARGE_VALUE) {
                     node = addNodeTo(element, false);
                     node.className = getClasses(type, options.cssClasses.value);
                     node.setAttribute("data-value", value);
