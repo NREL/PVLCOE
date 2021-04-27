@@ -325,7 +325,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <div class="row ml-0">
                   <div class="input-group">
-                  <div class="input-group-prepend" onclick="baselineToggle()" data-toggle='tooltip' id="baselineDiscountPrepend" title='Constrain baseline and proposed discount rates to be equal.' data-placement='top'>
+                  <div class="input-group-prepend" onclick="baselineToggle()" data-toggle='tooltip' id="baselineDiscountPrepend" title='Unconstrain baseline and proposed discount rates to be equal.' data-placement='top'>
                      <span class="input-group-text">
                         <img id="baselineLinkImage" src="link.svg"></img>
                      </span>
@@ -601,7 +601,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <div class="row ml-0">
                   <div class="input-group">
-                  <div class="input-group-prepend" data-toggle='tooltip' id="proposedDiscountPrepend" title='Constrain proposed and baseline discount rates to be equal.' data-placement='top' onclick="proposedToggle()">
+                  <div class="input-group-prepend" data-toggle='tooltip' id="proposedDiscountPrepend" title='Unconstrain proposed and baseline discount rates to be equal.' data-placement='top' onclick="proposedToggle()">
                      <span class="input-group-text">
                         <img id="proposedLinkImage" src="link.svg"></img>
                      </span>
@@ -682,7 +682,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <script src='js/jquery-3.2.1.slim.min.js'></script>
     <script src='js/popper.min.js'></script>
     <script src='js/bootstrap.min.js'></script>
-    <script src='js/nouislider.min.js'></script>
+    <!-- <script src='js/nouislider.min.js'></script> -->
+    <script src='nouislider/nouislider.js'></script>
     <script src='js/PresetTree.js'></script>
     <script src='js/BosCostTree.js'></script>
     <script src='js/lcoe_calculator.js'></script>

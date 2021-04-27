@@ -415,13 +415,13 @@
             var step = this.xNumSteps[index];
 
             if (step && (value / step) % 1 !== 0) {
-                throw new Error(
+                /*throw new Error(
                     "noUiSlider (" +
                         VERSION +
                         "): 'limit', 'margin' and 'padding' of " +
                         this.xPct[index] +
                         "% range must be divisible by step."
-                );
+                );*/
             }
 
             // Calculate percentual distance in current range of limit, margin or padding
@@ -850,7 +850,7 @@
         var lastValue = parsed.spectrum.xVal[parsed.spectrum.xVal.length - 1];
 
         if (totalPadding / (lastValue - firstValue) > 1) {
-            throw new Error("noUiSlider (" + VERSION + "): 'padding' option must not exceed 100% of the range.");
+           /* throw new Error("noUiSlider (" + VERSION + "): 'padding' option must not exceed 100% of the range."); */
         }
     }
 
