@@ -13,6 +13,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
 
 -->
 
+
 <!doctype html>
 <html lang='en'>
   <head>
@@ -29,65 +30,59 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       <p class='lead'>This tool calculates levelized cost of energy (LCOE) for photovoltaic (PV) systems based on cost, performance, and reliability inputs for a <strong>baseline</strong> and a <strong>proposed</strong> technology.</p>
       <p>Choose your inputs and watch the effect on LCOE to determine whether a proposed technology is cost-effective, to perform trade-off analysis among different technology options, and to do break-even analysis of cost or performance. Each <img src="balance.svg"></img> button adjusts a single input to make the baseline and proposed LCOE equal.</p>
       <p>For more details, please <a href='lcoe_calculator_documentation.html' target='_blank'>consult the documentation</a>. You may also be interested in <a href='lcoe_calculator_documentation.html#seealso' target='_blank'>other tools</a> for calculating cost and performance for renewable energy.</p>
-      <h2>Inputs</h2>
-      <div class='alert alert-dismissible alert-info' role='alert'>
-        Use the <strong>presets</strong> button (below) to choose a different cell technology, system type, or location. Use the <strong>copy from baseline button</strong> (below) to make the <strong>proposed</strong> inputs match the <strong>baseline</strong> inputs.
-        <button type='button' class='close' data-dismiss='alert'>
-          <span>&times;</span>
-        </button>
+      <div class="card bg-light">
+        <h4 class='card-header'>Presets for Inputs</h4>
+        <div class='card-body'>
+          Use the <strong>presets</strong> (below) to choose a different cell technology, package type, system type, location, or inverter loading ratio for the inputs.
+          <div class='row align-items-center'>
+            <div class='col-sm-3'>
+	      <a href="javascript://" title="Cell Technology" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.">Cell Technology
+              <span class="badge badge-primary">?</span></a>
+              <select id='cell_technology' class='form-control'></select>
+            </div>
+            <div class='col-sm-3'>
+	      <a href="javascript://" title="Package Type" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Package type affects <strong>back layer cost.">Package Type
+              <span class="badge badge-primary">?</span></a>
+              <select id='package_type' class='form-control'></select>
+            </div>
+            <div class='col-sm-3'>
+	      <a href="javascript://" title="System Type" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="System type affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">System Type
+              <span class="badge badge-primary">?</span></a>
+              <select id='system_type' class='form-control'></select>
+            </div>
+            <div class='col-sm-3'>
+	      <a href="javascript://" title="Location" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Location affects <strong>energy yield</strong>.">Location
+              <span class="badge badge-primary">?</span></a>
+              <select id='location_yield' class='form-control'></select>
+            </div>
+          </div>
+          <div class="row second align-items-center">
+            <div class='col-sm-4'>
+               <a href="javascript://" title="Inverter Loading Ratio" data-toggle="popover" data-placement="top" data-trigger="hover" data-content="Inverter loading ratio affects <strong>energy yield</strong> and <strong>BOS cost</strong>.">Inverter Loading Ratio
+               <span class="badge badge-primary">?</span></a>
+               <div class = 'row align-items-center ilr-preset'>
+                <div class='col presettext'>
+                  <input id='ilr_preset_text' type='number' size='4' class='form-control' step='0.1' disabled/>
+                </div>
+                <div class='col presetslider'>
+                  <div id='ilr_preset'></div>
+                </div>
+              </div>
+            </div>
+            <div class='col-sm-3'> <!-- this div used for spacing -->
+	    </div>
+            <div class='col-sm-5 text-right mb-3'>
+            <button type='button' class='btn baseline btn-preset' onclick=preset_set('baseline')>Apply to baseline</button>
+            <button type='button' class='btn proposed btn-preset' onclick=preset_set('proposed')>Apply to proposed</button>
+           </div>
+        </div>
+      </div>
       </div>
       <div class='row'>
         <div class='col-md'>
           <div class='card baseline'>
-            <h3 class='card-header'>Baseline
-              <button type='button' class='btn btn-primary float-right' data-toggle='modal' data-target='#preset_modal'>
-                Presets
-              </button>
-            </h3>
+            <h3 class='card-header'>Baseline</h3>
             <div class='card-body'>
-              <div class='modal' id='preset_modal' tabindex='-1' role='dialog'>
-                <div class='modal-dialog' role='document'>
-                  <div class='modal-content'>
-                    <div class='modal-header'>
-                      <h3 class='modal-title' id='exampleModalLabel'>Baseline presets</h3>
-                      <button type='button' class='close' data-dismiss='modal'>
-                        <span aria-hidden='true'>&times;</span>
-                      </button>
-                    </div>
-                    <div class='modal-body'>
-                      <p>Use these menus to choose a set of cost and performance values for the Baseline module.</p>
-                      <label for='cell_technology' class='h5'>Cell technology</label>
-                      <div class='form-group'>
-                        <select id='cell_technology' class='form-control'>
-                        </select>
-                      <p class='text-muted'>Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, <strong>energy yield</strong>, <strong>degradation rate</strong>, <strong>BOS cost</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.</p>
-                      </div>
-                      <label for='package_type' class='h5'>Package type</label>
-                      <div class='form-group'>
-                        <select id='package_type' class='form-control'>
-                        </select>
-                      <p class='text-muted'>Package type affects <strong>back layer cost</strong></p>
-                      </div>
-                      <label for='system_type' class='h5'>System type</label>
-                      <div class='form-group'>
-                        <select id='system_type' class='form-control'>
-                        </select>
-                      <p class='text-muted'>System type affects <strong>energy yield</strong> and <strong>BOS cost</strong></p>
-                      </div>
-                      <label for='location_yield' class='h5'>Location</label>
-                      <div class='form-group'>
-                        <select id='location_yield' class='form-control'>
-                        </select>
-                      <p class='text-muted'>Location affects <strong>energy yield</strong> and <strong>BOS cost</strong></p>
-                      </div>
-                    </div>
-                    <div class='modal-footer'>
-                      <button type='button' class='btn btn-secondary' data-dismiss='modal'>Close</button>
-                      <button type='button' class='btn btn-primary' onclick=preset_set()>Use this preset</button>
-                    </div>
-                  </div>
-                </div> 
-              </div>  
               <h4>Cost</h4>
               <label for='baseline_cost_front_layer_text' class='h5'>Front layer cost (USD/m<sup>2</sup>)</label>
               <!-- Each slider goes in a sliderrow, which arranges the text box and slider -->
@@ -191,7 +186,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <div class="row ml-0">
                   <div class="input-group">
-                  <div class="input-group-prepend" onclick="reset_OM('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                  <div class="input-group-prepend" onclick="break_even_OM('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
                         <img src="balance.svg"></img>
                      </span>
@@ -269,7 +264,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <div class="row ml-0">
                   <div class="input-group">
-                  <div class="input-group-prepend" onclick="reset_energy_yield('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                  <div class="input-group-prepend" onclick="break_even_energy_yield('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
                         <img src="balance.svg"></img>
                      </span>
@@ -290,7 +285,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <div class="row ml-0">
                   <div class="input-group">
-                  <div class="input-group-prepend" onclick="reset_degradation('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                  <div class="input-group-prepend" onclick="break_even_degradation('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
                         <img src="balance.svg"></img>
                      </span>
@@ -309,7 +304,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <div class="row ml-0">
                   <div class="input-group">
-                  <div class="input-group-prepend" onclick="reset_year('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
+                  <div class="input-group-prepend" onclick="break_even_service_life('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
                         <img src="balance.svg"></img>
                      </span>
@@ -322,14 +317,35 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div id='baseline_service_life'></div>
                 </div> 
               </div>
+              <hr>
+              <h4>Financial</h4>
+<label for='baseline_discount_rate_text' class='h5'>Discount rate</label>
+              <div class='form-row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" onclick="baselineToggle()" data-toggle='tooltip' id="baselineDiscountPrepend" title='Unconstrain baseline and proposed discount rates to be equal.' data-placement='top'>
+                     <span class="input-group-text">
+                        <img id="baselineLinkImage" src="link.svg"></img>
+                     </span>
+                   </div>
+                  <input id='baseline_discount_rate_text' type='number' class='form-control' step='0.01'/></div>
+                </div>
+		</div>
+                <div class='col baseline ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
+                  <div id='baseline_discount_rate'></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
         <div class='col-md'>
           <div class='card proposed'>
             <h3 class='card-header'>Proposed
-              <button type='button' class='btn btn-secondary float-right' onclick=copy_from_baseline()>
-                Copy from Baseline
+              <button type='button' class='btn btn-secondary btn-sm float-right' onclick=copy_from_baseline()>
+              Copy from Baseline
               </button>
             </h3>
             <div class='card-body'>
@@ -436,7 +452,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <div class="row ml-0">
                   <div class="input-group">
-                  <div class="input-group-prepend" onclick="reset_OM('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                  <div class="input-group-prepend" onclick="break_even_OM('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
                         <img src="balance.svg"></img>
                      </span>
@@ -514,7 +530,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <div class="row ml-0">
                   <div class="input-group">
-                  <div class="input-group-prepend" onclick="reset_energy_yield('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                  <div class="input-group-prepend" onclick="break_even_energy_yield('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
                         <img src="balance.svg"></img>
                      </span>
@@ -535,7 +551,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <div class="row ml-0">
                   <div class="input-group">
-                  <div class="input-group-prepend" onclick="reset_degradation('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                  <div class="input-group-prepend" onclick="break_even_degradation('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
                         <img src="balance.svg"></img>
                      </span>
@@ -554,7 +570,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <!-- This is the text box, which the JavaScript hooks into -->
                   <div class="row ml-0">
                   <div class="input-group">
-                  <div class="input-group-prepend" onclick="reset_year('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
+                  <div class="input-group-prepend" onclick="break_even_service_life('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
                         <img src="balance.svg"></img>
                      </span>
@@ -567,24 +583,36 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div id='proposed_service_life'></div>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class='row'>
-        <div class='col-xl'>
-          <div class='card common'>
-            <h3 class='card-header'>Common settings</h3>
-            <div class='card-body'>
+              <hr>
               <h4>Financial</h4>
-              <label for='common_discount_rate_text' class='h5'>Discount rate</label>
+              <!-- <label for='proposed_discount_rate_text' class='h5'>Discount rate</label>
               <div class='row align-items-center sliderrow'>
                 <div class='col slidertext'>
-                  <input id='common_discount_rate_text' type='number' class='form-control' step='0.01' />
+                  <input id='proposed_discount_rate_text' type='number' class='form-control' step='0.01' />
                 </div>
-                <div class='col common'>
-                  <div id='common_discount_rate'></div>
+                <div class='col proposed'>
+                  <div id='proposed_discount_rate'></div>
                 </div>
+              </div> -->
+ 
+<label for='proposed_discount_rate_text' class='h5'>Discount rate</label>
+              <div class='form-row align-items-center sliderrow'>
+                <div class='col slidertext'>
+                  <!-- This is the text box, which the JavaScript hooks into -->
+                  <div class="row ml-0">
+                  <div class="input-group">
+                  <div class="input-group-prepend" data-toggle='tooltip' id="proposedDiscountPrepend" title='Unconstrain proposed and baseline discount rates to be equal.' data-placement='top' onclick="proposedToggle()">
+                     <span class="input-group-text">
+                        <img id="proposedLinkImage" src="link.svg"></img>
+                     </span>
+                   </div>
+                  <input id='proposed_discount_rate_text' type='number' class='form-control' step='0.01' /></div>
+                 </div>
+                </div>
+                <div class='col proposed ml-4'>
+                  <!-- This is an empty div that jQuery UI magically styles as a slider -->
+                  <div id='proposed_discount_rate'></div>
+                </div> 
               </div>
             </div>
           </div>
@@ -598,7 +626,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
             <div class='card baseline'>
               <div class='card-body result'>
                <p class='result-label'>Baseline LCOE (USD/kWh) </p>
-                <p class='result'><span class='badge-pill badge-secondary' id='lcoe_baseline' data-toggle='tooltip' data-trigger='manual' title='Breakeven result is approximate because service life has been rounded.' data-placement='top'></span></p>
+                <p class='result'><span class='badge-pill badge-secondary' id='lcoe_baseline' data-toggle='tooltip' data-trigger='manual' title='Break-even result is approximate because service life has been rounded.' data-placement='top'></span></p>
               </div>
             </div>
           </div>
@@ -606,7 +634,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
             <div class='card proposed'>
               <div class='card-body result'>
                 <p class='result-label'>Proposed LCOE (USD/kWh) </p>
-                <p class='result'><span class='badge-pill badge-secondary' id='lcoe_proposed' data-toggle='tooltip' data-trigger='manual' title='Breakeven result is approximate because service life has been rounded.' data-placement='top'></span></p>
+                <p class='result'><span class='badge-pill badge-secondary' id='lcoe_proposed' data-toggle='tooltip' data-trigger='manual' title='Break-even result is approximate because service life has been rounded.' data-placement='top'></span></p>
               </div>
             </div>
           </div>
@@ -614,30 +642,30 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       </p>
       <h3>Additional results</h3>
       <p>
-        <div class='row'>
-          <div class='col-md result'>
-            <div class='card baseline'>
-              <h4 class='card-header'>Baseline</h4>
-              <div class='card-body result'>
-                <p class='result-label'>Module price (USD/W) </p>
-                <p class='result'><span class='badge-pill badge-secondary' id='module_cost_per_watt_baseline'></span></p>
-                <p class='result-label'>Total installed system cost (USD/W) </p>
-                <p class='result'><span class='badge-pill badge-secondary' id='system_cost_per_watt_baseline'></span></p>
-              </div>
-            </div>
-          </div>
-          <div class='col-md result'>
-            <div class='card proposed'>
-              <h4 class='card-header'>Proposed</h4>
-              <div class='card-body result'>
-                <p class='result-label'>Module price (USD/W) </p>
-                <p class='result'><span class='badge-pill badge-secondary' id='module_cost_per_watt_proposed'></span></p>
-                <p class='result-label'>Total installed system cost (USD/W) </p>
-                <p class='result'><span class='badge-pill badge-secondary' id='system_cost_per_watt_proposed'></span></p>
-              </div>
+      <div class='row'>
+        <div class='col-md result'>
+          <div class='card baseline'>
+            <h4 class='card-header'>Baseline</h4>
+            <div class='card-body result'>
+              <p class='result-label'>Module price (USD/W) </p>
+              <p class='result'><span class='badge-pill badge-secondary' id='module_cost_per_watt_baseline'></span></p>
+              <p class='result-label'>Total installed system cost (USD/W) </p>
+              <p class='result'><span class='badge-pill badge-secondary' id='system_cost_per_watt_baseline'></span></p>
             </div>
           </div>
         </div>
+        <div class='col-md result'>
+          <div class='card proposed'>
+            <h4 class='card-header'>Proposed</h4>
+            <div class='card-body result'>
+              <p class='result-label'>Module price (USD/W) </p>
+              <p class='result'><span class='badge-pill badge-secondary' id='module_cost_per_watt_proposed'></span></p>
+              <p class='result-label'>Total installed system cost (USD/W) </p>
+              <p class='result'><span class='badge-pill badge-secondary' id='system_cost_per_watt_proposed'></span></p>
+            </div>
+          </div>
+        </div>
+      </div>
       </p>
       <h2>Notes</h2>
       <h3>Citation</h3>
@@ -654,9 +682,10 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <script src='js/jquery-3.2.1.slim.min.js'></script>
     <script src='js/popper.min.js'></script>
     <script src='js/bootstrap.min.js'></script>
-    <script src='js/nouislider.min.js'></script>
-    <script src='js/preset_tree.min.js'></script>
-    <script src='js/bos_cost_tree.js'></script>
+    <!-- <script src='js/nouislider.min.js'></script> -->
+    <script src='nouislider/nouislider.js'></script>
+    <script src='js/PresetTree.js'></script>
+    <script src='js/BosCostTree.js'></script>
     <script src='js/lcoe_calculator.js'></script>
   </body>
 </html>

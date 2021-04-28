@@ -20,6 +20,47 @@ input[type='number']::-webkit-inner-spin-button {
 }
 input[type='number'] {
     -moz-appearance: textfield;
+    width: 70px;
+}
+
+.input-group-prepend {
+  cursor:pointer
+}
+
+a>.badge {
+  vertical-align: middle;
+  margin-top: -0.3em;
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  z-index:1;
+  position:relative;
+}
+
+.btn-preset {
+  margin-top:15px
+}
+
+.presetslider {
+  margin-left:-30px
+}
+
+.ilr-preset {
+  margin-top:-12px
+}
+
+.second {
+  margin-top:-23px;
+  margin-bottom:-40px;
+}
+
+svg {
+  horizontal-align:middle;
+  vertical-align:middle;
+  z-index:100;
+  position:relative;
 }
 
 .input-group-prepend {
@@ -63,6 +104,15 @@ body {
 
 .common {
   background-color: #e2e3e5
+}
+
+.presettext {
+  max-width: 7.5rem
+}
+
+.presetrow .col {
+  padding-top: 0rem;
+  padding-bottom: 1rem;
 }
 
 .slidertext {
