@@ -408,20 +408,17 @@ function slider_setup(slider_name, number_name, settings) {
     // when the degradation or service life slider moves, update the maximum of the other slider
     if (slider_name == 'baseline_degradation_rate') {
       document.getElementById('baseline_service_life').noUiSlider.updateOptions({
-        padding: [0, SERVICE_LIFE_SLIDER_MAX-parseInt(max_year)],
-	//pips: {mode: 'steps', density: 50, filter: pip_baseline_year}
+        padding: [0, SERVICE_LIFE_SLIDER_MAX-parseInt(max_year)]
       });
     }
     if (slider_name == 'proposed_degradation_rate') {
       document.getElementById('proposed_service_life').noUiSlider.updateOptions({
-        padding: [0, SERVICE_LIFE_SLIDER_MAX-parseInt(max_year)],
-	//pips: {mode: 'steps', density: 50, filter: pip_proposed_year}
+        padding: [0, SERVICE_LIFE_SLIDER_MAX-parseInt(max_year)]
       });
     }
     if (slider_name == 'baseline_service_life') {
      document.getElementById('baseline_degradation_rate').noUiSlider.updateOptions({
-        padding: [0, Math.round((DEGRADATION_MAX - max_degradation)*100)/100 ],
-	//pips: {mode: 'steps', density: 50, filter: pip_baseline_degradation}
+        padding: [0, Math.round((DEGRADATION_MAX - max_degradation)*100)/100 ]
       });
     }
     if (slider_name == 'proposed_service_life') {
@@ -701,30 +698,36 @@ function brents_method(f, a, b, precision, root_precision, key) {
   } 
   
   if (Math.abs(f(a, key)) < Math.abs(f(b, key))) {
+      // swap a and b so that b is a better guess
       var temp = a
       a = b
       b = temp
   }
   
-  var c = a
-  var flag = true
+  var c = a // c represents the previous guess
+  var bisection_previous = true // flag indicating whether the previous step used the bisection method
   var s = b
 
+  // repeat until you find a solution
   while ((Math.abs(f(b, key)) > root_precision || Math.abs(f(s, key)) > root_precision) || (b - a) > precision) {
-    if (f(a, key) != f(c, key) && f(b, key) != f(c, key)) {
+    if (f(a, key) != f(c, key) && f(b, key) != f(c, key)) { // inverse quadratic interpolation
       s = a*f(b, key)*f(c, key)/((f(a, key)-f(b, key))*(f(a, key)-f(c, key))) + b*f(a, key)*f(c, key)/((f(b, key)-f(a, key))*(f(b, key)-f(c, key))) + c*f(a, key)*f(b, key)/((f(c, key)-f(a, key))*(f(c, key)-f(b, key)))
-    } else {
+    } else { // secant method
       s = b-f(b, key) * (b-a)/(f(b, key)-f(a, key))
     }
-    if (!((s < b) && (s > ((3*a+b)/4))) || (flag && (Math.abs(s-b) >= Math.abs(b-c)/2)) || (!flag && (Math.abs(s-b) >= Math.abs(c-d)/2)) || (flag && (Math.abs(b-c) < precision)) || (!flag && (Math.abs(c-d) < precision))) {
-      s = (a+b)/2
-      flag = true
+
+    // if any of these five conditions are true, Brent's method says you can use the result of the bisection method for the next guess 
+    if (!((s < b) && (s > ((3*a+b)/4))) || (bisection_previous && (Math.abs(s-b) >= Math.abs(b-c)/2)) || (!bisection_previous && (Math.abs(s-b) >= Math.abs(c-d)/2)) || (bisection_previous && (Math.abs(b-c) < precision)) || (!bisection_previous && (Math.abs(c-d) < precision))) {
+      s = (a+b)/2 // bisection method
+      bisection_previous = true
     } else {
-      flag = false
+      bisection_previous = false
     }
     
-    var d = c
+    var d = c // d represents two guesses ago
     c = b
+
+    // updates for the next iteration
     if (f(a, key) * f(s, key) < 0) {
       b = s
     } else {
@@ -737,7 +740,7 @@ function brents_method(f, a, b, precision, root_precision, key) {
     }
     
   }
-  return b;
+  return b; // return the root
 } 
 
 // function used by Brent's method to break-even service life

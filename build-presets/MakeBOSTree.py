@@ -2,26 +2,24 @@ import pandas as pd
 import numpy as np
 from scipy.optimize import curve_fit
 import json
+from pathlib import Path # for platform independent paths
 
 efficiencies = []
 
 # 10% to 40% efficiency
 # building a list of efficiencies
-start = 0.1
-while (start < 0.41):
-	efficiencies.append(round(start, 2)) 
-	start += 0.01
+efficiencies = np.arange(0.1,0.4,0.01)
 
 # creates a data frame for each system type
 bos_table = {
-	'fixed tilt, utility scale': pd.read_csv('BOS_cost_data/fixed_tilt_utility.csv'),
-	'single-axis tracked, utility scale': pd.read_csv('BOS_cost_data/tracked_utility.csv'),
-	'roof-mounted, residential scale': pd.read_csv('BOS_cost_data/roof_residential.csv'),
-	'roof-mounted, commercial scale': pd.read_csv('BOS_cost_data/roof_commercial.csv'),
-	'fixed tilt, commercial scale': pd.read_csv('BOS_cost_data/fixed_tilt_commercial.csv')
+	'fixed tilt, utility scale': pd.read_csv(Path('BOS_cost_data/fixed_tilt_utility.csv')),
+	'single-axis tracked, utility scale': pd.read_csv(Path('BOS_cost_data/tracked_utility.csv')),
+	'roof-mounted, residential scale': pd.read_csv(Path('BOS_cost_data/roof_residential.csv')),
+	'roof-mounted, commercial scale': pd.read_csv(Path('BOS_cost_data/roof_commercial.csv')),
+	'fixed tilt, commercial scale': pd.read_csv(Path('BOS_cost_data/fixed_tilt_commercial.csv'))
 }
 
-ilr = [1.1, 1.3, 1.4]
+ilr = [1.1, 1.3, 1.4] # WARNING: make sure these values are the same as in the MakePresetTree.py file
 
 # function used for curve fit
 def bos_cost(efficiency, per_power, per_area):
@@ -44,5 +42,5 @@ for system_type in bos_table:
             		)
         	)
 			
-with open('../js/BOSCostTree.js', 'w') as file:
+with open(Path('../js/BOSCostTree.js'), 'w') as file:
     file.write('var cost_bos_tree = ' + json.dumps(bos_presets, indent=2, separators=(',', ': ')))

@@ -6,9 +6,7 @@ API instructions: https://nsrdb.nrel.gov/data-sets/api-instructions.html
 """
 
 import pandas as pd
-import numpy as np
-import sys, os
-from IPython.display import display
+from pathlib import Path # for platform independent paths
 
 
 df = pd.read_csv('location_coordinates.csv')
@@ -46,6 +44,6 @@ for i in range(len(lat_list)):
 	info = pd.read_csv(url)
 	print(lat)
 	# save the info to a csv, the weather_files folder must already be created
-	info.to_csv('weather_files/'+ state + '_' +str(lat)+'_'+str(lon)+'_tmy.csv', index=False)
+	info.to_csv(Path('weather_files/'+ state + '_' +str(lat)+'_'+str(lon)+'_tmy.csv'), index=False)
 	
 

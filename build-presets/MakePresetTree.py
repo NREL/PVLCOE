@@ -11,6 +11,7 @@ import PySAM.Pvwattsv7 as pvwatts
 import glob
 import PySAM.ResourceTools as tools
 import PySAM.PySSC as pssc
+from pathlib import Path # for platform independent paths
 
 # to avoid rounding issues, the lat and lon returned by pysam are in this file
 # locations maps a lat/lon pair to the string name of the location
@@ -55,24 +56,24 @@ cost_om = {
     'fixed tilt, commercial scale': 18.71
 }
 
-inverter_loading_ratio = [1.1, 1.3, 1.4]
+inverter_loading_ratio = [1.1, 1.3, 1.4] # WARNING: make sure these values are the same as in the MakeBOSTree.py file
 
 # creating PySAM model with default info from json file (that doesn't have location info)
 json_file = open("pvwatts_inputs.json")
-dict = json.load(json_file)
+pvwatts_dict = json.load(json_file)
 
 # using the pvwatts model
-pv_dat = pssc.dict_to_ssc_table(dict, "pvwattsv7")
+pv_dat = pssc.dict_to_ssc_table(pvwatts_dict, "pvwattsv7")
 json_file.close()
 json_model = pvwatts.wrap(pv_dat)
 
 # convert weather files into format that can be used by PySAM
-weather_folder = "weather_files"
+weather_folder = "Path(weather_files)"
 weather_files = glob.glob(weather_folder + "/*.csv")
 weather_data = [tools.SAM_CSV_to_solar_data(f) for f in weather_files]
 
 # tilt angles reported in degrees, needed for running PySAM
-tilt = {'fixed tilt, utility scale': 33, 'single-axis tracked, utility scale': 33,
+tilt = {'fixed tilt, utility scale': 33, 'single-axis tracked, utility scale': 0,
         'roof-mounted, residential scale': 25, 'roof-mounted, commercial scale': 10, 'fixed tilt, commercial scale': 10}
 
 # 0: fixed rack, 1: fixed roof, 2: 1 axis; needed for running PySAM
@@ -96,9 +97,9 @@ for cell_technology in cell_technologies:
             for ilr in inverter_loading_ratio:
                 if ilr not in preset_tree[cell_technology][package_type][system_type]:
                     preset_tree[cell_technology][package_type][system_type][ilr] = {}
-                for solar_resource_file in weather_data:
+                for solar_resource_dict in weather_data:
 
-                    json_model.SolarResource.solar_resource_data = solar_resource_file
+                    json_model.SolarResource.solar_resource_data = solar_resource_dict
                     lat = json_model.SolarResource.solar_resource_data['lat']
                     lon = json_model.SolarResource.solar_resource_data['lon']
                     location = locations[(lat, lon)]  # string name of location
@@ -125,7 +126,6 @@ for cell_technology in cell_technologies:
                         'state': location.split(' ')[1]
                     }
 
-# print(preset_tree)
-with open('../js/PresetTree.js', 'w') as file:
+with open(Path('../js/PresetTree.js'), 'w') as file:
     file.write('var preset_tree = ' + json.dumps(preset_tree,
                                                  indent=2, separators=(',', ': ')))

@@ -2,15 +2,7 @@
 The Comparative PV LCOE Calculator calculates levelized cost of energy (LCOE) for photovoltaic (PV) systems based on cost, performance, and reliability inputs for a *baseline* and a *proposed* technology. It is a single javascript-powered web page that runs entirely on the client side. Check the `lcoe_calculator_documentation.html` file for more detailed documentation.
 
 # Building a Preset Tree for NREL PVLCOE Calculator
-In the `/build-presets/` folder, the `MakePresetTree.py` file builds a javascript file which supplies the preset values that appear in the NREL PVLCOE calculator at http://pvlcoe.nrel.gov/, for the following parameters:
- - front layer cost
- - cell cost 
- - back layer cost 
- - non-cell costs
- - O&M costs
- - module efficiency 
- - energy yield 
- - degradation rate
+In the `/build-presets/` folder, the `MakePresetTree.py` file builds a javascript file which supplies the preset values that appear in the NREL PVLCOE calculator at http://pvlcoe.nrel.gov/.
 
 The values for efficiency, degradation rate, and all costs listed above are defined in the python file. The sources for these values are cited in https://www.nrel.gov/pv/lcoe-calculator/documentation.html. Energy yield is populated by running the NREL PySAM model inside the `MakePresetTree.py` script for every combination of presets (cell technology, module package type, system type, inverter loading ratio, and location). PySAM installation instructions are here: https://nrel-pysam.readthedocs.io/en/master/. The sources for these values are also cited in the documentation file. You can edit (or add) default values that are preset in the calculator. Follow the instructions depending on which values you want to edit:
 
