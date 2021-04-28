@@ -18,7 +18,7 @@ from pathlib import Path # for platform independent paths
 locations = {}
 df = pd.read_csv('location_coordinates.csv')
 for index, row in df.iterrows():
-    locations[(row['Latitude'], row['Longitude'])] = 'USA ' + \
+    locations[row['ID']] = 'USA ' + \
         row['State'] + ' ' + row['Place']
 
 # Define feasible system configurations
@@ -68,9 +68,8 @@ json_file.close()
 json_model = pvwatts.wrap(pv_dat)
 
 # convert weather files into format that can be used by PySAM
-weather_folder = "weather_files"
+weather_folder = "weather_data"
 weather_files = glob.glob(weather_folder + "/*.csv")
-weather_data = [tools.SAM_CSV_to_solar_data(f) for f in weather_files]
 
 # tilt angles reported in degrees, needed for running PySAM
 tilt = {'fixed tilt, utility scale': 33, 'single-axis tracked, utility scale': 0,
@@ -103,12 +102,11 @@ for cell_technology in cell_technologies:
             for ilr in inverter_loading_ratio:
                 if ilr not in preset_tree[cell_technology][package_type][system_type]:
                     preset_tree[cell_technology][package_type][system_type][ilr] = {}
-                for solar_resource_dict in weather_data:
-
-                    json_model.SolarResource.solar_resource_data = solar_resource_dict
-                    lat = json_model.SolarResource.solar_resource_data['lat']
-                    lon = json_model.SolarResource.solar_resource_data['lon']
-                    location = locations[(lat, lon)]  # string name of location
+                for f in weather_files:
+                    json_model.SolarResource.solar_resource_data = tools.SAM_CSV_to_solar_data(f)
+                    f = f.replace(weather_folder + '/', '') # remove folder name from file name
+                    id = f.split('_')[0] # get the id from the beginning of the string
+                    location = locations[int(id)]  # string name of location
 
                     # set specific inputs of PySAM model based on system type and ILR
                     json_model.SystemDesign.gcr = ground_coverage_ratio[system_type]
@@ -132,6 +130,8 @@ for cell_technology in cell_technologies:
                         'state': location.split(' ')[1]
                     }
 
+
 with open(Path('../js/PresetTree.js'), 'w') as file:
     file.write('var preset_tree = ' + json.dumps(preset_tree,
                                                  indent=2, separators=(',', ': ')))
+
