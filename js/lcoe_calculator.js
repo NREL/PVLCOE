@@ -303,7 +303,7 @@ function update_slider(slider_name, value) {
 function filterPips(value) {
   var ilr = Object.keys(preset_tree[INITIAL_CELL_TECH][INITIAL_PACKAGE_TYPE][INITIAL_SYSTEM_TYPE]) // get ILR values
   if (ilr.includes(value.toString())) {
-    return 0;
+    return 0; // draw a small pip
   }
 
   return -1; 
@@ -380,7 +380,7 @@ function slider_setup(slider_name, number_name, settings) {
     }  
 
     var ilr_range = {'min': [parseFloat(ilr[0]) - 0.1], 'max': [parseFloat(ilr[ilr.length - 1])]} // min needs to be slightly less than actual value to get all pips to appear
-    for (var i = 0; i < percentage_list.length; i++) {
+    for (var i = 0; i < percentage_list.length; i++) { // expand the range based on non-linear intervals
       ilr_range[percentage_list[i]] = interval_list[i]
     }
 
