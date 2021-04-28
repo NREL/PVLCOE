@@ -105,8 +105,8 @@ for cell_technology in cell_technologies:
                 for f in weather_files:
                     json_model.SolarResource.solar_resource_data = tools.SAM_CSV_to_solar_data(f)
                     f = f.replace(weather_folder + '/', '') # remove folder name from file name
-                    id = f.split('_')[0] # get the id from the beginning of the string
-                    location = locations[int(id)]  # string name of location
+                    location_id = f.split('_')[0] # get the id from the beginning of the string
+                    location = locations[int(location_id)]  # string name of location
 
                     # set specific inputs of PySAM model based on system type and ILR
                     json_model.SystemDesign.gcr = ground_coverage_ratio[system_type]

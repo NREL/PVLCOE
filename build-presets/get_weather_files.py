@@ -29,7 +29,7 @@ for i in range(len(lat_list)):
 	lat = lat_list[i]
 	lon = lon_list[i]
 	state = states[i]
-	id = ids[i]
+	location_id = ids[i]
 
 	# all variables must be strings, with spaces replaced by +
 	api_key = '' # REPLACE: get an API key from the link in the header comment
@@ -46,6 +46,6 @@ for i in range(len(lat_list)):
 
 	info = pd.read_csv(url)
 	# save the info to a csv, the weather_files folder must already be created
-	info.to_csv(Path('weather_data/' + str(id) + '_' + state + '_' +str(lat)+'_'+str(lon)+'_tmy.csv'), index=False)
+	info.to_csv(Path('weather_data/' + str(location_id) + '_' + state + '_' +str(lat)+'_'+str(lon)+'_tmy.csv'), index=False)
 	
 
