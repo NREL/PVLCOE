@@ -985,7 +985,7 @@ function break_even_energy_yield(key) {
   }
 }
 
-// Set up the baseline Preset model
+// Set up the baseline presets
 var preset_cell_technology = document.getElementById('cell_technology')
 var preset_location_yield = document.getElementById('location_yield')
 var preset_system_type = document.getElementById('system_type')
