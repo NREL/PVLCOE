@@ -368,7 +368,7 @@ function slider_setup(slider_name, number_name, settings) {
     var percentage_list = []; // percentages where values appear
     var interval_list = []; // interval between pips
 
-    for (var i = 0; i < ilr.length - 1; i++) { // ilr-1 to exclude the max value
+    for (var i = 0; i < ilr.length - 1; i++) { // ilr.length - 1 to exclude the max value
       if (i == 0) { // special case for min value
         percentage_list.push("0.1%")
         interval_list.push([parseFloat(ilr[0]), ilr[1]-ilr[0]])
