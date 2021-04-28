@@ -25,6 +25,15 @@ const SERVICE_LIFE_SLIDER_MAX = 100
 // the calculator freezes if this number gets too large
 const SERVICE_LIFE_CAP = 1000
 
+const RESIDENTIAL_ILR = 1.1 // default ILR value for residential systems
+const NON_RESIDENTIAL_ILR = 1.3 // default ILR value for non-residential (commercial and utility) systems
+
+// initial values for preset dropdowns
+const INITIAL_CELL_TECH = 'mono-Si'
+const INITIAL_PACKAGE_TYPE = 'glass-polymer backsheet'
+const INITIAL_SYSTEM_TYPE = 'fixed tilt, utility scale'
+const INITIAL_LOCATION = 'USA MO Kansas City'
+
 
 // allows for use of popovers and tooltips between javascript and html
 $(function(){
@@ -292,8 +301,12 @@ function update_slider(slider_name, value) {
 
 /* display "pips" at 1.1, 1.3 and 1.4 on ILR slider to emphasize it's non-linear */
 function filterPips(value) {
-  if (value.toFixed(1) == 1.1 || value.toFixed(1) == 1.3 || value.toFixed(1) == 1.4) return 0;
-  return -1;
+  var ilr = Object.keys(preset_tree[INITIAL_CELL_TECH][INITIAL_PACKAGE_TYPE][INITIAL_SYSTEM_TYPE]) // get ILR values
+  if (ilr.includes(value.toString())) {
+    return 0;
+  }
+
+  return -1; 
 }
 
 function pip_baseline_year(value) {
@@ -351,9 +364,29 @@ function slider_setup(slider_name, number_name, settings) {
   var number = document.getElementById(number_name);
   
   if (slider_name == 'ilr_preset') { // create non-linear preset slider with pips
-    noUiSlider.create(slider, {
+    var ilr = Object.keys(preset_tree[INITIAL_CELL_TECH][INITIAL_PACKAGE_TYPE][INITIAL_SYSTEM_TYPE]) // get ILR values
+    var percentage_list = []; // percentages where values appear
+    var interval_list = []; // interval between pips
+
+    for (var i = 0; i < ilr.length - 1; i++) { // ilr-1 to exclude the max value
+      if (i == 0) { // special case for min value
+        percentage_list.push("0.1%")
+        interval_list.push([parseFloat(ilr[0]), ilr[1]-ilr[0]])
+      } else {
+        var percentage = (ilr[i]-ilr[i-1]) / (ilr[ilr.length - 1] - ilr[0]) * 100
+        percentage_list.push(percentage.toString() + "%")
+        interval_list.push([parseFloat(ilr[i]), ilr[i+1]-ilr[i]])
+      }
+    }  
+
+    var ilr_range = {'min': [parseFloat(ilr[0]) - 0.1], 'max': [parseFloat(ilr[ilr.length - 1])]} // min needs to be slightly less than actual value to get all pips to appear
+    for (var i = 0; i < percentage_list.length; i++) {
+      ilr_range[percentage_list[i]] = interval_list[i]
+    }
+
+   noUiSlider.create(slider, {
       start: [1.1],
-      range: {'min': [1.09], '0.1%': [1.1, 0.2], '65%': [1.3, 0.1], 'max': [1.4]}, // min needs to be 1.09 to get all pips to appear
+      range: ilr_range, 
       pips: {mode: 'steps', density: 50, filter: filterPips}
     });
   } else if (slider_name == 'baseline_degradation_rate') {
@@ -1035,13 +1068,13 @@ function setup_preset_location_yield() {
 }
 
 // Set up the presets for the first time
-preset_cell_technology.value = 'mono-Si'
+preset_cell_technology.value = INITIAL_CELL_TECH
 setup_preset_package_type()
-preset_package_type.value = 'glass-polymer backsheet'
-preset_system_type.value = 'fixed tilt, utility scale'
-preset_location_yield.value = 'USA MO Kansas City'
-$('#ilr_preset_text').val(1.3)
-document.getElementById('ilr_preset').noUiSlider.set(1.3)
+preset_package_type.value = INITIAL_PACKAGE_TYPE
+preset_system_type.value = INITIAL_SYSTEM_TYPE
+preset_location_yield.value = INITIAL_LOCATION
+$('#ilr_preset_text').val(NON_RESIDENTIAL_ILR)
+document.getElementById('ilr_preset').noUiSlider.set(NON_RESIDENTIAL_ILR)
 
 // Set up the presets anytime a menu selection is made
 preset_cell_technology.addEventListener('input', function(){
@@ -1049,11 +1082,11 @@ preset_cell_technology.addEventListener('input', function(){
 
   // different ILR defaults depending on residential vs commericial/utility
   if (preset_system_type.value.includes('residential')) {
-    $('#ilr_preset_text').val(1.1)
-    document.getElementById('ilr_preset').noUiSlider.set(1.1)
+    $('#ilr_preset_text').val(RESIDENTIAL_ILR)
+    document.getElementById('ilr_preset').noUiSlider.set(RESIDENTIAL_ILR)
   } else {
-    $('#ilr_preset_text').val(1.3)
-    document.getElementById('ilr_preset').noUiSlider.set(1.3)
+    $('#ilr_preset_text').val(NON_RESIDENTIAL_ILR)
+    document.getElementById('ilr_preset').noUiSlider.set(NON_RESIDENTIAL_ILR)
   }
 })
 preset_package_type.addEventListener('input', function(){
@@ -1061,11 +1094,11 @@ preset_package_type.addEventListener('input', function(){
 
   // different ILR defaults depending on residential vs commericial/utility
   if (preset_system_type.value.includes('residential')) {
-    $('#ilr_preset_text').val(1.1)
-    document.getElementById('ilr_preset').noUiSlider.set(1.1)
+    $('#ilr_preset_text').val(RESIDENTIAL_ILR)
+    document.getElementById('ilr_preset').noUiSlider.set(RESIDENTIAL_ILR)
   } else {
-    $('#ilr_preset_text').val(1.3)
-    document.getElementById('ilr_preset').noUiSlider.set(1.3)
+    $('#ilr_preset_text').val(NON_RESIDENTIAL_ILR)
+    document.getElementById('ilr_preset').noUiSlider.set(NON_RESIDENTIAL_ILR)
   }
 })
 preset_system_type.addEventListener('input', function(){
@@ -1073,16 +1106,17 @@ preset_system_type.addEventListener('input', function(){
 
   // different ILR defaults depending on residential vs commericial/utility
   if (preset_system_type.value.includes('residential')) {
-    $('#ilr_preset_text').val(1.1)
-    document.getElementById('ilr_preset').noUiSlider.set(1.1)
+    $('#ilr_preset_text').val(RESIDENTIAL_ILR)
+    document.getElementById('ilr_preset').noUiSlider.set(RESIDENTIAL_ILR)
   } else {
-    $('#ilr_preset_text').val(1.3)
-    document.getElementById('ilr_preset').noUiSlider.set(1.3)
+    $('#ilr_preset_text').val(NON_RESIDENTIAL_ILR)
+    document.getElementById('ilr_preset').noUiSlider.set(NON_RESIDENTIAL_ILR)
   }
 })
 
 function preset_set(key){
   var preset = preset_tree[preset_cell_technology.value][preset_package_type.value][preset_system_type.value][parseFloat(ilr_slider.noUiSlider.get())][preset_location_yield.value]
+
   var service_life_default = 25
   var discount_rate_default = 6.30
 
