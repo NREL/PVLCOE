@@ -1313,6 +1313,5 @@ function calculate() {
   }
 
   // return values used in break-even calculations
-  //return [cost_baseline, energy_baseline, cost_proposed, energy_proposed]
   return {"cost_baseline": cost_baseline, "energy_baseline": energy_baseline, "cost_proposed": cost_proposed, "energy_proposed": energy_proposed}
 }

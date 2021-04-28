@@ -28,7 +28,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -37,7 +37,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1573.3720476515248,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -94,7 +94,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -103,7 +103,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1479.9796700428622,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -259,7 +259,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -268,7 +268,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1326.7959312426337,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -512,7 +512,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -521,7 +521,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1930.7593241994025,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -580,7 +580,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -589,7 +589,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1552.5579751081186,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -646,7 +646,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -655,7 +655,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1455.8495317812553,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -811,7 +811,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -820,7 +820,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1317.976207227789,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -1064,7 +1064,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -1073,7 +1073,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1900.7936265669573,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -1132,7 +1132,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -1141,7 +1141,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1525.5467529611428,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -1198,7 +1198,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -1207,7 +1207,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1426.7129665828165,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -1363,7 +1363,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -1372,7 +1372,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1300.229812044448,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -1616,7 +1616,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -1625,7 +1625,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1855.1351373099885,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -1682,20 +1682,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2113.706181362988,
+            "energy_yield": 1953.051876377607,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1962.9279165140988,
+            "energy_yield": 1808.9262326602582,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -1704,7 +1704,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1874.321202951223,
+            "energy_yield": 1709.2733927968516,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -1715,7 +1715,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2087.971747918312,
+            "energy_yield": 1878.9978328725688,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -1726,7 +1726,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2079.3679075337423,
+            "energy_yield": 1900.1688669071962,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -1737,7 +1737,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2499.9804387394242,
+            "energy_yield": 2293.838216135847,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -1748,20 +1748,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1941.0954908466358,
+            "energy_yield": 1774.598136431679,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1856.0085072771813,
+            "energy_yield": 1678.6385624057634,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -1770,7 +1770,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2551.1041031953946,
+            "energy_yield": 2363.501670024856,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -1781,7 +1781,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1866.727703723177,
+            "energy_yield": 1659.8509011097153,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -1792,7 +1792,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2027.6331396968744,
+            "energy_yield": 1856.3230114743574,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -1803,7 +1803,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1823.304709217326,
+            "energy_yield": 1692.3311511939332,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -1814,7 +1814,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1717.1789338673636,
+            "energy_yield": 1581.1113165261004,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -1825,7 +1825,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1879.4407676343371,
+            "energy_yield": 1727.8717006762186,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -1836,7 +1836,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1820.2039006213852,
+            "energy_yield": 1700.6110398773253,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -1847,7 +1847,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1796.1253085021187,
+            "energy_yield": 1647.7798025766972,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -1858,7 +1858,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1995.3315898508574,
+            "energy_yield": 1779.3739180930688,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -1869,7 +1869,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2189.5523872464446,
+            "energy_yield": 1978.2796322668585,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -1880,7 +1880,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1727.991488604177,
+            "energy_yield": 1555.6570224757618,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -1891,7 +1891,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2138.169305335042,
+            "energy_yield": 2063.9176081108576,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -1902,7 +1902,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1749.3376757450771,
+            "energy_yield": 1575.5999936023488,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -1913,20 +1913,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1739.492700370559,
+            "energy_yield": 1604.8512090379913,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1635.4730501801541,
+            "energy_yield": 1512.2709875883718,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -1935,7 +1935,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2025.8775774703563,
+            "energy_yield": 1913.261269217843,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -1946,7 +1946,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1883.2258394141472,
+            "energy_yield": 1723.922406281643,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -1957,7 +1957,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1716.5615119305266,
+            "energy_yield": 1556.1159361789805,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -1968,7 +1968,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 984.199342564289,
+            "energy_yield": 865.2839511020794,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -1979,7 +1979,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2109.806235266921,
+            "energy_yield": 1913.4990815458611,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -1990,7 +1990,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2268.626644340369,
+            "energy_yield": 2276.0534905066775,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -2001,7 +2001,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1893.645565949414,
+            "energy_yield": 1732.2254252858859,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -2012,7 +2012,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2454.024978928694,
+            "energy_yield": 2282.601792304387,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -2023,7 +2023,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1802.3805487543434,
+            "energy_yield": 1663.3408794347688,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -2034,7 +2034,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1804.746572570504,
+            "energy_yield": 1631.5385683000202,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -2045,7 +2045,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1942.667637452601,
+            "energy_yield": 1807.7098387199637,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -2056,7 +2056,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1897.9054845606508,
+            "energy_yield": 1773.8864352230703,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -2067,7 +2067,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1925.5766709938478,
+            "energy_yield": 1818.3025074233021,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -2078,7 +2078,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1604.071848447222,
+            "energy_yield": 1502.05305325111,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -2089,7 +2089,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2144.289128553052,
+            "energy_yield": 1923.5236257411993,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -2100,7 +2100,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1458.529133618255,
+            "energy_yield": 1333.158770626946,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -2111,7 +2111,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1913.8865544655848,
+            "energy_yield": 1697.2722906325046,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -2122,7 +2122,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1872.6293900269727,
+            "energy_yield": 1690.4734829833355,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -2133,7 +2133,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1651.661476139789,
+            "energy_yield": 1504.969303503971,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -2144,7 +2144,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1967.6598715951739,
+            "energy_yield": 1786.7038915232172,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -2155,7 +2155,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1699.85056755383,
+            "energy_yield": 1570.9930315391862,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -2166,20 +2166,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1777.4637786017738,
+            "energy_yield": 1580.264444793274,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2480.744682257427,
+            "energy_yield": 2276.6726884416194,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -2188,7 +2188,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1830.5600489121946,
+            "energy_yield": 1629.571823558708,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -2199,7 +2199,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1997.4012136716085,
+            "energy_yield": 1881.5173841762053,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -2210,7 +2210,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2021.5884238448948,
+            "energy_yield": 1930.9189284159122,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -2221,7 +2221,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1960.3901370524381,
+            "energy_yield": 1862.983299120176,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -2234,20 +2234,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2051.8677861025776,
+            "energy_yield": 1943.6178089456969,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1914.9434821316324,
+            "energy_yield": 1800.4386678684862,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -2256,7 +2256,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1826.0132269435335,
+            "energy_yield": 1696.9380979136395,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -2267,7 +2267,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2024.3608069150398,
+            "energy_yield": 1865.1409274585708,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -2278,7 +2278,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2030.6718326723444,
+            "energy_yield": 1890.3887842390552,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -2289,7 +2289,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2387.546412746467,
+            "energy_yield": 2259.5734108188594,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -2300,20 +2300,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1884.3864111420226,
+            "energy_yield": 1760.8857261653889,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1798.4104640958583,
+            "energy_yield": 1670.5494596203027,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -2322,7 +2322,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2462.2921049629567,
+            "energy_yield": 2329.3335958363086,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -2333,7 +2333,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1813.4645885789625,
+            "energy_yield": 1652.1623589963626,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -2344,7 +2344,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1972.37243391958,
+            "energy_yield": 1844.0677885310354,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -2355,7 +2355,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1787.5799687062581,
+            "energy_yield": 1687.9077527614418,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -2366,7 +2366,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1673.0396124455253,
+            "energy_yield": 1571.7828984492012,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -2377,7 +2377,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1851.3694618944594,
+            "energy_yield": 1725.5280326549205,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -2388,7 +2388,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1783.4656100674604,
+            "energy_yield": 1695.383353184123,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -2399,7 +2399,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1759.627817440182,
+            "energy_yield": 1640.2575484815063,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -2410,7 +2410,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1943.3963464778121,
+            "energy_yield": 1770.3119796546184,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -2421,7 +2421,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2111.646699462917,
+            "energy_yield": 1962.1761498017954,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -2432,7 +2432,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1704.6313668589505,
+            "energy_yield": 1555.0920829057438,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -2443,7 +2443,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2094.1514205073117,
+            "energy_yield": 2051.645669996226,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -2454,7 +2454,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1724.6815339825316,
+            "energy_yield": 1573.9727050175936,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -2465,20 +2465,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1704.3019092787051,
+            "energy_yield": 1598.8039920146323,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1611.9857566402288,
+            "energy_yield": 1510.0246753941549,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -2487,7 +2487,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1977.5344060513949,
+            "energy_yield": 1902.7909847897429,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -2498,7 +2498,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1841.6188574528658,
+            "energy_yield": 1717.7275141844357,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -2509,7 +2509,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1694.549133980247,
+            "energy_yield": 1555.4304540029607,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -2520,7 +2520,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 970.6190365834498,
+            "energy_yield": 866.8335382843758,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -2531,7 +2531,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2048.824729105818,
+            "energy_yield": 1903.6468825775682,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -2542,7 +2542,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2221.2121666158287,
+            "energy_yield": 2234.209336215291,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -2553,7 +2553,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1849.6319211754492,
+            "energy_yield": 1722.5570566813453,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -2564,7 +2564,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2402.9109488762133,
+            "energy_yield": 2267.08121681751,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -2575,7 +2575,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1763.301131505943,
+            "energy_yield": 1655.5045322532346,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -2586,7 +2586,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1765.504881592573,
+            "energy_yield": 1626.2063072330684,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -2597,7 +2597,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1903.9770398989397,
+            "energy_yield": 1802.6177781507665,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -2608,7 +2608,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1875.0293540493033,
+            "energy_yield": 1771.681329729367,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -2619,7 +2619,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1893.5995232657272,
+            "energy_yield": 1813.5906811887799,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -2630,7 +2630,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1597.1839054663603,
+            "energy_yield": 1502.4841484427254,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -2641,7 +2641,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2055.049776063807,
+            "energy_yield": 1900.0617991556248,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -2652,7 +2652,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1448.7244115459612,
+            "energy_yield": 1333.9073653323749,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -2663,7 +2663,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1865.846692741553,
+            "energy_yield": 1691.6584940409537,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -2674,7 +2674,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1820.7500469675683,
+            "energy_yield": 1681.712313152011,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -2685,7 +2685,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1619.4155461920927,
+            "energy_yield": 1501.6359381348616,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -2696,7 +2696,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1915.2104767580304,
+            "energy_yield": 1777.7192423579563,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -2707,7 +2707,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1683.5553276955116,
+            "energy_yield": 1571.3334247355317,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -2718,20 +2718,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1748.590157373351,
+            "energy_yield": 1578.3530807974687,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2405.4519427257824,
+            "energy_yield": 2256.4660849791253,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -2740,7 +2740,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1782.1995707901845,
+            "energy_yield": 1625.9374608097,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -2751,7 +2751,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1954.1169630798768,
+            "energy_yield": 1875.2787324095568,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -2762,7 +2762,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1974.131031076506,
+            "energy_yield": 1922.1340259390436,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -2773,7 +2773,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1920.2402512961783,
+            "energy_yield": 1855.4418634822882,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -2786,20 +2786,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1984.8320397340492,
+            "energy_yield": 1909.7722932273864,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1861.4113954586837,
+            "energy_yield": 1775.3746393709898,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -2808,7 +2808,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1775.818003335046,
+            "energy_yield": 1673.5778022667146,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -2819,7 +2819,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1950.6808975533,
+            "energy_yield": 1831.1536054082028,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -2830,7 +2830,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1960.490526798622,
+            "energy_yield": 1855.0215761438685,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -2841,7 +2841,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2282.2227640779693,
+            "energy_yield": 2194.7903166432284,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -2852,20 +2852,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1825.890405363864,
+            "energy_yield": 1731.4839295925806,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1738.9165581664836,
+            "energy_yield": 1642.700898592423,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -2874,7 +2874,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2355.37606690144,
+            "energy_yield": 2266.372838787915,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -2885,7 +2885,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1756.2307809690458,
+            "energy_yield": 1625.5207637606788,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -2896,7 +2896,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1903.0744237159072,
+            "energy_yield": 1806.5386673946145,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -2907,7 +2907,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1741.362297317834,
+            "energy_yield": 1669.102565527379,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -2918,7 +2918,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1625.0838371601792,
+            "energy_yield": 1545.5274141831342,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -2929,7 +2929,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1806.872066214866,
+            "energy_yield": 1709.5605066981109,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -2940,7 +2940,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1739.261267141601,
+            "energy_yield": 1676.4274985023835,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -2951,7 +2951,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1713.0413904249976,
+            "energy_yield": 1620.2471696542402,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -2962,7 +2962,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1879.7555437492615,
+            "energy_yield": 1744.7082936036838,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -2973,7 +2973,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2029.4967114309245,
+            "energy_yield": 1919.0399210133817,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -2984,7 +2984,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1663.2719210196972,
+            "energy_yield": 1541.328177804237,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -2995,7 +2995,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2038.999097277158,
+            "energy_yield": 2012.5982534431885,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -3006,7 +3006,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1681.5376262138816,
+            "energy_yield": 1559.2016646429365,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -3017,20 +3017,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1658.837257082691,
+            "energy_yield": 1576.7965450441814,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1572.7387055685926,
+            "energy_yield": 1492.2699635044376,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -3039,7 +3039,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1923.2801769359803,
+            "energy_yield": 1872.2339368945281,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -3050,7 +3050,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1790.4307114198568,
+            "energy_yield": 1695.0773010089863,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -3061,7 +3061,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1656.4646274641348,
+            "energy_yield": 1542.17675059797,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -3072,7 +3072,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 951.5854436946541,
+            "energy_yield": 863.5806752120966,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -3083,7 +3083,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1977.9731659457232,
+            "energy_yield": 1869.1665602723128,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -3094,7 +3094,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2154.292785721109,
+            "energy_yield": 2168.715290050458,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -3105,7 +3105,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1798.0199703874669,
+            "energy_yield": 1698.288848241095,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -3116,7 +3116,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2319.3668228192214,
+            "energy_yield": 2220.3111125423484,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -3127,7 +3127,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1713.6626695215516,
+            "energy_yield": 1630.687471280781,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -3138,7 +3138,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1715.248857631201,
+            "energy_yield": 1605.8526666329476,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -3149,7 +3149,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1851.5343575788104,
+            "energy_yield": 1780.8875713914508,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -3160,7 +3160,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1835.0007133702975,
+            "energy_yield": 1757.609415923579,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -3171,7 +3171,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1848.5602790007877,
+            "energy_yield": 1794.9324439165089,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -3182,7 +3182,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1561.325221018068,
+            "energy_yield": 1489.5391249882894,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -3193,7 +3193,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1975.438392690835,
+            "energy_yield": 1856.6585403915742,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -3204,7 +3204,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1419.0595572042482,
+            "energy_yield": 1325.1413932564733,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -3215,7 +3215,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1808.1831078934817,
+            "energy_yield": 1669.186407168961,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -3226,7 +3226,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1763.006022830847,
+            "energy_yield": 1655.6795715086525,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -3237,7 +3237,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1578.4627756995176,
+            "energy_yield": 1483.492397702857,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -3248,7 +3248,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1853.5305754108113,
+            "energy_yield": 1749.0298722684004,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -3259,7 +3259,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1650.7694511040897,
+            "energy_yield": 1562.2010643464696,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -3270,20 +3270,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1702.2705815162096,
+            "energy_yield": 1562.730421425179,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2309.4641484993963,
+            "energy_yield": 2204.0280160544376,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -3292,7 +3292,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1727.4582778762283,
+            "energy_yield": 1604.583278425419,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -3303,7 +3303,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1902.7543621380441,
+            "energy_yield": 1850.7724010432396,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -3314,7 +3314,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1922.1251385393452,
+            "energy_yield": 1887.5012573901456,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -3325,7 +3325,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1871.8126861176095,
+            "energy_yield": 1830.7380235264213,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -3344,7 +3344,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -3353,7 +3353,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1578.6183120260876,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -3410,7 +3410,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -3419,7 +3419,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1478.2845613574805,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -3575,7 +3575,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -3584,7 +3584,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1330.489711023358,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -3828,7 +3828,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -3837,7 +3837,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1920.6345218928282,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -3896,7 +3896,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -3905,7 +3905,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1565.9296861240066,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -3962,7 +3962,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -3971,7 +3971,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1462.1770344503932,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -4127,7 +4127,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -4136,7 +4136,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1325.4378334587852,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -4380,7 +4380,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -4389,7 +4389,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1900.7905766848432,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -4448,7 +4448,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -4457,7 +4457,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1542.5859075824972,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -4514,7 +4514,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -4523,7 +4523,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1437.4936807089587,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -4679,7 +4679,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -4688,7 +4688,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1311.4039895068206,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -4932,7 +4932,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -4941,7 +4941,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1860.5738029519287,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -5002,7 +5002,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -5011,7 +5011,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1482.6563917342116,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -5068,7 +5068,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -5077,7 +5077,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1364.8703867854697,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -5233,7 +5233,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -5242,7 +5242,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1249.7668362343559,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -5486,7 +5486,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -5495,7 +5495,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1792.428701679645,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -5554,7 +5554,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -5563,7 +5563,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1479.6560924505684,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -5620,7 +5620,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -5629,7 +5629,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1362.242006625151,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -5785,7 +5785,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -5794,7 +5794,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1250.0610720333784,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -6038,7 +6038,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -6047,7 +6047,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1784.8312993882275,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -6106,7 +6106,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -6115,7 +6115,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1467.9045726439672,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -6172,7 +6172,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -6181,7 +6181,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1349.8782795959642,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -6337,7 +6337,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -6346,7 +6346,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1243.2532017101203,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -6590,7 +6590,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -6599,7 +6599,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1762.0347753777162,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -6660,7 +6660,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -6669,7 +6669,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1494.138491133453,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -6726,7 +6726,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -6735,7 +6735,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1372.9062716033693,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -6891,7 +6891,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -6900,7 +6900,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1261.3179939975291,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -7144,7 +7144,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -7153,7 +7153,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1808.2136716013324,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -7212,7 +7212,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -7221,7 +7221,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1489.6831155758605,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -7278,7 +7278,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -7287,7 +7287,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1368.8041727774746,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -7443,7 +7443,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -7452,7 +7452,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1260.53537901079,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -7696,7 +7696,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -7705,7 +7705,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1797.8098424251784,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -7764,7 +7764,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -7773,7 +7773,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1475.7014524665462,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -7830,7 +7830,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -7839,7 +7839,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1354.7526310143562,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -7995,7 +7995,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -8004,7 +8004,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1251.579729186553,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -8248,7 +8248,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 2.4,
@@ -8257,7 +8257,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1771.6376824888544,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -8320,7 +8320,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -8329,7 +8329,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1573.3720476515248,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -8386,7 +8386,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -8395,7 +8395,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1479.9796700428622,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -8551,7 +8551,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -8560,7 +8560,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1326.7959312426337,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -8804,7 +8804,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -8813,7 +8813,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1930.7593241994025,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -8872,7 +8872,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -8881,7 +8881,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1552.5579751081186,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -8938,7 +8938,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -8947,7 +8947,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1455.8495317812553,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -9103,7 +9103,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -9112,7 +9112,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1317.976207227789,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -9356,7 +9356,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -9365,7 +9365,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1900.7936265669573,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -9424,7 +9424,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -9433,7 +9433,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1525.5467529611428,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -9490,7 +9490,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -9499,7 +9499,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1426.7129665828165,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -9655,7 +9655,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -9664,7 +9664,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1300.229812044448,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -9908,7 +9908,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -9917,7 +9917,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1855.1351373099885,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -9974,20 +9974,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2113.706181362988,
+            "energy_yield": 1953.051876377607,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1962.9279165140988,
+            "energy_yield": 1808.9262326602582,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -9996,7 +9996,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1874.321202951223,
+            "energy_yield": 1709.2733927968516,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -10007,7 +10007,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2087.971747918312,
+            "energy_yield": 1878.9978328725688,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -10018,7 +10018,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2079.3679075337423,
+            "energy_yield": 1900.1688669071962,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -10029,7 +10029,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2499.9804387394242,
+            "energy_yield": 2293.838216135847,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -10040,20 +10040,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1941.0954908466358,
+            "energy_yield": 1774.598136431679,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1856.0085072771813,
+            "energy_yield": 1678.6385624057634,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -10062,7 +10062,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2551.1041031953946,
+            "energy_yield": 2363.501670024856,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -10073,7 +10073,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1866.727703723177,
+            "energy_yield": 1659.8509011097153,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -10084,7 +10084,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2027.6331396968744,
+            "energy_yield": 1856.3230114743574,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -10095,7 +10095,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1823.304709217326,
+            "energy_yield": 1692.3311511939332,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -10106,7 +10106,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1717.1789338673636,
+            "energy_yield": 1581.1113165261004,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -10117,7 +10117,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1879.4407676343371,
+            "energy_yield": 1727.8717006762186,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -10128,7 +10128,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1820.2039006213852,
+            "energy_yield": 1700.6110398773253,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -10139,7 +10139,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1796.1253085021187,
+            "energy_yield": 1647.7798025766972,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -10150,7 +10150,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1995.3315898508574,
+            "energy_yield": 1779.3739180930688,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -10161,7 +10161,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2189.5523872464446,
+            "energy_yield": 1978.2796322668585,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -10172,7 +10172,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1727.991488604177,
+            "energy_yield": 1555.6570224757618,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -10183,7 +10183,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2138.169305335042,
+            "energy_yield": 2063.9176081108576,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -10194,7 +10194,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1749.3376757450771,
+            "energy_yield": 1575.5999936023488,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -10205,20 +10205,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1739.492700370559,
+            "energy_yield": 1604.8512090379913,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1635.4730501801541,
+            "energy_yield": 1512.2709875883718,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -10227,7 +10227,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2025.8775774703563,
+            "energy_yield": 1913.261269217843,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -10238,7 +10238,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1883.2258394141472,
+            "energy_yield": 1723.922406281643,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -10249,7 +10249,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1716.5615119305266,
+            "energy_yield": 1556.1159361789805,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -10260,7 +10260,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 984.199342564289,
+            "energy_yield": 865.2839511020794,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -10271,7 +10271,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2109.806235266921,
+            "energy_yield": 1913.4990815458611,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -10282,7 +10282,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2268.626644340369,
+            "energy_yield": 2276.0534905066775,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -10293,7 +10293,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1893.645565949414,
+            "energy_yield": 1732.2254252858859,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -10304,7 +10304,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2454.024978928694,
+            "energy_yield": 2282.601792304387,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -10315,7 +10315,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1802.3805487543434,
+            "energy_yield": 1663.3408794347688,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -10326,7 +10326,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1804.746572570504,
+            "energy_yield": 1631.5385683000202,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -10337,7 +10337,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1942.667637452601,
+            "energy_yield": 1807.7098387199637,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -10348,7 +10348,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1897.9054845606508,
+            "energy_yield": 1773.8864352230703,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -10359,7 +10359,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1925.5766709938478,
+            "energy_yield": 1818.3025074233021,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -10370,7 +10370,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1604.071848447222,
+            "energy_yield": 1502.05305325111,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -10381,7 +10381,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2144.289128553052,
+            "energy_yield": 1923.5236257411993,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -10392,7 +10392,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1458.529133618255,
+            "energy_yield": 1333.158770626946,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -10403,7 +10403,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1913.8865544655848,
+            "energy_yield": 1697.2722906325046,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -10414,7 +10414,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1872.6293900269727,
+            "energy_yield": 1690.4734829833355,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -10425,7 +10425,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1651.661476139789,
+            "energy_yield": 1504.969303503971,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -10436,7 +10436,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1967.6598715951739,
+            "energy_yield": 1786.7038915232172,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -10447,7 +10447,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1699.85056755383,
+            "energy_yield": 1570.9930315391862,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -10458,20 +10458,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1777.4637786017738,
+            "energy_yield": 1580.264444793274,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2480.744682257427,
+            "energy_yield": 2276.6726884416194,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -10480,7 +10480,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1830.5600489121946,
+            "energy_yield": 1629.571823558708,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -10491,7 +10491,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1997.4012136716085,
+            "energy_yield": 1881.5173841762053,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -10502,7 +10502,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2021.5884238448948,
+            "energy_yield": 1930.9189284159122,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -10513,7 +10513,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1960.3901370524381,
+            "energy_yield": 1862.983299120176,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -10526,20 +10526,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2051.8677861025776,
+            "energy_yield": 1943.6178089456969,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1914.9434821316324,
+            "energy_yield": 1800.4386678684862,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -10548,7 +10548,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1826.0132269435335,
+            "energy_yield": 1696.9380979136395,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -10559,7 +10559,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2024.3608069150398,
+            "energy_yield": 1865.1409274585708,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -10570,7 +10570,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2030.6718326723444,
+            "energy_yield": 1890.3887842390552,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -10581,7 +10581,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2387.546412746467,
+            "energy_yield": 2259.5734108188594,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -10592,20 +10592,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1884.3864111420226,
+            "energy_yield": 1760.8857261653889,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1798.4104640958583,
+            "energy_yield": 1670.5494596203027,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -10614,7 +10614,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2462.2921049629567,
+            "energy_yield": 2329.3335958363086,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -10625,7 +10625,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1813.4645885789625,
+            "energy_yield": 1652.1623589963626,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -10636,7 +10636,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1972.37243391958,
+            "energy_yield": 1844.0677885310354,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -10647,7 +10647,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1787.5799687062581,
+            "energy_yield": 1687.9077527614418,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -10658,7 +10658,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1673.0396124455253,
+            "energy_yield": 1571.7828984492012,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -10669,7 +10669,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1851.3694618944594,
+            "energy_yield": 1725.5280326549205,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -10680,7 +10680,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1783.4656100674604,
+            "energy_yield": 1695.383353184123,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -10691,7 +10691,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1759.627817440182,
+            "energy_yield": 1640.2575484815063,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -10702,7 +10702,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1943.3963464778121,
+            "energy_yield": 1770.3119796546184,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -10713,7 +10713,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2111.646699462917,
+            "energy_yield": 1962.1761498017954,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -10724,7 +10724,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1704.6313668589505,
+            "energy_yield": 1555.0920829057438,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -10735,7 +10735,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2094.1514205073117,
+            "energy_yield": 2051.645669996226,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -10746,7 +10746,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1724.6815339825316,
+            "energy_yield": 1573.9727050175936,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -10757,20 +10757,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1704.3019092787051,
+            "energy_yield": 1598.8039920146323,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1611.9857566402288,
+            "energy_yield": 1510.0246753941549,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -10779,7 +10779,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1977.5344060513949,
+            "energy_yield": 1902.7909847897429,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -10790,7 +10790,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1841.6188574528658,
+            "energy_yield": 1717.7275141844357,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -10801,7 +10801,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1694.549133980247,
+            "energy_yield": 1555.4304540029607,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -10812,7 +10812,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 970.6190365834498,
+            "energy_yield": 866.8335382843758,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -10823,7 +10823,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2048.824729105818,
+            "energy_yield": 1903.6468825775682,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -10834,7 +10834,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2221.2121666158287,
+            "energy_yield": 2234.209336215291,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -10845,7 +10845,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1849.6319211754492,
+            "energy_yield": 1722.5570566813453,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -10856,7 +10856,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2402.9109488762133,
+            "energy_yield": 2267.08121681751,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -10867,7 +10867,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1763.301131505943,
+            "energy_yield": 1655.5045322532346,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -10878,7 +10878,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1765.504881592573,
+            "energy_yield": 1626.2063072330684,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -10889,7 +10889,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1903.9770398989397,
+            "energy_yield": 1802.6177781507665,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -10900,7 +10900,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1875.0293540493033,
+            "energy_yield": 1771.681329729367,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -10911,7 +10911,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1893.5995232657272,
+            "energy_yield": 1813.5906811887799,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -10922,7 +10922,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1597.1839054663603,
+            "energy_yield": 1502.4841484427254,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -10933,7 +10933,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2055.049776063807,
+            "energy_yield": 1900.0617991556248,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -10944,7 +10944,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1448.7244115459612,
+            "energy_yield": 1333.9073653323749,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -10955,7 +10955,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1865.846692741553,
+            "energy_yield": 1691.6584940409537,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -10966,7 +10966,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1820.7500469675683,
+            "energy_yield": 1681.712313152011,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -10977,7 +10977,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1619.4155461920927,
+            "energy_yield": 1501.6359381348616,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -10988,7 +10988,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1915.2104767580304,
+            "energy_yield": 1777.7192423579563,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -10999,7 +10999,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1683.5553276955116,
+            "energy_yield": 1571.3334247355317,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -11010,20 +11010,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1748.590157373351,
+            "energy_yield": 1578.3530807974687,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2405.4519427257824,
+            "energy_yield": 2256.4660849791253,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -11032,7 +11032,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1782.1995707901845,
+            "energy_yield": 1625.9374608097,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -11043,7 +11043,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1954.1169630798768,
+            "energy_yield": 1875.2787324095568,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -11054,7 +11054,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1974.131031076506,
+            "energy_yield": 1922.1340259390436,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -11065,7 +11065,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1920.2402512961783,
+            "energy_yield": 1855.4418634822882,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -11078,20 +11078,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1984.8320397340492,
+            "energy_yield": 1909.7722932273864,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1861.4113954586837,
+            "energy_yield": 1775.3746393709898,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -11100,7 +11100,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1775.818003335046,
+            "energy_yield": 1673.5778022667146,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -11111,7 +11111,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1950.6808975533,
+            "energy_yield": 1831.1536054082028,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -11122,7 +11122,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1960.490526798622,
+            "energy_yield": 1855.0215761438685,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -11133,7 +11133,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2282.2227640779693,
+            "energy_yield": 2194.7903166432284,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -11144,20 +11144,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1825.890405363864,
+            "energy_yield": 1731.4839295925806,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1738.9165581664836,
+            "energy_yield": 1642.700898592423,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -11166,7 +11166,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2355.37606690144,
+            "energy_yield": 2266.372838787915,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -11177,7 +11177,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1756.2307809690458,
+            "energy_yield": 1625.5207637606788,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -11188,7 +11188,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1903.0744237159072,
+            "energy_yield": 1806.5386673946145,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -11199,7 +11199,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1741.362297317834,
+            "energy_yield": 1669.102565527379,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -11210,7 +11210,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1625.0838371601792,
+            "energy_yield": 1545.5274141831342,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -11221,7 +11221,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1806.872066214866,
+            "energy_yield": 1709.5605066981109,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -11232,7 +11232,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1739.261267141601,
+            "energy_yield": 1676.4274985023835,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -11243,7 +11243,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1713.0413904249976,
+            "energy_yield": 1620.2471696542402,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -11254,7 +11254,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1879.7555437492615,
+            "energy_yield": 1744.7082936036838,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -11265,7 +11265,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2029.4967114309245,
+            "energy_yield": 1919.0399210133817,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -11276,7 +11276,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1663.2719210196972,
+            "energy_yield": 1541.328177804237,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -11287,7 +11287,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2038.999097277158,
+            "energy_yield": 2012.5982534431885,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -11298,7 +11298,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1681.5376262138816,
+            "energy_yield": 1559.2016646429365,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -11309,20 +11309,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1658.837257082691,
+            "energy_yield": 1576.7965450441814,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1572.7387055685926,
+            "energy_yield": 1492.2699635044376,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -11331,7 +11331,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1923.2801769359803,
+            "energy_yield": 1872.2339368945281,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -11342,7 +11342,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1790.4307114198568,
+            "energy_yield": 1695.0773010089863,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -11353,7 +11353,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1656.4646274641348,
+            "energy_yield": 1542.17675059797,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -11364,7 +11364,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 951.5854436946541,
+            "energy_yield": 863.5806752120966,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -11375,7 +11375,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1977.9731659457232,
+            "energy_yield": 1869.1665602723128,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -11386,7 +11386,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2154.292785721109,
+            "energy_yield": 2168.715290050458,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -11397,7 +11397,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1798.0199703874669,
+            "energy_yield": 1698.288848241095,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -11408,7 +11408,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2319.3668228192214,
+            "energy_yield": 2220.3111125423484,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -11419,7 +11419,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1713.6626695215516,
+            "energy_yield": 1630.687471280781,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -11430,7 +11430,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1715.248857631201,
+            "energy_yield": 1605.8526666329476,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -11441,7 +11441,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1851.5343575788104,
+            "energy_yield": 1780.8875713914508,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -11452,7 +11452,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1835.0007133702975,
+            "energy_yield": 1757.609415923579,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -11463,7 +11463,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1848.5602790007877,
+            "energy_yield": 1794.9324439165089,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -11474,7 +11474,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1561.325221018068,
+            "energy_yield": 1489.5391249882894,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -11485,7 +11485,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1975.438392690835,
+            "energy_yield": 1856.6585403915742,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -11496,7 +11496,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1419.0595572042482,
+            "energy_yield": 1325.1413932564733,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -11507,7 +11507,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1808.1831078934817,
+            "energy_yield": 1669.186407168961,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -11518,7 +11518,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1763.006022830847,
+            "energy_yield": 1655.6795715086525,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -11529,7 +11529,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1578.4627756995176,
+            "energy_yield": 1483.492397702857,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -11540,7 +11540,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1853.5305754108113,
+            "energy_yield": 1749.0298722684004,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -11551,7 +11551,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1650.7694511040897,
+            "energy_yield": 1562.2010643464696,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -11562,20 +11562,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1702.2705815162096,
+            "energy_yield": 1562.730421425179,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 2309.4641484993963,
+            "energy_yield": 2204.0280160544376,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -11584,7 +11584,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1727.4582778762283,
+            "energy_yield": 1604.583278425419,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -11595,7 +11595,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1902.7543621380441,
+            "energy_yield": 1850.7724010432396,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -11606,7 +11606,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1922.1251385393452,
+            "energy_yield": 1887.5012573901456,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -11617,7 +11617,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 19.5,
-            "energy_yield": 1871.8126861176095,
+            "energy_yield": 1830.7380235264213,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -11636,7 +11636,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -11645,7 +11645,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1578.6183120260876,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -11702,7 +11702,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -11711,7 +11711,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1478.2845613574805,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -11867,7 +11867,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -11876,7 +11876,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1330.489711023358,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -12120,7 +12120,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -12129,7 +12129,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1920.6345218928282,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -12188,7 +12188,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -12197,7 +12197,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1565.9296861240066,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -12254,7 +12254,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -12263,7 +12263,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1462.1770344503932,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -12419,7 +12419,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -12428,7 +12428,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1325.4378334587852,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -12672,7 +12672,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -12681,7 +12681,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1900.7905766848432,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -12740,7 +12740,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -12749,7 +12749,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1542.5859075824972,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -12806,7 +12806,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -12815,7 +12815,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1437.4936807089587,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -12971,7 +12971,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -12980,7 +12980,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1311.4039895068206,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -13224,7 +13224,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -13233,7 +13233,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1860.5738029519287,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -13294,7 +13294,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -13303,7 +13303,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1482.6563917342116,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -13360,7 +13360,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -13369,7 +13369,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1364.8703867854697,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -13525,7 +13525,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -13534,7 +13534,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1249.7668362343559,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -13778,7 +13778,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -13787,7 +13787,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1792.428701679645,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -13846,7 +13846,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -13855,7 +13855,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1479.6560924505684,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -13912,7 +13912,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -13921,7 +13921,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1362.242006625151,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -14077,7 +14077,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -14086,7 +14086,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1250.0610720333784,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -14330,7 +14330,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -14339,7 +14339,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1784.8312993882275,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -14398,7 +14398,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -14407,7 +14407,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1467.9045726439672,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -14464,7 +14464,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -14473,7 +14473,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1349.8782795959642,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -14629,7 +14629,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -14638,7 +14638,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1243.2532017101203,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -14882,7 +14882,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -14891,7 +14891,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1762.0347753777162,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -14952,7 +14952,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -14961,7 +14961,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1494.138491133453,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -15018,7 +15018,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -15027,7 +15027,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1372.9062716033693,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -15183,7 +15183,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -15192,7 +15192,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1261.3179939975291,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -15436,7 +15436,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -15445,7 +15445,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1808.2136716013324,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -15504,7 +15504,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -15513,7 +15513,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1489.6831155758605,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -15570,7 +15570,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -15579,7 +15579,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1368.8041727774746,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -15735,7 +15735,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -15744,7 +15744,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1260.53537901079,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -15988,7 +15988,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -15997,7 +15997,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1797.8098424251784,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -16056,7 +16056,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -16065,7 +16065,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1475.7014524665462,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -16122,7 +16122,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -16131,7 +16131,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1354.7526310143562,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -16287,7 +16287,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -16296,7 +16296,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1251.579729186553,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -16540,7 +16540,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 22.2,
             "cost_back_layer": 3,
@@ -16549,7 +16549,7 @@ var preset_tree = {
             "efficiency": 19.5,
             "energy_yield": 1771.6376824888544,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -16614,7 +16614,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -16623,7 +16623,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1573.3720476515248,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -16680,7 +16680,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -16689,7 +16689,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1479.9796700428622,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -16845,7 +16845,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -16854,7 +16854,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1326.7959312426337,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -17098,7 +17098,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -17107,7 +17107,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1930.7593241994025,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -17166,7 +17166,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -17175,7 +17175,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1552.5579751081186,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -17232,7 +17232,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -17241,7 +17241,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1455.8495317812553,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -17397,7 +17397,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -17406,7 +17406,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1317.976207227789,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -17650,7 +17650,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -17659,7 +17659,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1900.7936265669573,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -17718,7 +17718,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -17727,7 +17727,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1525.5467529611428,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -17784,7 +17784,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -17793,7 +17793,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1426.7129665828165,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -17949,7 +17949,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -17958,7 +17958,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1300.229812044448,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -18202,7 +18202,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -18211,7 +18211,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1855.1351373099885,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -18268,20 +18268,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2113.706181362988,
+            "energy_yield": 1953.051876377607,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1962.9279165140988,
+            "energy_yield": 1808.9262326602582,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -18290,7 +18290,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1874.321202951223,
+            "energy_yield": 1709.2733927968516,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -18301,7 +18301,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2087.971747918312,
+            "energy_yield": 1878.9978328725688,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -18312,7 +18312,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2079.3679075337423,
+            "energy_yield": 1900.1688669071962,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -18323,7 +18323,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2499.9804387394242,
+            "energy_yield": 2293.838216135847,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -18334,20 +18334,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1941.0954908466358,
+            "energy_yield": 1774.598136431679,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1856.0085072771813,
+            "energy_yield": 1678.6385624057634,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -18356,7 +18356,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2551.1041031953946,
+            "energy_yield": 2363.501670024856,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -18367,7 +18367,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1866.727703723177,
+            "energy_yield": 1659.8509011097153,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -18378,7 +18378,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2027.6331396968744,
+            "energy_yield": 1856.3230114743574,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -18389,7 +18389,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1823.304709217326,
+            "energy_yield": 1692.3311511939332,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -18400,7 +18400,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1717.1789338673636,
+            "energy_yield": 1581.1113165261004,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -18411,7 +18411,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1879.4407676343371,
+            "energy_yield": 1727.8717006762186,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -18422,7 +18422,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1820.2039006213852,
+            "energy_yield": 1700.6110398773253,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -18433,7 +18433,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1796.1253085021187,
+            "energy_yield": 1647.7798025766972,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -18444,7 +18444,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1995.3315898508574,
+            "energy_yield": 1779.3739180930688,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -18455,7 +18455,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2189.5523872464446,
+            "energy_yield": 1978.2796322668585,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -18466,7 +18466,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1727.991488604177,
+            "energy_yield": 1555.6570224757618,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -18477,7 +18477,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2138.169305335042,
+            "energy_yield": 2063.9176081108576,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -18488,7 +18488,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1749.3376757450771,
+            "energy_yield": 1575.5999936023488,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -18499,20 +18499,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1739.492700370559,
+            "energy_yield": 1604.8512090379913,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1635.4730501801541,
+            "energy_yield": 1512.2709875883718,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -18521,7 +18521,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2025.8775774703563,
+            "energy_yield": 1913.261269217843,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -18532,7 +18532,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1883.2258394141472,
+            "energy_yield": 1723.922406281643,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -18543,7 +18543,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1716.5615119305266,
+            "energy_yield": 1556.1159361789805,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -18554,7 +18554,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 984.199342564289,
+            "energy_yield": 865.2839511020794,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -18565,7 +18565,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2109.806235266921,
+            "energy_yield": 1913.4990815458611,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -18576,7 +18576,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2268.626644340369,
+            "energy_yield": 2276.0534905066775,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -18587,7 +18587,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1893.645565949414,
+            "energy_yield": 1732.2254252858859,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -18598,7 +18598,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2454.024978928694,
+            "energy_yield": 2282.601792304387,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -18609,7 +18609,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1802.3805487543434,
+            "energy_yield": 1663.3408794347688,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -18620,7 +18620,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1804.746572570504,
+            "energy_yield": 1631.5385683000202,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -18631,7 +18631,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1942.667637452601,
+            "energy_yield": 1807.7098387199637,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -18642,7 +18642,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1897.9054845606508,
+            "energy_yield": 1773.8864352230703,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -18653,7 +18653,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1925.5766709938478,
+            "energy_yield": 1818.3025074233021,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -18664,7 +18664,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1604.071848447222,
+            "energy_yield": 1502.05305325111,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -18675,7 +18675,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2144.289128553052,
+            "energy_yield": 1923.5236257411993,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -18686,7 +18686,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1458.529133618255,
+            "energy_yield": 1333.158770626946,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -18697,7 +18697,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1913.8865544655848,
+            "energy_yield": 1697.2722906325046,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -18708,7 +18708,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1872.6293900269727,
+            "energy_yield": 1690.4734829833355,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -18719,7 +18719,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1651.661476139789,
+            "energy_yield": 1504.969303503971,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -18730,7 +18730,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1967.6598715951739,
+            "energy_yield": 1786.7038915232172,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -18741,7 +18741,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1699.85056755383,
+            "energy_yield": 1570.9930315391862,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -18752,20 +18752,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1777.4637786017738,
+            "energy_yield": 1580.264444793274,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2480.744682257427,
+            "energy_yield": 2276.6726884416194,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -18774,7 +18774,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1830.5600489121946,
+            "energy_yield": 1629.571823558708,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -18785,7 +18785,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1997.4012136716085,
+            "energy_yield": 1881.5173841762053,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -18796,7 +18796,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2021.5884238448948,
+            "energy_yield": 1930.9189284159122,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -18807,7 +18807,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1960.3901370524381,
+            "energy_yield": 1862.983299120176,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -18820,20 +18820,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2051.8677861025776,
+            "energy_yield": 1943.6178089456969,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1914.9434821316324,
+            "energy_yield": 1800.4386678684862,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -18842,7 +18842,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1826.0132269435335,
+            "energy_yield": 1696.9380979136395,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -18853,7 +18853,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2024.3608069150398,
+            "energy_yield": 1865.1409274585708,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -18864,7 +18864,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2030.6718326723444,
+            "energy_yield": 1890.3887842390552,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -18875,7 +18875,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2387.546412746467,
+            "energy_yield": 2259.5734108188594,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -18886,20 +18886,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1884.3864111420226,
+            "energy_yield": 1760.8857261653889,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1798.4104640958583,
+            "energy_yield": 1670.5494596203027,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -18908,7 +18908,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2462.2921049629567,
+            "energy_yield": 2329.3335958363086,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -18919,7 +18919,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1813.4645885789625,
+            "energy_yield": 1652.1623589963626,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -18930,7 +18930,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1972.37243391958,
+            "energy_yield": 1844.0677885310354,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -18941,7 +18941,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1787.5799687062581,
+            "energy_yield": 1687.9077527614418,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -18952,7 +18952,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1673.0396124455253,
+            "energy_yield": 1571.7828984492012,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -18963,7 +18963,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1851.3694618944594,
+            "energy_yield": 1725.5280326549205,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -18974,7 +18974,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1783.4656100674604,
+            "energy_yield": 1695.383353184123,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -18985,7 +18985,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1759.627817440182,
+            "energy_yield": 1640.2575484815063,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -18996,7 +18996,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1943.3963464778121,
+            "energy_yield": 1770.3119796546184,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -19007,7 +19007,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2111.646699462917,
+            "energy_yield": 1962.1761498017954,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -19018,7 +19018,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1704.6313668589505,
+            "energy_yield": 1555.0920829057438,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -19029,7 +19029,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2094.1514205073117,
+            "energy_yield": 2051.645669996226,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -19040,7 +19040,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1724.6815339825316,
+            "energy_yield": 1573.9727050175936,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -19051,20 +19051,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1704.3019092787051,
+            "energy_yield": 1598.8039920146323,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1611.9857566402288,
+            "energy_yield": 1510.0246753941549,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -19073,7 +19073,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1977.5344060513949,
+            "energy_yield": 1902.7909847897429,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -19084,7 +19084,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1841.6188574528658,
+            "energy_yield": 1717.7275141844357,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -19095,7 +19095,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1694.549133980247,
+            "energy_yield": 1555.4304540029607,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -19106,7 +19106,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 970.6190365834498,
+            "energy_yield": 866.8335382843758,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -19117,7 +19117,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2048.824729105818,
+            "energy_yield": 1903.6468825775682,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -19128,7 +19128,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2221.2121666158287,
+            "energy_yield": 2234.209336215291,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -19139,7 +19139,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1849.6319211754492,
+            "energy_yield": 1722.5570566813453,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -19150,7 +19150,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2402.9109488762133,
+            "energy_yield": 2267.08121681751,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -19161,7 +19161,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1763.301131505943,
+            "energy_yield": 1655.5045322532346,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -19172,7 +19172,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1765.504881592573,
+            "energy_yield": 1626.2063072330684,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -19183,7 +19183,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1903.9770398989397,
+            "energy_yield": 1802.6177781507665,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -19194,7 +19194,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1875.0293540493033,
+            "energy_yield": 1771.681329729367,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -19205,7 +19205,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1893.5995232657272,
+            "energy_yield": 1813.5906811887799,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -19216,7 +19216,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1597.1839054663603,
+            "energy_yield": 1502.4841484427254,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -19227,7 +19227,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2055.049776063807,
+            "energy_yield": 1900.0617991556248,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -19238,7 +19238,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1448.7244115459612,
+            "energy_yield": 1333.9073653323749,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -19249,7 +19249,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1865.846692741553,
+            "energy_yield": 1691.6584940409537,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -19260,7 +19260,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1820.7500469675683,
+            "energy_yield": 1681.712313152011,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -19271,7 +19271,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1619.4155461920927,
+            "energy_yield": 1501.6359381348616,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -19282,7 +19282,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1915.2104767580304,
+            "energy_yield": 1777.7192423579563,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -19293,7 +19293,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1683.5553276955116,
+            "energy_yield": 1571.3334247355317,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -19304,20 +19304,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1748.590157373351,
+            "energy_yield": 1578.3530807974687,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2405.4519427257824,
+            "energy_yield": 2256.4660849791253,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -19326,7 +19326,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1782.1995707901845,
+            "energy_yield": 1625.9374608097,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -19337,7 +19337,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1954.1169630798768,
+            "energy_yield": 1875.2787324095568,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -19348,7 +19348,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1974.131031076506,
+            "energy_yield": 1922.1340259390436,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -19359,7 +19359,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1920.2402512961783,
+            "energy_yield": 1855.4418634822882,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -19372,20 +19372,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1984.8320397340492,
+            "energy_yield": 1909.7722932273864,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1861.4113954586837,
+            "energy_yield": 1775.3746393709898,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -19394,7 +19394,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1775.818003335046,
+            "energy_yield": 1673.5778022667146,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -19405,7 +19405,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1950.6808975533,
+            "energy_yield": 1831.1536054082028,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -19416,7 +19416,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1960.490526798622,
+            "energy_yield": 1855.0215761438685,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -19427,7 +19427,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2282.2227640779693,
+            "energy_yield": 2194.7903166432284,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -19438,20 +19438,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1825.890405363864,
+            "energy_yield": 1731.4839295925806,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1738.9165581664836,
+            "energy_yield": 1642.700898592423,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -19460,7 +19460,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2355.37606690144,
+            "energy_yield": 2266.372838787915,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -19471,7 +19471,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1756.2307809690458,
+            "energy_yield": 1625.5207637606788,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -19482,7 +19482,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1903.0744237159072,
+            "energy_yield": 1806.5386673946145,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -19493,7 +19493,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1741.362297317834,
+            "energy_yield": 1669.102565527379,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -19504,7 +19504,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1625.0838371601792,
+            "energy_yield": 1545.5274141831342,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -19515,7 +19515,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1806.872066214866,
+            "energy_yield": 1709.5605066981109,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -19526,7 +19526,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1739.261267141601,
+            "energy_yield": 1676.4274985023835,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -19537,7 +19537,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1713.0413904249976,
+            "energy_yield": 1620.2471696542402,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -19548,7 +19548,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1879.7555437492615,
+            "energy_yield": 1744.7082936036838,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -19559,7 +19559,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2029.4967114309245,
+            "energy_yield": 1919.0399210133817,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -19570,7 +19570,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1663.2719210196972,
+            "energy_yield": 1541.328177804237,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -19581,7 +19581,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2038.999097277158,
+            "energy_yield": 2012.5982534431885,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -19592,7 +19592,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1681.5376262138816,
+            "energy_yield": 1559.2016646429365,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -19603,20 +19603,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1658.837257082691,
+            "energy_yield": 1576.7965450441814,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1572.7387055685926,
+            "energy_yield": 1492.2699635044376,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -19625,7 +19625,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1923.2801769359803,
+            "energy_yield": 1872.2339368945281,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -19636,7 +19636,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1790.4307114198568,
+            "energy_yield": 1695.0773010089863,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -19647,7 +19647,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1656.4646274641348,
+            "energy_yield": 1542.17675059797,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -19658,7 +19658,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 951.5854436946541,
+            "energy_yield": 863.5806752120966,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -19669,7 +19669,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1977.9731659457232,
+            "energy_yield": 1869.1665602723128,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -19680,7 +19680,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2154.292785721109,
+            "energy_yield": 2168.715290050458,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -19691,7 +19691,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1798.0199703874669,
+            "energy_yield": 1698.288848241095,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -19702,7 +19702,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2319.3668228192214,
+            "energy_yield": 2220.3111125423484,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -19713,7 +19713,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1713.6626695215516,
+            "energy_yield": 1630.687471280781,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -19724,7 +19724,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1715.248857631201,
+            "energy_yield": 1605.8526666329476,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -19735,7 +19735,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1851.5343575788104,
+            "energy_yield": 1780.8875713914508,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -19746,7 +19746,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1835.0007133702975,
+            "energy_yield": 1757.609415923579,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -19757,7 +19757,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1848.5602790007877,
+            "energy_yield": 1794.9324439165089,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -19768,7 +19768,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1561.325221018068,
+            "energy_yield": 1489.5391249882894,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -19779,7 +19779,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1975.438392690835,
+            "energy_yield": 1856.6585403915742,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -19790,7 +19790,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1419.0595572042482,
+            "energy_yield": 1325.1413932564733,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -19801,7 +19801,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1808.1831078934817,
+            "energy_yield": 1669.186407168961,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -19812,7 +19812,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1763.006022830847,
+            "energy_yield": 1655.6795715086525,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -19823,7 +19823,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1578.4627756995176,
+            "energy_yield": 1483.492397702857,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -19834,7 +19834,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1853.5305754108113,
+            "energy_yield": 1749.0298722684004,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -19845,7 +19845,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1650.7694511040897,
+            "energy_yield": 1562.2010643464696,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -19856,20 +19856,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1702.2705815162096,
+            "energy_yield": 1562.730421425179,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2309.4641484993963,
+            "energy_yield": 2204.0280160544376,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -19878,7 +19878,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1727.4582778762283,
+            "energy_yield": 1604.583278425419,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -19889,7 +19889,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1902.7543621380441,
+            "energy_yield": 1850.7724010432396,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -19900,7 +19900,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1922.1251385393452,
+            "energy_yield": 1887.5012573901456,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -19911,7 +19911,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1871.8126861176095,
+            "energy_yield": 1830.7380235264213,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -19930,7 +19930,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -19939,7 +19939,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1482.6563917342116,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -19996,7 +19996,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -20005,7 +20005,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1364.8703867854697,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -20161,7 +20161,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -20170,7 +20170,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1249.7668362343559,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -20414,7 +20414,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -20423,7 +20423,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1792.428701679645,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -20482,7 +20482,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -20491,7 +20491,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1479.6560924505684,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -20548,7 +20548,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -20557,7 +20557,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1362.242006625151,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -20713,7 +20713,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -20722,7 +20722,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1250.0610720333784,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -20966,7 +20966,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -20975,7 +20975,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1784.8312993882275,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -21034,7 +21034,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -21043,7 +21043,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1467.9045726439672,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -21100,7 +21100,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -21109,7 +21109,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1349.8782795959642,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -21265,7 +21265,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -21274,7 +21274,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1243.2532017101203,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -21518,7 +21518,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -21527,7 +21527,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1762.0347753777162,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -21588,7 +21588,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -21597,7 +21597,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1494.138491133453,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -21654,7 +21654,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -21663,7 +21663,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1372.9062716033693,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -21819,7 +21819,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -21828,7 +21828,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1261.3179939975291,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -22072,7 +22072,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -22081,7 +22081,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1808.2136716013324,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -22140,7 +22140,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -22149,7 +22149,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1489.6831155758605,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -22206,7 +22206,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -22215,7 +22215,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1368.8041727774746,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -22371,7 +22371,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -22380,7 +22380,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1260.53537901079,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -22624,7 +22624,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -22633,7 +22633,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1797.8098424251784,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -22692,7 +22692,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -22701,7 +22701,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1475.7014524665462,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -22758,7 +22758,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -22767,7 +22767,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1354.7526310143562,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -22923,7 +22923,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -22932,7 +22932,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1251.579729186553,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -23176,7 +23176,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 2.4,
@@ -23185,7 +23185,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1771.6376824888544,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -23248,7 +23248,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -23257,7 +23257,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1573.3720476515248,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -23314,7 +23314,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -23323,7 +23323,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1479.9796700428622,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -23479,7 +23479,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -23488,7 +23488,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1326.7959312426337,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -23732,7 +23732,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -23741,7 +23741,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1930.7593241994025,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -23800,7 +23800,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -23809,7 +23809,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1552.5579751081186,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -23866,7 +23866,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -23875,7 +23875,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1455.8495317812553,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -24031,7 +24031,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -24040,7 +24040,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1317.976207227789,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -24284,7 +24284,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -24293,7 +24293,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1900.7936265669573,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -24352,7 +24352,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -24361,7 +24361,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1525.5467529611428,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -24418,7 +24418,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -24427,7 +24427,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1426.7129665828165,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -24583,7 +24583,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -24592,7 +24592,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1300.229812044448,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -24836,7 +24836,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -24845,7 +24845,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1855.1351373099885,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -24902,20 +24902,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2113.706181362988,
+            "energy_yield": 1953.051876377607,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1962.9279165140988,
+            "energy_yield": 1808.9262326602582,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -24924,7 +24924,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1874.321202951223,
+            "energy_yield": 1709.2733927968516,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -24935,7 +24935,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2087.971747918312,
+            "energy_yield": 1878.9978328725688,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -24946,7 +24946,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2079.3679075337423,
+            "energy_yield": 1900.1688669071962,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -24957,7 +24957,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2499.9804387394242,
+            "energy_yield": 2293.838216135847,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -24968,20 +24968,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1941.0954908466358,
+            "energy_yield": 1774.598136431679,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1856.0085072771813,
+            "energy_yield": 1678.6385624057634,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -24990,7 +24990,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2551.1041031953946,
+            "energy_yield": 2363.501670024856,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -25001,7 +25001,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1866.727703723177,
+            "energy_yield": 1659.8509011097153,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -25012,7 +25012,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2027.6331396968744,
+            "energy_yield": 1856.3230114743574,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -25023,7 +25023,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1823.304709217326,
+            "energy_yield": 1692.3311511939332,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -25034,7 +25034,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1717.1789338673636,
+            "energy_yield": 1581.1113165261004,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -25045,7 +25045,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1879.4407676343371,
+            "energy_yield": 1727.8717006762186,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -25056,7 +25056,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1820.2039006213852,
+            "energy_yield": 1700.6110398773253,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -25067,7 +25067,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1796.1253085021187,
+            "energy_yield": 1647.7798025766972,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -25078,7 +25078,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1995.3315898508574,
+            "energy_yield": 1779.3739180930688,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -25089,7 +25089,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2189.5523872464446,
+            "energy_yield": 1978.2796322668585,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -25100,7 +25100,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1727.991488604177,
+            "energy_yield": 1555.6570224757618,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -25111,7 +25111,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2138.169305335042,
+            "energy_yield": 2063.9176081108576,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -25122,7 +25122,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1749.3376757450771,
+            "energy_yield": 1575.5999936023488,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -25133,20 +25133,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1739.492700370559,
+            "energy_yield": 1604.8512090379913,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1635.4730501801541,
+            "energy_yield": 1512.2709875883718,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -25155,7 +25155,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2025.8775774703563,
+            "energy_yield": 1913.261269217843,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -25166,7 +25166,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1883.2258394141472,
+            "energy_yield": 1723.922406281643,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -25177,7 +25177,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1716.5615119305266,
+            "energy_yield": 1556.1159361789805,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -25188,7 +25188,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 984.199342564289,
+            "energy_yield": 865.2839511020794,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -25199,7 +25199,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2109.806235266921,
+            "energy_yield": 1913.4990815458611,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -25210,7 +25210,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2268.626644340369,
+            "energy_yield": 2276.0534905066775,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -25221,7 +25221,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1893.645565949414,
+            "energy_yield": 1732.2254252858859,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -25232,7 +25232,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2454.024978928694,
+            "energy_yield": 2282.601792304387,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -25243,7 +25243,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1802.3805487543434,
+            "energy_yield": 1663.3408794347688,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -25254,7 +25254,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1804.746572570504,
+            "energy_yield": 1631.5385683000202,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -25265,7 +25265,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1942.667637452601,
+            "energy_yield": 1807.7098387199637,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -25276,7 +25276,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1897.9054845606508,
+            "energy_yield": 1773.8864352230703,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -25287,7 +25287,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1925.5766709938478,
+            "energy_yield": 1818.3025074233021,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -25298,7 +25298,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1604.071848447222,
+            "energy_yield": 1502.05305325111,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -25309,7 +25309,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2144.289128553052,
+            "energy_yield": 1923.5236257411993,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -25320,7 +25320,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1458.529133618255,
+            "energy_yield": 1333.158770626946,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -25331,7 +25331,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1913.8865544655848,
+            "energy_yield": 1697.2722906325046,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -25342,7 +25342,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1872.6293900269727,
+            "energy_yield": 1690.4734829833355,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -25353,7 +25353,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1651.661476139789,
+            "energy_yield": 1504.969303503971,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -25364,7 +25364,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1967.6598715951739,
+            "energy_yield": 1786.7038915232172,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -25375,7 +25375,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1699.85056755383,
+            "energy_yield": 1570.9930315391862,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -25386,20 +25386,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1777.4637786017738,
+            "energy_yield": 1580.264444793274,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2480.744682257427,
+            "energy_yield": 2276.6726884416194,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -25408,7 +25408,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1830.5600489121946,
+            "energy_yield": 1629.571823558708,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -25419,7 +25419,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1997.4012136716085,
+            "energy_yield": 1881.5173841762053,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -25430,7 +25430,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2021.5884238448948,
+            "energy_yield": 1930.9189284159122,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -25441,7 +25441,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1960.3901370524381,
+            "energy_yield": 1862.983299120176,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -25454,20 +25454,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2051.8677861025776,
+            "energy_yield": 1943.6178089456969,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1914.9434821316324,
+            "energy_yield": 1800.4386678684862,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -25476,7 +25476,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1826.0132269435335,
+            "energy_yield": 1696.9380979136395,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -25487,7 +25487,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2024.3608069150398,
+            "energy_yield": 1865.1409274585708,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -25498,7 +25498,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2030.6718326723444,
+            "energy_yield": 1890.3887842390552,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -25509,7 +25509,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2387.546412746467,
+            "energy_yield": 2259.5734108188594,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -25520,20 +25520,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1884.3864111420226,
+            "energy_yield": 1760.8857261653889,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1798.4104640958583,
+            "energy_yield": 1670.5494596203027,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -25542,7 +25542,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2462.2921049629567,
+            "energy_yield": 2329.3335958363086,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -25553,7 +25553,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1813.4645885789625,
+            "energy_yield": 1652.1623589963626,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -25564,7 +25564,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1972.37243391958,
+            "energy_yield": 1844.0677885310354,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -25575,7 +25575,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1787.5799687062581,
+            "energy_yield": 1687.9077527614418,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -25586,7 +25586,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1673.0396124455253,
+            "energy_yield": 1571.7828984492012,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -25597,7 +25597,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1851.3694618944594,
+            "energy_yield": 1725.5280326549205,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -25608,7 +25608,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1783.4656100674604,
+            "energy_yield": 1695.383353184123,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -25619,7 +25619,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1759.627817440182,
+            "energy_yield": 1640.2575484815063,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -25630,7 +25630,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1943.3963464778121,
+            "energy_yield": 1770.3119796546184,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -25641,7 +25641,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2111.646699462917,
+            "energy_yield": 1962.1761498017954,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -25652,7 +25652,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1704.6313668589505,
+            "energy_yield": 1555.0920829057438,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -25663,7 +25663,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2094.1514205073117,
+            "energy_yield": 2051.645669996226,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -25674,7 +25674,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1724.6815339825316,
+            "energy_yield": 1573.9727050175936,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -25685,20 +25685,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1704.3019092787051,
+            "energy_yield": 1598.8039920146323,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1611.9857566402288,
+            "energy_yield": 1510.0246753941549,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -25707,7 +25707,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1977.5344060513949,
+            "energy_yield": 1902.7909847897429,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -25718,7 +25718,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1841.6188574528658,
+            "energy_yield": 1717.7275141844357,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -25729,7 +25729,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1694.549133980247,
+            "energy_yield": 1555.4304540029607,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -25740,7 +25740,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 970.6190365834498,
+            "energy_yield": 866.8335382843758,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -25751,7 +25751,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2048.824729105818,
+            "energy_yield": 1903.6468825775682,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -25762,7 +25762,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2221.2121666158287,
+            "energy_yield": 2234.209336215291,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -25773,7 +25773,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1849.6319211754492,
+            "energy_yield": 1722.5570566813453,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -25784,7 +25784,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2402.9109488762133,
+            "energy_yield": 2267.08121681751,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -25795,7 +25795,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1763.301131505943,
+            "energy_yield": 1655.5045322532346,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -25806,7 +25806,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1765.504881592573,
+            "energy_yield": 1626.2063072330684,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -25817,7 +25817,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1903.9770398989397,
+            "energy_yield": 1802.6177781507665,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -25828,7 +25828,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1875.0293540493033,
+            "energy_yield": 1771.681329729367,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -25839,7 +25839,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1893.5995232657272,
+            "energy_yield": 1813.5906811887799,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -25850,7 +25850,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1597.1839054663603,
+            "energy_yield": 1502.4841484427254,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -25861,7 +25861,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2055.049776063807,
+            "energy_yield": 1900.0617991556248,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -25872,7 +25872,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1448.7244115459612,
+            "energy_yield": 1333.9073653323749,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -25883,7 +25883,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1865.846692741553,
+            "energy_yield": 1691.6584940409537,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -25894,7 +25894,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1820.7500469675683,
+            "energy_yield": 1681.712313152011,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -25905,7 +25905,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1619.4155461920927,
+            "energy_yield": 1501.6359381348616,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -25916,7 +25916,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1915.2104767580304,
+            "energy_yield": 1777.7192423579563,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -25927,7 +25927,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1683.5553276955116,
+            "energy_yield": 1571.3334247355317,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -25938,20 +25938,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1748.590157373351,
+            "energy_yield": 1578.3530807974687,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2405.4519427257824,
+            "energy_yield": 2256.4660849791253,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -25960,7 +25960,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1782.1995707901845,
+            "energy_yield": 1625.9374608097,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -25971,7 +25971,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1954.1169630798768,
+            "energy_yield": 1875.2787324095568,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -25982,7 +25982,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1974.131031076506,
+            "energy_yield": 1922.1340259390436,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -25993,7 +25993,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1920.2402512961783,
+            "energy_yield": 1855.4418634822882,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -26006,20 +26006,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1984.8320397340492,
+            "energy_yield": 1909.7722932273864,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1861.4113954586837,
+            "energy_yield": 1775.3746393709898,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -26028,7 +26028,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1775.818003335046,
+            "energy_yield": 1673.5778022667146,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -26039,7 +26039,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1950.6808975533,
+            "energy_yield": 1831.1536054082028,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -26050,7 +26050,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1960.490526798622,
+            "energy_yield": 1855.0215761438685,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -26061,7 +26061,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2282.2227640779693,
+            "energy_yield": 2194.7903166432284,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -26072,20 +26072,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1825.890405363864,
+            "energy_yield": 1731.4839295925806,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1738.9165581664836,
+            "energy_yield": 1642.700898592423,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -26094,7 +26094,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2355.37606690144,
+            "energy_yield": 2266.372838787915,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -26105,7 +26105,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1756.2307809690458,
+            "energy_yield": 1625.5207637606788,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -26116,7 +26116,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1903.0744237159072,
+            "energy_yield": 1806.5386673946145,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -26127,7 +26127,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1741.362297317834,
+            "energy_yield": 1669.102565527379,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -26138,7 +26138,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1625.0838371601792,
+            "energy_yield": 1545.5274141831342,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -26149,7 +26149,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1806.872066214866,
+            "energy_yield": 1709.5605066981109,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -26160,7 +26160,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1739.261267141601,
+            "energy_yield": 1676.4274985023835,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -26171,7 +26171,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1713.0413904249976,
+            "energy_yield": 1620.2471696542402,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -26182,7 +26182,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1879.7555437492615,
+            "energy_yield": 1744.7082936036838,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -26193,7 +26193,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2029.4967114309245,
+            "energy_yield": 1919.0399210133817,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -26204,7 +26204,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1663.2719210196972,
+            "energy_yield": 1541.328177804237,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -26215,7 +26215,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2038.999097277158,
+            "energy_yield": 2012.5982534431885,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -26226,7 +26226,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1681.5376262138816,
+            "energy_yield": 1559.2016646429365,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -26237,20 +26237,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1658.837257082691,
+            "energy_yield": 1576.7965450441814,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1572.7387055685926,
+            "energy_yield": 1492.2699635044376,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -26259,7 +26259,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1923.2801769359803,
+            "energy_yield": 1872.2339368945281,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -26270,7 +26270,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1790.4307114198568,
+            "energy_yield": 1695.0773010089863,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -26281,7 +26281,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1656.4646274641348,
+            "energy_yield": 1542.17675059797,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -26292,7 +26292,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 951.5854436946541,
+            "energy_yield": 863.5806752120966,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -26303,7 +26303,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1977.9731659457232,
+            "energy_yield": 1869.1665602723128,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -26314,7 +26314,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2154.292785721109,
+            "energy_yield": 2168.715290050458,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -26325,7 +26325,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1798.0199703874669,
+            "energy_yield": 1698.288848241095,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -26336,7 +26336,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2319.3668228192214,
+            "energy_yield": 2220.3111125423484,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -26347,7 +26347,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1713.6626695215516,
+            "energy_yield": 1630.687471280781,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -26358,7 +26358,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1715.248857631201,
+            "energy_yield": 1605.8526666329476,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -26369,7 +26369,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1851.5343575788104,
+            "energy_yield": 1780.8875713914508,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -26380,7 +26380,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1835.0007133702975,
+            "energy_yield": 1757.609415923579,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -26391,7 +26391,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1848.5602790007877,
+            "energy_yield": 1794.9324439165089,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -26402,7 +26402,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1561.325221018068,
+            "energy_yield": 1489.5391249882894,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -26413,7 +26413,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1975.438392690835,
+            "energy_yield": 1856.6585403915742,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -26424,7 +26424,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1419.0595572042482,
+            "energy_yield": 1325.1413932564733,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -26435,7 +26435,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1808.1831078934817,
+            "energy_yield": 1669.186407168961,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -26446,7 +26446,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1763.006022830847,
+            "energy_yield": 1655.6795715086525,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -26457,7 +26457,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1578.4627756995176,
+            "energy_yield": 1483.492397702857,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -26468,7 +26468,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1853.5305754108113,
+            "energy_yield": 1749.0298722684004,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -26479,7 +26479,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1650.7694511040897,
+            "energy_yield": 1562.2010643464696,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -26490,20 +26490,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1702.2705815162096,
+            "energy_yield": 1562.730421425179,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 2309.4641484993963,
+            "energy_yield": 2204.0280160544376,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -26512,7 +26512,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1727.4582778762283,
+            "energy_yield": 1604.583278425419,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -26523,7 +26523,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1902.7543621380441,
+            "energy_yield": 1850.7724010432396,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -26534,7 +26534,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1922.1251385393452,
+            "energy_yield": 1887.5012573901456,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -26545,7 +26545,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 17.5,
-            "energy_yield": 1871.8126861176095,
+            "energy_yield": 1830.7380235264213,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -26564,7 +26564,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -26573,7 +26573,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1482.6563917342116,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -26630,7 +26630,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -26639,7 +26639,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1364.8703867854697,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -26795,7 +26795,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -26804,7 +26804,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1249.7668362343559,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -27048,7 +27048,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -27057,7 +27057,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1792.428701679645,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -27116,7 +27116,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -27125,7 +27125,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1479.6560924505684,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -27182,7 +27182,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -27191,7 +27191,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1362.242006625151,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -27347,7 +27347,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -27356,7 +27356,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1250.0610720333784,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -27600,7 +27600,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -27609,7 +27609,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1784.8312993882275,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -27668,7 +27668,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -27677,7 +27677,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1467.9045726439672,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -27734,7 +27734,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -27743,7 +27743,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1349.8782795959642,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -27899,7 +27899,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -27908,7 +27908,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1243.2532017101203,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -28152,7 +28152,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -28161,7 +28161,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1762.0347753777162,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -28222,7 +28222,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -28231,7 +28231,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1494.138491133453,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -28288,7 +28288,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -28297,7 +28297,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1372.9062716033693,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -28453,7 +28453,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -28462,7 +28462,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1261.3179939975291,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -28706,7 +28706,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -28715,7 +28715,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1808.2136716013324,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -28774,7 +28774,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -28783,7 +28783,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1489.6831155758605,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -28840,7 +28840,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -28849,7 +28849,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1368.8041727774746,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -29005,7 +29005,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -29014,7 +29014,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1260.53537901079,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -29258,7 +29258,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -29267,7 +29267,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1797.8098424251784,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -29326,7 +29326,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -29335,7 +29335,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1475.7014524665462,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -29392,7 +29392,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -29401,7 +29401,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1354.7526310143562,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -29557,7 +29557,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -29566,7 +29566,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1251.579729186553,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -29810,7 +29810,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 19.4,
             "cost_back_layer": 3,
@@ -29819,7 +29819,7 @@ var preset_tree = {
             "efficiency": 17.5,
             "energy_yield": 1771.6376824888544,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -29884,7 +29884,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -29893,7 +29893,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1573.3720476515248,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -29950,7 +29950,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -29959,7 +29959,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1479.9796700428622,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -30115,7 +30115,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -30124,7 +30124,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1326.7959312426337,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -30368,7 +30368,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -30377,7 +30377,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1930.7593241994025,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -30436,7 +30436,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -30445,7 +30445,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1552.5579751081186,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -30502,7 +30502,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -30511,7 +30511,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1455.8495317812553,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -30667,7 +30667,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -30676,7 +30676,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1317.976207227789,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -30920,7 +30920,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -30929,7 +30929,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1900.7936265669573,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -30988,7 +30988,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -30997,7 +30997,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1525.5467529611428,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -31054,7 +31054,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -31063,7 +31063,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1426.7129665828165,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -31219,7 +31219,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -31228,7 +31228,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1300.229812044448,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -31472,7 +31472,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -31481,7 +31481,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1855.1351373099885,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -31538,20 +31538,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2113.706181362988,
+            "energy_yield": 1962.9791364942269,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1962.9279165140988,
+            "energy_yield": 1818.3958541540753,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -31560,7 +31560,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1874.321202951223,
+            "energy_yield": 1717.5997960850507,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -31571,7 +31571,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2087.971747918312,
+            "energy_yield": 1890.8487086892455,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -31582,7 +31582,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2079.3679075337423,
+            "energy_yield": 1912.3639247419726,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -31593,7 +31593,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2499.9804387394242,
+            "energy_yield": 2308.705330382966,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -31604,20 +31604,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1941.0954908466358,
+            "energy_yield": 1783.648167934603,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1856.0085072771813,
+            "energy_yield": 1687.931337442499,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -31626,7 +31626,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2551.1041031953946,
+            "energy_yield": 2378.040971296508,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -31637,7 +31637,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1866.727703723177,
+            "energy_yield": 1671.4778698440614,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -31648,7 +31648,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2027.6331396968744,
+            "energy_yield": 1867.7272320684217,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -31659,7 +31659,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1823.304709217326,
+            "energy_yield": 1701.4004468647518,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -31670,7 +31670,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1717.1789338673636,
+            "energy_yield": 1590.754573632857,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -31681,7 +31681,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1879.4407676343371,
+            "energy_yield": 1736.5075531808043,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -31692,7 +31692,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1820.2039006213852,
+            "energy_yield": 1709.371617503631,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -31703,7 +31703,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1796.1253085021187,
+            "energy_yield": 1656.1811141107223,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -31714,7 +31714,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1995.3315898508574,
+            "energy_yield": 1791.5100416322477,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -31725,7 +31725,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2189.5523872464446,
+            "energy_yield": 1989.9386082759638,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -31736,7 +31736,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1727.991488604177,
+            "energy_yield": 1565.396999734298,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -31747,7 +31747,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2138.169305335042,
+            "energy_yield": 2073.1389936814357,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -31758,7 +31758,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1749.3376757450771,
+            "energy_yield": 1584.5172627022405,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -31769,20 +31769,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1739.492700370559,
+            "energy_yield": 1613.405005520023,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1635.4730501801541,
+            "energy_yield": 1519.8084603057882,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -31791,7 +31791,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2025.8775774703563,
+            "energy_yield": 1921.8167732640627,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -31802,7 +31802,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1883.2258394141472,
+            "energy_yield": 1732.6781385948432,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -31813,7 +31813,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1716.5615119305266,
+            "energy_yield": 1564.4230290442385,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -31824,7 +31824,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 984.199342564289,
+            "energy_yield": 871.6559438321796,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -31835,7 +31835,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2109.806235266921,
+            "energy_yield": 1925.0132739492628,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -31846,7 +31846,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2268.626644340369,
+            "energy_yield": 2288.4163679276985,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -31857,7 +31857,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1893.645565949414,
+            "energy_yield": 1740.593182527442,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -31868,7 +31868,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2454.024978928694,
+            "energy_yield": 2293.8888624017827,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -31879,7 +31879,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1802.3805487543434,
+            "energy_yield": 1672.5818948565327,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -31890,7 +31890,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1804.746572570504,
+            "energy_yield": 1640.7741896523116,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -31901,7 +31901,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1942.667637452601,
+            "energy_yield": 1816.459219694294,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -31912,7 +31912,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1897.9054845606508,
+            "energy_yield": 1783.3174922840951,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -31923,7 +31923,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1925.5766709938478,
+            "energy_yield": 1828.3518643222528,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -31934,7 +31934,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1604.071848447222,
+            "energy_yield": 1510.9031110551202,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -31945,7 +31945,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2144.289128553052,
+            "energy_yield": 1936.3412993360682,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -31956,7 +31956,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1458.529133618255,
+            "energy_yield": 1342.2461322672386,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -31967,7 +31967,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1913.8865544655848,
+            "energy_yield": 1709.1385003201854,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -31978,7 +31978,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1872.6293900269727,
+            "energy_yield": 1700.3117504320226,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -31989,7 +31989,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1651.661476139789,
+            "energy_yield": 1514.1171217246363,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -32000,7 +32000,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1967.6598715951739,
+            "energy_yield": 1796.7070028779956,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -32011,7 +32011,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1699.85056755383,
+            "energy_yield": 1578.6597224080629,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -32022,20 +32022,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1777.4637786017738,
+            "energy_yield": 1590.6789873029993,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2480.744682257427,
+            "energy_yield": 2290.217316864589,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -32044,7 +32044,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1830.5600489121946,
+            "energy_yield": 1640.8507643112255,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -32055,7 +32055,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1997.4012136716085,
+            "energy_yield": 1890.6733694740828,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -32066,7 +32066,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2021.5884238448948,
+            "energy_yield": 1939.1574694687115,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -32077,7 +32077,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1960.3901370524381,
+            "energy_yield": 1872.7780105745755,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -32090,20 +32090,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2051.8677861025776,
+            "energy_yield": 1953.5293896754804,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1914.9434821316324,
+            "energy_yield": 1809.893497226123,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -32112,7 +32112,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1826.0132269435335,
+            "energy_yield": 1705.247054956156,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -32123,7 +32123,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2024.3608069150398,
+            "energy_yield": 1876.973137089201,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -32134,7 +32134,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2030.6718326723444,
+            "energy_yield": 1902.562849858386,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -32145,7 +32145,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2387.546412746467,
+            "energy_yield": 2274.418641903833,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -32156,20 +32156,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1884.3864111420226,
+            "energy_yield": 1769.9186315861737,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1798.4104640958583,
+            "energy_yield": 1679.8209685598288,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -32178,7 +32178,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2462.2921049629567,
+            "energy_yield": 2343.8523909335854,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -32189,7 +32189,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1813.4645885789625,
+            "energy_yield": 1663.7636289260447,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -32200,7 +32200,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1972.37243391958,
+            "energy_yield": 1855.4514678966727,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -32211,7 +32211,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1787.5799687062581,
+            "energy_yield": 1696.9606495232326,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -32222,7 +32222,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1673.0396124455253,
+            "energy_yield": 1581.4076411160625,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -32233,7 +32233,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1851.3694618944594,
+            "energy_yield": 1734.1500945376479,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -32244,7 +32244,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1783.4656100674604,
+            "energy_yield": 1704.1269659384272,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -32255,7 +32255,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1759.627817440182,
+            "energy_yield": 1648.643258916061,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -32266,7 +32266,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1943.3963464778121,
+            "energy_yield": 1782.4299067889715,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -32277,7 +32277,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2111.646699462917,
+            "energy_yield": 1973.8158341761437,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -32288,7 +32288,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1704.6313668589505,
+            "energy_yield": 1564.815435342333,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -32299,7 +32299,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2094.1514205073117,
+            "energy_yield": 2060.855265855547,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -32310,7 +32310,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1724.6815339825316,
+            "energy_yield": 1582.873920922054,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -32321,20 +32321,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1704.3019092787051,
+            "energy_yield": 1607.337572166937,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1611.9857566402288,
+            "energy_yield": 1517.5453801698761,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -32343,7 +32343,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1977.5344060513949,
+            "energy_yield": 1911.3344238436937,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -32354,7 +32354,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1841.6188574528658,
+            "energy_yield": 1726.465623851858,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -32365,7 +32365,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1694.549133980247,
+            "energy_yield": 1563.7206179292402,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -32376,7 +32376,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 970.6190365834498,
+            "energy_yield": 873.1793364444977,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -32387,7 +32387,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2048.824729105818,
+            "energy_yield": 1915.1438405835443,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -32398,7 +32398,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2221.2121666158287,
+            "energy_yield": 2246.5539602426393,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -32409,7 +32409,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1849.6319211754492,
+            "energy_yield": 1730.9088234852848,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -32420,7 +32420,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2402.9109488762133,
+            "energy_yield": 2278.3489064165824,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -32431,7 +32431,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1763.301131505943,
+            "energy_yield": 1664.7269870922166,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -32442,7 +32442,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1765.504881592573,
+            "energy_yield": 1635.4251492411504,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -32453,7 +32453,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1903.9770398989397,
+            "energy_yield": 1811.3542105377107,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -32464,7 +32464,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1875.0293540493033,
+            "energy_yield": 1781.0937137099659,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -32475,7 +32475,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1893.5995232657272,
+            "energy_yield": 1823.6220451148868,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -32486,7 +32486,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1597.1839054663603,
+            "energy_yield": 1511.3144273438054,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -32497,7 +32497,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2055.049776063807,
+            "energy_yield": 1912.857264984506,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -32508,7 +32508,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1448.7244115459612,
+            "energy_yield": 1342.971800916798,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -32519,7 +32519,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1865.846692741553,
+            "energy_yield": 1703.5089095051126,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -32530,7 +32530,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1820.7500469675683,
+            "energy_yield": 1691.5303979807043,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -32541,7 +32541,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1619.4155461920927,
+            "energy_yield": 1510.7617480840713,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -32552,7 +32552,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1915.2104767580304,
+            "energy_yield": 1787.7026832125457,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -32563,7 +32563,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1683.5553276955116,
+            "energy_yield": 1578.9790915069088,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -32574,20 +32574,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1748.590157373351,
+            "energy_yield": 1588.74736538754,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2405.4519427257824,
+            "energy_yield": 2269.9923326128587,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -32596,7 +32596,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1782.1995707901845,
+            "energy_yield": 1637.1979244430331,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -32607,7 +32607,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1954.1169630798768,
+            "energy_yield": 1884.41413266581,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -32618,7 +32618,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1974.131031076506,
+            "energy_yield": 1930.3596804291344,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -32629,7 +32629,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1920.2402512961783,
+            "energy_yield": 1865.2221718758797,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -32642,20 +32642,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1984.8320397340492,
+            "energy_yield": 1919.6762084589477,
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1861.4113954586837,
+            "energy_yield": 1784.822134647619,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -32664,7 +32664,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1775.818003335046,
+            "energy_yield": 1681.8796598633226,
             "degradation_rate": 0.7,
             "state": "MD"
           },
@@ -32675,7 +32675,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1950.6808975533,
+            "energy_yield": 1842.9771122426039,
             "degradation_rate": 0.7,
             "state": "NE"
           },
@@ -32686,7 +32686,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1960.490526798622,
+            "energy_yield": 1867.1872324626308,
             "degradation_rate": 0.7,
             "state": "UT"
           },
@@ -32697,7 +32697,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2282.2227640779693,
+            "energy_yield": 2209.6286370861226,
             "degradation_rate": 0.7,
             "state": "NM"
           },
@@ -32708,20 +32708,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1825.890405363864,
+            "energy_yield": 1740.5104146508565,
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1738.9165581664836,
+            "energy_yield": 1651.9639361040843,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -32730,7 +32730,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2355.37606690144,
+            "energy_yield": 2280.883317134698,
             "degradation_rate": 0.7,
             "state": "CA"
           },
@@ -32741,7 +32741,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1756.2307809690458,
+            "energy_yield": 1637.113841595516,
             "degradation_rate": 0.7,
             "state": "MT"
           },
@@ -32752,7 +32752,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1903.0744237159072,
+            "energy_yield": 1817.9136972918259,
             "degradation_rate": 0.7,
             "state": "ID"
           },
@@ -32763,7 +32763,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1741.362297317834,
+            "energy_yield": 1678.1493128436823,
             "degradation_rate": 0.7,
             "state": "KY"
           },
@@ -32774,7 +32774,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1625.0838371601792,
+            "energy_yield": 1555.1440184829585,
             "degradation_rate": 0.7,
             "state": "MI"
           },
@@ -32785,7 +32785,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1806.872066214866,
+            "energy_yield": 1718.1754811021185,
             "degradation_rate": 0.7,
             "state": "VA"
           },
@@ -32796,7 +32796,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1739.261267141601,
+            "energy_yield": 1685.163990487856,
             "degradation_rate": 0.7,
             "state": "TN"
           },
@@ -32807,7 +32807,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1713.0413904249976,
+            "energy_yield": 1628.6256860558992,
             "degradation_rate": 0.7,
             "state": "PA"
           },
@@ -32818,7 +32818,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1879.7555437492615,
+            "energy_yield": 1756.8174383220867,
             "degradation_rate": 0.7,
             "state": "SD"
           },
@@ -32829,7 +32829,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2029.4967114309245,
+            "energy_yield": 1930.6732130510586,
             "degradation_rate": 0.7,
             "state": "CO"
           },
@@ -32840,7 +32840,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1663.2719210196972,
+            "energy_yield": 1551.0448482459287,
             "degradation_rate": 0.7,
             "state": "NH"
           },
@@ -32851,7 +32851,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2038.999097277158,
+            "energy_yield": 2021.8023841065956,
             "degradation_rate": 0.7,
             "state": "FL"
           },
@@ -32862,7 +32862,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1681.5376262138816,
+            "energy_yield": 1568.095230967067,
             "degradation_rate": 0.7,
             "state": "MA"
           },
@@ -32873,20 +32873,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1658.837257082691,
+            "energy_yield": 1585.3226149554516,
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1572.7387055685926,
+            "energy_yield": 1499.7849060160347,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -32895,7 +32895,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1923.2801769359803,
+            "energy_yield": 1880.7719618239266,
             "degradation_rate": 0.7,
             "state": "GA"
           },
@@ -32906,7 +32906,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1790.4307114198568,
+            "energy_yield": 1703.8056474623772,
             "degradation_rate": 0.7,
             "state": "IL"
           },
@@ -32917,7 +32917,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1656.4646274641348,
+            "energy_yield": 1550.4602498117038,
             "degradation_rate": 0.7,
             "state": "CT"
           },
@@ -32928,7 +32928,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 951.5854436946541,
+            "energy_yield": 869.9142012881902,
             "degradation_rate": 0.7,
             "state": "AK"
           },
@@ -32939,7 +32939,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1977.9731659457232,
+            "energy_yield": 1880.6557342738,
             "degradation_rate": 0.7,
             "state": "KS"
           },
@@ -32950,7 +32950,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2154.292785721109,
+            "energy_yield": 2181.0525843542778,
             "degradation_rate": 0.7,
             "state": "HI"
           },
@@ -32961,7 +32961,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1798.0199703874669,
+            "energy_yield": 1706.6346373389779,
             "degradation_rate": 0.7,
             "state": "DE"
           },
@@ -32972,7 +32972,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2319.3668228192214,
+            "energy_yield": 2231.5699536504776,
             "degradation_rate": 0.7,
             "state": "AZ"
           },
@@ -32983,7 +32983,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1713.6626695215516,
+            "energy_yield": 1639.9008768472386,
             "degradation_rate": 0.7,
             "state": "IN"
           },
@@ -32994,7 +32994,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1715.248857631201,
+            "energy_yield": 1615.0647723755765,
             "degradation_rate": 0.7,
             "state": "RI"
           },
@@ -33005,7 +33005,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1851.5343575788104,
+            "energy_yield": 1789.6171486203668,
             "degradation_rate": 0.7,
             "state": "SC"
           },
@@ -33016,7 +33016,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1835.0007133702975,
+            "energy_yield": 1767.0143889860003,
             "degradation_rate": 0.7,
             "state": "AR"
           },
@@ -33027,7 +33027,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1848.5602790007877,
+            "energy_yield": 1804.9561901736715,
             "degradation_rate": 0.7,
             "state": "MS"
           },
@@ -33038,7 +33038,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1561.325221018068,
+            "energy_yield": 1498.3619101065833,
             "degradation_rate": 0.7,
             "state": "OR"
           },
@@ -33049,7 +33049,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1975.438392690835,
+            "energy_yield": 1869.4421610257723,
             "degradation_rate": 0.7,
             "state": "WY"
           },
@@ -33060,7 +33060,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1419.0595572042482,
+            "energy_yield": 1334.1952747451821,
             "degradation_rate": 0.7,
             "state": "WA"
           },
@@ -33071,7 +33071,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1808.1831078934817,
+            "energy_yield": 1681.028407915022,
             "degradation_rate": 0.7,
             "state": "ND"
           },
@@ -33082,7 +33082,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1763.006022830847,
+            "energy_yield": 1665.4896912968682,
             "degradation_rate": 0.7,
             "state": "IA"
           },
@@ -33093,7 +33093,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1578.4627756995176,
+            "energy_yield": 1492.610212327382,
             "degradation_rate": 0.7,
             "state": "VT"
           },
@@ -33104,7 +33104,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1853.5305754108113,
+            "energy_yield": 1759.0054158396554,
             "degradation_rate": 0.7,
             "state": "MO"
           },
@@ -33115,7 +33115,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1650.7694511040897,
+            "energy_yield": 1569.8398709218695,
             "degradation_rate": 0.7,
             "state": "WV"
           },
@@ -33126,20 +33126,20 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1702.2705815162096,
+            "energy_yield": 1573.1155756430855,
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 2309.4641484993963,
+            "energy_yield": 2217.545333688274,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -33148,7 +33148,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1727.4582778762283,
+            "energy_yield": 1615.8343874862594,
             "degradation_rate": 0.7,
             "state": "MN"
           },
@@ -33159,7 +33159,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1902.7543621380441,
+            "energy_yield": 1859.8986961885878,
             "degradation_rate": 0.7,
             "state": "AL"
           },
@@ -33170,7 +33170,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1922.1251385393452,
+            "energy_yield": 1895.7214750418336,
             "degradation_rate": 0.7,
             "state": "TX"
           },
@@ -33181,7 +33181,7 @@ var preset_tree = {
             "cost_noncell": 13.6,
             "cost_om": 17.46,
             "efficiency": 18.0,
-            "energy_yield": 1871.8126861176095,
+            "energy_yield": 1840.5104776945573,
             "degradation_rate": 0.7,
             "state": "LA"
           }
@@ -33200,7 +33200,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -33209,7 +33209,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1482.6563917342116,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -33266,7 +33266,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -33275,7 +33275,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1364.8703867854697,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -33431,7 +33431,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -33440,7 +33440,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1249.7668362343559,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -33684,7 +33684,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -33693,7 +33693,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1792.428701679645,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -33752,7 +33752,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -33761,7 +33761,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1479.6560924505684,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -33818,7 +33818,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -33827,7 +33827,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1362.242006625151,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -33983,7 +33983,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -33992,7 +33992,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1250.0610720333784,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -34236,7 +34236,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -34245,7 +34245,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1784.8312993882275,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -34304,7 +34304,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -34313,7 +34313,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1467.9045726439672,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -34370,7 +34370,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -34379,7 +34379,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1349.8782795959642,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -34535,7 +34535,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -34544,7 +34544,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1243.2532017101203,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -34788,7 +34788,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -34797,7 +34797,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1762.0347753777162,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -34858,7 +34858,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -34867,7 +34867,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1494.138491133453,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -34924,7 +34924,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -34933,7 +34933,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1372.9062716033693,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -35089,7 +35089,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -35098,7 +35098,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1261.3179939975291,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -35342,7 +35342,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -35351,7 +35351,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1808.2136716013324,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -35410,7 +35410,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -35419,7 +35419,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1489.6831155758605,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -35476,7 +35476,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -35485,7 +35485,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1368.8041727774746,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -35641,7 +35641,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -35650,7 +35650,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1260.53537901079,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -35894,7 +35894,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -35903,7 +35903,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1797.8098424251784,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,
@@ -35962,7 +35962,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OK"
           },
-          "USA NV Las Vegas": {
+          "USA NC Greensboro": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -35971,7 +35971,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1475.7014524665462,
             "degradation_rate": 0.7,
-            "state": "NV"
+            "state": "NC"
           },
           "USA MD Baltimore": {
             "cost_front_layer": 3.5,
@@ -36028,7 +36028,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "NJ"
           },
-          "USA NY Rochester": {
+          "USA WI Madison": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -36037,7 +36037,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1354.7526310143562,
             "degradation_rate": 0.7,
-            "state": "NY"
+            "state": "WI"
           },
           "USA CA Daggett": {
             "cost_front_layer": 3.5,
@@ -36193,7 +36193,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "OH"
           },
-          "USA WI Madison": {
+          "USA NY Rochester": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -36202,7 +36202,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1251.579729186553,
             "degradation_rate": 0.7,
-            "state": "WI"
+            "state": "NY"
           },
           "USA GA Albany": {
             "cost_front_layer": 3.5,
@@ -36446,7 +36446,7 @@ var preset_tree = {
             "degradation_rate": 0.7,
             "state": "ME"
           },
-          "USA NC Greensboro": {
+          "USA NV Las Vegas": {
             "cost_front_layer": 3.5,
             "cost_cell": 21.3,
             "cost_back_layer": 3,
@@ -36455,7 +36455,7 @@ var preset_tree = {
             "efficiency": 18.0,
             "energy_yield": 1771.6376824888544,
             "degradation_rate": 0.7,
-            "state": "NC"
+            "state": "NV"
           },
           "USA MN Minneapolis": {
             "cost_front_layer": 3.5,

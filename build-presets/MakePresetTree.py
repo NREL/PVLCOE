@@ -68,7 +68,7 @@ json_file.close()
 json_model = pvwatts.wrap(pv_dat)
 
 # convert weather files into format that can be used by PySAM
-weather_folder = "Path(weather_files)"
+weather_folder = "weather_files"
 weather_files = glob.glob(weather_folder + "/*.csv")
 weather_data = [tools.SAM_CSV_to_solar_data(f) for f in weather_files]
 
@@ -76,9 +76,15 @@ weather_data = [tools.SAM_CSV_to_solar_data(f) for f in weather_files]
 tilt = {'fixed tilt, utility scale': 33, 'single-axis tracked, utility scale': 0,
         'roof-mounted, residential scale': 25, 'roof-mounted, commercial scale': 10, 'fixed tilt, commercial scale': 10}
 
-# 0: fixed rack, 1: fixed roof, 2: 1 axis; needed for running PySAM
-array_type = {'fixed tilt, utility scale': 0, 'single-axis tracked, utility scale': 2,
-              'roof-mounted, residential scale': 1, 'roof-mounted, commercial scale': 1, 'fixed tilt, commercial scale': 0}
+# 0: fixed rack, 1: fixed roof, 2: 1 axis, 3: backtracked; needed for running PySAM
+# backtracking for the silicon single-axis tracked systems but not for CdTe 
+array_type = {'mono-Si': {'fixed tilt, utility scale': 0, 'single-axis tracked, utility scale': 3,
+                          'roof-mounted, residential scale': 1, 'roof-mounted, commercial scale': 1, 'fixed tilt, commercial scale': 0}, 
+              'multi-Si': {'fixed tilt, utility scale': 0, 'single-axis tracked, utility scale': 3,
+                          'roof-mounted, residential scale': 1, 'roof-mounted, commercial scale': 1, 'fixed tilt, commercial scale': 0}, 
+              'CdTe': {'fixed tilt, utility scale': 0, 'single-axis tracked, utility scale': 2,
+                          'roof-mounted, residential scale': 1, 'roof-mounted, commercial scale': 1, 'fixed tilt, commercial scale': 0} }
+
 
 # between 0 and 1, needed for running PySAM
 ground_coverage_ratio = {'fixed tilt, utility scale': 0.44, 'single-axis tracked, utility scale': 0.33,
@@ -106,7 +112,7 @@ for cell_technology in cell_technologies:
 
                     # set specific inputs of PySAM model based on system type and ILR
                     json_model.SystemDesign.gcr = ground_coverage_ratio[system_type]
-                    json_model.SystemDesign.array_type = array_type[system_type]
+                    json_model.SystemDesign.array_type = array_type[cell_technology][system_type]
                     json_model.SystemDesign.tilt = tilt[system_type]
                     json_model.SystemDesign.dc_ac_ratio = ilr
 
