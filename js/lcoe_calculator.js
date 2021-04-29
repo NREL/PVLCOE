@@ -170,8 +170,7 @@ function update_slider(slider_name, value) {
   if (slider_name == 'baseline_service_life') {
     var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
     var max_year = 1 / degradation_rate + 0.5
-  
-   if (!(value < max_year.toFixed(0))) {
+   if (!isNaN(value) && !(value < max_year.toFixed(0))) { //!isNaN to avoid this condition when '-' inputted before negative number
      value = max_year.toFixed(0) // round to integer
 
      breakeven_active = true
@@ -191,7 +190,7 @@ function update_slider(slider_name, value) {
   if (slider_name == 'proposed_service_life') {
     var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
     var max_year = 1 / degradation_rate + 0.5
-    if (!(value < max_year.toFixed(0))) {
+    if (!isNaN(value) && !(value < max_year.toFixed(0))) {
       value = max_year.toFixed(0)
       breakeven_active = true
 
@@ -256,10 +255,14 @@ function update_slider(slider_name, value) {
   }
 
   // displays warning if non-integer service life
-  if ((slider_name == 'baseline_service_life' && (!Number.isInteger(value))) || (slider_name == 'baseline_service_life' && value >= SERVICE_LIFE_CAP)) {
+  if ((slider_name == 'baseline_service_life' && (!Number.isInteger(value))) || (slider_name == 'baseline_service_life' && value >= SERVICE_LIFE_CAP) || (slider_name == 'baseline_service_life' && value < 1)) {
 
      if (value > SERVICE_LIFE_CAP) { // set service life maximum at 1000 (calculator freezes if service life is too large)
        $('#baseline_service_life_text').val(SERVICE_LIFE_CAP)
+     }
+
+     if (value < 1) { // restrict to positive numbers
+       $('#baseline_service_life_text').val(1)
      }
 
      if (!breakeven_active) { // only display for non-break-even interaction
@@ -273,10 +276,14 @@ function update_slider(slider_name, value) {
      $('#baseline_service_life_text').tooltip('disable')
   }
 
-  if ((slider_name == 'proposed_service_life' && (!Number.isInteger(value))) || (slider_name == 'proposed_service_life' && value >= SERVICE_LIFE_CAP)) {
+  if ((slider_name == 'proposed_service_life' && (!Number.isInteger(value))) || (slider_name == 'proposed_service_life' && value >= SERVICE_LIFE_CAP) || (slider_name == 'proposed_service_life' && value < 1)) {
 
      if (value > SERVICE_LIFE_CAP) { // set service life maximum at 1000 (calculator freezes if service life is too large)
        $('#proposed_service_life_text').val(SERVICE_LIFE_CAP)
+     }
+
+     if (value < 1) { // restrict to positive numbers
+       $('#proposed_service_life_text').val(1)
      }
 
      if (!breakeven_active) {
