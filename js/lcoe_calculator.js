@@ -129,7 +129,7 @@ function update_slider(slider_name, value) {
     var max_degradation = 1 / (year - 0.5) * 100
 
    // checking equality
-   if (!(value < max_degradation)) {
+   if (!isNaN(value) && !(value < max_degradation)) {
 
      breakeven_active = true // indicates break-even
 
@@ -152,7 +152,7 @@ function update_slider(slider_name, value) {
     var year = parseFloat($('#'+key+'_service_life_text').val())
     var max_degradation = 1 / (year - 0.5) * 100
 
-    if (!(value < max_degradation)) {
+    if (!isNaN(value) && !(value < max_degradation)) { //!isNaN to avoid this condition when '-' inputted before negative number
       breakeven_active = true
       value = max_degradation
       $('#proposed_degradation_rate_text').val(max_degradation.toFixed(2))
@@ -226,14 +226,14 @@ function update_slider(slider_name, value) {
       document.getElementById('baseline_service_life').noUiSlider.updateOptions({
         padding: [0, SERVICE_LIFE_SLIDER_MAX-parseInt(max_year)]
       });
-	}
+    }
   }
   if (slider_name == 'proposed_degradation_rate') {
     if (degradation_rate > 0) {
       document.getElementById('proposed_service_life').noUiSlider.updateOptions({
         padding: [0, SERVICE_LIFE_SLIDER_MAX-parseInt(max_year)]
       });
-	}
+    }
   }
   if (slider_name == 'baseline_service_life') {
       document.getElementById('baseline_degradation_rate').noUiSlider.updateOptions({
@@ -254,7 +254,15 @@ function update_slider(slider_name, value) {
     $('#proposed_efficiency_text').val(EFFICIENCY_MAX)
   }
 
-  // displays warning if non-integer service life
+  // degradation rate lower bounded by zero
+  if (slider_name == 'baseline_degradation_rate' && (value < 0 || isNaN(value))) {
+    $('#baseline_degradation_rate_text').val(0)
+  }
+  if (slider_name == 'proposed_degradation_rate' && (value < 0 || isNaN(value))) {
+    $('#proposed_degradation_rate_text').val(0)
+  }
+
+  // displays warning if non-positive integer service life
   if ((slider_name == 'baseline_service_life' && (!Number.isInteger(value))) || (slider_name == 'baseline_service_life' && value >= SERVICE_LIFE_CAP) || (slider_name == 'baseline_service_life' && value < 1)) {
 
      if (value > SERVICE_LIFE_CAP) { // set service life maximum at 1000 (calculator freezes if service life is too large)
@@ -649,10 +657,12 @@ function break_even_degradation(key) {
     var year = parseFloat($('#'+key+'_service_life_text').val())
     var upper_bound = 1 / (year - 0.5)
 
-    new_value = brents_method(func_deg, -1e10, upper_bound, 0.0001, 1e-10, key)
+    new_value = brents_method(func_deg, 0, upper_bound, 0.0001, 1e-10, key)
 
     // Brent's method failed
-    if (new_value == -1) {
+    if (Math.abs(func_deg(0, key)) < Math.abs(func_year(upper_bound, key))) {
+      new_value = 0
+    } else {
       new_value = upper_bound
     }
     new_value *= 100
