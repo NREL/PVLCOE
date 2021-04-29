@@ -246,12 +246,14 @@ function update_slider(slider_name, value) {
       });
   } 
 
-  // efficiency capped at 100%
-  if (slider_name == 'baseline_efficiency' && value > EFFICIENCY_MAX) {
-    $('#baseline_efficiency_text').val(EFFICIENCY_MAX)
+  // efficiency bounded by 0% and 100%
+  if (slider_name == 'baseline_efficiency') {
+    if (value < 0 || isNaN(value)) $('#baseline_efficiency_text').val(0)
+    if (value > EFFICIENCY_MAX) $('#baseline_efficiency_text').val(EFFICIENCY_MAX)
   }
-  if (slider_name == 'proposed_efficiency' && value > EFFICIENCY_MAX) {
-    $('#proposed_efficiency_text').val(EFFICIENCY_MAX)
+  if (slider_name == 'proposed_efficiency') {
+    if (value < 0 || isNaN(value)) $('#proposed_efficiency_text').val(0)
+    if (value > EFFICIENCY_MAX) $('#proposed_efficiency_text').val(EFFICIENCY_MAX)
   }
 
   // degradation rate lower bounded by zero
@@ -260,6 +262,14 @@ function update_slider(slider_name, value) {
   }
   if (slider_name == 'proposed_degradation_rate' && (value < 0 || isNaN(value))) {
     $('#proposed_degradation_rate_text').val(0)
+  }
+
+  // energy yield lower bounded by zero
+  if (slider_name == 'baseline_energy_yield' && (value < 0 || isNaN(value))) {
+    $('#baseline_energy_yield_text').val(0)
+  }
+  if (slider_name == 'proposed_energy_yield' && (value < 0 || isNaN(value))) {
+    $('#proposed_energy_yield_text').val(0)
   }
 
   // displays warning if non-positive integer service life
