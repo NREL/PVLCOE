@@ -130,7 +130,6 @@ function update_slider(slider_name, value) {
 
    // checking equality
    if (!isNaN(value) && !(value < max_degradation)) {
-console.log('update')
      breakeven_active = true // indicates break-even
 
      value = max_degradation // restrict displayed value based on maximum
@@ -971,8 +970,8 @@ function match_LCOE(slider_name, number_name, key) {
       wanted_cost = (lcoe * energy_current) - later_cost 
       efficiency = (cost_bos_area + MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)) / (10 * (wanted_cost-cost_bos_power))
       new_value = efficiency
-console.log(new_value)
-      if (new_value < 0 || new_value > EFFICIENCY_MAX) {
+      if (new_value < 0 || new_value > EFFICIENCY_MAX) { // indicates break-even gives infeasible result
+        new_value = EFFICIENCY_MAX // correct to maximum
         break_even_infeasible(key + '_efficiency_text', 'efficiency');
       } 
     }
