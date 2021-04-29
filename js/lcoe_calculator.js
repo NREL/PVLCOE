@@ -130,7 +130,7 @@ function update_slider(slider_name, value) {
 
    // checking equality
    if (!isNaN(value) && !(value < max_degradation)) {
-
+console.log('update')
      breakeven_active = true // indicates break-even
 
      value = max_degradation // restrict displayed value based on maximum
@@ -654,6 +654,20 @@ slider_setup(
   {'start': 0, 'min': 0, 'max': 10, 'step': 0.01, 'digits': 2}
 )
 
+// displays popover when break even result is outside feasible range
+// slider_name: the HTML id, e.g. "baseline_degradation_rate"
+// name: the generic input name, e.g. "degradation rate"
+function break_even_infeasible(slider_name, name) {
+
+  document.getElementById(slider_name).setAttribute('data-original-title', 'Break-even would require an infeasible ' + name + '.');
+
+   $('#'+slider_name).tooltip('enable')
+   $('#'+slider_name).tooltip('show')
+   setTimeout(function(){
+     $('#'+slider_name).tooltip('hide');
+   }, 3000);
+}
+
 /* function with calculations for break-even degradation rate
    key: baseline or proposed
 */
@@ -668,13 +682,22 @@ function break_even_degradation(key) {
     var upper_bound = 1 / (year - 0.5)
 
     new_value = brents_method(func_deg, 0, upper_bound, 0.0001, 1e-10, key)
+    var too_small = false;
 
     // Brent's method failed
-    if (Math.abs(func_deg(0, key)) < Math.abs(func_year(upper_bound, key))) {
-      new_value = 0
-    } else {
-      new_value = upper_bound
+    if (new_value == -1) {
+      if (Math.abs(func_deg(0, key)) < Math.abs(func_year(upper_bound, key))) {
+        too_small = true
+        new_value = 0
+      } else {
+        new_value = upper_bound
+      }
     }
+
+    if (too_small) {
+      break_even_infeasible(key + '_degradation_rate_text', 'degradation rate');
+    }
+
     new_value *= 100
     $('#'+key+'_degradation_rate_text').val(new_value)
     update_slider(key+'_degradation_rate', new_value)
@@ -833,7 +856,7 @@ function func_year(year, key) {
 function break_even_service_life(key) {
   $('#lcoe_proposed').tooltip('disable')
   $('#lcoe_baseline').tooltip('disable')
-  var break_even = false;
+  var brents_failed = false;
   var new_value = 0
   var degradation_rate = parseFloat($('#'+key+'_degradation_rate_text').val())/100.0
   var upper_bound = 1 / degradation_rate + 0.5
@@ -841,7 +864,7 @@ function break_even_service_life(key) {
 
   // Brent's method failed, determine if largest or smallest value should be displayed
   if (new_value == -1) {
-    break_even = true;
+    brents_failed = true;
     if (Math.abs(func_year(1, key)) < Math.abs(func_year(upper_bound, key))) {
       new_value = 1
     } else {
@@ -854,7 +877,7 @@ function break_even_service_life(key) {
   calculate()
 
   // show a tooltip with a warning for 3 seconds if LCOEs don't match for rounding reasons (and not because break-even failed)
-  if (!break_even) {
+  if (!brents_failed) {
     if ((document.getElementById('lcoe_proposed').innerHTML != document.getElementById('lcoe_baseline').innerHTML) && (key == 'proposed')) {
 
       document.getElementById('lcoe_proposed').setAttribute('data-original-title', 'Break-even result is approximate because service life has been rounded.');
@@ -947,14 +970,18 @@ function match_LCOE(slider_name, number_name, key) {
     } else if (slider_name == 'efficiency') {
       wanted_cost = (lcoe * energy_current) - later_cost 
       efficiency = (cost_bos_area + MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)) / (10 * (wanted_cost-cost_bos_power))
-      new_value = efficiency 
+      new_value = efficiency
+console.log(new_value)
+      if (new_value < 0 || new_value > EFFICIENCY_MAX) {
+        break_even_infeasible(key + '_efficiency_text', 'efficiency');
+      } 
     }
   
     var cost_module = MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency)
     document.getElementById('module_cost_per_watt_'+key).innerHTML = cost_module.toFixed(2)
     document.getElementById('system_cost_per_watt_'+key).innerHTML = (cost_bos_power + cost_bos_area/(10.0*efficiency) + cost_module).toFixed(2)
 
-    if (new_value < 1e-7) new_value = 0 // handle imprecision
+    if (Math.abs(new_value) < 1e-7) new_value = 0 // handle imprecision
   
     $('#'+key+'_'+slider_name+'_text').val(new_value)
     update_slider(key+'_'+slider_name, new_value)
@@ -997,6 +1024,9 @@ function break_even_energy_yield(key) {
     var energy_deg_mult = (1 / Math.pow(1 + discount_rate, year - 1) - 1 - discount_rate) / Math.pow(discount_rate, 2) - ((0.5 - year) / Math.pow(1 + discount_rate, year) - 0.5) / discount_rate
 
     var new_value = energy_wanted / (energy_mult + degradation_rate * energy_deg_mult) * 1000
+    if (new_value < 0) {
+      break_even_infeasible(key + '_energy_yield_text', 'energy yield');
+    }
 
     $('#'+key+'_energy_yield_text').val(new_value)
     update_slider(key+'_energy_yield', new_value)
