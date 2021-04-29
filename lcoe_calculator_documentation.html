@@ -102,7 +102,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       <h4>Financial</h4>
       <dl class='row'>
         <dt class='col-sm-3'>Discount rate</dt>
-        <dd class='col-sm-9'>The annual rate at which future costs and future energy production are discounted.</dd>
+        <dd class='col-sm-9'>The annual rate at which future costs and future energy production are discounted. Use the button to toggle between constrained&nbsp;<img src="link.svg" alt="picture of a chain"></img> and unconstrained&nbsp;<img src="broken_link.svg" alt="picture of a broken chain"></img>. When discount rates are constrained, changes to the baseline degradation rate are automatically copied to the proposed degradation rate, and vice-versa. This is the default setting. When discount rates are unconstrained, the baseline and proposed degradation rate can be changed independently.</dd>
       </dl>
       <h2>Calculation</h2>
       <p>The calculator performs a &ldquo;simple&rdquo; LCOE calculation. $$\text{LCOE}=\frac{\sum_{n=0}^{n_s}{\frac{c_n}{\left( 1 + d \right)^n}}}{\sum_{n=0}^{n_s}{\frac{e_n}{\left( 1 + d \right)^n}}}\text{, }$$ where \(c_n\) is the cost in year \(n\), \(d\) is discount rate, \(e_n\) is the energy produced in year \(n\), and \(n_s\) is the number of years in the system's service life.</p>
