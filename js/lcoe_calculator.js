@@ -105,7 +105,8 @@ function proposedToggle() {
 }
 
 /* update slider position based on number entered in input box */
-function update_slider(slider_name, value) { 
+// third parameter indicates if slider movement because of break-even
+function update_slider(slider_name, value, breakeven_active) { 
   $('#baseline_service_life_text').tooltip('hide')
   $('#proposed_service_life_text').tooltip('hide')
   $('#lcoe_proposed').tooltip('hide')
@@ -118,9 +119,6 @@ function update_slider(slider_name, value) {
 
   key = slider_name.substring(0, 8) // 'baseline' and 'proposed' are both 8 letters
 
-  // indicates if slider movement because of break-even button
-  var breakeven_active = false;
-
   // for break-even purposes, calculate the maximum values after the slider is moved to make sure calculation based on most recent values
   // the following four conditions handle the popups on service life and degradation
   if (slider_name == 'baseline_degradation_rate') {
@@ -130,7 +128,6 @@ function update_slider(slider_name, value) {
 
    // checking equality
    if (!isNaN(value) && !(value < max_degradation)) {
-     breakeven_active = true // indicates break-even
 
      value = max_degradation // restrict displayed value based on maximum
      $('#baseline_degradation_rate_text').val(max_degradation.toFixed(2))
@@ -152,7 +149,6 @@ function update_slider(slider_name, value) {
     var max_degradation = 1 / (year - 0.5) * 100
 
     if (!isNaN(value) && !(value < max_degradation)) { //!isNaN to avoid this condition when '-' inputted before negative number
-      breakeven_active = true
       value = max_degradation
       $('#proposed_degradation_rate_text').val(max_degradation.toFixed(2))
       document.getElementById('proposed_degradation_rate_text').setAttribute('data-original-title', 'Choose a shorter service life to enable a larger degradation rate.');
@@ -172,7 +168,6 @@ function update_slider(slider_name, value) {
    if (!isNaN(value) && !(value < max_year.toFixed(0))) { //!isNaN to avoid this condition when '-' inputted before negative number
      value = max_year.toFixed(0) // round to integer
 
-     breakeven_active = true
      $('#baseline_service_life_text').val(max_year.toFixed(0))
      document.getElementById('baseline_service_life_text').setAttribute('data-original-title', 'Choose a smaller degradation rate to enable a longer service life.');
 
@@ -191,7 +186,6 @@ function update_slider(slider_name, value) {
     var max_year = 1 / degradation_rate + 0.5
     if (!isNaN(value) && !(value < max_year.toFixed(0))) {
       value = max_year.toFixed(0)
-      breakeven_active = true
 
       $('#proposed_service_life_text').val(max_year.toFixed(0))
       document.getElementById('proposed_service_life_text').setAttribute('data-original-title', 'Choose a smaller degradation rate to enable a longer service life.');
@@ -249,26 +243,31 @@ function update_slider(slider_name, value) {
   if (slider_name == 'baseline_efficiency') {
     if (value < 0 || isNaN(value)) $('#baseline_efficiency_text').val(0)
     if (value > EFFICIENCY_MAX) $('#baseline_efficiency_text').val(EFFICIENCY_MAX)
+    if (!breakeven_active) $('#baseline_efficiency_text').tooltip('disable') 
   }
   if (slider_name == 'proposed_efficiency') {
     if (value < 0 || isNaN(value)) $('#proposed_efficiency_text').val(0)
     if (value > EFFICIENCY_MAX) $('#proposed_efficiency_text').val(EFFICIENCY_MAX)
+    if (!breakeven_active) $('#proposed_efficiency_text').tooltip('disable') 
   }
 
   // degradation rate lower bounded by zero
   if (slider_name == 'baseline_degradation_rate' && (value < 0 || isNaN(value))) {
     $('#baseline_degradation_rate_text').val(0)
+    if (!breakeven_active) $('#baseline_degradation_rate_text').tooltip('disable') 
   }
   if (slider_name == 'proposed_degradation_rate' && (value < 0 || isNaN(value))) {
-    $('#proposed_degradation_rate_text').val(0)
+    if (!breakeven_active) $('#proposed_degradation_rate_text').tooltip('disable') 
   }
 
   // energy yield lower bounded by zero
   if (slider_name == 'baseline_energy_yield' && (value < 0 || isNaN(value))) {
     $('#baseline_energy_yield_text').val(0)
+    if (!breakeven_active) $('#baseline_energy_yield_text').tooltip('disable') 
   }
   if (slider_name == 'proposed_energy_yield' && (value < 0 || isNaN(value))) {
     $('#proposed_energy_yield_text').val(0)
+    if (!breakeven_active) $('#proposed_energy_yield_text').tooltip('disable') 
   }
 
   // displays warning if non-positive integer service life
@@ -487,11 +486,11 @@ function slider_setup(slider_name, number_name, settings) {
 
     // if discount rate is linked, move baseline and proposed sliders together
     if (slider_name == 'baseline_discount_rate' && !document.getElementById('baselineLinkImage').src.includes('broken')) {
-      update_slider('proposed_discount_rate', number.value)
+      update_slider('proposed_discount_rate', number.value, false)
       $('#proposed_discount_rate_text').val(number.value)
     }
     if (slider_name == 'proposed_discount_rate' && !document.getElementById('proposedLinkImage').src.includes('broken')) {
-      update_slider('baseline_discount_rate', number.value)
+      update_slider('baseline_discount_rate', number.value, false)
       $('#baseline_discount_rate_text').val(number.value)
     }
 
@@ -500,7 +499,7 @@ function slider_setup(slider_name, number_name, settings) {
 
   // When the number changes, update the slider
   number.addEventListener('input', function(){
-    update_slider(slider_name, this.value);
+    update_slider(slider_name, this.value, false);
 
     // if discount rate is linked, update baseline and proposed input boxes together
     if (slider_name == 'baseline_discount_rate' && !document.getElementById('baselineLinkImage').src.includes('broken')) {
@@ -700,7 +699,7 @@ function break_even_degradation(key) {
 
     new_value *= 100
     $('#'+key+'_degradation_rate_text').val(new_value)
-    update_slider(key+'_degradation_rate', new_value)
+    update_slider(key+'_degradation_rate', new_value, true)
     calculate()
 
   }
@@ -758,7 +757,7 @@ function break_even_OM(key) {
     new_value *= 1000
     $('#'+key+'_cost_om_text').val((new_value))
   
-    update_slider(key+'_cost_om', new_value)
+    update_slider(key+'_cost_om', new_value, true)
     calculate()
   }
 
@@ -873,7 +872,7 @@ function break_even_service_life(key) {
   }
   new_value = new_value.toFixed(0)
   $('#'+key+'_service_life_text').val(new_value)
-  update_slider(key+'_service_life', new_value)
+  update_slider(key+'_service_life', new_value, true)
   calculate()
 
   // show a tooltip with a warning for 3 seconds if LCOEs don't match for rounding reasons (and not because break-even failed)
@@ -986,7 +985,7 @@ function match_LCOE(slider_name, number_name, key) {
     if (Math.abs(new_value) < 1e-7) new_value = 0 // handle imprecision
   
     $('#'+key+'_'+slider_name+'_text').val(new_value)
-    update_slider(key+'_'+slider_name, new_value)
+    update_slider(key+'_'+slider_name, new_value, true)
     calculate()
 
     var lcoe_proposed = document.getElementById('lcoe_proposed').innerHTML
@@ -1033,7 +1032,7 @@ function break_even_energy_yield(key) {
     }
 
     $('#'+key+'_energy_yield_text').val(new_value)
-    update_slider(key+'_energy_yield', new_value)
+    update_slider(key+'_energy_yield', new_value, true)
     calculate()
 
     var lcoe_proposed = document.getElementById('lcoe_proposed').innerHTML
