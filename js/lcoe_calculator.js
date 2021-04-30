@@ -678,23 +678,17 @@ function break_even_degradation(key) {
     var year = parseFloat($('#'+key+'_service_life_text').val())
     var upper_bound = 1 / (year - 0.5)
 
-    new_value = brents_method(func_deg, 0, upper_bound, 0.0001, 1e-10, key)
-    var too_small = false;
+    new_value = brents_method(func_deg, -1e10, 1e10, 0.0001, 1e-10, key)
 
-    // Brent's method failed
-    if (new_value == -1) {
-      if (Math.abs(func_deg(0, key)) < Math.abs(func_year(upper_bound, key))) {
-        too_small = true
-        new_value = 0
-      } else {
-        new_value = upper_bound
-      }
+    // corrections if result is out of bounds
+    if (new_value > upper_bound) {
+      new_value = upper_bound
     }
-
-    if (too_small) {
+    else if (new_value < 0) {
+      new_value = 0;
       break_even_infeasible(key + '_degradation_rate_text', 'degradation rate');
     } else {
-      $('#' + key + '_degradation_rate_text').tooltip('disable')      
+      $('#' + key + '_degradation_rate_text').tooltip('disable');
     }
 
     new_value *= 100
