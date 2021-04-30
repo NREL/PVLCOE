@@ -330,7 +330,7 @@ function filterPips(value) {
     return 0; // draw a small pip
   }
 
-  return -1; 
+  return -1; // do nothing
 }
 
 function pip_baseline_year(value) {
@@ -654,17 +654,16 @@ slider_setup(
 )
 
 // displays popover when break even result is outside feasible range
-// slider_name: the HTML id, e.g. "baseline_degradation_rate"
+// input_name: the HTML id, e.g. "baseline_degradation_rate_text"
 // name: the generic input name, e.g. "degradation rate"
-function break_even_infeasible(slider_name, name) {
+function break_even_infeasible(input_name, name) {
+  document.getElementById(input_name).setAttribute('data-original-title', 'Break-even would require an infeasible ' + name + '.');
 
-  document.getElementById(slider_name).setAttribute('data-original-title', 'Break-even would require an infeasible ' + name + '.');
-
-   $('#'+slider_name).tooltip('enable')
-   $('#'+slider_name).tooltip('show')
-   setTimeout(function(){
-     $('#'+slider_name).tooltip('hide');
-   }, 3000);
+  $('#'+input_name).tooltip('enable')
+  $('#'+input_name).tooltip('show')
+  setTimeout(function(){
+    $('#'+input_name).tooltip('hide');
+  }, 3000);
 }
 
 /* function with calculations for break-even degradation rate
@@ -695,6 +694,8 @@ function break_even_degradation(key) {
 
     if (too_small) {
       break_even_infeasible(key + '_degradation_rate_text', 'degradation rate');
+    } else {
+      $('#' + key + '_degradation_rate_text').tooltip('disable')      
     }
 
     new_value *= 100
@@ -973,7 +974,9 @@ function match_LCOE(slider_name, number_name, key) {
       if (new_value < 0 || new_value > EFFICIENCY_MAX) { // indicates break-even gives infeasible result
         new_value = EFFICIENCY_MAX // correct to maximum
         break_even_infeasible(key + '_efficiency_text', 'efficiency');
-      } 
+      } else {
+        $('#' + key + '_efficiency_text').tooltip('disable')
+      }
     }
   
     var cost_module = MODULE_MARKUP * (cost_front_layer + cost_cell + cost_back_layer + cost_noncell + cost_extra)/(10.0*efficiency)
@@ -1025,6 +1028,8 @@ function break_even_energy_yield(key) {
     var new_value = energy_wanted / (energy_mult + degradation_rate * energy_deg_mult) * 1000
     if (new_value < 0) {
       break_even_infeasible(key + '_energy_yield_text', 'energy yield');
+    } else {
+      $('#' + key + '_energy_yield_text').tooltip('disable')      
     }
 
     $('#'+key+'_energy_yield_text').val(new_value)
