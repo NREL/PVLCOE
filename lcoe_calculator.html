@@ -28,7 +28,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <div class='container'>
       <h1>Comparative PV LCOE calculator</h1>
       <p class='lead'>This tool calculates levelized cost of energy (LCOE) for photovoltaic (PV) systems based on cost, performance, and reliability inputs for a <strong>baseline</strong> and a <strong>proposed</strong> technology.</p>
-      <p>Choose your inputs and watch the effect on LCOE to determine whether a proposed technology is cost-effective, to perform trade-off analysis among different technology options, and to do break-even analysis of cost or performance. Each <img src="balance.svg"></img> button adjusts a single input to make the baseline and proposed LCOE equal.</p>
+      <p>Choose your inputs and watch the effect on LCOE to determine whether a proposed technology is cost-effective, to perform trade-off analysis among different technology options, and to do break-even analysis of cost or performance. Each <img src="img/balance.svg"></img> button adjusts a single input to make the baseline and proposed LCOE equal.</p>
       <p>For more details, please <a href='lcoe_calculator_documentation.html' target='_blank'>consult the documentation</a>. You may also be interested in <a href='lcoe_calculator_documentation.html#seealso' target='_blank'>other tools</a> for calculating cost and performance for renewable energy.</p>
       <div class="card bg-light">
         <h4 class='card-header'>Presets for Inputs</h4>
@@ -93,7 +93,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_front_layer', 'baseline_cost_front_layer_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_cost_front_layer_text' type='number' class='form-control' step='0.01' /></div>
@@ -112,7 +112,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_cell', 'baseline_cost_cell_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_cost_cell_text' type='number' class='form-control' step='0.01' /></div>
@@ -131,7 +131,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_back_layer', 'baseline_cost_back_layer_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_cost_back_layer_text' type='number' class='form-control' step='0.01' /></div>
@@ -150,7 +150,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_noncell', 'baseline_cost_noncell_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_cost_noncell_text' type='number' class='form-control' step='0.01' /></div>
@@ -169,7 +169,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_extra', 'baseline_cost_extra_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_cost_extra_text' type='number' class='form-control' step='0.01' /></div>
@@ -188,7 +188,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="break_even_OM('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_cost_om_text' type='number' class='form-control' step='0.01' /></div>
@@ -207,7 +207,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_bos_power', 'baseline_cost_bos_power_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_cost_bos_power_text' type='number' class='form-control' step='0.01' /></div>
@@ -226,7 +226,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_bos_area', 'baseline_cost_bos_area_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_cost_bos_area_text' type='number' class='form-control' step='0.01' /></div>
@@ -247,7 +247,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('efficiency', 'baseline_efficiency_text', 'baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_efficiency_text' type='number' class='form-control' step='0.01' /></div>
@@ -266,7 +266,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="break_even_energy_yield('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_energy_yield_text' type='number' class='form-control' step='0.01' /></div>
@@ -287,7 +287,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="break_even_degradation('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_degradation_rate_text' type='number' class='form-control' step='0.01' /></div>
@@ -306,7 +306,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="break_even_service_life('baseline')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the proposed LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_service_life_text' type='number' class='form-control' step='0.01' data-toggle='tooltip' title='Service life must be a positive integer no greater than 1000.' data-placement='top'/></div>
@@ -327,7 +327,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="baselineToggle()" data-toggle='tooltip' id="baselineDiscountPrepend" title='Unconstrain baseline and proposed discount rates to be equal.' data-placement='top'>
                      <span class="input-group-text">
-                        <img id="baselineLinkImage" src="link.svg"></img>
+                        <img id="baselineLinkImage" src="img/link.svg"></img>
                      </span>
                    </div>
                   <input id='baseline_discount_rate_text' type='number' class='form-control' step='0.01'/></div>
@@ -359,7 +359,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_front_layer', 'proposed_cost_front_layer_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_cost_front_layer_text' type='number' class='form-control' step='0.01' /></div>
@@ -378,7 +378,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_cell', 'proposed_cost_cell_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_cost_cell_text' type='number' class='form-control' step='0.01' /></div>
@@ -397,7 +397,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_back_layer', 'proposed_cost_back_layer_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_cost_back_layer_text' type='number' class='form-control' step='0.01' /></div>
@@ -416,7 +416,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_noncell', 'proposed_cost_noncell_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_cost_noncell_text' type='number' class='form-control' step='0.01' /></div>
@@ -435,7 +435,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_extra', 'proposed_cost_extra_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_cost_extra_text' type='number' class='form-control' step='0.01' /></div>
@@ -454,7 +454,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="break_even_OM('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_cost_om_text' type='number' class='form-control' step='0.01' /></div>
@@ -473,7 +473,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_bos_power', 'proposed_cost_bos_power_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_cost_bos_power_text' type='number' class='form-control' step='0.01' /></div>
@@ -492,7 +492,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('cost_bos_area', 'proposed_cost_bos_area_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_cost_bos_area_text' type='number' class='form-control' step='0.01' /></div>
@@ -513,7 +513,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="match_LCOE('efficiency', 'proposed_efficiency_text', 'proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_efficiency_text' type='number' class='form-control' step='0.01' /></div>
@@ -532,7 +532,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="break_even_energy_yield('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_energy_yield_text' type='number' class='form-control' step='0.01' /></div>
@@ -553,7 +553,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="break_even_degradation('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_degradation_rate_text' type='number' class='form-control' step='0.01' /></div>
@@ -572,7 +572,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" onclick="break_even_service_life('proposed')" data-toggle='tooltip' title='Automatically adjust this input to make LCOE match the baseline LCOE.' data-placement='top'>
                      <span class="input-group-text">
-                        <img src="balance.svg"></img>
+                        <img src="img/balance.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_service_life_text' type='number' class='form-control' step='0.01' data-toggle='tooltip' title='Service life must be a positive integer no greater than 1000.' data-placement='top'/></div>
@@ -603,7 +603,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
                   <div class="input-group">
                   <div class="input-group-prepend" data-toggle='tooltip' id="proposedDiscountPrepend" title='Unconstrain proposed and baseline discount rates to be equal.' data-placement='top' onclick="proposedToggle()">
                      <span class="input-group-text">
-                        <img id="proposedLinkImage" src="link.svg"></img>
+                        <img id="proposedLinkImage" src="img/link.svg"></img>
                      </span>
                    </div>
                   <input id='proposed_discount_rate_text' type='number' class='form-control' step='0.01' /></div>
@@ -682,8 +682,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
     <script src='js/jquery-3.2.1.slim.min.js'></script>
     <script src='js/popper.min.js'></script>
     <script src='js/bootstrap.min.js'></script>
-    <!-- <script src='js/nouislider.min.js'></script> -->
-    <script src='nouislider/nouislider.js'></script>
+    <script src='js/nouislider.js'></script>
     <script src='js/PresetTree.js'></script>
     <script src='js/BosCostTree.js'></script>
     <script src='js/lcoe_calculator.js'></script>

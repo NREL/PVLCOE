@@ -38,13 +38,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
           </div>
         </div>
       </p>
-      <p>You can also do quick break-even analysis of technology improvements. Each input parameter except discount rate (more on that below) has a break-even button, marked <img src="balance.svg" alt="picture of a balance"></img>, that automatically adjusts that parameter to make the <strong>proposed LCOE</strong> equal the <strong>baseline LCOE</strong>. In cases where an exact break-even calculation is not possible, a warning appears and the closest approximation is used.</p>
+      <p>You can also do quick break-even analysis of technology improvements. Each input parameter except discount rate (more on that below) has a break-even button, marked <img src="img/balance.svg" alt="picture of a balance"></img>, that automatically adjusts that parameter to make the <strong>proposed LCOE</strong> equal the <strong>baseline LCOE</strong>. In cases where an exact break-even calculation is not possible, a warning appears and the closest approximation is used.</p>
       <p>
         <div class='card'>
           <h5 class='card-header'>Example: New technology break-even analysis</h5>
           <div class='card-body'>
             <p class='card-text'>Simulate adding a new component to the module by changing the cost of the <strong>extra component</strong> in the <strong>proposed</strong> section to 4.00&nbsp;USD/m<sup>2</sup>. The <strong>proposed LCOE</strong> increases due to the higher module cost.</p>
-            <p class='card-text'>Suppose the new component increases the energy yield of the system. In the <strong>proposed</strong> section, press the break-even button, marked <img src="balance.svg" alt="picture of a balance"></img>, beside the <strong>energy yield</strong> input. The <strong>energy yield</strong> is automatically adjusted so the <strong>proposed LCOE</strong> equals the <strong>baseline LCOE</strong>. This shows how much of an improvement to energy yield the new technology must provide to break even in LCOE.</p>
+            <p class='card-text'>Suppose the new component increases the energy yield of the system. In the <strong>proposed</strong> section, press the break-even button, marked <img src="img/balance.svg" alt="picture of a balance"></img>, beside the <strong>energy yield</strong> input. The <strong>energy yield</strong> is automatically adjusted so the <strong>proposed LCOE</strong> equals the <strong>baseline LCOE</strong>. This shows how much of an improvement to energy yield the new technology must provide to break even in LCOE.</p>
           </div>
         </div>
       </p>
@@ -103,7 +103,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       <h4>Financial</h4>
       <dl class='row'>
         <dt class='col-sm-3'>Discount rate</dt>
-        <dd class='col-sm-9'>The annual rate at which future costs and future energy production are discounted. Use the button to toggle between constrained&nbsp;<img src="link.svg" alt="picture of a chain"></img> and unconstrained&nbsp;<img src="broken_link.svg" alt="picture of a broken chain"></img>. When discount rates are constrained, changes to the baseline degradation rate are automatically copied to the proposed degradation rate, and vice-versa. This is the default setting. When discount rates are unconstrained, the baseline and proposed degradation rate can be changed independently.</dd>
+        <dd class='col-sm-9'>The annual rate at which future costs and future energy production are discounted. Use the button to toggle between constrained&nbsp;<img src="img/link.svg" alt="picture of a chain"></img> and unconstrained&nbsp;<img src="img/broken_link.svg" alt="picture of a broken chain"></img>. When discount rates are constrained, changes to the baseline degradation rate are automatically copied to the proposed degradation rate, and vice-versa. This is the default setting. When discount rates are unconstrained, the baseline and proposed degradation rate can be changed independently.</dd>
       </dl>
       <h2>Calculation</h2>
       <p>The calculator performs a &ldquo;simple&rdquo; LCOE calculation. $$\text{LCOE}=\frac{\sum_{n=0}^{n_s}{\frac{c_n}{\left( 1 + d \right)^n}}}{\sum_{n=0}^{n_s}{\frac{e_n}{\left( 1 + d \right)^n}}}\text{, }$$ where \(c_n\) is the cost in year \(n\), \(d\) is discount rate, \(e_n\) is the energy produced in year \(n\), and \(n_s\) is the number of years in the system's service life.</p>
