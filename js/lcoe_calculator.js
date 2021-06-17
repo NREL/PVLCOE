@@ -69,8 +69,8 @@ $('#lcoe_baseline').tooltip('disable')
 function baselineToggle() {
   if (document.getElementById('baselineLinkImage').src.includes('broken')) {
     // switch image
-    document.getElementById("baselineLinkImage").src = "link.svg";
-    document.getElementById("proposedLinkImage").src = "link.svg";
+    document.getElementById("baselineLinkImage").src = "img/link.svg";
+    document.getElementById("proposedLinkImage").src = "img/link.svg";
 
     document.getElementById('baselineDiscountPrepend').setAttribute('data-original-title', 'Unconstrain baseline and proposed discount rates to be equal.');
     document.getElementById('proposedDiscountPrepend').setAttribute('data-original-title', 'Unconstrain baseline and proposed discount rates to be equal.');
@@ -81,8 +81,8 @@ function baselineToggle() {
     calculate();
 
   } else {
-    document.getElementById("baselineLinkImage").src = "broken_link.svg";
-    document.getElementById("proposedLinkImage").src = "broken_link.svg";
+    document.getElementById("baselineLinkImage").src = "img/broken_link.svg";
+    document.getElementById("proposedLinkImage").src = "img/broken_link.svg";
 
     document.getElementById('baselineDiscountPrepend').setAttribute('data-original-title', 'Constrain baseline and proposed discount rates to be equal.');
     document.getElementById('proposedDiscountPrepend').setAttribute('data-original-title', 'Constrain baseline and proposed discount rates to be equal.');
@@ -97,8 +97,8 @@ function baselineToggle() {
 function proposedToggle() {
   if (document.getElementById('proposedLinkImage').src.includes('broken')) {
     // switch image
-    document.getElementById("baselineLinkImage").src = "link.svg";
-    document.getElementById("proposedLinkImage").src = "link.svg";
+    document.getElementById("baselineLinkImage").src = "img/link.svg";
+    document.getElementById("proposedLinkImage").src = "img/link.svg";
 
     document.getElementById('baselineDiscountPrepend').setAttribute('data-original-title', 'Unconstrain baseline and proposed discount rates to be equal.');
     document.getElementById('proposedDiscountPrepend').setAttribute('data-original-title', 'Unconstrain baseline and proposed discount rates to be equal.');
@@ -109,8 +109,8 @@ function proposedToggle() {
     calculate();
 
   } else {
-    document.getElementById("baselineLinkImage").src = "broken_link.svg";
-    document.getElementById("proposedLinkImage").src = "broken_link.svg";
+    document.getElementById("baselineLinkImage").src = "img/broken_link.svg";
+    document.getElementById("proposedLinkImage").src = "img/broken_link.svg";
 
     document.getElementById('baselineDiscountPrepend').setAttribute('data-original-title', 'Constrain baseline and proposed discount rates to be equal.');
     document.getElementById('proposedDiscountPrepend').setAttribute('data-original-title', 'Constrain baseline and proposed discount rates to be equal.');
