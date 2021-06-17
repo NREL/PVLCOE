@@ -1,5 +1,9 @@
 # PVLCOE
 The Comparative PV LCOE Calculator calculates levelized cost of energy (LCOE) for photovoltaic (PV) systems based on cost, performance, and reliability inputs for a *baseline* and a *proposed* technology. It is a single javascript-powered web page that runs entirely on the client side. Check the `lcoe_calculator_documentation.html` file for more detailed documentation. The calculator can be run from the source by downloading this repository and opening `lcoe_calculator.html` in a web browser. The latest release of the calculator is available to use online at https://pvlcoe.nrel.gov 
+
+The structure of the repository is shown below.
+![image](https://user-images.githubusercontent.com/70656408/122474033-a2e3a400-cf90-11eb-9d05-3a7659feb5ca.png)
+
  
 # Building a Preset Tree for NREL PVLCOE Calculator
 In the `/build-presets/` folder, the `MakePresetTree.py` file builds a javascript file which supplies the preset values that appear in the NREL PVLCOE calculator at http://pvlcoe.nrel.gov/.
