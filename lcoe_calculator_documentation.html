@@ -86,7 +86,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         <dd class='col-sm-9'>The component of balance of system cost that scales with the physical size of the system. This includes racking, wiring, and installation labor, for example.</dd>
       </dl>
       <p>*The BOS cost presets are most accurate for module sizes around 1.65 m<sup>2</sup> for residential systems, and 2 m<sup>2</sup> for utility and commercial systems. Results will be less accurate for modules that are significantly larger or smaller.</p>
-      <p>This calculator relies on BOS costs provided by the NREL system benchmark cost model, since a bottom-up system cost model is highly complex compared to the function of this calculator. The BOS cost data is reported as a function of module efficiency and is fit using the following equation: $$c_\text{system} = \frac{c_\text{area}}{\eta1,000\frac{W}{m^2}} + c_\text{power}$$ where \(c_\text{system}\) and \(c_\text{power}\) are in units of $/W, and \(c_\text{area}\) is in units of $/m<sup>2</sup>.</p>
+      <p>This calculator relies on BOS costs provided by the NREL system benchmark cost model, since a bottom-up system cost model is highly complex compared to the function of this calculator. The BOS cost data is reported as a function of module efficiency and is fit using the following equation: $$c_\text{system} = \frac{c_\text{area}}{\eta \times 1000\frac{W}{m^2}} + c_\text{power}$$ where \(\eta\) is the module efficiency, \(c_\text{system}\) and \(c_\text{power}\) are in units of $/W, and \(c_\text{area}\) is in units of $/m<sup>2</sup>.</p>
       <h4>Performance</h4>
       <dl class='row'>
         <dt class='col-sm-3'>Efficiency</dt>
