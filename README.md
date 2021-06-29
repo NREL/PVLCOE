@@ -36,3 +36,5 @@ The values for efficiency, degradation rate, and all costs listed above are defi
  - Run `MakeBOSTree.py` in the `/build-presets/` folder
  - Then, `lcoe_calculator.html` will show your new presets!
 
+# Acknowledgment
+This work was supported by the Durable Modules Consortium (DuraMAT), an Energy Materials Network Consortium funded by the U.S. Department of Energy, Office of Energy Efficiency and Renewable Energy, Solar Energy Technologies Office.

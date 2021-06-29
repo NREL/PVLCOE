@@ -38,13 +38,13 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
           </div>
         </div>
       </p>
-      <p>You can also do quick break-even analysis of technology improvements. Each input parameter except discount rate (more on that below) has a break-even button, marked <img src="balance.svg" alt="picture of a balance"></img>, that automatically adjusts that parameter to make the <strong>proposed LCOE</strong> equal the <strong>baseline LCOE</strong>. In cases where an exact break-even calculation is not possible, a warning appears and the closest approximation is used.</p>
+      <p>You can also do quick break-even analysis of technology improvements. Each input parameter except discount rate (more on that below) has a break-even button, marked <img src="img/balance.svg" alt="picture of a balance"></img>, that automatically adjusts that parameter to make the <strong>proposed LCOE</strong> equal the <strong>baseline LCOE</strong>. In cases where an exact break-even calculation is not possible, a warning appears and the closest approximation is used.</p>
       <p>
         <div class='card'>
           <h5 class='card-header'>Example: New technology break-even analysis</h5>
           <div class='card-body'>
             <p class='card-text'>Simulate adding a new component to the module by changing the cost of the <strong>extra component</strong> in the <strong>proposed</strong> section to 4.00&nbsp;USD/m<sup>2</sup>. The <strong>proposed LCOE</strong> increases due to the higher module cost.</p>
-            <p class='card-text'>Suppose the new component increases the energy yield of the system. In the <strong>proposed</strong> section, press the break-even button, marked <img src="balance.svg" alt="picture of a balance"></img>, beside the <strong>energy yield</strong> input. The <strong>energy yield</strong> is automatically adjusted so the <strong>proposed LCOE</strong> equals the <strong>baseline LCOE</strong>. This shows how much of an improvement to energy yield the new technology must provide to break even in LCOE.</p>
+            <p class='card-text'>Suppose the new component increases the energy yield of the system. In the <strong>proposed</strong> section, press the break-even button, marked <img src="img/balance.svg" alt="picture of a balance"></img>, beside the <strong>energy yield</strong> input. The <strong>energy yield</strong> is automatically adjusted so the <strong>proposed LCOE</strong> equals the <strong>baseline LCOE</strong>. This shows how much of an improvement to energy yield the new technology must provide to break even in LCOE.</p>
           </div>
         </div>
       </p>
@@ -103,7 +103,7 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       <h4>Financial</h4>
       <dl class='row'>
         <dt class='col-sm-3'>Discount rate</dt>
-        <dd class='col-sm-9'>The annual rate at which future costs and future energy production are discounted. Use the button to toggle between constrained&nbsp;<img src="link.svg" alt="picture of a chain"></img> and unconstrained&nbsp;<img src="broken_link.svg" alt="picture of a broken chain"></img>. When discount rates are constrained, changes to the baseline degradation rate are automatically copied to the proposed degradation rate, and vice-versa. This is the default setting. When discount rates are unconstrained, the baseline and proposed degradation rate can be changed independently.</dd>
+        <dd class='col-sm-9'>The annual rate at which future costs and future energy production are discounted. Use the button to toggle between constrained&nbsp;<img src="img/link.svg" alt="picture of a chain"></img> and unconstrained&nbsp;<img src="img/broken_link.svg" alt="picture of a broken chain"></img>. When discount rates are constrained, changes to the baseline degradation rate are automatically copied to the proposed degradation rate, and vice-versa. This is the default setting. When discount rates are unconstrained, the baseline and proposed degradation rate can be changed independently.</dd>
       </dl>
       <h2>Calculation</h2>
       <p>The calculator performs a &ldquo;simple&rdquo; LCOE calculation. $$\text{LCOE}=\frac{\sum_{n=0}^{n_s}{\frac{c_n}{\left( 1 + d \right)^n}}}{\sum_{n=0}^{n_s}{\frac{e_n}{\left( 1 + d \right)^n}}}\text{, }$$ where \(c_n\) is the cost in year \(n\), \(d\) is discount rate, \(e_n\) is the energy produced in year \(n\), and \(n_s\) is the number of years in the system's service life.</p>
@@ -134,8 +134,22 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       </p>
       <h2>Source code</h2>
       <p>The source code for this calculator is publicly available <a href='https://github.com/NREL/PVLCOE'>on GitHub</a>.</p>
+      <h2>Acknowledgment</h2>
+      <p>This work was supported by the Durable Modules Consortium (DuraMAT), an Energy Materials Network Consortium funded by the U.S. Department of Energy, Office of Energy Efficiency and Renewable Energy, Solar Energy Technologies Office.</p>
       <h2>Changelog</h2>
-      <p><strong>Pending: Impose physically-motivated limits on effeciency, yield, degradation rate, and service life.</strong></p>
+      <p><strong>2020-06-17 (version 2.0): Made multiple changes to the calculator, preset values, and the way preset values are produced.</strong>
+        <ul>
+          <li>Added break-even buttons for all inputs except discount rate</li>
+          <li>Added a slider for inverter loading ratio (ILR)</li>
+          <li>Redesigned the presets menu</li>
+          <li>Restricted acceptable service life range and added a dead zone to the slider, imposed physically-motivated limits on efficiency, yield, and degradation rate</li>
+          <li>Added the option to compare a proposed discount rate</li>
+          <li>Switched to a linear equation for applying degradation rate to energy yield</li>
+          <li>Updated energy yield based on PySAM, using the PVWatts model and NSRDB weather data (source is available in the repository)</li>
+          <li>Removed BOS-cost variation by location, updated BOS costs, added commercial system BOS costs, added BOS costs for different ILRs, added a new script to the repository build the BOS cost tree, updated references in documentation</li>
+          <li>Updated module costs, efficiencies, degradation rate, O&M costs, and added a new script to the repository to build the preset tree, updated references in documentation</li>
+          <li>Updated citation</li>
+        </ul></p>
       <p><strong>2020-09-11: Added explanation of system versus module degradation rates, changed source code link to GitHub repository, added files to GitHub that can create new sets of preset values.</strong> We have clarified that module degradation rates serve as an approximation for system degradation rates, which was not explicitly stated previously. The new files added to the GitHub repository are under the /build-presets/ folder. This includes a jupyter notebook which builds the preset file called by the calculator (and also houses default efficiency and cost values), as well as an Excel file that contains default energy yield and degradation rate values.</p>
       <p><strong>2018-07-16: Added link to source code; added note about anti-reflective coating.</strong></p>
       <p><strong>2018-06-06: Harmonized magnitude and units of area-scaling BOS cost.</strong> Previously, preset values for area-scaling BOS cost were stored and displayed in units of USD/(100&nbsp;m<sup>2</sup>) and a corresponding factor of 100 was used to produce correct LCOE results. But the calculator incorrectly displayed units of USD/m<sup>2</sup> for this parameter. We have corrected the discrepancy by storing and displaying presets for area-scaling BOS cost in units of USD/m<sup>2</sup> and removing the factor of 100 from the calculation. Results relying only on preset values of area-scaling BOS or on relative changes in area-scaling BOS are unaffected.</p>
