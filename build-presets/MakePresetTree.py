@@ -11,7 +11,7 @@ import PySAM.Pvwattsv7 as pvwatts
 import glob
 import PySAM.ResourceTools as tools
 import PySAM.PySSC as pssc
-from pathlib import Path # for platform independent paths
+from pathlib import Path  # for platform independent paths
 
 # to avoid rounding issues, the lat and lon returned by pysam are in this file
 # locations maps a lat/lon pair to the string name of the location
@@ -56,7 +56,8 @@ cost_om = {
     'fixed tilt, commercial scale': 18.71
 }
 
-inverter_loading_ratio = [1.1, 1.3, 1.4] # WARNING: make sure these values are the same as in the MakeBOSTree.py file
+# WARNING: make sure these values are the same as in the MakeBOSTree.py file
+inverter_loading_ratio = [1.1, 1.3, 1.4]
 
 # creating PySAM model with default info from json file (that doesn't have location info)
 json_file = open("pvwatts_inputs.json")
@@ -76,13 +77,13 @@ tilt = {'fixed tilt, utility scale': 33, 'single-axis tracked, utility scale': 0
         'roof-mounted, residential scale': 25, 'roof-mounted, commercial scale': 10, 'fixed tilt, commercial scale': 10}
 
 # 0: fixed rack, 1: fixed roof, 2: 1 axis, 3: backtracked; needed for running PySAM
-# backtracking for the silicon single-axis tracked systems but not for CdTe 
+# backtracking for the silicon single-axis tracked systems but not for CdTe
 array_type = {'mono-Si': {'fixed tilt, utility scale': 0, 'single-axis tracked, utility scale': 3,
-                          'roof-mounted, residential scale': 1, 'roof-mounted, commercial scale': 1, 'fixed tilt, commercial scale': 0}, 
+                          'roof-mounted, residential scale': 1, 'roof-mounted, commercial scale': 1, 'fixed tilt, commercial scale': 0},
               'multi-Si': {'fixed tilt, utility scale': 0, 'single-axis tracked, utility scale': 3,
-                          'roof-mounted, residential scale': 1, 'roof-mounted, commercial scale': 1, 'fixed tilt, commercial scale': 0}, 
+                           'roof-mounted, residential scale': 1, 'roof-mounted, commercial scale': 1, 'fixed tilt, commercial scale': 0},
               'CdTe': {'fixed tilt, utility scale': 0, 'single-axis tracked, utility scale': 2,
-                          'roof-mounted, residential scale': 1, 'roof-mounted, commercial scale': 1, 'fixed tilt, commercial scale': 0} }
+                       'roof-mounted, residential scale': 1, 'roof-mounted, commercial scale': 1, 'fixed tilt, commercial scale': 0}}
 
 
 # between 0 and 1, needed for running PySAM
@@ -103,10 +104,14 @@ for cell_technology in cell_technologies:
                 if ilr not in preset_tree[cell_technology][package_type][system_type]:
                     preset_tree[cell_technology][package_type][system_type][ilr] = {}
                 for f in weather_files:
-                    json_model.SolarResource.solar_resource_data = tools.SAM_CSV_to_solar_data(f)
-                    f = f.replace(weather_folder + '/', '') # remove folder name from file name
-                    location_id = f.split('_')[0] # get the id from the beginning of the string
-                    location = locations[int(location_id)]  # string name of location
+                    json_model.SolarResource.solar_resource_data = tools.SAM_CSV_to_solar_data(
+                        f)
+                    # remove folder name from file name
+                    f = f.replace(weather_folder + '/', '')
+                    # get the id from the beginning of the string
+                    location_id = f.split('_')[0]
+                    # string name of location
+                    location = locations[int(location_id)]
 
                     # set specific inputs of PySAM model based on system type and ILR
                     json_model.SystemDesign.gcr = ground_coverage_ratio[system_type]
@@ -134,4 +139,3 @@ for cell_technology in cell_technologies:
 with open(Path('../js/PresetTree.js'), 'w') as file:
     file.write('var preset_tree = ' + json.dumps(preset_tree,
                                                  indent=2, separators=(',', ': ')))
-
