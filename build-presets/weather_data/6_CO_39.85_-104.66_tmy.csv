@@ -1,5 +1,5 @@
 Source,Location ID,City,State,Country,Latitude,Longitude,Time Zone,Elevation,Local Time Zone,Dew Point Units,DHI Units,DNI Units,GHI Units,Temperature Units,Pressure Units,Wind Direction Units,Wind Speed,Surface Albedo Units,Version
-NSRDB,492807,-,-,-,39.85,-104.66,-7,1633,-7,c,w/m2,w/m2,w/m2,c,mbar,Degrees,m/s,,3.1.1
+NSRDB,492807,-,-,-,39.85,-104.66,-7,1633,-7,c,w/m2,w/m2,w/m2,c,mbar,Degrees,m/s,,3.2.0
 Year,Month,Day,Hour,Minute,GHI,DHI,DNI,Wind Speed,Temperature,Dew Point,Pressure,Wind Direction,Surface Albedo,,,,,,
 2011,1,1,0,30,0,0,0,2.4000000000000004,-13,-24,820,289,0.87,,,,,,
 2011,1,1,1,30,0,0,0,2.5,-13,-24,820,289,0.87,,,,,,
