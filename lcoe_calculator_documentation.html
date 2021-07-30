@@ -1,18 +1,3 @@
-<!--
-Copyright 2020 Alliance for Sustainable Energy, LLC
- 
-Redistribution and use in source and binary forms, with or without modification, are permitted provided that the following conditions are met:
- 
-1. Redistributions of source code must retain the above copyright notice, this list of conditions and the following disclaimer.
- 
-2. Redistributions in binary form must reproduce the above copyright notice, this list of conditions and the following disclaimer in the documentation and/or other materials provided with the distribution.
- 
-3. Neither the name of the copyright holder nor the names of its contributors may be used to endorse or promote products derived from this software without specific prior written permission.
- 
-THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
-*/
--->
-
 <!doctype html>
 <html lang='en'>
   <head>
@@ -38,33 +23,35 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
           </div>
         </div>
       </p>
-      <p>You can also do quick breakeven analysis of technology improvements.</p>
+      <p>You can also do quick break-even analysis of technology improvements. Each input parameter except discount rate (more on that below) has a break-even button, marked <img src="img/balance.svg" alt="picture of a balance"></img>, that automatically adjusts that parameter to make the <strong>proposed LCOE</strong> equal the <strong>baseline LCOE</strong>. In cases where an exact break-even calculation is not possible, a warning appears and the closest approximation is used.</p>
       <p>
         <div class='card'>
-          <h5 class='card-header'>Example: New technology breakeven analysis</h5>
+          <h5 class='card-header'>Example: New technology break-even analysis</h5>
           <div class='card-body'>
             <p class='card-text'>Simulate adding a new component to the module by changing the cost of the <strong>extra component</strong> in the <strong>proposed</strong> section to 4.00&nbsp;USD/m<sup>2</sup>. The <strong>proposed LCOE</strong> increases due to the higher module cost.</p>
-            <p class='card-text'>Suppose the new component increases the energy yield of the system. In the <strong>proposed</strong> section, drag the <strong>energy yield</strong> slider until the <strong>proposed LCOE</strong> equals the <strong>baseline LCOE</strong>. This shows how much of an improvement to <strong>energy yield</strong> the new technology must provide to break even in LCOE.</p>
+            <p class='card-text'>Suppose the new component increases the energy yield of the system. In the <strong>proposed</strong> section, press the break-even button, marked <img src="img/balance.svg" alt="picture of a balance"></img>, beside the <strong>energy yield</strong> input. The <strong>energy yield</strong> is automatically adjusted so the <strong>proposed LCOE</strong> equals the <strong>baseline LCOE</strong>. This shows how much of an improvement to energy yield the new technology must provide to break even in LCOE.</p>
           </div>
         </div>
       </p>
       <h2>Presets</h2>
-      <p>The calculator includes hundreds of presets for the input parameters. To replace the <strong>baseline</strong> input parameters with a set of preset parameters, use the <strong>presets</strong> button. To update the <strong>proposed</strong> inputs to match the preset, use the <strong>copy from baseline</strong> button after choosing a preset.</p>
-      <p>Each preset represents a simulated PV system with a particular <strong>cell technology</strong>, module <strong>package type</strong>, <strong>system type</strong>, and geographic <strong>location</strong>. Input values for module cost come from NREL's benchmark module cost studies. Energy yield has been simulated using SAM with TMY inputs for each location. Silicon modules are simulated with an anti-reflective coating (ARC) on the glass.</p>
+      <p>The calculator includes hundreds of presets for the input parameters. Choose settings in the <strong>presets for inputs</strong> section and then press <strong>apply to baseline</strong> or <strong>apply to proposed</strong> to load the preset parameter values.</p>
+      <p>Each preset represents a simulated PV system with a particular <strong>cell technology</strong>, module <strong>package type</strong>, <strong>system type</strong>, and geographic <strong>location</strong>. Input values for module cost come from NREL's benchmark module cost studies. Energy yield has been simulated using <a href="https://sam.nrel.gov/">SAM</a> with <a href="https://nsrdb.nrel.gov/">NSRDB</a> weather data for each location. More details on this simulation are available in the <a href="https://github.com/NREL/PVLCOE/">repository documentation</a>.</p>
       <dl class='row'>
         <dt class='col-sm-3'>Cell technology</dt>
-        <dd class='col-sm-9'>Cell technology can be monocrystalline silicon (mono-Si), multicrystalline silicon (multi-Si), or cadmium telluride (CdTe). Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, <strong>energy yield</strong>, <strong>degradation rate</strong>, <strong>BOS cost</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.</dd>
+        <dd class='col-sm-9'>Cell technology can be monocrystalline silicon (mono-Si), multicrystalline silicon (multi-Si), or cadmium telluride (CdTe). Modules with silicon cell technology are simulated with an anti-reflective coating (ARC) on the glass. Cell technology affects <strong>cell cost</strong>, <strong>efficiency</strong>, <strong>energy yield</strong>, <strong>BOS cost</strong>, and the available values for <strong>package type</strong> and <strong>system type</strong>.</dd>
         <dt class='col-sm-3'>Package type</dt>
-        <dd class='col-sm-9'>Package type can be (glass-polymer backsheet) or (glass-glass). Crystalline silicon modules are most often the glass-polymer backsheet type, but glass-glass modules are commercially available. CdTe modules are not available in the glass-polymer backsheet package. Package type affects <strong>back layer cost</strong>.</dd>
+        <dd class='col-sm-9'>Package type can be (glass-polymer backsheet) or (glass-glass). Crystalline silicon modules can be either glass-polymer backsheet or glass-glass. CdTe modules are not available in the glass-polymer backsheet package. Package type affects <strong>back layer cost</strong>.</dd>
         <dt class='col-sm-3'>System type</dt>
-        <dd class='col-sm-9'>System type can be (fixed tilt, utility scale), (single-axis tracked, utility scale), or (roof-mounted, residential scale). Our baseline utility-scale system has 100&nbsp;MW capacity and our baseline residential-scale system has 5.6&nbsp;kW capacity. System type affects <strong>energy yield</strong> and <strong>BOS cost</strong>.</dd>
+        <dd class='col-sm-9'>System type can be (fixed tilt, utility scale), (single-axis tracked, utility scale), or (roof-mounted, residential scale). Our baseline utility-scale system has 100&nbsp;MW capacity and our baseline residential-scale system has 7&nbsp;kW capacity. System type affects <strong>energy yield</strong> and <strong>BOS cost</strong>.</dd>
         <dt class='col-sm-3'>Location</dt>
-        <dd class='col-sm-9'>Location can be one of 50 places, one in each US state. Locations are chosen to have nearly the median solar resource in the state, subject to data availability. TMY2 or TMY3 datasets were used in each location to produce a preset value for first-year energy yield. Location affects <strong>energy yield</strong> and <strong>BOS cost</strong>.</dd>
+        <dd class='col-sm-9'>Location can be one of 50 places, one in each US state. Locations are chosen to have nearly the median solar resource in the state, subject to data availability. Weather data for each location was used to produce a preset value for undegraded energy yield. Location affects <strong>energy yield</strong>.</dd>
+        <dt class='col-sm-3'>Inverter Loading Ratio (ILR)</dt>
+        <dd class='col-sm-9'>Also known as DC/AC ratio, ILR is the ratio of a PV system's DC nameplate power to its inverter's AC nameplate power. ILR values of 1.1, 1.3, and 1.4 are available. For commercial and utility-scale systems, the default is 1.3. For residential systems the default is 1.1. ILR affects <strong>energy yield</strong> and <strong>BOS cost</strong>.</dd>
       </dl>
       <h2>Input parameters</h2>
-      <h3>Separate inputs</h3>
-      <p>These inputs apply separately to the <strong>baseline</strong> and <strong>proposed</strong> technologies. Module price is calculated by summing the component costs and adding a 15% margin representing the module manufacturer's profit.</p>
+      <p>These inputs apply separately to the <strong>baseline</strong> and <strong>proposed</strong> technologies.</p>
       <h4>Cost</h4>
+      <p>Module price is calculated by summing the component costs and adding a 15% margin representing the module manufacturer's profit.</p>
       <dl class='row'>
         <dt class='col-sm-3'>Front layer cost</dt>
         <dd class='col-sm-9'>Cost of the glass on the front surface of the module.</dd>
@@ -78,30 +65,31 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         <dd class='col-sm-9'>Initially set to zero, this cost represents an additional component, not otherwise accounted for, being proposed for addition to the module or system.</dd>
         <dt class='col-sm-3'>O&amp;M cost</dt>
         <dd class='col-sm-9'>Cost of operations and maintenance, including troubleshooting, repairs, and cleaning. This cost is normalized to the system's nameplate power.</dd>
-        <dt class='col-sm-3'>BOS cost, power-scaling</dt>
+        <dt class='col-sm-3'>BOS cost, power-scaling*</dt>
         <dd class='col-sm-9'>The component of balance of system cost that scales with the power output of the system, regardless of its physical size. This includes the inverter, for instance.</dd>
-        <dt class='col-sm-3'>BOS cost, area-scaling</dt>
+        <dt class='col-sm-3'>BOS cost, area-scaling*</dt>
         <dd class='col-sm-9'>The component of balance of system cost that scales with the physical size of the system. This includes racking, wiring, and installation labor, for example.</dd>
       </dl>
+      <p>*The BOS cost presets are most accurate for module sizes around 1.65 m<sup>2</sup> for residential systems, and 2 m<sup>2</sup> for utility and commercial systems. Results will be less accurate for modules that are significantly larger or smaller.</p>
+      <p>This calculator relies on BOS costs provided by the NREL system benchmark cost model, since a bottom-up system cost model is highly complex compared to the function of this calculator. The BOS cost data is reported as a function of module efficiency and is fit using the following equation: $$c_\text{system} = \frac{c_\text{area}}{\eta \times 1000\frac{W}{m^2}} + c_\text{power}$$ where \(\eta\) is the module efficiency, \(c_\text{system}\) and \(c_\text{power}\) are in units of $/W, and \(c_\text{area}\) is in units of $/m<sup>2</sup>.</p>
       <h4>Performance</h4>
       <dl class='row'>
         <dt class='col-sm-3'>Efficiency</dt>
         <dd class='col-sm-9'>Module efficiency measured at standard test conditions (STC). This is the module's nameplate efficiency.</dd>
         <dt class='col-sm-3'>Energy yield</dt>
-        <dd class='col-sm-9'>Also known as array yield, the first-year energy production of the system, normalized by its nameplate power rating.</dd>
+        <dd class='col-sm-9'>Also known as array yield, the energy production of the undegraded system, normalized by its nameplate power rating.</dd>
       </dl>
       <h4>Reliability</h4>
       <dl class='row'>
         <dt class='col-sm-3'>Degradation rate</dt>
-        <dd class='col-sm-9'>The annual, fractional loss of the system's energy production.</dd>
+        <dd class='col-sm-9'>The annual loss in energy production, as a percentage of the system's undegraded energy yield. Degradation rate is limited based on the value of <strong>service life</strong> so that the system's final-year energy production is greater than zero.</dd>
         <dt class='col-sm-3'>Service life</dt>
-        <dd class='col-sm-9'>The number of years the system is expected to operate.</dd>
+        <dd class='col-sm-9'>The number of years the system is expected to operate. The &ldquo;financial life&rdquo; of the system is set equal to its service life. Service life is limited based on the value of <strong>degradation rate</strong> so that the system's final-year energy production is greater than zero. The maximum value of service life is 1000 years.</dd>
       </dl>
-      <h3>Common inputs</h3>
       <h4>Financial</h4>
       <dl class='row'>
         <dt class='col-sm-3'>Discount rate</dt>
-        <dd class='col-sm-9'>The annual rate at which future costs and future energy production are discounted.</dd>
+        <dd class='col-sm-9'>The annual rate at which future costs and future energy production are discounted. Use the button to toggle between constrained&nbsp;<img src="img/link.svg" alt="picture of a chain"></img> and unconstrained&nbsp;<img src="img/broken_link.svg" alt="picture of a broken chain"></img>. When discount rates are constrained, changes to the baseline degradation rate are automatically copied to the proposed degradation rate, and vice-versa. This is the default setting. When discount rates are unconstrained, the baseline and proposed degradation rate can be changed independently.</dd>
       </dl>
       <h2>Calculation</h2>
       <p>The calculator performs a &ldquo;simple&rdquo; LCOE calculation. $$\text{LCOE}=\frac{\sum_{n=0}^{n_s}{\frac{c_n}{\left( 1 + d \right)^n}}}{\sum_{n=0}^{n_s}{\frac{e_n}{\left( 1 + d \right)^n}}}\text{, }$$ where \(c_n\) is the cost in year \(n\), \(d\) is discount rate, \(e_n\) is the energy produced in year \(n\), and \(n_s\) is the number of years in the system's service life.</p>
@@ -111,8 +99,8 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
       \end{cases}\text{,}$$ where \(c_\text{capital}\) is the initial capital cost of the system and \(c_\text{O&M}\) is the annual O&amp;M cost. In this calculator, these costs are in units of USD/kW.</p>
       <p>The energy produced in year \(n\) $$e_n = \begin{cases} 
       0 & n = 0\\
-      \text{max}\left[ Y \left( 1 - R_d \right)^\left(n-1\right), 0 \right] & n>0
-      \end{cases}\text{,}$$ where \(Y\) is the first-year energy yield and \(R_d\) is the system's annual degradation rate. In this calculator, this energy production is in units of kWh/kW, so \(c_e\) is in units of USD/kWh.</p>
+      \text{max}\left[ e_0 \left( 1 - R_d \left(n-0.5\right)\right), 0 \right] & n>0
+      \end{cases}\text{,}$$ where \(e_0\) is the ideal undegraded energy yield and \(R_d\) is the system's annual degradation rate, expressed in fractional change per year. In this calculator, this energy production is in units of kWh/kW, so \(c_e\) is in units of USD/kWh.</p>
       <div id='seealso'>
         <h2>See also</h2>
         <p>This tool is for evaluating how changes to PV module and system technology affect LCOE. You may be interested in these other resources.</p>
@@ -121,26 +109,33 @@ THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND 
         <p>Tools with fewer technology-specific details and more financial details include <a href='http://reopt.nrel.gov'>REopt</a>, which also includes energy storage, and the simple <a href='http://www.nrel.gov/analysis/tech-lcoe.html'>LCOE Calculator</a>.</p>
       </div>
       <h2>Data Sources</h2>
-      <p>Input values for module cost breakdowns and balance-of-system costs come from NREL's benchmark analysis. Results are relevant to systems installed in the United States. The latest available studies are used:</p>
+      <p>Input values for module cost breakdowns and balance-of-system costs come from NREL's benchmark analysis. The module degradation rate cited in the latest system benchmark report is used as an approximation of the system degradation rate. Results are relevant to systems installed in the United States. The latest available studies are used:</p>
       <p>
         <div class='card'>
           <div class='card-body'>
-            <p class='card-text'>Silicon module inputs and balance-of-system costs: Fu, Ran, David Feldman, Robert Margolis, Mike Woodhouse, and Kristen Ardani. 2017. U.S. Solar Photovoltaic System Cost Benchmark: Q1 2017. Golden, CO: National Renewable Energy Laboratory. NREL/TP-6A20-68925. <a href='https://www.nrel.gov/docs/fy17osti/68925.pdf'>https://www.nrel.gov/docs/fy17osti/68925.pdf</a>. </p>
-            <p class='card-text'>CdTe: Model last updated in 2017, unpublished. </p>
-          </div>
-        </div>
-      </p>
-      <p> For the default degradation rates, we assume systems are highly performing such that system degradation rates are equivalent to the module degradation rate for each cell technology. We use the median module degradation rates for CdTe, mono-Si, and multi-Si published in: </p>
-      <p>
-        <div class='card'>
-          <div class='card-body'>
-            <p class='card-text'>D. Jordan and S. Kurtz, "Photovoltaic Degradation Rates - An Analytical Review," Progress in Photovoltaics: Research & Applications 21(1), pp. 12-29, 2013.</p>
+            <p class='card-text'>Default system degradation rate and balance-of-system costs: Feldman, David, Vignesh Ramasamy, Ran Fu, Ashwin Ramdas, Jal Desai, and Robert Margolis. 2021. U.S. Solar Photovoltaic System Cost Benchmark: Q1 2020. Golden, CO: National Renewable Energy Laboratory. NREL/TP-6A20-77324. <a href='https://www.nrel.gov/docs/fy21osti/77324.pdf'>https://www.nrel.gov/docs/fy21osti/77324.pdf</a>.</p>
+            <p class='card-text'>Silicon and CdTe module inputs: Models last updated in 2020, unpublished.</p>
           </div>
         </div>
       </p>
       <h2>Source code</h2>
       <p>The source code for this calculator is publicly available <a href='https://github.com/NREL/PVLCOE'>on GitHub</a>.</p>
+      <h2>Acknowledgment</h2>
+      <p>This work was supported by the Durable Modules Consortium (DuraMAT), an Energy Materials Network Consortium funded by the U.S. Department of Energy, Office of Energy Efficiency and Renewable Energy, Solar Energy Technologies Office.</p>
       <h2>Changelog</h2>
+      <p><strong>Version 2.0.0 (August 2021): Made multiple changes to the calculator, preset values, and the way preset values are produced.</strong>
+        <ul>
+          <li>Added break-even buttons for all inputs except discount rate</li>
+          <li>Added a slider for inverter loading ratio (ILR)</li>
+          <li>Redesigned the presets menu</li>
+          <li>Restricted acceptable service life range and added a dead zone to the slider, imposed physically-motivated limits on efficiency, yield, and degradation rate</li>
+          <li>Added the option to compare a proposed discount rate</li>
+          <li>Switched to a linear equation for applying degradation rate to energy yield</li>
+          <li>Updated energy yield based on PySAM, using the PVWatts model and NSRDB weather data (source is available in the repository). Weather data is NSRDB TMY based on PSM through 2020.</li>
+          <li>Removed BOS-cost variation by location, updated BOS costs, added commercial system BOS costs, added BOS costs for different ILRs, added a new script to the repository build the BOS cost tree, updated references in documentation</li>
+          <li>Updated module costs, efficiencies, degradation rate, O&M costs, and added a new script to the repository to build the preset tree, updated references in documentation</li>
+          <li>Updated citation</li>
+        </ul></p>
       <p><strong>2020-09-11: Added explanation of system versus module degradation rates, changed source code link to GitHub repository, added files to GitHub that can create new sets of preset values.</strong> We have clarified that module degradation rates serve as an approximation for system degradation rates, which was not explicitly stated previously. The new files added to the GitHub repository are under the /build-presets/ folder. This includes a jupyter notebook which builds the preset file called by the calculator (and also houses default efficiency and cost values), as well as an Excel file that contains default energy yield and degradation rate values.</p>
       <p><strong>2018-07-16: Added link to source code; added note about anti-reflective coating.</strong></p>
       <p><strong>2018-06-06: Harmonized magnitude and units of area-scaling BOS cost.</strong> Previously, preset values for area-scaling BOS cost were stored and displayed in units of USD/(100&nbsp;m<sup>2</sup>) and a corresponding factor of 100 was used to produce correct LCOE results. But the calculator incorrectly displayed units of USD/m<sup>2</sup> for this parameter. We have corrected the discrepancy by storing and displaying presets for area-scaling BOS cost in units of USD/m<sup>2</sup> and removing the factor of 100 from the calculation. Results relying only on preset values of area-scaling BOS or on relative changes in area-scaling BOS are unaffected.</p>

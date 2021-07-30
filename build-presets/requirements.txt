@@ -1,2 +1,12 @@
-pandas==1.0.2
+certifi==2021.5.30
+charset-normalizer==2.0.3
+idna==3.2
+NREL-PySAM==2.2.0
+NREL-PySAM-stubs==2.2.3
 numpy==1.18.1
+pandas==1.0.2
+python-dateutil==2.8.2
+pytz==2021.1
+requests==2.26.0
+six==1.16.0
+urllib3==1.26.6
